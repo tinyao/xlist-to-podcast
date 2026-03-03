@@ -16,6 +16,9 @@ dist/
 # Runtime data
 data/
 
+# Audio files (hosted on OSS, not git)
+docs/**/*.mp3
+
 # OS
 .DS_Store
 Thumbs.db
