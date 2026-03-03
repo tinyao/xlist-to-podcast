@@ -31,9 +31,9 @@
 #       category: "Technology"
 
 podcasts:
-  - id: "ai-builders-daily"
+  - id: "ai-builders"
     name: "AI Builders Daily"
-    description: "每日精选 AI 圈最重要的动态，为中文开发者和创业者提供快速、深度的行业洞察。覆盖大模型、AI Agent、开源生态、融资动态等核心领域。"
+    description: "每日精选 AI 圈最重要的动态，为中文开发者和创业者提供快速、深度的行业洞察。覆盖大模型、AI Agent、AI 产品等核心领域。"
     twitter_list_url: "https://x.com/i/lists/2007466263661232466"
     twitter_list_id: "2007466263661232466"
     voice: "nova"
