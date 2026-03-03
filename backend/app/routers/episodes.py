@@ -1,49 +1,38 @@
 import asyncio
+from datetime import date
 
-from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import select
-from sqlalchemy.ext.asyncio import AsyncSession
+from fastapi import APIRouter, HTTPException
 
-from app.database import get_db
-from app.models import Podcast, Episode
+from app.storage import get_podcast, get_episode, list_episodes
 from app.schemas import EpisodeOut, EpisodeDetail
 
 router = APIRouter(prefix="/api/podcasts", tags=["episodes"])
 
 
 @router.get("/{podcast_id}/episodes", response_model=list[EpisodeOut])
-async def list_episodes(podcast_id: str, db: AsyncSession = Depends(get_db)):
-    podcast = await db.get(Podcast, podcast_id)
+async def list_episodes_route(podcast_id: str):
+    podcast = await get_podcast(podcast_id)
     if not podcast:
         raise HTTPException(status_code=404, detail="播客不存在")
-
-    result = await db.execute(
-        select(Episode)
-        .where(Episode.podcast_id == podcast_id)
-        .order_by(Episode.date.desc())
-        .limit(50)
-    )
-    return result.scalars().all()
+    return await list_episodes(podcast_id)
 
 
 @router.get("/{podcast_id}/episodes/{episode_date}", response_model=EpisodeDetail)
-async def get_episode(podcast_id: str, episode_date: str, db: AsyncSession = Depends(get_db)):
-    result = await db.execute(
-        select(Episode).where(
-            Episode.podcast_id == podcast_id,
-            Episode.date == episode_date,
-        )
-    )
-    episode = result.scalar_one_or_none()
+async def get_episode_route(podcast_id: str, episode_date: str):
+    try:
+        ep_date = date.fromisoformat(episode_date)
+    except ValueError:
+        raise HTTPException(status_code=422, detail="日期格式无效，应为 YYYY-MM-DD")
+    episode = await get_episode(podcast_id, ep_date)
     if not episode:
         raise HTTPException(status_code=404, detail="节目不存在")
     return episode
 
 
 @router.post("/{podcast_id}/episodes/trigger", status_code=202)
-async def trigger_episode(podcast_id: str, db: AsyncSession = Depends(get_db)):
+async def trigger_episode(podcast_id: str):
     """手动触发当日节目生成（异步，立即返回）。"""
-    podcast = await db.get(Podcast, podcast_id)
+    podcast = await get_podcast(podcast_id)
     if not podcast:
         raise HTTPException(status_code=404, detail="播客不存在")
 

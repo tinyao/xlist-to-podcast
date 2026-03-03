@@ -5,14 +5,12 @@ from feedgen.feed import FeedGenerator
 from app.config import settings
 
 
-def build_and_upload_feed(podcast, episodes: list) -> None:
+def build_feed(podcast, episodes: list) -> bytes:
     """
-    重新生成 feed.xml 并上传覆盖 OSS。
+    根据 Podcast 和 Episode 列表生成 RSS feed XML，返回字节流。
     podcast: Podcast ORM 对象
     episodes: 最近 30 期 Episode ORM 对象列表（按日期倒序）
     """
-    from app.services import oss  # 避免循环导入
-
     fg = FeedGenerator()
     fg.load_extension("podcast")
 
@@ -31,7 +29,6 @@ def build_and_upload_feed(podcast, episodes: list) -> None:
     fg.podcast.itunes_explicit("no")
     fg.podcast.itunes_author(podcast.name)
 
-    # 只保留最近 30 期，按时间正序加入（RSS 规范：新在前，feedgen 会倒序）
     for ep in reversed(episodes[:30]):
         if ep.status != "done":
             continue
@@ -49,5 +46,4 @@ def build_and_upload_feed(podcast, episodes: list) -> None:
         fe.podcast.itunes_duration(str(ep.audio_duration))
         fe.podcast.itunes_summary((ep.shownotes or "")[:500])
 
-    xml_bytes = fg.rss_str(pretty=True)
-    oss.upload(podcast.feed_oss_key, xml_bytes, content_type="application/rss+xml")
+    return fg.rss_str(pretty=True)
