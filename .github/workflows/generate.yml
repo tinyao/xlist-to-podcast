@@ -22,6 +22,9 @@ concurrency:
   group: generate-episodes
   cancel-in-progress: false
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
