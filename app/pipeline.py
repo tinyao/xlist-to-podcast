@@ -80,9 +80,9 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date) -> None
         posts_key = f"{podcast.id}/episodes/{today}/posts.md"
         await asyncio.to_thread(upload_file_sync, posts_key, posts_text.encode("utf-8"))
 
-    # 2. LLM 生成 script + shownotes
+    # 2. LLM 生成 script + shownotes + title
     logger.info(f"[{podcast.name}] 生成内容（{len(tweets)} 条推文）...")
-    script, shownotes = await asyncio.to_thread(
+    script, shownotes, title = await asyncio.to_thread(
         generate_content, tweets, podcast.name, podcast.language, today,
     )
 
@@ -94,7 +94,7 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date) -> None
         await asyncio.to_thread(upload_file_sync, f"{prefix}/shownotes.md", shownotes.encode("utf-8"))
 
     date_str = today.strftime("%Y年%m月%d日") if podcast.language == "zh" else today.strftime("%B %d, %Y")
-    title = f"{podcast.name} · {date_str}"
+    title = title or f"{podcast.name} · {date_str}"
 
     # 3. TTS 转音频
     logger.info(f"[{podcast.name}] TTS 转换...")

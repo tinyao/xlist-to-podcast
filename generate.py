@@ -58,6 +58,9 @@ def load_podcasts_from_yaml() -> list[Podcast]:
             language=entry.get("language", "zh"),
             publish_hour=entry.get("publish_hour", 8),
             cover_path=f"{entry['id']}/cover.jpg",
+            owner_name=entry.get("owner_name", ""),
+            owner_email=entry.get("owner_email", ""),
+            category=entry.get("category", "Technology"),
             is_active=True,
         ))
     return podcasts

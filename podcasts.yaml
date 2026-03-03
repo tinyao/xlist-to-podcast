@@ -2,7 +2,7 @@
 # 每个播客对应一个 X (Twitter) List，每天自动生成一期音频节目。
 #
 # 字段说明：
-#   id              — 唯一标识（UUID），创建后不要修改
+#   id              — 唯一标识，创建后不要修改
 #   name            — 播客名称
 #   description     — 播客简介
 #   twitter_list_url — X List 链接
@@ -11,9 +11,26 @@
 #   language        — 语言：zh / en
 #   publish_hour    — 每日发布时间（北京时间，0-23）
 #   cover_file      — 封面图路径（相对于仓库根目录 covers/ 目录）
+#   owner_name      — iTunes 播客所有者姓名（可选）
+#   owner_email     — iTunes 播客所有者邮箱（可选）
+#   category        — iTunes 分类，默认 "Technology"（可选）
+#
+# 示例：
+#   podcasts:
+#     - id: "my-podcast"
+#       name: "AI 日报"
+#       description: "每日 AI 科技动态"
+#       twitter_list_url: "https://x.com/i/lists/123456"
+#       twitter_list_id: "123456"
+#       voice: "nova"
+#       language: "zh"
+#       publish_hour: 8
+#       cover_file: "ai-daily.jpg"
+#       owner_name: "Your Name"
+#       owner_email: "you@example.com"
+#       category: "Technology"
 
 podcasts:
-  # 示例：
   - id: "ai-builders-daily"
     name: "AI Builders Daily"
     description: "每日精选 AI 圈最重要的动态，为中文开发者和创业者提供快速、深度的行业洞察。覆盖大模型、AI Agent、开源生态、融资动态等核心领域。"

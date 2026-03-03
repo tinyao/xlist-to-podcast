@@ -28,6 +28,14 @@ def build_feed(podcast, episodes: list) -> bytes:
 
     fg.podcast.itunes_explicit("no")
     fg.podcast.itunes_author(podcast.name)
+    fg.podcast.itunes_type("episodic")
+    fg.podcast.itunes_summary(podcast.description or podcast.name)
+    fg.podcast.itunes_category(podcast.category or "Technology")
+    if podcast.owner_name or podcast.owner_email:
+        fg.podcast.itunes_owner(
+            name=podcast.owner_name or podcast.name,
+            email=podcast.owner_email or "",
+        )
 
     for ep in reversed(episodes[:30]):
         if ep.status != "done":
@@ -45,5 +53,6 @@ def build_feed(podcast, episodes: list) -> bytes:
         fe.enclosure(ep.audio_url, str(ep.audio_size), "audio/mpeg")
         fe.podcast.itunes_duration(str(ep.audio_duration))
         fe.podcast.itunes_summary((ep.shownotes or "")[:500])
+        fe.podcast.itunes_episode_type("full")
 
     return fg.rss_str(pretty=True)

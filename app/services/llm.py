@@ -69,7 +69,7 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
 
 ## 输出要求
 
-请生成以下两部分内容：
+请生成以下三部分内容：
 
 1. 播客朗读稿，用 <script>...</script> 包裹：
    - 纯文本，不要标注说话人或时间戳
@@ -90,6 +90,11 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
 
    ## 信息来源
    - @用户名：推文摘要（一句话）
+
+3. 节目标题，用 <title>...</title> 包裹：
+   - 简短吸引人，突出本期最核心的话题
+   - 不超过 30 个字
+   - 不要包含播客名称和日期
 """
 
 _PROMPT_EN = """You are a tech-savvy content curator who lives and breathes the English-language tech scene. Your tone is professional but never stiff — with the occasional personal observation and dry humor. Think of yourself as chatting with a knowledgeable friend, not reading from a teleprompter. Style references: "The Daily" by NYT, "Acquired" podcast.
@@ -149,7 +154,7 @@ Sign-off (~15 seconds): Today's single biggest takeaway + subscribe prompt.
 
 ## Output Requirements
 
-Generate the following two sections:
+Generate the following three sections:
 
 1. Podcast script, wrapped in <script>...</script>:
    - Plain text, no speaker labels or timestamps
@@ -170,6 +175,11 @@ Generate the following two sections:
 
    ## Sources
    - @username: one-sentence tweet summary
+
+3. Episode title, wrapped in <title>...</title>:
+   - Short and catchy, highlighting the most important topic of this episode
+   - No more than 15 words
+   - Do not include the podcast name or date
 """
 
 
@@ -184,10 +194,10 @@ def generate_content(
     podcast_name: str,
     language: str,
     today: date,
-) -> tuple[str, str]:
+) -> tuple[str, str, str]:
     """
-    调用 OpenRouter (Claude Sonnet 4.6) 生成 (script, shownotes)。
-    返回 (朗读稿, shownotes_markdown)。
+    调用 OpenRouter (Claude Sonnet 4.6) 生成 (script, shownotes, title)。
+    返回 (朗读稿, shownotes_markdown, 标题)。
     """
     client = OpenAI(
         base_url=_OPENROUTER_BASE_URL,
@@ -214,8 +224,9 @@ def generate_content(
     raw = response.choices[0].message.content or ""
     script = _extract_tag(raw, "script")
     shownotes = _extract_tag(raw, "shownotes")
+    title = _extract_tag(raw, "title")
 
     if not script:
         raise ValueError("LLM 未返回有效的 <script> 内容")
 
-    return script, shownotes
+    return script, shownotes, title

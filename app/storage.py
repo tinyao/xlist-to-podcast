@@ -50,6 +50,9 @@ class Podcast(BaseModel):
     language: str = "zh"
     cover_path: str = ""
     publish_hour: int = 8
+    owner_name: str = ""
+    owner_email: str = ""
+    category: str = "Technology"
     is_active: bool = True
     created_at: datetime = Field(default_factory=_now)
     updated_at: datetime = Field(default_factory=_now)
