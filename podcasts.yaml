@@ -39,7 +39,7 @@ podcasts:
     voice: "nova"
     language: "zh"
     publish_hour: 8
-    cover_file: "cover.jpg"
+    cover_file: "ai-daily.jpg"
     owner_name: "Ryan Yao"
     owner_email: "hi@zao.im"
     category: "Technology"
