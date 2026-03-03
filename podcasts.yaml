@@ -14,12 +14,12 @@
 
 podcasts: []
   # 示例：
-  # - id: "550e8400-e29b-41d4-a716-446655440000"
-  #   name: "AI 日报"
-  #   description: "每日 AI 科技动态"
-  #   twitter_list_url: "https://x.com/i/lists/123456"
-  #   twitter_list_id: "123456"
-  #   voice: "nova"
-  #   language: "zh"
-  #   publish_hour: 8
-  #   cover_file: "ai-daily.jpg"
+  - id: "ai-builders-daily"
+    name: "AI Builders Daily"
+    description: "每日精选 AI 圈最重要的动态，为中文开发者和创业者提供快速、深度的行业洞察。覆盖大模型、AI Agent、开源生态、融资动态等核心领域。"
+    twitter_list_url: "https://x.com/i/lists/2007466263661232466"
+    twitter_list_id: "2007466263661232466"
+    voice: "nova"
+    language: "zh"
+    publish_hour: 8
+    cover_file: "ai-daily.jpg"
