@@ -169,7 +169,7 @@ def write_site_files(podcasts: list[Podcast]) -> None:
 
 # ── 主流程 ───────────────────────────────────────────────────────────────────
 
-async def main(force: bool = False, podcast_id: Optional[str] = None) -> None:
+async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts: Optional[int] = None) -> None:
     all_podcasts = load_podcasts_from_yaml()
 
     if not all_podcasts:
@@ -201,7 +201,7 @@ async def main(force: bool = False, podcast_id: Optional[str] = None) -> None:
             continue
 
         logger.info(f"[{podcast.name}] 开始生成节目...")
-        await generate_episode(podcast.id)
+        await generate_episode(podcast.id, max_posts=max_posts)
 
         # 注入 audio_url 到 episode.json
         today = date.today()
@@ -217,6 +217,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="生成播客节目并上传到 OSS")
     parser.add_argument("--force", action="store_true", help="忽略 publish_hour 检查")
     parser.add_argument("--podcast", type=str, default=None, help="只处理指定播客 ID")
+    parser.add_argument("--max-posts", type=int, default=None, help="最大抓取推文数")
     args = parser.parse_args()
 
-    asyncio.run(main(force=args.force, podcast_id=args.podcast))
+    asyncio.run(main(force=args.force, podcast_id=args.podcast, max_posts=args.max_posts))

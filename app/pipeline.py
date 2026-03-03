@@ -12,6 +12,7 @@ import asyncio
 import logging
 from datetime import datetime, timedelta, timezone, date
 from pathlib import Path
+from typing import Optional
 
 from app.storage import (
     Podcast, Episode,
@@ -35,7 +36,7 @@ def _episode_dir(podcast_id: str, ep_date: date) -> Path:
     return d
 
 
-async def generate_episode(podcast_id: str) -> None:
+async def generate_episode(podcast_id: str, max_posts: Optional[int] = None) -> None:
     podcast = await get_podcast(podcast_id)
     if not podcast or not podcast.is_active:
         return
@@ -51,7 +52,7 @@ async def generate_episode(podcast_id: str) -> None:
     await save_episode(episode)
 
     try:
-        await _run_pipeline(podcast, episode, today)
+        await _run_pipeline(podcast, episode, today, max_posts=max_posts)
     except Exception as e:
         logger.exception(f"[{podcast.name}] 生成失败: {e}")
         episode.status = "failed"
@@ -59,13 +60,16 @@ async def generate_episode(podcast_id: str) -> None:
         await save_episode(episode)
 
 
-async def _run_pipeline(podcast: Podcast, episode: Episode, today: date) -> None:
+async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_posts: Optional[int] = None) -> None:
     since = datetime.now(timezone.utc) - timedelta(hours=24)
     ep_dir = _episode_dir(podcast.id, today)
 
     # 1. 抓取推文
     logger.info(f"[{podcast.name}] 抓取推文...")
-    tweets = await asyncio.to_thread(fetch_list_tweets, podcast.twitter_list_id, since)
+    fetch_kwargs = {"list_id": podcast.twitter_list_id, "since": since}
+    if max_posts is not None:
+        fetch_kwargs["max_tweets"] = max_posts
+    tweets = await asyncio.to_thread(lambda: fetch_list_tweets(**fetch_kwargs))
 
     if len(tweets) < MIN_TWEETS:
         logger.info(f"[{podcast.name}] 推文数量不足（{len(tweets)} 条），跳过")

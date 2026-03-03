@@ -13,6 +13,10 @@ on:
         description: '只处理指定播客 ID（留空处理全部）'
         type: string
         default: ''
+      max_posts:
+        description: '最大抓取推文数（留空使用默认值 300）'
+        type: string
+        default: ''
 
 concurrency:
   group: generate-episodes
@@ -52,6 +56,9 @@ jobs:
           fi
           if [ -n "${{ inputs.podcast_id }}" ]; then
             ARGS="$ARGS --podcast ${{ inputs.podcast_id }}"
+          fi
+          if [ -n "${{ inputs.max_posts }}" ]; then
+            ARGS="$ARGS --max-posts ${{ inputs.max_posts }}"
           fi
           python -m generate $ARGS
 
