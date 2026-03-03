@@ -44,7 +44,7 @@ jobs:
           OSS_ENDPOINT: ${{ secrets.OSS_ENDPOINT }}
           OSS_BUCKET_NAME: ${{ secrets.OSS_BUCKET_NAME }}
           OSS_CDN_URL: ${{ secrets.OSS_CDN_URL }}
-          SITE_URL: ${{ secrets.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL }}
         run: |
           ARGS=""
           if [ "${{ inputs.force }}" = "true" ]; then
