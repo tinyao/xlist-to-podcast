@@ -1,11 +1,10 @@
-.PHONY: setup dev-backend dev-frontend
+.PHONY: setup generate generate-force
 
 setup:
-	cd backend && pip install -r requirements.txt
-	cd frontend && npm install
+	pip install -r requirements.txt
 
-dev-backend:
-	cd backend && uvicorn app.main:app --reload --port 8000
+generate:
+	python -m generate
 
-dev-frontend:
-	cd frontend && npm run dev
+generate-force:
+	python -m generate --force

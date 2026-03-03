@@ -1,0 +1,25 @@
+# 播客配置文件
+# 每个播客对应一个 X (Twitter) List，每天自动生成一期音频节目。
+#
+# 字段说明：
+#   id              — 唯一标识（UUID），创建后不要修改
+#   name            — 播客名称
+#   description     — 播客简介
+#   twitter_list_url — X List 链接
+#   twitter_list_id  — X List 数字 ID
+#   voice           — OpenAI TTS 音色：alloy / echo / fable / onyx / nova / shimmer
+#   language        — 语言：zh / en
+#   publish_hour    — 每日发布时间（北京时间，0-23）
+#   cover_file      — 封面图路径（相对于仓库根目录 covers/ 目录）
+
+podcasts: []
+  # 示例：
+  # - id: "550e8400-e29b-41d4-a716-446655440000"
+  #   name: "AI 日报"
+  #   description: "每日 AI 科技动态"
+  #   twitter_list_url: "https://x.com/i/lists/123456"
+  #   twitter_list_id: "123456"
+  #   voice: "nova"
+  #   language: "zh"
+  #   publish_hour: 8
+  #   cover_file: "ai-daily.jpg"

@@ -13,16 +13,8 @@ dist/
 .env.local
 .env.*.local
 
-# DB
-*.db
-*.db-shm
-*.db-wal
+# Runtime data
 data/
-
-# Node
-node_modules/
-.next/
-out/
 
 # OS
 .DS_Store

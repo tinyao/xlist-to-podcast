@@ -1,0 +1,55 @@
+name: Generate Episodes
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # 每小时整点
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '忽略 publish_hour，强制生成'
+        type: boolean
+        default: false
+      podcast_id:
+        description: '只处理指定播客 ID（留空处理全部）'
+        type: string
+        default: ''
+
+concurrency:
+  group: generate-episodes
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run generate
+        env:
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          OSS_ENDPOINT: ${{ secrets.OSS_ENDPOINT }}
+          OSS_BUCKET_NAME: ${{ secrets.OSS_BUCKET_NAME }}
+          OSS_CDN_URL: ${{ secrets.OSS_CDN_URL }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.force }}" = "true" ]; then
+            ARGS="$ARGS --force"
+          fi
+          if [ -n "${{ inputs.podcast_id }}" ]; then
+            ARGS="$ARGS --podcast ${{ inputs.podcast_id }}"
+          fi
+          python -m generate $ARGS

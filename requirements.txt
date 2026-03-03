@@ -2,7 +2,6 @@ fastapi>=0.110.0
 uvicorn[standard]>=0.29.0
 pydantic>=2.0.0
 pydantic-settings>=2.0.0
-python-multipart>=0.0.9
 python-dotenv>=1.0.0
 
 # Twitter
@@ -15,11 +14,11 @@ httpx[socks]
 # RSS
 feedgen>=0.9.0
 
-# 调度
-apscheduler>=3.10.0
-
 # 音频时长计算
 mutagen>=1.47.0
 
-# 阿里云 OSS（可选）
+# 阿里云 OSS
 oss2>=2.18.0
+
+# YAML 配置
+pyyaml>=6.0
