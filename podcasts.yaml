@@ -33,7 +33,7 @@
 podcasts:
   - id: "ai-builders"
     name: "AI Builders Daily"
-    description: "每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号，用中文讲给你听。"
+    description: "每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。"
     twitter_list_url: "https://x.com/i/lists/2007466263661232466"
     twitter_list_id: "2007466263661232466"
     voice: "nova"
