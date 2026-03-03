@@ -12,13 +12,6 @@ python -m generate --podcast <ID>          # only process one podcast
 python -m generate --force --podcast <ID>  # combine flags
 ```
 
-### Makefile shortcuts
-```bash
-make setup          # pip install -r requirements.txt
-make generate       # run pipeline (respects publish_hour)
-make generate-force # run pipeline (ignore publish_hour)
-```
-
 ## Architecture
 
 ### Overview
@@ -51,16 +44,14 @@ podcasts.yaml → generate.py (GitHub Actions) → OSS/CDN → feed.xml → Podc
 
 ### generate.py flow
 1. Load podcast configs from `podcasts.yaml`
-2. Bootstrap each podcast: write `podcast.json` (with computed URLs), upload cover, restore episode index from OSS
+2. Bootstrap each podcast: write local `podcast.json`, upload cover, restore episode index from OSS
 3. Check Asia/Shanghai current hour vs `publish_hour` (skip with `--force`)
 4. Call `generate_episode()` from `pipeline.py`
-5. Upload index files: `podcasts.json`, `{id}/episodes/index.json`
+5. Upload episode index: `{id}/episodes/index.json`
 
 ### OSS file layout
 ```
-podcasts.json                              # global podcast list index
 {podcast_id}/
-  podcast.json                             # podcast metadata (with cover_url, feed_url)
   cover.jpg
   feed.xml                                 # RSS feed
   episodes/
@@ -73,4 +64,4 @@ podcasts.json                              # global podcast list index
 - **No frontend / no server** — RSS feed is the product. GitHub Actions cron replaces APScheduler. OSS replaces local file serving.
 - **Config as code** — `podcasts.yaml` in repo, not UI-created.
 - **Blocking calls** in the pipeline use `asyncio.to_thread()`.
-- **Index files** (`podcasts.json`, `episodes/index.json`) contain pre-computed URLs since Pydantic `@property` fields don't serialize.
+- **Episode index** (`episodes/index.json`) contains pre-computed URLs since Pydantic `@property` fields don't serialize.
