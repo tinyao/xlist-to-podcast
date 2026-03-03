@@ -24,7 +24,7 @@ from app.storage import (
 )
 from app.services.oss import (
     upload_file_sync, download_file_sync,
-    public_url, is_enabled as oss_enabled,
+    is_enabled as oss_enabled,
 )
 from app.pipeline import generate_episode
 
@@ -68,14 +68,6 @@ def load_podcasts_from_yaml() -> list[Podcast]:
 
 # ── Bootstrap ────────────────────────────────────────────────────────────────
 
-def _podcast_json_with_urls(podcast: Podcast) -> dict:
-    """在 podcast 的 JSON 字典中注入计算后的 cover_url 和 feed_url。"""
-    d = json.loads(podcast.model_dump_json())
-    d["cover_url"] = podcast.cover_url
-    d["feed_url"] = podcast.feed_url
-    return d
-
-
 def _episode_json_with_urls(episode: Episode) -> dict:
     """在 episode 的 JSON 字典中注入计算后的 audio_url。"""
     d = json.loads(episode.model_dump_json())
@@ -86,20 +78,12 @@ def _episode_json_with_urls(episode: Episode) -> dict:
 def bootstrap_podcast(podcast: Podcast) -> None:
     """
     初始化播客：
-    1. 写 podcast.json（含 URL）到本地和 OSS
+    1. 写 podcast.json 到本地
     2. 上传封面图到 OSS
     3. 从 OSS 下载 episodes/index.json 到本地（让 list_episodes() 能工作）
     """
-    # 1. 写 podcast.json
+    # 1. 写 podcast.json（仅本地，供 pipeline 读取）
     _save_podcast_sync(podcast)
-    podcast_dict = _podcast_json_with_urls(podcast)
-    podcast_json_bytes = json.dumps(podcast_dict, ensure_ascii=False, indent=2).encode("utf-8")
-
-    if oss_enabled():
-        upload_file_sync(f"{podcast.id}/podcast.json", podcast_json_bytes)
-        # 也写入本地（覆盖 storage 写的，因为我们需要带 URL 的版本）
-        podcast_json_path = STATIC_DIR / podcast.id / "podcast.json"
-        podcast_json_path.write_bytes(podcast_json_bytes)
 
     # 2. 上传封面
     cover_filename = None
@@ -184,22 +168,6 @@ def upload_episode_detail(podcast: Podcast, ep_date: date) -> None:
         upload_file_sync(f"{podcast.id}/episodes/{ep_date}/episode.json", ep_bytes)
 
 
-def upload_podcasts_index(podcasts: list[Podcast]) -> None:
-    """构建并上传全局 podcasts.json。"""
-    index = [_podcast_json_with_urls(p) for p in podcasts]
-    index_bytes = json.dumps(index, ensure_ascii=False, indent=2).encode("utf-8")
-
-    # 写本地
-    STATIC_DIR.mkdir(parents=True, exist_ok=True)
-    (STATIC_DIR / "podcasts.json").write_bytes(index_bytes)
-
-    # 上传 OSS
-    if oss_enabled():
-        upload_file_sync("podcasts.json", index_bytes)
-
-    logger.info(f"podcasts.json 已更新 ({len(index)} 个播客)")
-
-
 # ── 主流程 ───────────────────────────────────────────────────────────────────
 
 async def main(force: bool = False, podcast_id: Optional[str] = None) -> None:
@@ -240,11 +208,9 @@ async def main(force: bool = False, podcast_id: Optional[str] = None) -> None:
         today = date.today()
         await asyncio.to_thread(upload_episode_detail, podcast, today)
 
-    # 上传索引文件
+    # 上传 episode 索引
     for podcast in all_podcasts:
         await asyncio.to_thread(upload_episode_index, podcast)
-
-    await asyncio.to_thread(upload_podcasts_index, all_podcasts)
 
     logger.info("全部完成")
 
