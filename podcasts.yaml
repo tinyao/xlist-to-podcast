@@ -10,7 +10,6 @@
 #   voice           — OpenAI TTS 音色：alloy / echo / fable / onyx / nova / shimmer
 #   language        — 语言：zh / en
 #   publish_hour    — 每日发布时间（北京时间，0-23）
-#   cover_file      — 封面图路径（相对于仓库根目录 covers/ 目录）
 #   owner_name      — iTunes 播客所有者姓名（可选）
 #   owner_email     — iTunes 播客所有者邮箱（可选）
 #   category        — iTunes 分类，默认 "Technology"（可选）
@@ -25,7 +24,6 @@
 #       voice: "nova"
 #       language: "zh"
 #       publish_hour: 8
-#       cover_file: "ai-daily.jpg"
 #       owner_name: "Your Name"
 #       owner_email: "you@example.com"
 #       category: "Technology"
@@ -39,7 +37,6 @@ podcasts:
     voice: "nova"
     language: "zh"
     publish_hour: 8
-    cover_file: "cover.jpg"
     owner_name: "Ryan Yao"
     owner_email: "hi@zao.im"
     category: "Technology"

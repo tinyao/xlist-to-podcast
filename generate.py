@@ -79,36 +79,12 @@ def bootstrap_podcast(podcast: Podcast) -> None:
     """
     初始化播客：
     1. 写 podcast.json 到本地
-    2. 上传封面图到 OSS
-    3. 从 OSS 下载 episodes/index.json 到本地（让 list_episodes() 能工作）
+    2. 从 OSS 下载 episodes/index.json 到本地（让 list_episodes() 能工作）
     """
     # 1. 写 podcast.json（仅本地，供 pipeline 读取）
     _save_podcast_sync(podcast)
 
-    # 2. 上传封面
-    cover_filename = None
-    yaml_data = yaml.safe_load(YAML_PATH.read_text(encoding="utf-8"))
-    for entry in yaml_data.get("podcasts") or []:
-        if entry["id"] == podcast.id:
-            cover_filename = entry.get("cover_file")
-            break
-
-    if cover_filename:
-        cover_src = REPO_ROOT / "covers" / cover_filename
-        if cover_src.exists():
-            cover_bytes = cover_src.read_bytes()
-            # 写到本地
-            local_cover = STATIC_DIR / podcast.id / "cover.jpg"
-            local_cover.parent.mkdir(parents=True, exist_ok=True)
-            local_cover.write_bytes(cover_bytes)
-            # 上传 OSS
-            if oss_enabled():
-                upload_file_sync(f"{podcast.id}/cover.jpg", cover_bytes)
-            logger.info(f"[{podcast.name}] 封面已同步: {cover_filename}")
-        else:
-            logger.warning(f"[{podcast.name}] 封面文件不存在: {cover_src}")
-
-    # 3. 从 OSS 下载 episodes/index.json → 还原本地 episode.json 文件
+    # 2. 从 OSS 下载 episodes/index.json → 还原本地 episode.json 文件
     if oss_enabled():
         index_data = download_file_sync(f"{podcast.id}/episodes/index.json")
         if index_data:

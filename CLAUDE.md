@@ -25,7 +25,6 @@ podcasts.yaml → generate.py (GitHub Actions) → OSS/CDN → feed.xml → Podc
 ```
 ├── generate.py          # CLI entry point (GitHub Actions runs this)
 ├── podcasts.yaml        # Podcast definitions
-├── covers/              # Cover images referenced by podcasts.yaml
 ├── app/
 │   ├── config.py        # Pydantic BaseSettings, reads .env
 │   ├── storage.py       # JSON file-based storage (Podcast/Episode models)
@@ -44,7 +43,7 @@ podcasts.yaml → generate.py (GitHub Actions) → OSS/CDN → feed.xml → Podc
 
 ### generate.py flow
 1. Load podcast configs from `podcasts.yaml`
-2. Bootstrap each podcast: write local `podcast.json`, upload cover, restore episode index from OSS
+2. Bootstrap each podcast: write local `podcast.json`, restore episode index from OSS
 3. Check Asia/Shanghai current hour vs `publish_hour` (skip with `--force`)
 4. Call `generate_episode()` from `pipeline.py`
 5. Upload episode index: `{id}/episodes/index.json`
@@ -52,7 +51,6 @@ podcasts.yaml → generate.py (GitHub Actions) → OSS/CDN → feed.xml → Podc
 ### OSS file layout
 ```
 {podcast_id}/
-  cover.jpg
   feed.xml                                 # RSS feed
   episodes/
     index.json                             # episode list index (no script field)
