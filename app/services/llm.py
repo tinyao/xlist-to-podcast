@@ -88,13 +88,13 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
    ## 快讯
    - 一句话概括
 
-   ## 信息来源
-   - @用户名：推文摘要（一句话）
+   ## 值得阅读
+   - 值得深入了解的内容链接，高质量推文, article, youtube video etc.
 
 3. 节目标题，用 <title>...</title> 包裹：
+   - 格式：yyyyMMdd-<主标题>
    - 简短吸引人，突出本期最核心的话题
-   - 不超过 30 个字
-   - 不要包含播客名称和日期
+   - 主标题不超过 30 个字
 """
 
 _PROMPT_EN = """You are a tech-savvy content curator who lives and breathes the English-language tech scene. Your tone is professional but never stiff — with the occasional personal observation and dry humor. Think of yourself as chatting with a knowledgeable friend, not reading from a teleprompter. Style references: "The Daily" by NYT, "Acquired" podcast.
