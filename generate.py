@@ -11,6 +11,7 @@ import argparse
 import asyncio
 import json
 import logging
+import shutil
 import sys
 from datetime import datetime, timezone, timedelta, date
 from pathlib import Path
@@ -20,12 +21,10 @@ import yaml
 
 from app.storage import (
     Podcast, Episode, STATIC_DIR,
-    _save_podcast_sync, _list_episodes_sync,
+    _save_podcast_sync,
 )
-from app.services.oss import (
-    upload_file_sync, download_file_sync,
-    is_enabled as oss_enabled,
-)
+from app.services.oss import upload_file_sync, is_enabled as oss_enabled
+from app.config import settings
 from app.pipeline import generate_episode
 
 logging.basicConfig(
@@ -79,8 +78,8 @@ def bootstrap_podcast(podcast: Podcast) -> None:
     """
     初始化播客：
     1. 写 podcast.json 到本地
-    2. 上传封面图到 OSS
-    3. 从 OSS 下载 episodes/index.json 到本地（让 list_episodes() 能工作）
+    2. 同步封面（本地 + OSS + docs/）
+    3. 从 docs/ 恢复 episode.json 到本地（让 list_episodes() 能工作）
     """
     # 1. 写 podcast.json（仅本地，供 pipeline 读取）
     _save_podcast_sync(podcast)
@@ -104,68 +103,68 @@ def bootstrap_podcast(podcast: Podcast) -> None:
             # 上传 OSS
             if oss_enabled():
                 upload_file_sync(f"{podcast.id}/cover.jpg", cover_bytes)
+            # 复制到 docs/
+            if settings.site_url:
+                docs_cover = REPO_ROOT / "docs" / podcast.id / "cover.jpg"
+                docs_cover.parent.mkdir(parents=True, exist_ok=True)
+                docs_cover.write_bytes(cover_bytes)
             logger.info(f"[{podcast.name}] 封面已同步: {cover_filename}")
         else:
             logger.warning(f"[{podcast.name}] 封面文件不存在: {cover_src}")
 
-    # 3. 从 OSS 下载 episodes/index.json → 还原本地 episode.json 文件
-    if oss_enabled():
-        index_data = download_file_sync(f"{podcast.id}/episodes/index.json")
-        if index_data:
-            episodes_list = json.loads(index_data)
-            for ep_dict in episodes_list:
-                ep_date = ep_dict.get("date")
-                if ep_date:
-                    ep_dir = STATIC_DIR / podcast.id / "episodes" / ep_date
-                    ep_dir.mkdir(parents=True, exist_ok=True)
-                    ep_path = ep_dir / "episode.json"
-                    ep_path.write_text(
-                        json.dumps(ep_dict, ensure_ascii=False, indent=2),
-                        encoding="utf-8",
-                    )
-            logger.info(f"[{podcast.name}] 已从 OSS 恢复 {len(episodes_list)} 个节目索引")
+    # 3. 从 docs/ 读取 episode.json → 还原本地 episode.json 文件
+    docs_ep_root = REPO_ROOT / "docs" / podcast.id / "episodes"
+    if docs_ep_root.exists():
+        count = 0
+        for ep_json_file in docs_ep_root.glob("*/episode.json"):
+            ep_date = ep_json_file.parent.name
+            ep_dir = STATIC_DIR / podcast.id / "episodes" / ep_date
+            ep_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(ep_json_file, ep_dir / "episode.json")
+            count += 1
+        if count:
+            logger.info(f"[{podcast.name}] 已从 docs/ 恢复 {count} 个节目")
 
 
-# ── 索引文件上传 ─────────────────────────────────────────────────────────────
-
-def upload_episode_index(podcast: Podcast) -> None:
-    """构建并上传 {podcast_id}/episodes/index.json（去掉 script 字段）。"""
-    episodes = _list_episodes_sync(podcast.id, limit=100)
-    index = []
-    for ep in episodes:
-        d = _episode_json_with_urls(ep)
-        d.pop("script", None)  # 索引中不需要 script，节省带宽
-        index.append(d)
-
-    index_bytes = json.dumps(index, ensure_ascii=False, indent=2).encode("utf-8")
-
-    # 写本地
-    index_dir = STATIC_DIR / podcast.id / "episodes"
-    index_dir.mkdir(parents=True, exist_ok=True)
-    (index_dir / "index.json").write_bytes(index_bytes)
-
-    # 上传 OSS
-    if oss_enabled():
-        upload_file_sync(f"{podcast.id}/episodes/index.json", index_bytes)
-
-    logger.info(f"[{podcast.name}] episodes/index.json 已更新 ({len(index)} 期)")
-
-
-def upload_episode_detail(podcast: Podcast, ep_date: date) -> None:
-    """上传带 audio_url 的 episode.json 到 OSS。"""
+def inject_episode_urls(podcast: Podcast, ep_date: date) -> None:
+    """将 audio_url 注入 episode.json（Pydantic @property 不序列化）。"""
     ep_path = STATIC_DIR / podcast.id / "episodes" / str(ep_date) / "episode.json"
     if not ep_path.exists():
         return
 
     ep = Episode.model_validate_json(ep_path.read_text(encoding="utf-8"))
     ep_dict = _episode_json_with_urls(ep)
-    ep_bytes = json.dumps(ep_dict, ensure_ascii=False, indent=2).encode("utf-8")
+    ep_path.write_bytes(json.dumps(ep_dict, ensure_ascii=False, indent=2).encode("utf-8"))
 
-    # 覆写本地（带 URL）
-    ep_path.write_bytes(ep_bytes)
 
-    if oss_enabled():
-        upload_file_sync(f"{podcast.id}/episodes/{ep_date}/episode.json", ep_bytes)
+# ── docs/ 站点文件 ────────────────────────────────────────────────────────────
+
+def write_site_files(podcasts: list[Podcast]) -> None:
+    """将 feed.xml 和每期的 md 文件复制到 docs/，供 GitHub Pages 托管。"""
+    if not settings.site_url:
+        return
+    for podcast in podcasts:
+        docs_dir = REPO_ROOT / "docs" / podcast.id
+        # feed.xml
+        feed_src = STATIC_DIR / podcast.id / "feed.xml"
+        if feed_src.exists():
+            feed_dst = docs_dir / "feed.xml"
+            feed_dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(feed_src, feed_dst)
+            logger.info(f"[{podcast.name}] feed.xml → docs/{podcast.id}/feed.xml")
+        # 每期的 episode.json / posts.md / script.md / shownotes.md
+        ep_root = STATIC_DIR / podcast.id / "episodes"
+        if ep_root.exists():
+            for src_file in ep_root.glob("*/*.md"):
+                rel = src_file.relative_to(STATIC_DIR / podcast.id)
+                dst = docs_dir / rel
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src_file, dst)
+            for src_file in ep_root.glob("*/episode.json"):
+                rel = src_file.relative_to(STATIC_DIR / podcast.id)
+                dst = docs_dir / rel
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src_file, dst)
 
 
 # ── 主流程 ───────────────────────────────────────────────────────────────────
@@ -204,13 +203,12 @@ async def main(force: bool = False, podcast_id: Optional[str] = None) -> None:
         logger.info(f"[{podcast.name}] 开始生成节目...")
         await generate_episode(podcast.id)
 
-        # 上传带 URL 的 episode.json
+        # 注入 audio_url 到 episode.json
         today = date.today()
-        await asyncio.to_thread(upload_episode_detail, podcast, today)
+        await asyncio.to_thread(inject_episode_urls, podcast, today)
 
-    # 上传 episode 索引
-    for podcast in all_podcasts:
-        await asyncio.to_thread(upload_episode_index, podcast)
+    # 复制文件到 docs/ 供 GitHub Pages 托管
+    await asyncio.to_thread(write_site_files, all_podcasts)
 
     logger.info("全部完成")
 

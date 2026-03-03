@@ -23,6 +23,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
+from app.config import settings
 from app.services.oss import public_url
 
 STATIC_DIR = Path("data/static")
@@ -65,6 +66,8 @@ class Podcast(BaseModel):
 
     @property
     def feed_url(self) -> str:
+        if settings.site_url:
+            return f"{settings.site_url.rstrip('/')}/{self.id}/feed.xml"
         return public_url(f"{self.id}/feed.xml")
 
 

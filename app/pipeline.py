@@ -76,9 +76,6 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date) -> None
 
     posts_text = tweets.text
     (ep_dir / "posts.md").write_text(posts_text, encoding="utf-8")
-    if oss_enabled():
-        posts_key = f"{podcast.id}/episodes/{today}/posts.md"
-        await asyncio.to_thread(upload_file_sync, posts_key, posts_text.encode("utf-8"))
 
     # 2. LLM 生成 script + shownotes + title
     logger.info(f"[{podcast.name}] 生成内容（{len(tweets)} 条推文）...")
@@ -88,10 +85,6 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date) -> None
 
     (ep_dir / "script.md").write_text(script, encoding="utf-8")
     (ep_dir / "shownotes.md").write_text(shownotes, encoding="utf-8")
-    if oss_enabled():
-        prefix = f"{podcast.id}/episodes/{today}"
-        await asyncio.to_thread(upload_file_sync, f"{prefix}/script.md", script.encode("utf-8"))
-        await asyncio.to_thread(upload_file_sync, f"{prefix}/shownotes.md", shownotes.encode("utf-8"))
 
     date_str = today.strftime("%Y年%m月%d日") if podcast.language == "zh" else today.strftime("%B %d, %Y")
     title = title or f"{podcast.name} · {date_str}"
@@ -115,10 +108,6 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date) -> None
     episode.tweet_count = len(tweets)
     episode.status = "done"
     await save_episode(episode)
-    if oss_enabled():
-        ep_json_key = f"{podcast.id}/episodes/{today}/episode.json"
-        ep_json = (ep_dir / "episode.json").read_bytes()
-        await asyncio.to_thread(upload_file_sync, ep_json_key, ep_json)
 
     # 5. 重新生成 feed.xml
     logger.info(f"[{podcast.name}] 更新 feed.xml...")
@@ -127,7 +116,5 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date) -> None
     xml_bytes = await asyncio.to_thread(build_feed, podcast, done_episodes)
     feed_file = STATIC_DIR / podcast.id / "feed.xml"
     feed_file.write_bytes(xml_bytes)
-    if oss_enabled():
-        await asyncio.to_thread(upload_file_sync, f"{podcast.id}/feed.xml", xml_bytes)
 
     logger.info(f"[{podcast.name}] 生成完成：{title}")

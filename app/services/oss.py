@@ -78,38 +78,6 @@ def upload_file_sync(key: str, data: bytes) -> None:
     logger.info(f"[OSS] Uploaded: {key} ({len(data)} bytes)")
 
 
-def download_file_sync(key: str) -> Optional[bytes]:
-    """同步从 OSS 下载文件。不存在返回 None。"""
-    bucket = _get_bucket()
-    if bucket is None:
-        return None
-
-    import oss2
-
-    try:
-        result = bucket.get_object(key)
-        data = result.read()
-        logger.info(f"[OSS] Downloaded: {key} ({len(data)} bytes)")
-        return data
-    except oss2.exceptions.NoSuchKey:
-        logger.debug(f"[OSS] Not found: {key}")
-        return None
-
-
-def list_keys_sync(prefix: str) -> list[str]:
-    """列出指定前缀下的所有对象 key。"""
-    bucket = _get_bucket()
-    if bucket is None:
-        return []
-
-    import oss2
-
-    keys: list[str] = []
-    for obj in oss2.ObjectIterator(bucket, prefix=prefix):
-        keys.append(obj.key)
-    logger.info(f"[OSS] Listed {len(keys)} keys under '{prefix}'")
-    return keys
-
 
 def public_url(relative_path: str) -> str:
     """
