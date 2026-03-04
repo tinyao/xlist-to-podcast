@@ -27,7 +27,7 @@ def build_feed(podcast, episodes: list) -> bytes:
         fg.podcast.itunes_image(podcast.cover_url)
 
     fg.podcast.itunes_explicit("no")
-    fg.podcast.itunes_author(podcast.name)
+    fg.podcast.itunes_author(podcast.owner_name or podcast.name)
     fg.podcast.itunes_type("episodic")
     fg.podcast.itunes_summary(podcast.description or podcast.name)
     fg.podcast.itunes_category(podcast.category or "Technology")
