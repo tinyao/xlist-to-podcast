@@ -58,6 +58,7 @@ def load_podcasts_from_yaml() -> list[Podcast]:
             publish_hour=entry.get("publish_hour", 8),
             frequency=entry.get("frequency", "daily"),
             publish_day=entry.get("publish_day", 0),
+            extra_prompt=entry.get("extra_prompt", ""),
             cover_path=f"{entry['id']}/cover.jpg",
             owner_name=entry.get("owner_name", ""),
             owner_email=entry.get("owner_email", ""),
@@ -211,7 +212,7 @@ async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts:
             continue
 
         logger.info(f"[{podcast.name}] 开始生成节目...")
-        await generate_episode(podcast.id, max_posts=max_posts, frequency=podcast.frequency)
+        await generate_episode(podcast.id, max_posts=max_posts, frequency=podcast.frequency, extra_prompt=podcast.extra_prompt)
 
         # 注入 audio_url 到 episode.json
         today = date.today()

@@ -53,6 +53,7 @@ class Podcast(BaseModel):
     publish_hour: int = 8
     frequency: str = "daily"   # "daily" or "weekly"
     publish_day: int = 0       # 0=Monday..6=Sunday, only used when frequency="weekly"
+    extra_prompt: str = ""     # appended to LLM prompt as additional instructions
     owner_name: str = ""
     owner_email: str = ""
     category: str = "Technology"

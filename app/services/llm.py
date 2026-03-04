@@ -195,6 +195,7 @@ def generate_content(
     language: str,
     today: date,
     frequency: str = "daily",
+    extra_prompt: str = "",
 ) -> tuple[str, str, str]:
     """
     调用 OpenRouter (Claude Sonnet 4.6) 生成 (script, shownotes, title)。
@@ -219,6 +220,9 @@ def generate_content(
         tweets_text=tweets.text,
         time_window=time_window,
     )
+
+    if extra_prompt:
+        prompt += f"\n\n## 补充要求\n\n{extra_prompt}"
 
     response = client.chat.completions.create(
         model=_MODEL,
