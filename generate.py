@@ -9,6 +9,7 @@ GitHub Actions 入口：从 podcasts.yaml 加载配置，生成播客节目并�
 """
 import argparse
 import asyncio
+import hashlib
 import json
 import logging
 import shutil
@@ -99,6 +100,8 @@ def bootstrap_podcast(podcast: Podcast) -> None:
         cover_src = REPO_ROOT / "covers" / cover_filename
         if cover_src.exists():
             cover_bytes = cover_src.read_bytes()
+            # 计算封面内容 hash，用于 URL 缓存刷新
+            podcast.cover_hash = hashlib.md5(cover_bytes).hexdigest()[:8]
             # 写到本地
             local_cover = STATIC_DIR / podcast.id / "cover.jpg"
             local_cover.parent.mkdir(parents=True, exist_ok=True)
@@ -111,9 +114,13 @@ def bootstrap_podcast(podcast: Podcast) -> None:
                 docs_cover = REPO_ROOT / "docs" / podcast.id / "cover.jpg"
                 docs_cover.parent.mkdir(parents=True, exist_ok=True)
                 docs_cover.write_bytes(cover_bytes)
-            logger.info(f"[{podcast.name}] 封面已同步: {cover_filename}")
+            logger.info(f"[{podcast.name}] 封面已同步: {cover_filename} (hash={podcast.cover_hash})")
         else:
             logger.warning(f"[{podcast.name}] 封面文件不存在: {cover_src}")
+
+    # 封面 hash 更新后重新保存 podcast.json
+    if podcast.cover_hash:
+        _save_podcast_sync(podcast)
 
     # 3. 从 docs/ 读取 episode.json → 还原本地 episode.json 文件
     docs_ep_root = REPO_ROOT / "docs" / podcast.id / "episodes"

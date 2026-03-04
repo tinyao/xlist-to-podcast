@@ -50,6 +50,7 @@ class Podcast(BaseModel):
     voice: str = "nova"
     language: str = "zh"
     cover_path: str = ""
+    cover_hash: str = ""
     publish_hour: int = 8
     frequency: str = "daily"   # "daily" or "weekly"
     publish_day: int = 0       # 0=Monday..6=Sunday, only used when frequency="weekly"
@@ -65,7 +66,10 @@ class Podcast(BaseModel):
 
     @property
     def cover_url(self) -> str:
-        return public_url(self.cover_path)
+        url = public_url(self.cover_path)
+        if url and self.cover_hash:
+            url += f"?v={self.cover_hash}"
+        return url
 
     @property
     def feed_url(self) -> str:
