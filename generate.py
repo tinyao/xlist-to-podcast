@@ -6,6 +6,8 @@ GitHub Actions 入口：从 podcasts.yaml 加载配置，生成播客节目并�
   python -m generate --force            # 忽略小时检查，强制生成
   python -m generate --podcast ID       # 只处理指定播客
   python -m generate --force --podcast ID
+  python -m generate --test-feishu              # 用最新 episode 测试飞书通知
+  python -m generate --test-feishu --podcast ID # 测试指定播客的飞书通知
 """
 import argparse
 import asyncio
@@ -25,6 +27,7 @@ from app.storage import (
     _save_podcast_sync,
 )
 from app.services.oss import upload_file_sync, is_enabled as oss_enabled
+from app.services.feishu import send_feishu_notification
 from app.config import settings
 from app.pipeline import generate_episode
 
@@ -64,6 +67,8 @@ def load_podcasts_from_yaml() -> list[Podcast]:
             owner_name=entry.get("owner_name", ""),
             owner_email=entry.get("owner_email", ""),
             category=entry.get("category", "Technology"),
+            feishu_webhook=entry.get("feishu_webhook", ""),
+            subscribe_url=entry.get("subscribe_url", ""),
             is_active=True,
         ))
     return podcasts
@@ -177,6 +182,38 @@ def write_site_files(podcasts: list[Podcast]) -> None:
                 shutil.copy2(src_file, dst)
 
 
+# ── 飞书测试 ──────────────────────────────────────────────────────────────────
+
+def test_feishu(podcast_id: Optional[str] = None) -> None:
+    """用已有的最新一期 episode 测试飞书通知，不触发任何生成。"""
+    all_podcasts = load_podcasts_from_yaml()
+    if podcast_id:
+        all_podcasts = [p for p in all_podcasts if p.id == podcast_id]
+    if not all_podcasts:
+        logger.error("未找到播客" + (f" ID: {podcast_id}" if podcast_id else ""))
+        sys.exit(1)
+
+    for podcast in all_podcasts:
+        if not podcast.feishu_webhook:
+            logger.warning(f"[{podcast.name}] 未配置 feishu_webhook，跳过")
+            continue
+
+        # 从 docs/ 找最新 episode.json
+        docs_ep_root = REPO_ROOT / "docs" / podcast.id / "episodes"
+        if not docs_ep_root.exists():
+            logger.warning(f"[{podcast.name}] docs/ 中无 episode 数据")
+            continue
+
+        ep_files = sorted(docs_ep_root.glob("*/episode.json"), reverse=True)
+        if not ep_files:
+            logger.warning(f"[{podcast.name}] 无已有 episode")
+            continue
+
+        ep = Episode.model_validate_json(ep_files[0].read_text(encoding="utf-8"))
+        logger.info(f"[{podcast.name}] 用 {ep.date} 的 episode 测试飞书通知: {ep.title}")
+        send_feishu_notification(podcast.feishu_webhook, podcast, ep)
+
+
 # ── 主流程 ───────────────────────────────────────────────────────────────────
 
 async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts: Optional[int] = None) -> None:
@@ -236,6 +273,10 @@ if __name__ == "__main__":
     parser.add_argument("--force", action="store_true", help="忽略 publish_hour 检查")
     parser.add_argument("--podcast", type=str, default=None, help="只处理指定播客 ID")
     parser.add_argument("--max-posts", type=int, default=None, help="最大抓取推文数")
+    parser.add_argument("--test-feishu", action="store_true", help="用最新已有 episode 测试飞书通知")
     args = parser.parse_args()
 
-    asyncio.run(main(force=args.force, podcast_id=args.podcast, max_posts=args.max_posts))
+    if args.test_feishu:
+        test_feishu(podcast_id=args.podcast)
+    else:
+        asyncio.run(main(force=args.force, podcast_id=args.podcast, max_posts=args.max_posts))

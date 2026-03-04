@@ -22,6 +22,7 @@ from app.services.twitter import fetch_list_tweets
 from app.services.llm import generate_content
 from app.services.tts import text_to_speech
 from app.services.feed import build_feed
+from app.services.feishu import send_feishu_notification
 from app.services.oss import upload_file_sync, is_enabled as oss_enabled
 
 logger = logging.getLogger(__name__)
@@ -121,5 +122,12 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
     xml_bytes = await asyncio.to_thread(build_feed, podcast, done_episodes)
     feed_file = STATIC_DIR / podcast.id / "feed.xml"
     feed_file.write_bytes(xml_bytes)
+
+    # 6. 飞书通知
+    if podcast.feishu_webhook:
+        try:
+            await asyncio.to_thread(send_feishu_notification, podcast.feishu_webhook, podcast, episode)
+        except Exception:
+            logger.warning(f"[{podcast.name}] 飞书通知发送失败", exc_info=True)
 
     logger.info(f"[{podcast.name}] 生成完成：{title}")

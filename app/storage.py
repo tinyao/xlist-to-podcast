@@ -58,6 +58,8 @@ class Podcast(BaseModel):
     owner_name: str = ""
     owner_email: str = ""
     category: str = "Technology"
+    feishu_webhook: str = ""
+    subscribe_url: str = ""
     is_active: bool = True
     created_at: datetime = Field(default_factory=_now)
     updated_at: datetime = Field(default_factory=_now)
