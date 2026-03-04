@@ -12,7 +12,7 @@ from app.services.twitter import FetchResult
 
 _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。语气专业但不刻板，偶尔带点个人观察和幽默。像在和一位懂行的朋友聊天，而非念稿。风格参考「声动早咖啡」和「硅谷早知道」。
 
-你的任务是将过去 {time_window} 采集到的 Twitter posts 整理成一期中文播客文稿。
+你的任务是将过去 24 小时采集到的 Twitter posts 整理成一期中文播客文稿。
 
 播客名称：{podcast_name}
 今日日期：{date}
@@ -35,7 +35,7 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
 - 多条 posts 围绕同一话题，可以整合成一个完整视角
 - 受众共鸣强，对产品、工程、创业等核心读者有直接参考价值
 - 有争议、有反直觉的观点，值得分析展开
-- 是这 {time_window} 内最具代表性的信号
+- 是这 24 小时内最具代表性的信号
 
 快讯带过的主题（每期 3-6 条）满足以下条件：
 - 值得知道，但逻辑简单，一句话能说清楚
@@ -99,7 +99,7 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
 
 _PROMPT_EN = """You are a tech-savvy content curator who lives and breathes the English-language tech scene. Your tone is professional but never stiff — with the occasional personal observation and dry humor. Think of yourself as chatting with a knowledgeable friend, not reading from a teleprompter. Style references: "The Daily" by NYT, "Acquired" podcast.
 
-Your task is to turn the past {time_window} of collected Twitter posts into a single English podcast episode script.
+Your task is to turn the past 24 hours of collected Twitter posts into a single English podcast episode script.
 
 Podcast name: {podcast_name}
 Today's date: {date}
@@ -120,7 +120,7 @@ Criteria for deep-dive topics (2-3 per episode) — must meet at least one:
 - Multiple posts converge on the same story, enabling a well-rounded perspective
 - Strong audience resonance — direct relevance to product, engineering, or startup practitioners
 - Controversial or counter-intuitive take worth unpacking
-- The single most representative signal from the past {time_window}
+- The single most representative signal from the past 24 hours
 
 Criteria for quick hits (3-6 per episode):
 - Worth knowing, but the logic is simple — one sentence covers it
@@ -194,7 +194,6 @@ def generate_content(
     podcast_name: str,
     language: str,
     today: date,
-    frequency: str = "daily",
 ) -> tuple[str, str, str]:
     """
     调用 OpenRouter (Claude Sonnet 4.6) 生成 (script, shownotes, title)。
@@ -205,11 +204,6 @@ def generate_content(
         api_key=settings.openrouter_api_key,
     )
 
-    if language == "zh":
-        time_window = "一周" if frequency == "weekly" else "24 小时"
-    else:
-        time_window = "7 days" if frequency == "weekly" else "24 hours"
-
     prompt_template = _PROMPT_ZH if language == "zh" else _PROMPT_EN
 
     prompt = prompt_template.format(
@@ -217,7 +211,6 @@ def generate_content(
         date=today.strftime("%Y年%m月%d日") if language == "zh" else today.strftime("%B %d, %Y"),
         count=tweets.count,
         tweets_text=tweets.text,
-        time_window=time_window,
     )
 
     response = client.chat.completions.create(
