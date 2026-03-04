@@ -28,6 +28,7 @@ from app.services.oss import upload_file_sync, is_enabled as oss_enabled
 logger = logging.getLogger(__name__)
 
 STATIC_DIR = Path("data/static")
+SHANGHAI_TZ = timezone(timedelta(hours=8))
 MIN_TWEETS = 3
 
 
@@ -42,7 +43,7 @@ async def generate_episode(podcast_id: str, max_posts: Optional[int] = None, fre
     if not podcast or not podcast.is_active:
         return
 
-    today = date.today()
+    today = datetime.now(SHANGHAI_TZ).date()
 
     existing = await get_episode(podcast_id, today)
     if existing and existing.status in ("done", "processing"):
