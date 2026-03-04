@@ -1,0 +1,16 @@
+{
+  "id": "509d7af7-634b-4827-9930-c3aa6e2b5a2a",
+  "podcast_id": "panzi-weekly",
+  "date": "2026-03-04",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "X API 402: {\"account_id\":2027398785715048448,\"title\":\"CreditsDepleted\",\"detail\":\"Your enrolled account [2027398785715048448] does not have any credits to fulfill this request.\",\"type\":\"https://api.twitter.com/2/problems/credits\"}",
+  "created_at": "2026-03-04T10:09:43.215499",
+  "audio_url": ""
+}
