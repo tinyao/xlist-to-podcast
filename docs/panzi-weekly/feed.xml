@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Panzi Weekly</title>
+    <link>https://podcast.zao.im/panzi-weekly/feed.xml</link>
+    <description>每周一杯，聊聊矿圈这周发生的大事。冷却技术、能源格局、AI转型、竞品动向，Fog Hashing 团队内部情报播客。</description>
+    <atom:link href="https://podcast.zao.im/panzi-weekly/feed.xml" rel="self"/>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <image>
+      <url>https://xlist-podcast.oss-cn-beijing.aliyuncs.com/panzi-weekly/cover.jpg</url>
+      <title>Panzi Weekly</title>
+      <link>https://podcast.zao.im/panzi-weekly/feed.xml</link>
+    </image>
+    <language>zh</language>
+    <lastBuildDate>Wed, 04 Mar 2026 10:44:28 +0000</lastBuildDate>
+    <itunes:author>Ryan Yao</itunes:author>
+    <itunes:category text="Technology"/>
+    <itunes:image href="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/panzi-weekly/cover.jpg"/>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:owner>
+      <itunes:name>Ryan Yao</itunes:name>
+      <itunes:email>hi@zao.im</itunes:email>
+    </itunes:owner>
+    <itunes:summary>每周一杯，聊聊矿圈这周发生的大事。冷却技术、能源格局、AI转型、竞品动向，Fog Hashing 团队内部情报播客。</itunes:summary>
+    <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260304-矿企大转型：电力才是 AI 时代的真正筹码</title>
+      <description>## 今日摘要
+
+本期聚焦比特币矿企向 AI 基础设施转型的加速信号。MARA 宣布与 Starwood Digital Ventures 合作开发超大规模 AI 数据中心，同时持有法国 Exaion 64% 股权，双线布局 AI 算力市场。比特币链上数据过滤争议持续发酵，开发者实验证明 OP_RETURN 限制形同虚设，社区陷入"打地鼠"困境。低功耗芯片公司 Auradine 更名 Velaura AI，引入前 Nuvia 联合创始人，押注 AI 能效赛道。多家矿企发布 2025 全年财报，行业整体向电力基础设施和 AI 数据中心转型。
+
+## 重点话题
+
+- MARA 双线转型：与 Starwood 合作 1GW AI 数据中心 + Exaion 企业云，矿企转型 AI 基础设施提速
+- 比特币链上数据过滤争议：开发者绕过 Knots 过滤成功嵌入图片，BIP-110 共识远未达成
+- Velaura AI 更名亮相：前 Nuvia 联创加盟，超低功耗 ASIC 押注 AI 能效瓶颈
+
+## 快讯
+
+- Riot Platforms 2025 全年营收 $647M 创历史新高，挖出 5,686 枚 BTC，流动性超 $1.9B
+- Hut 8 签署 $70 亿 15 年 AI 基础设施租约，开发管线达 8,500 MW
+- Bitfarms 推动股东投票，计划更名 Keel Infrastructure 并迁册美国
+- Braiins Hashpower：用户花 $200 租算力，中奖 3.125 BTC（概率约 1/1087）
+- Braiins OS 固件案例：同硬件算力提升 40%，70 TH/s → 99 TH/s
+- Morphware 与巴拉圭国家电力局 ANDE 签署 MOU，探索国家级比特币挖矿合作
+- Giga Energy 参加 NVIDIA GTC，USA Today 专题报道其 AI 能源基础设施布局
+- Heat Core 在 Heatpunk Summit 展示 HS05 水冷系统，矿机热量加热家庭泳池场景引发关注
+
+## 值得阅读
+
+- [MARA × Starwood 合作公告](https://ir.mara.com/news-events/press-releases/detail/1416/mara-announces-strategic-partnership-with-starwood-to-accelerate-delivery-of-cutting-edge-hyperscale-enterprise-and-ai-capable-digital-infrastructure) — 1GW AI 数据中心合作详情
+- [Braiins OS 固件优化案例研究](https://braiins.com/blog/firmware-optimization-gda-40mw-case-study) — 40MW 矿场实测，同硬件算力提升 40%
+- [Velaura AI 官网](http://velaura.ai) — 前 Auradine 更名后的新定位与团队
+- [Giga Energy：如何最大化 SPP 市场收益](https://www.gigaenergy.com/blog/maximize-revenue-southwest-power-pool) — 灵活负载运营商的市场叠加策略
+- [Bitfarms 美国迁册详情](https://investor.bitfarms.com/bitfarms-us-redomiciliation) — 更名 Keel Infrastructure 的战略逻辑
+- [KnotsLies.com](http://knotslies.com) — Martin Habovstiak 关于 OP_RETURN 过滤无效的完整研究论文</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/panzi-weekly/episodes/2026-03-04/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/panzi-weekly/episodes/2026-03-04/audio.mp3" length="14985600" type="audio/mpeg"/>
+      <pubDate>Wed, 04 Mar 2026 10:39:13 +0000</pubDate>
+      <itunes:duration>749</itunes:duration>
+      <itunes:summary>## 今日摘要
+
+本期聚焦比特币矿企向 AI 基础设施转型的加速信号。MARA 宣布与 Starwood Digital Ventures 合作开发超大规模 AI 数据中心，同时持有法国 Exaion 64% 股权，双线布局 AI 算力市场。比特币链上数据过滤争议持续发酵，开发者实验证明 OP_RETURN 限制形同虚设，社区陷入"打地鼠"困境。低功耗芯片公司 Auradine 更名 Velaura AI，引入前 Nuvia 联合创始人，押注 AI 能效赛道。多家矿企发布 2025 全年财报，行业整体向电力基础设施和 AI 数据中心转型。
+
+## 重点话题
+
+- MARA 双线转型：与 Starwood 合作 1GW AI 数据中心 + Exaion 企业云，矿企转型 AI 基础设施提速
+- 比特币链上数据过滤争议：开发者绕过 Knots 过滤成功嵌入图片，BIP-110 共识远未达成
+- Velaura AI 更名亮相：前 Nuvia 联创加盟，超低功耗 ASIC 押注 AI 能效瓶颈
+
+## 快讯
+
+- Riot Platforms 2025 全年营收 $647M 创历史新高，挖出</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+  </channel>
+</rss>
