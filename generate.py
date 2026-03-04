@@ -259,7 +259,7 @@ async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts:
         await generate_episode(podcast.id, max_posts=max_posts, frequency=podcast.frequency, extra_prompt=podcast.extra_prompt)
 
         # 注入 audio_url 到 episode.json
-        today = date.today()
+        today = datetime.now(SHANGHAI_TZ).date()
         await asyncio.to_thread(inject_episode_urls, podcast, today)
 
     # 复制文件到 docs/ 供 GitHub Pages 托管
