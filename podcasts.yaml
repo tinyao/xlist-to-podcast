@@ -48,7 +48,7 @@ podcasts:
     category: "Technology"
   - id: "panzi-weekly"
     name: "Panzi Weekly"
-    description: "每周一杯，聊聊矿圈这周发生的大事。冷却技术、能源格局、AI转型、竞品动向，Fog Hashing 团队内部情报播客。"
+    description: "每周一杯，聊聊矿圈这周发生的大事。冷却技术、能源格局、AI转型、竞品动向。"
     twitter_list_url: "https://x.com/i/lists/1969974026086052333"
     twitter_list_id: "1969974026086052333"
     voice: "nova"
