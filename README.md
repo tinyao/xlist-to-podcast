@@ -37,6 +37,8 @@ podcasts:
     language: "zh"          # zh / en
     publish_hour: 8         # 北京时间
     cover_file: "cover.jpg" # covers/ 目录下的封面图
+    feishu_webhook: "https://open.feishu.cn/open-apis/bot/v2/hook/xxx"  # 飞书通知（可选）
+    subscribe_url: "https://open.spotify.com/show/xxx"                   # 订阅链接（可选）
 ```
 
 ### 3. 配置 GitHub
@@ -70,6 +72,7 @@ podcasts:
 pip install -r requirements.txt
 python -m generate --force --podcast <ID>             # 生成一期
 python -m generate --force --podcast <ID> --max-posts 5  # 限制推文数，省 token
+python -m generate --test-feishu --podcast <ID>            # 测试飞书通知（不生成节目）
 ```
 
 ### 5. 订阅
@@ -92,6 +95,7 @@ RSS 地址：`{SITE_URL}/{podcast_id}/feed.xml`
 │       ├── llm.py           # LLM 内容生成
 │       ├── tts.py           # OpenAI TTS
 │       ├── feed.py          # RSS feed 生成
+│       ├── feishu.py        # 飞书 Webhook 通知
 │       └── oss.py           # 阿里云 OSS (音频+封面)
 ├── .github/workflows/
 │   └── generate.yml         # 每小时 cron + 手动触发
@@ -102,3 +106,12 @@ RSS 地址：`{SITE_URL}/{podcast_id}/feed.xml`
 
 - **OSS** — 音频 (`audio.mp3`) + 封面 (`cover.jpg`)
 - **GitHub Pages (`docs/`)** — `feed.xml`、`episode.json`、`posts.md`、`script.md`、`shownotes.md`
+
+## 飞书通知
+
+在 `podcasts.yaml` 中配置 `feishu_webhook` 后，每次生成新节目会自动发送飞书卡片消息到群组，包含标题、shownotes 和收听/订阅按钮。
+
+- 通知在音频上传 + feed 更新后才发送，确保内容已就绪
+- 发送失败不会阻断生成流程
+- 配置 `subscribe_url` 可在卡片中添加播客订阅按钮
+- 使用 `--test-feishu` 可用已有节目测试通知，不触发实际生成

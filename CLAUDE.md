@@ -10,6 +10,8 @@ python -m generate                         # run pipeline (respects publish_hour
 python -m generate --force                 # ignore publish_hour, force generate
 python -m generate --podcast <ID>          # only process one podcast
 python -m generate --force --podcast <ID>  # combine flags
+python -m generate --test-feishu           # test Feishu notification with latest episode
+python -m generate --test-feishu --podcast <ID>
 ```
 
 ## Architecture
@@ -37,6 +39,7 @@ podcasts.yaml → generate.py (GitHub Actions) → OSS (audio) + docs/ (feed.xml
 │       ├── llm.py       # LLM content generation
 │       ├── tts.py       # OpenAI TTS
 │       ├── feed.py      # RSS feed generation
+│       ├── feishu.py    # Feishu webhook notification (interactive card)
 │       └── oss.py       # Alibaba Cloud OSS (audio upload only)
 ├── requirements.txt
 ├── .github/workflows/generate.yml  # Hourly cron + manual dispatch
@@ -48,7 +51,8 @@ podcasts.yaml → generate.py (GitHub Actions) → OSS (audio) + docs/ (feed.xml
 2. Bootstrap each podcast: write local `podcast.json`, sync cover, restore episodes from `docs/`
 3. Check Asia/Shanghai current hour vs `publish_hour` (skip with `--force`)
 4. Call `generate_episode()` from `pipeline.py`
-5. Copy feed.xml, cover, episode.json, md files to `docs/{id}/` for GitHub Pages (when `SITE_URL` is set)
+5. Send Feishu notification if `feishu_webhook` is configured (after feed.xml is written)
+6. Copy feed.xml, cover, episode.json, md files to `docs/{id}/` for GitHub Pages (when `SITE_URL` is set)
 
 ### OSS file layout (audio + cover)
 ```
@@ -75,3 +79,4 @@ docs/
 - **Config as code** — `podcasts.yaml` in repo, not UI-created.
 - **Blocking calls** in the pipeline use `asyncio.to_thread()`.
 - **Episode URLs** — `audio_url` is injected into `episode.json` at generation time since Pydantic `@property` fields don't serialize.
+- **Feishu notification** — Optional per-podcast webhook. Sends interactive card after episode is fully generated. Failure only logs warning, never blocks pipeline. `--test-feishu` flag tests with existing episodes.
