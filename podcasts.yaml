@@ -56,6 +56,14 @@ podcasts:
     publish_hour: 8
     frequency: weekly
     publish_day: 1
+    extra_prompt: |
+      特别关注以下竞品账号的动态，如有相关内容请单独作为重点 segment 展开：
+      - @GigaEnergy_（Giga Energy）
+      - @Heatcore_tech（Heat Core）
+      - @hashhousetech（Hash House）
+      - @fboxdata（FBox）
+      - @_Green_Hash（Green Hash）
+      对竞品相关内容，请做简介，必要的情况分析其战略意图。
     cover_file: "panzi-weekly.jpg"
     owner_name: "Ryan Yao"
     owner_email: "hi@zao.im"
