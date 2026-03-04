@@ -9,8 +9,8 @@
   "audio_duration": 624,
   "audio_size": 12494400,
   "tweet_count": 65,
-  "status": "failed",
-  "error_msg": "Invalid value for explicit tag",
+  "status": "done",
+  "error_msg": null,
   "created_at": "2026-03-04T23:16:37.139633",
   "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-05/audio.mp3"
 }
