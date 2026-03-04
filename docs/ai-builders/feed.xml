@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders/feed.xml</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Wed, 04 Mar 2026 00:42:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2026 23:16:37 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:image href="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/cover.jpg"/>
@@ -24,6 +24,38 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260305-SWE-Bench 退场、人人都是 PM，AI 重写游戏规则</title>
+      <description>## 今日摘要
+本期聚焦三个核心话题：SWE-Bench Verified 正式退役，benchmark 污染问题被彻底摆上台面；Claude Code 负责人的一句"每个人都是 PM、每个人都写代码"引发广泛讨论，多家 AI-native 公司分享了落地实践；RevenueCat 直接招聘 AI Agent 担任 Developer Advocate 职位，月薪一万美元，面试对象是 Agent 本身。此外还有 NotebookLM 新功能、Cursor 进入 JetBrains 生态等产品快讯。
+
+## 重点话题
+- SWE-Bench 的落幕：OpenAI 主动退役这一主流编程 benchmark，原因是模型污染和题目质量问题，揭示了 AI 评估体系的系统性困境
+- 每个人都是 PM，每个人都写代码：Claude Code 负责人的预言 + 三家 AI-native 公司的落地实践，展示了 AI 重塑工作角色的真实路径
+- RevenueCat 招聘 AI Agent：月薪一万美元、直接面试 Agent，这个案例折射出 AI Agent 承担真实工作职能的趋势正在加速
+
+## 快讯
+- NotebookLM 推出 Cinematic Video Overviews，支持从资料生成视频摘要，Ultra 用户可用
+- Cursor 通过 Agent Client Protocol 接入 JetBrains IDE，覆盖更多开发者生态
+- OpenAI Prism（LaTeX 编辑器）集成 Codex，并新增版本管理功能
+- Replit 发布纪录片《21 Days to Launch》，记录 AI-native 团队的真实构建过程
+- OpenAI 发布博客 Harness Engineering，探讨如何在 agent-first 世界中有效使用 Codex，收藏量破 1900
+- Matt Turck 用一句冷笑话点出 AI 创业公司的结构性成本困境：VC 的钱最终都流向了模型提供商
+
+## 值得阅读
+- Harness Engineering: Leveraging Codex in an Agent-First World: https://openai.com/index/harness-engineering/
+- Tracing the Thoughts of a Large Language Model: https://www.anthropic.com/research/tracing-thoughts-language-model
+- Your New Job Is to Onboard AI Agents: https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents
+- The End of SWE-Bench Verified: https://www.latent.space/
+- Donald Knuth 关于 Claude 的新论文: https://cs.stanford.edu/~knuth/papers/claude-cycles.pdf
+- 21 Days to Launch — Replit 纪录片: https://youtu.be/zB1lpGNWVtg?si=CLWStUCoxZyFAgoA</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-05/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-05/audio.mp3" length="12494400" type="audio/mpeg"/>
+      <pubDate>Wed, 04 Mar 2026 23:16:37 +0000</pubDate>
+      <itunes:duration>624</itunes:duration>
+      <itunes:summary>本期聚焦三个核心话题：SWE-Bench Verified 正式退役，benchmark 污染问题被彻底摆上台面；Claude Code 负责人的一句"每个人都是 PM、每个人都写代码"引发广泛讨论，多家 AI-native 公司分享了落地实践；RevenueCat 直接招聘 AI Agent 担任 Developer Advocate 职位，月薪一万美元，面试对象是 Agent 本身。此外还有 NotebookLM 新功能、Cursor 进入 JetBrains 生态等产品快讯。</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260304-Agent幻觉部署生产事故、Claude流量爆炸与代码审查的终局</title>
       <description>## 今日摘要
