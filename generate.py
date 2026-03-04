@@ -56,6 +56,8 @@ def load_podcasts_from_yaml() -> list[Podcast]:
             voice=entry.get("voice", "nova"),
             language=entry.get("language", "zh"),
             publish_hour=entry.get("publish_hour", 8),
+            frequency=entry.get("frequency", "daily"),
+            publish_day=entry.get("publish_day", 0),
             cover_path=f"{entry['id']}/cover.jpg",
             owner_name=entry.get("owner_name", ""),
             owner_email=entry.get("owner_email", ""),
@@ -184,6 +186,7 @@ async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts:
 
     now_shanghai = datetime.now(SHANGHAI_TZ)
     current_hour = now_shanghai.hour
+    current_weekday = now_shanghai.weekday()
     logger.info(f"当前时间: {now_shanghai.strftime('%Y-%m-%d %H:%M')} (Asia/Shanghai)")
 
     # Bootstrap 所有播客
@@ -200,8 +203,15 @@ async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts:
             )
             continue
 
+        if not force and podcast.frequency == "weekly" and podcast.publish_day != current_weekday:
+            logger.info(
+                f"[{podcast.name}] 跳过：publish_day={podcast.publish_day}，"
+                f"当前={current_weekday}"
+            )
+            continue
+
         logger.info(f"[{podcast.name}] 开始生成节目...")
-        await generate_episode(podcast.id, max_posts=max_posts)
+        await generate_episode(podcast.id, max_posts=max_posts, frequency=podcast.frequency)
 
         # 注入 audio_url 到 episode.json
         today = date.today()

@@ -51,6 +51,8 @@ class Podcast(BaseModel):
     language: str = "zh"
     cover_path: str = ""
     publish_hour: int = 8
+    frequency: str = "daily"   # "daily" or "weekly"
+    publish_day: int = 0       # 0=Monday..6=Sunday, only used when frequency="weekly"
     owner_name: str = ""
     owner_email: str = ""
     category: str = "Technology"

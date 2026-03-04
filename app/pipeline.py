@@ -36,7 +36,7 @@ def _episode_dir(podcast_id: str, ep_date: date) -> Path:
     return d
 
 
-async def generate_episode(podcast_id: str, max_posts: Optional[int] = None) -> None:
+async def generate_episode(podcast_id: str, max_posts: Optional[int] = None, frequency: str = "daily") -> None:
     podcast = await get_podcast(podcast_id)
     if not podcast or not podcast.is_active:
         return
@@ -52,7 +52,7 @@ async def generate_episode(podcast_id: str, max_posts: Optional[int] = None) -> 
     await save_episode(episode)
 
     try:
-        await _run_pipeline(podcast, episode, today, max_posts=max_posts)
+        await _run_pipeline(podcast, episode, today, max_posts=max_posts, frequency=frequency)
     except Exception as e:
         logger.exception(f"[{podcast.name}] 生成失败: {e}")
         episode.status = "failed"
@@ -60,8 +60,9 @@ async def generate_episode(podcast_id: str, max_posts: Optional[int] = None) -> 
         await save_episode(episode)
 
 
-async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_posts: Optional[int] = None) -> None:
-    since = datetime.now(timezone.utc) - timedelta(hours=24)
+async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_posts: Optional[int] = None, frequency: str = "daily") -> None:
+    lookback_hours = 168 if frequency == "weekly" else 24
+    since = datetime.now(timezone.utc) - timedelta(hours=lookback_hours)
     ep_dir = _episode_dir(podcast.id, today)
 
     # 1. 抓取推文
@@ -84,7 +85,7 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
     # 2. LLM 生成 script + shownotes + title
     logger.info(f"[{podcast.name}] 生成内容（{len(tweets)} 条推文）...")
     script, shownotes, title = await asyncio.to_thread(
-        generate_content, tweets, podcast.name, podcast.language, today,
+        generate_content, tweets, podcast.name, podcast.language, today, frequency,
     )
 
     (ep_dir / "script.md").write_text(script, encoding="utf-8")

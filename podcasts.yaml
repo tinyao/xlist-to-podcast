@@ -9,7 +9,9 @@
 #   twitter_list_id  — X List 数字 ID
 #   voice           — OpenAI TTS 音色：alloy / echo / fable / onyx / nova / shimmer
 #   language        — 语言：zh / en
-#   publish_hour    — 每日发布时间（北京时间，0-23）
+#   publish_hour    — 发布时间（北京时间，0-23）
+#   frequency       — 发布频率：daily（每天）/ weekly（每周），默认 daily（可选）
+#   publish_day     — 每周发布星期（0=周一..6=周日），仅 frequency=weekly 时生效（可选）
 #   cover_file      — 封面图路径（相对于仓库根目录 covers/ 目录）
 #   owner_name      — iTunes 播客所有者姓名（可选）
 #   owner_email     — iTunes 播客所有者邮箱（可选）
