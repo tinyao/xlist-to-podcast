@@ -8,15 +8,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <image>
-      <url>https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/cover.jpg</url>
+      <url>https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/cover.jpg?v=4cf8c7c8</url>
       <title>AI Builders Daily</title>
       <link>https://podcast.zao.im/ai-builders/feed.xml</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Wed, 04 Mar 2026 23:16:37 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2026 22:16:33 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
-    <itunes:image href="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/cover.jpg"/>
     <itunes:explicit>no</itunes:explicit>
     <itunes:owner>
       <itunes:name>Ryan Yao</itunes:name>
@@ -25,35 +24,51 @@
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
     <item>
-      <title>20260305-SWE-Bench 退场、人人都是 PM，AI 重写游戏规则</title>
+      <title>20260306-GPT-5.4来了，Agent工具层正在悄悄重构</title>
       <description>## 今日摘要
-本期聚焦三个核心话题：SWE-Bench Verified 正式退役，benchmark 污染问题被彻底摆上台面；Claude Code 负责人的一句"每个人都是 PM、每个人都写代码"引发广泛讨论，多家 AI-native 公司分享了落地实践；RevenueCat 直接招聘 AI Agent 担任 Developer Advocate 职位，月薪一万美元，面试对象是 Agent 本身。此外还有 NotebookLM 新功能、Cursor 进入 JetBrains 生态等产品快讯。
+
+2026年3月6日，AI 工具层迎来密集更新。OpenAI 正式发布 GPT-5.4，带来编程、推理和 Agent 能力的全面提升；Google 发布 Workspace CLI，引发 Agent 工具链的广泛讨论；Claude Code 面对爆炸式增长，悄悄做了一系列服务质量取舍。三件事放在一起，描绘出 Agent 基础设施正在快速成形的清晰轮廓。
 
 ## 重点话题
-- SWE-Bench 的落幕：OpenAI 主动退役这一主流编程 benchmark，原因是模型污染和题目质量问题，揭示了 AI 评估体系的系统性困境
-- 每个人都是 PM，每个人都写代码：Claude Code 负责人的预言 + 三家 AI-native 公司的落地实践，展示了 AI 重塑工作角色的真实路径
-- RevenueCat 招聘 AI Agent：月薪一万美元、直接面试 Agent，这个案例折射出 AI Agent 承担真实工作职能的趋势正在加速
+
+- GPT-5.4 正式发布：统一模型、编程能力提升、Box 测试文档处理准确率提升6个百分点，同步进入 Codex 与 API
+- Google Workspace CLI：用 Rust 写的官方命令行工具，支持 Drive/Gmail/Calendar 等，可直接作为 Claude Code Skill 接入，标志着"为 Agent 重写工具层"时代来临
+- Claude Code 增长与取舍：流量爆炸难以预测，Anthropic 下线部分模型版本、调整 Effort 默认值，同期 OpenAI Codex 周活用户突破200万，同比年初增长超3倍
 
 ## 快讯
-- NotebookLM 推出 Cinematic Video Overviews，支持从资料生成视频摘要，Ultra 用户可用
-- Cursor 通过 Agent Client Protocol 接入 JetBrains IDE，覆盖更多开发者生态
-- OpenAI Prism（LaTeX 编辑器）集成 Codex，并新增版本管理功能
-- Replit 发布纪录片《21 Days to Launch》，记录 AI-native 团队的真实构建过程
-- OpenAI 发布博客 Harness Engineering，探讨如何在 agent-first 世界中有效使用 Codex，收藏量破 1900
-- Matt Turck 用一句冷笑话点出 AI 创业公司的结构性成本困境：VC 的钱最终都流向了模型提供商
+
+- Cursor 发布 Automations 功能：支持构建"永远在线"的 Agent，让代码在你休息时继续跑
+- NotebookLM 新增视频生成：自动搜索、写脚本、生成混合素材视频，正从笔记工具进化为内容生产平台
+- Netflix 收购 Ben Affleck 的 AI 影视工具公司 interpositive：专注调色、打光、VFX 后期辅助
+- 第三方 LLM 代理 API 假模型研究：17个服务中近46%指纹测试不通过，声称 GPT-5 实为 GLM-4，已被引用进187篇学术论文
+- Vercel x Stripe 集成正式 GA：一行命令接入支付，Agent 商业化基础设施门槛持续降低
 
 ## 值得阅读
-- Harness Engineering: Leveraging Codex in an Agent-First World: https://openai.com/index/harness-engineering/
-- Tracing the Thoughts of a Large Language Model: https://www.anthropic.com/research/tracing-thoughts-language-model
-- Your New Job Is to Onboard AI Agents: https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents
-- The End of SWE-Bench Verified: https://www.latent.space/
-- Donald Knuth 关于 Claude 的新论文: https://cs.stanford.edu/~knuth/papers/claude-cycles.pdf
-- 21 Days to Launch — Replit 纪录片: https://youtu.be/zB1lpGNWVtg?si=CLWStUCoxZyFAgoA</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-05/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-05/audio.mp3" length="12494400" type="audio/mpeg"/>
-      <pubDate>Wed, 04 Mar 2026 23:16:37 +0000</pubDate>
-      <itunes:duration>624</itunes:duration>
-      <itunes:summary>本期聚焦三个核心话题：SWE-Bench Verified 正式退役，benchmark 污染问题被彻底摆上台面；Claude Code 负责人的一句"每个人都是 PM、每个人都写代码"引发广泛讨论，多家 AI-native 公司分享了落地实践；RevenueCat 直接招聘 AI Agent 担任 Developer Advocate 职位，月薪一万美元，面试对象是 Agent 本身。此外还有 NotebookLM 新功能、Cursor 进入 JetBrains 生态等产品快讯。</itunes:summary>
+
+- [GPT-5.4 发布公告 - OpenAI](https://openai.com)
+- [Google Workspace CLI 官方仓库](https://github.com/googleworkspace/cli)
+- [为 AI Agent 重写你的 CLI - Justin Poehnelt](https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/)
+- [Box GPT-5.4 评测报告](https://blog.box.com)
+- [你的新工作是 onboard AI Agent - Peter Yang](https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents)
+- [NotebookLM 视频功能演示 - Josh Woodward (Twitter)](https://twitter.com/joshwoodward/status/2029424537331482672)
+- [Claude Code 更新说明 - Thariq (Twitter)](https://twitter.com/trq212/status/2029651089184952542)</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-06/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-06/audio.mp3" length="14316960" type="audio/mpeg"/>
+      <pubDate>Thu, 05 Mar 2026 22:11:44 +0000</pubDate>
+      <itunes:duration>715</itunes:duration>
+      <itunes:summary>## 今日摘要
+
+2026年3月6日，AI 工具层迎来密集更新。OpenAI 正式发布 GPT-5.4，带来编程、推理和 Agent 能力的全面提升；Google 发布 Workspace CLI，引发 Agent 工具链的广泛讨论；Claude Code 面对爆炸式增长，悄悄做了一系列服务质量取舍。三件事放在一起，描绘出 Agent 基础设施正在快速成形的清晰轮廓。
+
+## 重点话题
+
+- GPT-5.4 正式发布：统一模型、编程能力提升、Box 测试文档处理准确率提升6个百分点，同步进入 Codex 与 API
+- Google Workspace CLI：用 Rust 写的官方命令行工具，支持 Drive/Gmail/Calendar 等，可直接作为 Claude Code Skill 接入，标志着"为 Agent 重写工具层"时代来临
+- Claude Code 增长与取舍：流量爆炸难以预测，Anthropic 下线部分模型版本、调整 Effort 默认值，同期 OpenAI Codex 周活用户突破200万，同比年初增长超3倍
+
+## 快讯
+
+- Cursor 发布 Auto</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
     <item>
