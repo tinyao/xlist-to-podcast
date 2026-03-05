@@ -43,7 +43,7 @@ podcasts:
     twitter_list_id: "2007466263661232466"
     voice: "nova"
     language: "zh"
-    publish_hour: 7
+    publish_hour: 6
     cover_file: "ai-daily.jpg"
     owner_name: "Ryan Yao"
     owner_email: "hi@zao.im"
