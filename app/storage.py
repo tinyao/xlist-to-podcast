@@ -15,11 +15,14 @@
 from __future__ import annotations
 
 import asyncio
+import logging
 import shutil
 import uuid
 from datetime import datetime, date
 from pathlib import Path
 from typing import Optional
+
+logger = logging.getLogger(__name__)
 
 from pydantic import BaseModel, Field
 
@@ -92,7 +95,7 @@ class Episode(BaseModel):
     audio_size: int = 0
     tweet_count: int = 0
     status: str = "pending"
-    error_msg: str = ""
+    error_msg: Optional[str] = ""
     created_at: datetime = Field(default_factory=_now)
 
     model_config = {"from_attributes": True}
@@ -181,8 +184,8 @@ def _list_episodes_sync(podcast_id: str, limit: int = 50) -> list[Episode]:
     for path in ep_root.glob("*/episode.json"):
         try:
             episodes.append(Episode.model_validate_json(path.read_text(encoding="utf-8")))
-        except Exception:
-            pass
+        except Exception as e:
+            logger.warning(f"Failed to parse episode: {path} - {e}")
     episodes.sort(key=lambda e: e.date, reverse=True)
     return episodes[:limit]
 

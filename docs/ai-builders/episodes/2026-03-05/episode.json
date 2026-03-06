@@ -10,7 +10,7 @@
   "audio_size": 12494400,
   "tweet_count": 65,
   "status": "done",
-  "error_msg": null,
+  "error_msg": "",
   "created_at": "2026-03-04T23:16:37.139633",
   "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-05/audio.mp3"
 }
