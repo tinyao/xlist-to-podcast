@@ -2,7 +2,7 @@
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
     <title>AI Builders Daily</title>
-    <link>https://podcast.zao.im/ai-builders/feed.xml</link>
+    <link>https://podcast.zao.im/ai-builders</link>
     <description>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</description>
     <atom:link href="https://podcast.zao.im/ai-builders/feed.xml" rel="self"/>
     <docs>http://www.rssboard.org/rss-specification</docs>
@@ -10,7 +10,7 @@
     <image>
       <url>https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/cover.jpg?v=4cf8c7c8</url>
       <title>AI Builders Daily</title>
-      <link>https://podcast.zao.im/ai-builders/feed.xml</link>
+      <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
     <lastBuildDate>Fri, 06 Mar 2026 22:14:49 +0000</lastBuildDate>
