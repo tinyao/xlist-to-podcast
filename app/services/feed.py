@@ -20,7 +20,8 @@ def build_feed(podcast, episodes: list) -> bytes:
     fg.description(podcast.description or podcast.name)
     fg.language(podcast.language)
     fg.link(href=feed_url, rel="self")
-    fg.link(href=feed_url, rel="alternate")
+    site_link = f"{settings.site_url.rstrip('/')}/{podcast.id}" if settings.site_url else feed_url
+    fg.link(href=site_link, rel="alternate")
 
     if podcast.cover_url:
         fg.image(podcast.cover_url)
