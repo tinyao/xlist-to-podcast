@@ -12,6 +12,8 @@ python -m generate --podcast <ID>          # only process one podcast
 python -m generate --force --podcast <ID>  # combine flags
 python -m generate --test-feishu           # test Feishu notification with latest episode
 python -m generate --test-feishu --podcast <ID>
+python -m generate --check-script --podcast <ID>  # test script only (no TTS/OSS/feed), output to preview/
+python -m generate --check-script --podcast <ID> --prompt prompts/my_prompt.md  # test with custom prompt
 ```
 
 ## Architecture

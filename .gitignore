@@ -16,6 +16,9 @@ dist/
 # Runtime data
 data/
 
+# Script preview (--check-script output)
+preview/
+
 # Audio files (hosted on OSS, not git)
 docs/**/*.mp3
 

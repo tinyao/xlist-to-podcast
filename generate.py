@@ -30,6 +30,8 @@ from app.services.oss import upload_file_sync, is_enabled as oss_enabled
 from app.services.feishu import send_feishu_notification
 from app.config import settings
 from app.pipeline import generate_episode
+from app.services.twitter import fetch_list_tweets
+from app.services.llm import generate_content
 
 logging.basicConfig(
     level=logging.INFO,
@@ -214,9 +216,68 @@ def test_feishu(podcast_id: Optional[str] = None) -> None:
         send_feishu_notification(podcast.feishu_webhook, podcast, ep)
 
 
+# ── Script 测试 ──────────────────────────────────────────────────────────────
+
+async def check_script(
+    podcast_id: Optional[str] = None,
+    max_posts: Optional[int] = None,
+    prompt_file: Optional[str] = None,
+) -> None:
+    """只运行 fetch tweets + LLM 生成 script，输出到 preview/ 目录，不做 TTS/OSS/feed/docs。"""
+    all_podcasts = load_podcasts_from_yaml()
+    if podcast_id:
+        all_podcasts = [p for p in all_podcasts if p.id == podcast_id]
+    if not all_podcasts:
+        logger.error("未找到播客" + (f" ID: {podcast_id}" if podcast_id else ""))
+        sys.exit(1)
+
+    for podcast in all_podcasts:
+        logger.info(f"[{podcast.name}] 测试模式：fetch + LLM...")
+
+        # Fetch tweets
+        lookback_hours = 168 if podcast.frequency == "weekly" else 24
+        since = datetime.now(timezone.utc) - timedelta(hours=lookback_hours)
+        fetch_kwargs = {"list_id": podcast.twitter_list_id, "since": since}
+        if max_posts is not None:
+            fetch_kwargs["max_tweets"] = max_posts
+        tweets = await asyncio.to_thread(lambda: fetch_list_tweets(**fetch_kwargs))
+
+        if len(tweets) < 3:
+            logger.warning(f"[{podcast.name}] 推文数量不足（{len(tweets)} 条），跳过")
+            continue
+
+        today = datetime.now(SHANGHAI_TZ).date()
+
+        # Generate content
+        script, shownotes, title = await asyncio.to_thread(
+            generate_content,
+            tweets, podcast.name, podcast.language, today,
+            podcast.frequency, podcast.extra_prompt, prompt_file,
+        )
+
+        # Write to preview/ directory
+        preview_dir = REPO_ROOT / "preview" / podcast.id
+        preview_dir.mkdir(parents=True, exist_ok=True)
+        (preview_dir / "posts.md").write_text(tweets.text, encoding="utf-8")
+        (preview_dir / "script.md").write_text(script, encoding="utf-8")
+        (preview_dir / "shownotes.md").write_text(shownotes, encoding="utf-8")
+        if title:
+            (preview_dir / "title.txt").write_text(title, encoding="utf-8")
+
+        # Print to stdout
+        print(f"\n{'='*60}")
+        print(f"播客: {podcast.name} | 标题: {title}")
+        print(f"{'='*60}")
+        print(script)
+        print(f"\n{'='*60}")
+        print(f"预览文件已写入: {preview_dir}")
+        prompt_source = prompt_file or f"prompts/script_{podcast.language}.md"
+        print(f"使用 prompt: {prompt_source}")
+
+
 # ── 主流程 ───────────────────────────────────────────────────────────────────
 
-async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts: Optional[int] = None) -> None:
+async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts: Optional[int] = None, prompt_file: Optional[str] = None) -> None:
     all_podcasts = load_podcasts_from_yaml()
 
     if not all_podcasts:
@@ -256,7 +317,7 @@ async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts:
             continue
 
         logger.info(f"[{podcast.name}] 开始生成节目...")
-        await generate_episode(podcast.id, max_posts=max_posts, frequency=podcast.frequency, extra_prompt=podcast.extra_prompt)
+        await generate_episode(podcast.id, max_posts=max_posts, frequency=podcast.frequency, extra_prompt=podcast.extra_prompt, prompt_file=prompt_file)
 
         # 注入 audio_url 到 episode.json
         today = datetime.now(SHANGHAI_TZ).date()
@@ -274,9 +335,13 @@ if __name__ == "__main__":
     parser.add_argument("--podcast", type=str, default=None, help="只处理指定播客 ID")
     parser.add_argument("--max-posts", type=int, default=None, help="最大抓取推文数")
     parser.add_argument("--test-feishu", action="store_true", help="用最新已有 episode 测试飞书通知")
+    parser.add_argument("--check-script", action="store_true", help="只生成 script 到 preview/，不做 TTS/OSS/feed")
+    parser.add_argument("--prompt", type=str, default=None, help="自定义 prompt 文件路径")
     args = parser.parse_args()
 
     if args.test_feishu:
         test_feishu(podcast_id=args.podcast)
+    elif args.check_script:
+        asyncio.run(check_script(podcast_id=args.podcast, max_posts=args.max_posts, prompt_file=args.prompt))
     else:
-        asyncio.run(main(force=args.force, podcast_id=args.podcast, max_posts=args.max_posts))
+        asyncio.run(main(force=args.force, podcast_id=args.podcast, max_posts=args.max_posts, prompt_file=args.prompt))
