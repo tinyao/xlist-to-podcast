@@ -65,7 +65,7 @@ podcasts:
     language: "zh"
     publish_hour: 8
     frequency: weekly
-    publish_day: 1
+    publish_day: 0
     extra_prompt: |
       特别关注以下竞品账号的动态，如有相关内容请单独作为重点 segment 展开：
       - @GigaEnergy_（Giga Energy）
