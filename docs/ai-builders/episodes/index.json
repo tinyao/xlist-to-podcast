@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-08",
+    "title": "20260308-Claude Code 开始值班，AI Agent 进入持续协作时代",
+    "summary": "本期聚焦三个核心信号：Claude Code 发布 /loop 定时任务功能，标志着 AI agent 从单次调用走向持续协作；Karpathy 开源 autoresearch 项目，探索\"让 AI 自主做 AI 研究\"的可能性；OpenClaw 团队的实践揭示了一个普遍认知盲区——AI coding 工具的能力边界早已超出\"写代码\"本身。此外，GPT 5.4 口碑持续发酵，Replit CEO 提出\"Generalist Automator\"新职位概念，也值得关注。",
+    "audio_duration": 640,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-08/audio.mp3",
+    "tweet_count": 53
+  },
+  {
     "date": "2026-03-07",
     "title": "20260307-AI自己优化自己：Karpathy的agent实验与subagent时代来临",
     "summary": "今天的核心主题围绕 AI agent 的工作范式转变展开。Karpathy 用 AI agent 自动优化自己的 nanochat 项目，宣告\"研究 agent 框架本身\"成为新的元竞争；swyx 提出\"2026年是 subagent 之年\"，主张放弃 multiagent 思维；Claude 每日新增百万用户，Claude Code 推出本地定时任务，AI coding 工具正从\"被动调用\"走向\"主动运行\"。商业视角上，Aaron Levie 和 Greg Isenberg 分别从采购决策和产品设计角度，指出垂直 AI 公司的最优切入路径是\"替换现有外包合同\"和\"自动化生产客户真正在乎的成品\"。",
