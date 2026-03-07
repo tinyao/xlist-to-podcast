@@ -18,7 +18,12 @@
 #   owner_email     — iTunes 播客所有者邮箱（可选）
 #   category        — iTunes 分类，默认 "Technology"（可选）
 #   feishu_webhook  — 飞书群机器人 Webhook 地址，配置后生成新节目时自动推送通知（可选）
-#   subscribe_url   — 播客订阅链接（如 Spotify / Apple Podcasts），附在飞书通知卡片中（可选）
+#   subscribe_links — 多平台订阅链接（可选），支持的 key：spotify / apple / xiaoyuzhou
+#                     示例：
+#                       subscribe_links:
+#                         spotify: "https://open.spotify.com/show/xxx"
+#                         apple: "https://podcasts.apple.com/podcast/xxx"
+#                         xiaoyuzhou: "https://www.xiaoyuzhoufm.com/podcast/xxx"
 #
 # 示例：
 #   podcasts:
@@ -48,6 +53,9 @@ podcasts:
     owner_name: "Ryan Yao"
     owner_email: "hi@zao.im"
     category: "Technology"
+    subscribe_links:
+      spotify: "https://open.spotify.com/show/2XWstEer4GWhVg6GCGBOo2"
+      xiaoyuzhou: "https://www.xiaoyuzhoufm.com/podcast/69a8f097f44c14356ad7f22e"
   - id: "panzi-weekly"
     name: "Panzi Weekly"
     description: "每周一喵，聊聊矿圈这周发生的大事。冷却技术、能源格局、AI转型、竞品动向。"
@@ -71,4 +79,6 @@ podcasts:
     owner_email: "hi@zao.im"
     category: "Technology"
     feishu_webhook: "https://open.feishu.cn/open-apis/bot/v2/hook/497fd34f-179b-4dcd-b8cf-f1a29a786def"
-    subscribe_url: "https://open.spotify.com/show/357HsPQRC51bKsSyBA0zjQ"
+    subscribe_links:
+      spotify: "https://open.spotify.com/show/357HsPQRC51bKsSyBA0zjQ"
+      xiaoyuzhou: "https://www.xiaoyuzhoufm.com/podcast/69a917b14ed07e226448743f"

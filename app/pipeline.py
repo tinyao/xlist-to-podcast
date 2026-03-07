@@ -2,11 +2,13 @@
 Episode 生成完整流程：
 Twitter 抓取 → LLM 生成 → TTS → 写文件 → 更新 feed.xml
 
-每期输出目录：data/static/{podcast_id}/episodes/{YYYY-MM-DD}/
-  ├── posts.md       抓取的原始推文（xtest.py 格式）
-  ├── script.md      播客朗读稿
-  ├── audio.mp3      TTS 音频
-  └── shownotes.md   节目说明
+中间文件先写入 data/static/，最终由 generate.py 复制到 docs/ 供 GitHub Pages 托管。
+每期目录结构（data/static/ 和 docs/ 下相同）：
+  {podcast_id}/episodes/{YYYY-MM-DD}/
+    ├── posts.md       抓取的原始推文
+    ├── script.md      播客朗读稿
+    ├── audio.mp3      TTS 音频（仅 data/static/，docs/ 不含音频）
+    └── shownotes.md   节目说明
 """
 import asyncio
 import logging

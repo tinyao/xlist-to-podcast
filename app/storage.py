@@ -1,7 +1,7 @@
 """
 文件存储层，替代 SQLite/SQLAlchemy。
 
-布局：
+本地工作目录（data/static/），由 generate.py 复制到 docs/ 发布：
   data/static/
     {podcast_id}/
       podcast.json
@@ -62,7 +62,8 @@ class Podcast(BaseModel):
     owner_email: str = ""
     category: str = "Technology"
     feishu_webhook: str = ""
-    subscribe_url: str = ""
+    subscribe_url: str = ""  # deprecated, kept for backward compat
+    subscribe_links: dict = Field(default_factory=dict)  # e.g. {"spotify": "https://...", "apple": "...", "xiaoyuzhou": "..."}
     is_active: bool = True
     created_at: datetime = Field(default_factory=_now)
     updated_at: datetime = Field(default_factory=_now)

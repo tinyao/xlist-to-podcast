@@ -18,11 +18,14 @@ def send_feishu_notification(webhook_url: str, podcast: Podcast, episode: Episod
             "type": "primary_filled",
         },
     ]
-    if podcast.subscribe_url:
+    sub_url = podcast.subscribe_url
+    if podcast.subscribe_links:
+        sub_url = next(iter(podcast.subscribe_links.values()), sub_url)
+    if sub_url:
         actions.append({
             "tag": "button",
             "text": {"tag": "plain_text", "content": "🌟 订阅播客"},
-            "url": podcast.subscribe_url,
+            "url": sub_url,
             "type": "default",
         })
 
