@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-09",
+    "title": "20260309-Karpathy 要造 AI 科研社区，agent 时代的基础设施正在被重写",
+    "summary": "本期聚焦三条主线：Andrej Karpathy 提出 AI 自动科研的下一步应该是\"分布式 agent 研究社区\"，现有 Git 基础设施已经开始显露局限；agent 时代正在倒逼产品接口、组织方式和算力基础设施同步重构，从 agency-agents 项目的爆火到 NVIDIA 收购 Brev，信号密集；另外，\"会不会写代码还重不重要\"的争论再度升温，Vercel CEO Guillermo Rauch 的观点最为犀利，值得认真读一读。",
+    "audio_duration": 710,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-09/audio.mp3",
+    "tweet_count": 50
+  },
+  {
     "date": "2026-03-08",
     "title": "20260308-Claude Code 开始值班，AI Agent 进入持续协作时代",
     "summary": "本期聚焦三个核心信号：Claude Code 发布 /loop 定时任务功能，标志着 AI agent 从单次调用走向持续协作；Karpathy 开源 autoresearch 项目，探索\"让 AI 自主做 AI 研究\"的可能性；OpenClaw 团队的实践揭示了一个普遍认知盲区——AI coding 工具的能力边界早已超出\"写代码\"本身。此外，GPT 5.4 口碑持续发酵，Replit CEO 提出\"Generalist Automator\"新职位概念，也值得关注。",
