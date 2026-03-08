@@ -107,6 +107,15 @@ RSS 地址：`{SITE_URL}/{podcast_id}/feed.xml`
 - **OSS** — 音频 (`audio.mp3`) + 封面 (`cover.jpg`)
 - **GitHub Pages (`docs/`)** — `feed.xml`、`episode.json`、`posts.md`、`script.md`、`shownotes.md`
 
+## CI 发布策略
+
+GitHub Actions 生成完成后会自动判断变更类型：
+
+- **新节目生成** — 创建 PR 供人工审核后合并
+- **其他变更**（feed.xml、封面、索引更新等）— 直接推送到 main
+
+需在仓库设置中开启 **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests**。
+
 ## 飞书通知
 
 在 `podcasts.yaml` 中配置 `feishu_webhook` 后，每次生成新节目会自动发送飞书卡片消息到群组，包含标题、shownotes 和收听/订阅按钮。

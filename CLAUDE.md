@@ -80,3 +80,4 @@ docs/
 - **Blocking calls** in the pipeline use `asyncio.to_thread()`.
 - **Episode URLs** — `audio_url` is injected into `episode.json` at generation time since Pydantic `@property` fields don't serialize.
 - **Feishu notification** — Optional per-podcast webhook. Sends interactive card after episode is fully generated. Failure only logs warning, never blocks pipeline. `--test-feishu` flag tests with existing episodes.
+- **CI publish strategy** — New episodes (detected by `episode.json` in diff) create a PR for review; other changes (feed.xml, cover, index updates) push directly to main.
