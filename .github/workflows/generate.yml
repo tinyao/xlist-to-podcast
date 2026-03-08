@@ -66,7 +66,7 @@ jobs:
           fi
           python -m generate $ARGS
 
-      - name: Create PR for feed updates
+      - name: Commit and publish changes
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -78,11 +78,20 @@ jobs:
             exit 0
           fi
           DATE=$(date -u +%Y-%m-%d)
-          BRANCH="episode/${DATE}-$(date -u +%H%M%S)"
-          git checkout -b "$BRANCH"
-          git commit -m "Update feeds ${DATE}"
-          git push -u origin "$BRANCH"
-          gh pr create \
-            --title "🎙️ New episode ${DATE}" \
-            --body "Auto-generated episode update for ${DATE}." \
-            --base main
+          # Check if there are new episode files (episode.json, posts.md, script.md, shownotes.md)
+          HAS_NEW_EPISODE=$(git diff --cached --name-only | grep -c 'docs/.*/episodes/.*/episode\.json' || true)
+          if [ "$HAS_NEW_EPISODE" -gt 0 ]; then
+            echo "New episode detected, creating PR..."
+            BRANCH="episode/${DATE}-$(date -u +%H%M%S)"
+            git checkout -b "$BRANCH"
+            git commit -m "New episode ${DATE}"
+            git push -u origin "$BRANCH"
+            gh pr create \
+              --title "🎙️ New episode ${DATE}" \
+              --body "Auto-generated episode update for ${DATE}." \
+              --base main
+          else
+            echo "No new episode, pushing directly to main..."
+            git commit -m "Update feeds ${DATE}"
+            git push
+          fi
