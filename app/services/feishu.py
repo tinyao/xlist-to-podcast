@@ -3,6 +3,7 @@ import json
 import logging
 from urllib.request import Request, urlopen
 
+from app.config import settings
 from app.storage import Podcast, Episode
 
 logger = logging.getLogger(__name__)
@@ -10,17 +11,22 @@ logger = logging.getLogger(__name__)
 
 def send_feishu_notification(webhook_url: str, podcast: Podcast, episode: Episode) -> None:
     """发送飞书 interactive card 通知，失败只 log 不抛异常。"""
+    # 优先使用 site_url 的当期页面链接，回退到 audio_url
+    if settings.site_url:
+        listen_url = f"{settings.site_url.rstrip('/')}/{podcast.id}#{episode.date}"
+    else:
+        listen_url = episode.audio_url
     actions = [
         {
             "tag": "button",
             "text": {"tag": "plain_text", "content": "🎧 收听本期"},
-            "url": episode.audio_url,
+            "url": listen_url,
             "type": "primary_filled",
         },
     ]
     sub_url = podcast.subscribe_url
     if podcast.subscribe_links:
-        sub_url = next(iter(podcast.subscribe_links.values()), sub_url)
+        sub_url = podcast.subscribe_links.get("xiaoyuzhou") or next(iter(podcast.subscribe_links.values()), sub_url)
     if sub_url:
         actions.append({
             "tag": "button",
