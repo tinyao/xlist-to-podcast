@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-09",
+    "title": "20260309-矿机废热供暖、算力V型反弹与MARA辟谣",
+    "summary": "本期聚焦三个核心话题：矿机废热供暖正在从极客爱好演变为有产品、有社区的细分赛道；比特币网络算力V型反弹至1.2 ZH/s，而Braiins的案例研究揭示了固件优化带来40%算力提升的真实空间；MARA公开辟谣比特币储备策略被误读，折射出矿业上市公司叙事管理能力的提升。此外，Riot 2025年营收创纪录，Morphware拿下巴拉圭国家电力局合作框架，Auradine更名Velaura AI转型超低功耗AI计算。",
+    "audio_duration": 642,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/panzi-weekly/episodes/2026-03-09/audio.mp3",
+    "tweet_count": 40
+  },
+  {
     "date": "2026-03-04",
     "title": "20260304-矿企大转型：电力才是 AI 时代的真正筹码",
     "summary": "本期聚焦比特币矿企向 AI 基础设施转型的加速信号。MARA 宣布与 Starwood Digital Ventures 合作开发超大规模 AI 数据中心，同时持有法国 Exaion 64% 股权，双线布局 AI 算力市场。比特币链上数据过滤争议持续发酵，开发者实验证明 OP_RETURN 限制形同虚设，社区陷入\"打地鼠\"困境。低功耗芯片公司 Auradine 更名 Velaura AI，引入前 Nuvia 联合创始人，押注 AI 能效赛道。多家矿企发布 2025 全年财报，行业整体向电力基础设施和 AI 数据中心转型。",
