@@ -1,0 +1,16 @@
+{
+  "id": "75681fcd-a734-472a-b120-b1edf9ed98c6",
+  "podcast_id": "ai-builders",
+  "date": "2026-03-10",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 46527. To increase, visit https://openrouter.ai/settings/credits and add more credits', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_3AAHPsUkFCWbsWNrjN9Lollv0OD'}",
+  "created_at": "2026-03-09T23:11:16.269847",
+  "audio_url": ""
+}
