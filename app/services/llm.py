@@ -229,6 +229,7 @@ def generate_content(
         messages=[
             {"role": "user", "content": prompt},
         ],
+        max_tokens=16384,
         temperature=0.7,
     )
 
