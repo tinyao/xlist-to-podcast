@@ -31,13 +31,15 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
 
 判断标准：
 
-重点展开的主题（每期 2-3 个）需满足以下任意条件：
+重点展开的主题（每期 3-5 个）需满足以下任意条件：
 - 多条 posts 围绕同一话题，可以整合成一个完整视角
 - 受众共鸣强，对产品、工程、创业等核心读者有直接参考价值
 - 有争议、有反直觉的观点，值得分析展开
 - 是这 {time_window} 内最具代表性的信号
+- 包含深度访谈、长文、播客、视频等富媒体内容，提供了独特的一手信息或深度洞察
+- 分享了具体可操作的 AI 实践技巧、工作流、工具链搭建经验
 
-快讯带过的主题（每期 3-6 条）满足以下条件：
+快讯带过的主题（每期 3-8 条）满足以下条件：
 - 值得知道，但逻辑简单，一句话能说清楚
 - 产品更新、数据点、单条有趣观察
 - 补充信息密度，但不需要展开分析
@@ -46,7 +48,7 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
 
 开场白（约 15 秒）：日期 + 今日 2-3 个关键词预告，轻松引入。
 
-重点 Segment（每个 2-4 分钟）：
+重点 Segment（每个 2-4 分钟，总共约 10-12 分钟）：
 - 话题引入：一句话带出这个话题为什么值得关注
 - 核心信息：谁说了什么、发生了什么，提炼重组，不逐条翻译
 - 策展人解读：你的观察、为什么重要、对行业的影响
@@ -64,7 +66,7 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
 - 句子节奏有变化，不要每句都一样长
 - 用「我们来看」「值得注意的是」「说到这个」等口语连接词
 - 提及信息来源时自然带出（"某某在推特上提到..."）
-- 不相关的内容（非 AI、非科技话题）直接过滤，不出现在文稿中
+- 不相关的内容（非 AI、非科技话题）直接过滤，不出现在文稿中。但注意：与 AI/科技行业相关的深度访谈、创业实践、团队管理经验属于相关内容，不应被过滤
 - 适合 TTS 朗读，避免表情符号和网络缩写
 
 ## 输出要求
@@ -75,7 +77,7 @@ _PROMPT_ZH = """你是一位浸泡在英文科技圈的中文内容策展人。�
    - 纯文本，不要标注说话人或时间戳
    - 用空行分隔段落和 segment
    - 重点 segment 之间节奏要有张弛，不要每个都同等篇幅
-   - 总字数控制在 3000-5000 字
+   - 总字数控制在 5000-7500 字（约 10-15 分钟朗读时长）
    - 不要使用 markdown 格式符号（无 #、*、- 等）
 
 2. 节目说明（Markdown 格式），用 <shownotes>...</shownotes> 包裹：
@@ -116,13 +118,15 @@ Here are the collected posts ({count} total):
 
 Before writing the script, triage all posts into two tiers: deep-dive topics vs. quick hits.
 
-Criteria for deep-dive topics (2-3 per episode) — must meet at least one:
+Criteria for deep-dive topics (3-5 per episode) — must meet at least one:
 - Multiple posts converge on the same story, enabling a well-rounded perspective
 - Strong audience resonance — direct relevance to product, engineering, or startup practitioners
 - Controversial or counter-intuitive take worth unpacking
 - The single most representative signal from the past {time_window}
+- Contains rich media content (in-depth interviews, long-form articles, podcasts, videos) that provides unique first-hand information or deep insights
+- Shares concrete, actionable AI practices, workflows, or toolchain-building experiences
 
-Criteria for quick hits (3-6 per episode):
+Criteria for quick hits (3-8 per episode):
 - Worth knowing, but the logic is simple — one sentence covers it
 - Product updates, data points, interesting one-off observations
 - Adds information density without needing analysis
@@ -131,7 +135,7 @@ Criteria for quick hits (3-6 per episode):
 
 Opening (~15 seconds): Date + preview of 2-3 keywords for today, casual hook.
 
-Deep-dive Segments (2-4 minutes each):
+Deep-dive Segments (2-4 minutes each, ~10-12 minutes total):
 - Topic hook: one sentence on why this matters
 - Core info: who said what, what happened — synthesize, don't translate post by post
 - Curator's take: your observation, why it matters, industry implications
@@ -149,7 +153,7 @@ Sign-off (~15 seconds): Today's single biggest takeaway + subscribe prompt.
 - Vary sentence rhythm — not every sentence the same length
 - Use spoken connectors: "Let's look at," "What's interesting here is," "Speaking of which"
 - Attribute sources naturally ("So-and-so mentioned on Twitter...")
-- Filter out off-topic content (non-AI, non-tech) — it should not appear in the script
+- Filter out off-topic content (non-AI, non-tech) — it should not appear in the script. However, in-depth interviews, startup practices, and team management insights related to the AI/tech industry ARE on-topic and should not be filtered out
 - Optimized for TTS: no emojis, no internet slang
 
 ## Output Requirements
@@ -160,7 +164,7 @@ Generate the following three sections:
    - Plain text, no speaker labels or timestamps
    - Separate paragraphs and segments with blank lines
    - Vary pacing between deep-dive segments — not every one the same length
-   - Target length: 1500-2500 words
+   - Target length: 2500-4000 words (~10-15 minutes reading time)
    - Do not use markdown formatting (no #, *, - etc.)
 
 2. Show notes (Markdown format), wrapped in <shownotes>...</shownotes>:
