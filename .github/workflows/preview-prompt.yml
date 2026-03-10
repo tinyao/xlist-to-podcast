@@ -1,0 +1,70 @@
+name: Preview Prompt
+
+on:
+  workflow_dispatch:
+    inputs:
+      podcast_id:
+        description: '播客 ID（如 ai-builders）'
+        type: string
+        required: true
+      episode_date:
+        description: '节目日期（YYYY-MM-DD，需已有 posts.md）'
+        type: string
+        required: true
+      prompt_file:
+        description: 'Prompt 文件路径（如 prompts/zh-tech-daily.md，留空使用播客默认）'
+        type: string
+        default: ''
+      extra_prompt:
+        description: '补充 prompt（留空使用播客默认 extra_prompt）'
+        type: string
+        default: ''
+
+concurrency:
+  group: preview-prompt
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run preview
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          ARGS="--podcast ${{ inputs.podcast_id }} --date ${{ inputs.episode_date }}"
+          if [ -n "${{ inputs.prompt_file }}" ]; then
+            ARGS="$ARGS --prompt ${{ inputs.prompt_file }}"
+          fi
+          if [ -n "${{ inputs.extra_prompt }}" ]; then
+            ARGS="$ARGS --extra-prompt '${{ inputs.extra_prompt }}'"
+          fi
+          python -m preview_prompt $ARGS
+
+      - name: Commit preview results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          PREVIEW_DIR="docs/${{ inputs.podcast_id }}/episodes/${{ inputs.episode_date }}/preview"
+          git add -f "$PREVIEW_DIR"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Preview: ${{ inputs.podcast_id }} ${{ inputs.episode_date }}"
+          git push
