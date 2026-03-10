@@ -61,7 +61,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           PREVIEW_DIR="docs/${{ inputs.podcast_id }}/episodes/${{ inputs.episode_date }}/preview"
-          git add -f "$PREVIEW_DIR"
+          git add "$PREVIEW_DIR"
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
