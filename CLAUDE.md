@@ -12,6 +12,9 @@ python -m generate --podcast <ID>          # only process one podcast
 python -m generate --force --podcast <ID>  # combine flags
 python -m generate --test-feishu           # test Feishu notification with latest episode
 python -m generate --test-feishu --podcast <ID>
+python preview_content.py --podcast <ID> --date YYYY-MM-DD                  # preview LLM output with existing posts
+python preview_content.py --podcast <ID> --date YYYY-MM-DD --prompt <file>  # use custom prompt file
+python preview_content.py --podcast <ID> --date YYYY-MM-DD --extra-prompt "..." # append extra instructions
 ```
 
 ## Architecture
@@ -42,7 +45,9 @@ podcasts.yaml → generate.py (GitHub Actions) → OSS (audio) + docs/ (feed.xml
 │       ├── feishu.py    # Feishu webhook notification (interactive card)
 │       └── oss.py       # Alibaba Cloud OSS (audio upload only)
 ├── requirements.txt
-├── .github/workflows/generate.yml  # Hourly cron + manual dispatch
+├── preview_content.py   # Test LLM output with existing posts (no TTS/Twitter)
+├── .github/workflows/generate.yml          # Hourly cron + manual dispatch
+├── .github/workflows/preview-content.yml   # Manual: test prompt with existing posts
 └── .env.example
 ```
 
