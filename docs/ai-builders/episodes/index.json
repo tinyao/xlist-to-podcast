@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-10",
+    "title": "20260310-Karpathy的AI自动调参实验，以及agent开始接管代码审查",
+    "summary": "本期聚焦三个核心信号：Karpathy 的 autoresearch 项目展示了 AI agent 自主完成科研迭代循环的真实可行性，11% 的性能提升来自 700 次自主实验；Anthropic 发布 Claude Code Code Review 功能，多 agent 协作审查 PR，内部工程师效率提升 200%；OpenClaw 在深圳开设全球首个实体展厅，AI 工具竞争延伸至线下体验层。此外 Google Pomelli 全球开放、NotebookLM 支持 ePub、a16z 消费者 AI Top 100 榜单均有值得关注的新信号。",
+    "audio_duration": 502,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-10/audio.mp3",
+    "tweet_count": 79
+  },
+  {
     "date": "2026-03-09",
     "title": "20260309-Karpathy 要造 AI 科研社区，agent 时代的基础设施正在被重写",
     "summary": "本期聚焦三条主线：Andrej Karpathy 提出 AI 自动科研的下一步应该是\"分布式 agent 研究社区\"，现有 Git 基础设施已经开始显露局限；agent 时代正在倒逼产品接口、组织方式和算力基础设施同步重构，从 agency-agents 项目的爆火到 NVIDIA 收购 Brev，信号密集；另外，\"会不会写代码还重不重要\"的争论再度升温，Vercel CEO Guillermo Rauch 的观点最为犀利，值得认真读一读。",
