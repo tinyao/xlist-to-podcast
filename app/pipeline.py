@@ -20,7 +20,7 @@ from app.storage import (
     Podcast, Episode,
     get_podcast, get_episode, save_episode, list_episodes,
 )
-from app.services.twitter import fetch_list_tweets
+from app.services.twitter import fetch_list_tweets, FetchResult
 from app.services.llm import generate_content
 from app.services.tts import text_to_speech
 from app.services.feed import build_feed
@@ -40,7 +40,7 @@ def _episode_dir(podcast_id: str, ep_date: date) -> Path:
     return d
 
 
-async def generate_episode(podcast_id: str, max_posts: Optional[int] = None, frequency: str = "daily", extra_prompt: str = "") -> None:
+async def generate_episode(podcast_id: str, max_posts: Optional[int] = None, frequency: str = "daily", extra_prompt: str = "", regenerate: bool = False) -> None:
     podcast = await get_podcast(podcast_id)
     if not podcast or not podcast.is_active:
         return
@@ -48,7 +48,7 @@ async def generate_episode(podcast_id: str, max_posts: Optional[int] = None, fre
     today = datetime.now(SHANGHAI_TZ).date()
 
     existing = await get_episode(podcast_id, today)
-    if existing and existing.status in ("done", "processing"):
+    if not regenerate and existing and existing.status in ("done", "processing"):
         logger.info(f"[{podcast.name}] 今日节目已存在，跳过")
         return
 
@@ -56,7 +56,7 @@ async def generate_episode(podcast_id: str, max_posts: Optional[int] = None, fre
     await save_episode(episode)
 
     try:
-        await _run_pipeline(podcast, episode, today, max_posts=max_posts, frequency=frequency, extra_prompt=extra_prompt)
+        await _run_pipeline(podcast, episode, today, max_posts=max_posts, frequency=frequency, extra_prompt=extra_prompt, regenerate=regenerate)
     except Exception as e:
         logger.exception(f"[{podcast.name}] 生成失败: {e}")
         episode.status = "failed"
@@ -64,27 +64,42 @@ async def generate_episode(podcast_id: str, max_posts: Optional[int] = None, fre
         await save_episode(episode)
 
 
-async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_posts: Optional[int] = None, frequency: str = "daily", extra_prompt: str = "") -> None:
+async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_posts: Optional[int] = None, frequency: str = "daily", extra_prompt: str = "", regenerate: bool = False) -> None:
     lookback_hours = 168 if frequency == "weekly" else 24
     since = datetime.now(timezone.utc) - timedelta(hours=lookback_hours)
     ep_dir = _episode_dir(podcast.id, today)
 
-    # 1. 抓取推文
-    logger.info(f"[{podcast.name}] 抓取推文...")
-    fetch_kwargs = {"list_id": podcast.twitter_list_id, "since": since}
-    if max_posts is not None:
-        fetch_kwargs["max_tweets"] = max_posts
-    tweets = await asyncio.to_thread(lambda: fetch_list_tweets(**fetch_kwargs))
+    posts_file = ep_dir / "posts.md"
+    # 也检查 docs/ 下的 posts.md（bootstrap 只恢复 episode.json）
+    docs_posts = Path("docs") / podcast.id / "episodes" / str(today) / "posts.md"
+    if not posts_file.exists() and docs_posts.exists():
+        posts_file.parent.mkdir(parents=True, exist_ok=True)
+        posts_file.write_text(docs_posts.read_text(encoding="utf-8"), encoding="utf-8")
 
-    if len(tweets) < MIN_TWEETS:
-        logger.info(f"[{podcast.name}] 推文数量不足（{len(tweets)} 条），跳过")
-        episode.status = "failed"
-        episode.error_msg = f"推文数量不足（{len(tweets)} 条，最少需要 {MIN_TWEETS} 条）"
-        await save_episode(episode)
-        return
+    if regenerate and posts_file.exists():
+        # 跳过推文抓取，直接使用已有的 posts.md
+        posts_text = posts_file.read_text(encoding="utf-8")
+        # 统计 post 数量（每个 post 以 "---\n\n" 分隔）
+        post_count = posts_text.count("\n---\n") + 1
+        tweets = FetchResult(count=post_count, text=posts_text)
+        logger.info(f"[{podcast.name}] 使用已有 posts.md（约 {post_count} 条）")
+    else:
+        # 1. 抓取推文
+        logger.info(f"[{podcast.name}] 抓取推文...")
+        fetch_kwargs = {"list_id": podcast.twitter_list_id, "since": since}
+        if max_posts is not None:
+            fetch_kwargs["max_tweets"] = max_posts
+        tweets = await asyncio.to_thread(lambda: fetch_list_tweets(**fetch_kwargs))
 
-    posts_text = tweets.text
-    (ep_dir / "posts.md").write_text(posts_text, encoding="utf-8")
+        if len(tweets) < MIN_TWEETS:
+            logger.info(f"[{podcast.name}] 推文数量不足（{len(tweets)} 条），跳过")
+            episode.status = "failed"
+            episode.error_msg = f"推文数量不足（{len(tweets)} 条，最少需要 {MIN_TWEETS} 条）"
+            await save_episode(episode)
+            return
+
+        posts_text = tweets.text
+        posts_file.write_text(posts_text, encoding="utf-8")
 
     # 2. LLM 生成 script + shownotes + title
     logger.info(f"[{podcast.name}] 生成内容（{len(tweets)} 条推文）...")
