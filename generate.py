@@ -63,6 +63,7 @@ def load_podcasts_from_yaml() -> list[Podcast]:
             publish_hour=entry.get("publish_hour", 8),
             frequency=entry.get("frequency", "daily"),
             publish_day=entry.get("publish_day", 0),
+            prompt_file=entry.get("prompt_file", ""),
             extra_prompt=entry.get("extra_prompt", ""),
             cover_path=f"{entry['id']}/cover.jpg",
             owner_name=entry.get("owner_name", ""),

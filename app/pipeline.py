@@ -90,6 +90,7 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
     logger.info(f"[{podcast.name}] 生成内容（{len(tweets)} 条推文）...")
     script, shownotes, title = await asyncio.to_thread(
         generate_content, tweets, podcast.name, podcast.language, today, frequency, extra_prompt,
+        prompt_file=podcast.prompt_file,
     )
 
     (ep_dir / "script.md").write_text(script, encoding="utf-8")
