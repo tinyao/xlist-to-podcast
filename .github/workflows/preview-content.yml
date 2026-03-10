@@ -1,0 +1,66 @@
+name: Preview Content
+
+on:
+  workflow_dispatch:
+    inputs:
+      podcast_id:
+        description: '播客 ID（如 ai-builders）'
+        type: string
+        required: true
+      episode_date:
+        description: 'Episode 日期（YYYY-MM-DD）'
+        type: string
+        required: true
+      prompt_file:
+        description: '自定义 prompt 文件路径（留空使用 podcasts.yaml 中的配置）'
+        type: string
+        default: ''
+      extra_prompt:
+        description: '补充 LLM 提示词（追加到末尾）'
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run preview content
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          ARGS="--podcast ${{ inputs.podcast_id }} --date ${{ inputs.episode_date }}"
+          if [ -n "${{ inputs.prompt_file }}" ]; then
+            ARGS="$ARGS --prompt ${{ inputs.prompt_file }}"
+          fi
+          if [ -n "${{ inputs.extra_prompt }}" ]; then
+            ARGS="$ARGS --extra-prompt \"${{ inputs.extra_prompt }}\""
+          fi
+          eval python preview_content.py $ARGS
+
+      - name: Commit preview results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          PREVIEW_DIR="docs/${{ inputs.podcast_id }}/episodes/${{ inputs.episode_date }}/preview"
+          git add "$PREVIEW_DIR"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Preview content for ${{ inputs.podcast_id }} (${{ inputs.episode_date }})"
+          git push
