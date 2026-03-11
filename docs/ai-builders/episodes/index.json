@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-11",
+    "title": "20260311-Claude Code 可以插嘴了，AI 自动调参效率提升11%",
+    "summary": "本期聚焦三大主题：Claude Code 推出 /btw 侧链对话功能，让开发者在 agent 工作时随时插问，同日移动端也迎来一批更新；Andrej Karpathy 记录了 AI agent 自主调参两天、提升训练效率 11% 的全程，Kevin Weil 称之为\"未来已来\"；此外，OpenCode 团队提出的反 slop 三原则引发广泛共鸣，与郭宇关于 agent 工作流设计的思考形成有趣呼应。快讯方面，Vercel AI SDK 周下载破千万、Nous Research 发布开源 Hermes Agent、NYT 盲测显示 54% 读者更偏好 AI 写作等消息值得关注。",
+    "audio_duration": 596,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-11/audio.mp3",
+    "tweet_count": 77
+  },
+  {
     "date": "2026-03-10",
     "title": "20260310-Karpathy的AI自动调参实验，以及agent开始接管代码审查",
     "summary": "本期聚焦三个核心信号：Karpathy 的 autoresearch 项目展示了 AI agent 自主完成科研迭代循环的真实可行性，11% 的性能提升来自 700 次自主实验；Anthropic 发布 Claude Code Code Review 功能，多 agent 协作审查 PR，内部工程师效率提升 200%；OpenClaw 在深圳开设全球首个实体展厅，AI 工具竞争延伸至线下体验层。此外 Google Pomelli 全球开放、NotebookLM 支持 ePub、a16z 消费者 AI Top 100 榜单均有值得关注的新信号。",
