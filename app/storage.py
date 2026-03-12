@@ -57,7 +57,7 @@ class Podcast(BaseModel):
     publish_hour: int = 8
     frequency: str = "daily"   # "daily" or "weekly"
     publish_day: int = 0       # 0=Monday..6=Sunday, only used when frequency="weekly"
-    prompt_file: str = ""      # path to prompt template file (relative to repo root, e.g. "prompts/zh-tech-daily.md")
+    prompt_file: str = ""      # path to prompt template file (relative to repo root, e.g. "prompts/tech-daily.md")
     extra_prompt: str = ""     # appended to LLM prompt as additional instructions
     owner_name: str = ""
     owner_email: str = ""

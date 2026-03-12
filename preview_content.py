@@ -4,8 +4,8 @@
 
 用法：
   python preview_content.py --podcast ai-builders --date 2026-03-09
-  python preview_content.py --podcast ai-builders --date 2026-03-09 --prompt prompts/zh-tech-daily.md
-  python preview_content.py --podcast ai-builders --date 2026-03-09 --prompt prompts/zh-tech-daily.md --extra-prompt "多关注 AI Agent 相关内容"
+  python preview_content.py --podcast ai-builders --date 2026-03-09 --prompt prompts/tech-daily.md
+  python preview_content.py --podcast ai-builders --date 2026-03-09 --prompt prompts/tech-daily.md --extra-prompt "多关注 AI Agent 相关内容"
 """
 import argparse
 import logging

@@ -21,9 +21,8 @@ def _load_prompt_template(prompt_file: str, language: str) -> str:
             return path.read_text(encoding="utf-8")
         raise FileNotFoundError(f"Prompt file not found: {path}")
 
-    # Fallback: use built-in defaults
-    fallback = "prompts/zh-tech-daily.md" if language == "zh" else "prompts/en-tech-daily.md"
-    path = _REPO_ROOT / fallback
+    # Fallback: use built-in default
+    path = _REPO_ROOT / "prompts/tech-daily.md"
     if path.exists():
         return path.read_text(encoding="utf-8")
     raise FileNotFoundError(
