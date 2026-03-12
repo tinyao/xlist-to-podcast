@@ -86,11 +86,18 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
     posts_text = tweets.text
     (ep_dir / "posts.md").write_text(posts_text, encoding="utf-8")
 
+    # 1.5 获取近期 episodes（仅 daily 播客）
+    recent_episodes = []
+    if frequency == "daily":
+        all_eps = await list_episodes(podcast.id, limit=5)
+        recent_episodes = [e for e in all_eps if e.status == "done" and e.date < today][:2]
+
     # 2. LLM 生成 script + shownotes + title
     logger.info(f"[{podcast.name}] 生成内容（{len(tweets)} 条推文）...")
     script, shownotes, title = await asyncio.to_thread(
         generate_content, tweets, podcast.name, podcast.language, today, frequency, extra_prompt,
         prompt_file=podcast.prompt_file,
+        recent_episodes=recent_episodes,
     )
 
     (ep_dir / "script.md").write_text(script, encoding="utf-8")

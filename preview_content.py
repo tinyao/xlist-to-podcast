@@ -8,14 +8,16 @@
   python preview_content.py --podcast ai-builders --date 2026-03-09 --prompt prompts/tech-daily.md --extra-prompt "多关注 AI Agent 相关内容"
 """
 import argparse
+import json
 import logging
 import re
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 from app.services.llm import generate_content
 from app.services.twitter import FetchResult
+from app.storage import Episode
 
 logging.basicConfig(
     level=logging.INFO,
@@ -90,6 +92,29 @@ def main() -> None:
 
     logger.info(f"播客: {podcast_name}, 语言: {language}, prompt: {prompt_file or '(默认)'}")
 
+    # 2.5 加载近期 episodes（仅 daily）
+    recent_episodes = []
+    if frequency == "daily":
+        episodes_dir = DOCS_DIR / args.podcast / "episodes"
+        for days_ago in range(1, 3):
+            past_date = ep_date - timedelta(days=days_ago)
+            ep_json_path = episodes_dir / str(past_date) / "episode.json"
+            script_path = episodes_dir / str(past_date) / "script.md"
+            shownotes_path = episodes_dir / str(past_date) / "shownotes.md"
+            if ep_json_path.exists():
+                data = json.loads(ep_json_path.read_text(encoding="utf-8"))
+                if data.get("status") == "done":
+                    # Load script/shownotes from files if not in JSON
+                    if not data.get("script") and script_path.exists():
+                        data["script"] = script_path.read_text(encoding="utf-8")
+                    if not data.get("shownotes") and shownotes_path.exists():
+                        data["shownotes"] = shownotes_path.read_text(encoding="utf-8")
+                    # Remove extra fields not in Episode model
+                    data.pop("audio_url", None)
+                    recent_episodes.append(Episode(**data))
+        if recent_episodes:
+            logger.info(f"加载了 {len(recent_episodes)} 期近期节目作为上下文")
+
     # 3. 调用 LLM 生成
     logger.info("调用 LLM 生成 script + shownotes...")
     script, shownotes, title = generate_content(
@@ -100,6 +125,7 @@ def main() -> None:
         frequency=frequency,
         extra_prompt=extra_prompt,
         prompt_file=prompt_file,
+        recent_episodes=recent_episodes,
     )
 
     # 4. 保存到 preview/ 子文件夹
