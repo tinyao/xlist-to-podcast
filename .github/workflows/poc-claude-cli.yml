@@ -1,0 +1,56 @@
+name: PoC - Claude CLI Content Generation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-claude-cli:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Generate content with Claude CLI
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          cat prompts/tech-daily.md > /tmp/system-prompt.txt
+
+          claude -p --model sonnet --max-turns 1 \
+            --system-prompt-file /tmp/system-prompt.txt \
+            --output-format text \
+            --no-session-persistence \
+            "以下是采集到的 posts（共 3 条）：
+
+          1. @elikiiii: OpenAI just dropped GPT-5. Full multimodal reasoning, 1M context window. The benchmarks are insane - 95% on MMLU, 89% on HumanEval. But the real story is the agent capabilities. It can browse, code, and reason across modalities simultaneously. Pricing starts at \$30/1M tokens. https://openai.com/gpt5
+
+          2. @nicklmg: Rust 1.80 stable is here! The big feature: async closures are finally stabilized. Also: new borrowck improvements that eliminate a ton of false positives. Migration guide if you hit any edge cases: https://blog.rust-lang.org/2024/rust-1.80
+
+          3. @aaborovkov: GitHub Copilot now has a code review mode. It reads your PR diff, leaves inline comments, suggests fixes. Early access shows it catches ~40% of issues human reviewers find. Free for all Copilot subscribers. Thread on how it works 🧵
+
+          请生成播客文稿，用 <script></script> 包裹朗读稿，<shownotes></shownotes> 包裹摘要，<title></title> 包裹标题。" \
+            | tee /tmp/output.txt
+
+          echo ""
+          echo "=== Validation ==="
+          PASS=true
+          grep -q '<script>' /tmp/output.txt && echo "✓ script tag found" || { echo "✗ script tag missing"; PASS=false; }
+          grep -q '</script>' /tmp/output.txt && echo "✓ script closing tag found" || { echo "✗ script closing tag missing"; PASS=false; }
+          grep -q '<shownotes>' /tmp/output.txt && echo "✓ shownotes tag found" || { echo "✗ shownotes tag missing"; PASS=false; }
+          grep -q '<title>' /tmp/output.txt && echo "✓ title tag found" || { echo "✗ title tag missing"; PASS=false; }
+
+          if [ "$PASS" = true ]; then
+            echo ""
+            echo "=== PoC PASSED ==="
+          else
+            echo ""
+            echo "=== PoC FAILED ==="
+            exit 1
+          fi
