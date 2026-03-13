@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-14",
+    "title": "20260314-Claude Code一百万上下文成默认，郭宇纯Qwen跑出AI游戏公司",
+    "summary": "Anthropic 周五集中发布多项 Claude Code 更新：1M context 正式 GA 并成为 Max/Team/Enterprise 默认模型，手机远程启动笔记本 session，Voice Mode 全量推送。郭宇发布 wanman AI 新实验，用纯 Qwen 3.5 35B 在本地跑了 1019 轮游戏公司模拟，AI 自主开发了一款种花放置游戏。Chrome 146 通过 MCP 接口暴露真实浏览器 session，AI agent 操控浏览器迎来新可能。",
+    "audio_duration": 736,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-14/audio.mp3",
+    "tweet_count": 66
+  },
+  {
     "date": "2026-03-13",
     "title": "20260313-Replit九十亿估值、OpenClaw神秘模型，以及agent开始跑商业实验",
     "summary": "Replit 宣布完成四亿美元融资，估值九十亿美元，同步发布支持无限画布和并行 agent 的 Agent 4；OpenClaw 新 beta 带来两个来历不明的神秘模型 Hunter 和 Healer，同时修复了 GPT 5.4 的关键 bug；郭宇公开了 wanman AI 跑日本商业项目的实验报告，CEO+CTO agent 协作完成市场假设验证，并正式上线 Sandbank Cloud——一个专门给 AI agent 用的按需沙箱云服务；Karpathy 的 autoresearch 因 oauth 故障被清空，同时他提出 agentic org 可以像代码仓库一样被 fork 的新思考。",
