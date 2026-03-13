@@ -114,27 +114,31 @@ def _build_prompt(
 
 
 def _generate_via_claude_cli(prompt: str) -> str:
-    """Call Claude CLI to generate content."""
+    """Call Claude CLI to generate content.
+
+    Pipes prompt via stdin to avoid OS argument length limits
+    with large prompts (100+ tweets + recent episode context).
+    """
     claude_path = shutil.which("claude")
     if not claude_path:
         raise RuntimeError(
             "Claude CLI not found. Install with: npm install -g @anthropic-ai/claude-code"
         )
 
-    logger.info("Using Claude CLI for content generation")
+    logger.info("Using Claude CLI for content generation (%d chars prompt)", len(prompt))
     result = subprocess.run(
         [
             claude_path,
             "-p",
-            prompt,
             "--model", "sonnet",
             "--max-turns", "1",
             "--output-format", "text",
             "--no-session-persistence",
         ],
+        input=prompt,
         capture_output=True,
         text=True,
-        timeout=300,
+        timeout=600,
     )
 
     if result.returncode != 0:
