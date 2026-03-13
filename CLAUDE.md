@@ -10,6 +10,7 @@ python -m generate                         # run pipeline (respects publish_hour
 python -m generate --force                 # ignore publish_hour, force generate
 python -m generate --podcast <ID>          # only process one podcast
 python -m generate --force --podcast <ID>  # combine flags
+python -m generate --force --podcast <ID> --date YYYY-MM-DD  # reuse existing posts for given date
 python -m generate --test-feishu           # test Feishu notification with latest episode
 python -m generate --test-feishu --podcast <ID>
 python preview_content.py --podcast <ID> --date YYYY-MM-DD                  # preview LLM output with existing posts

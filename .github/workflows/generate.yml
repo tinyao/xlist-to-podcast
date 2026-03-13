@@ -17,6 +17,10 @@ on:
         description: '最大抓取推文数（留空使用默认值 300）'
         type: string
         default: ''
+      date:
+        description: '指定日期 YYYY-MM-DD，复用已有 posts（留空使用当天）'
+        type: string
+        default: ''
 
 concurrency:
   group: generate-episodes
@@ -71,6 +75,9 @@ jobs:
           fi
           if [ -n "${{ inputs.max_posts }}" ]; then
             ARGS="$ARGS --max-posts ${{ inputs.max_posts }}"
+          fi
+          if [ -n "${{ inputs.date }}" ]; then
+            ARGS="$ARGS --date ${{ inputs.date }}"
           fi
           python -m generate $ARGS
 

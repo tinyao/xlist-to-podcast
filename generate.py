@@ -6,6 +6,7 @@ GitHub Actions 入口：从 podcasts.yaml 加载配置，生成播客节目并�
   python -m generate --force            # 忽略小时检查，强制生成
   python -m generate --podcast ID       # 只处理指定播客
   python -m generate --force --podcast ID
+  python -m generate --force --podcast ID --date 2026-03-12  # 复用指定日期已有 posts
   python -m generate --test-feishu              # 用最新 episode 测试飞书通知
   python -m generate --test-feishu --podcast ID # 测试指定播客的飞书通知
 """
@@ -928,7 +929,7 @@ def test_feishu(podcast_id: Optional[str] = None) -> None:
 
 # ── 主流程 ───────────────────────────────────────────────────────────────────
 
-async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts: Optional[int] = None) -> None:
+async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts: Optional[int] = None, ep_date: Optional[date] = None) -> None:
     all_podcasts = load_podcasts_from_yaml()
 
     if not all_podcasts:
@@ -968,10 +969,10 @@ async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts:
             continue
 
         logger.info(f"[{podcast.name}] 开始生成节目...")
-        await generate_episode(podcast.id, max_posts=max_posts, frequency=podcast.frequency, extra_prompt=podcast.extra_prompt)
+        await generate_episode(podcast.id, max_posts=max_posts, frequency=podcast.frequency, extra_prompt=podcast.extra_prompt, ep_date=ep_date)
 
         # 注入 audio_url 到 episode.json
-        today = datetime.now(SHANGHAI_TZ).date()
+        today = ep_date or datetime.now(SHANGHAI_TZ).date()
         await asyncio.to_thread(inject_episode_urls, podcast, today)
 
     # 复制文件到 docs/ 供 GitHub Pages 托管
@@ -985,10 +986,15 @@ if __name__ == "__main__":
     parser.add_argument("--force", action="store_true", help="忽略 publish_hour 检查")
     parser.add_argument("--podcast", type=str, default=None, help="只处理指定播客 ID")
     parser.add_argument("--max-posts", type=int, default=None, help="最大抓取推文数")
+    parser.add_argument("--date", type=str, default=None, help="指定日期 YYYY-MM-DD，复用已有 posts")
     parser.add_argument("--test-feishu", action="store_true", help="用最新已有 episode 测试飞书通知")
     args = parser.parse_args()
+
+    ep_date = None
+    if args.date:
+        ep_date = date.fromisoformat(args.date)
 
     if args.test_feishu:
         test_feishu(podcast_id=args.podcast)
     else:
-        asyncio.run(main(force=args.force, podcast_id=args.podcast, max_posts=args.max_posts))
+        asyncio.run(main(force=args.force, podcast_id=args.podcast, max_posts=args.max_posts, ep_date=ep_date))
