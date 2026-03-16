@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-16",
+    "title": "20260316-kepano护城河金句爆款、OpenClaw插话来了、郭宇vibelab上线",
+    "summary": "本期聚焦三大方向：OpenClaw 周末连发三条高互动更新，包括 Twitter 垃圾提及自动屏蔽 cron job、/btw 中途插话功能即将上线，以及 Claude Code bundle 支持进入开发；Obsidian 创始人 kepano 发出今日点赞收藏双料冠军两条推文，分别探讨 AI 时代个人护城河与第三方 MCP 的隐私风险；郭宇上线第 11 个 vibe 产品 vibelab（面向 vibe coder 的云端协作直播平台），Sandbank Cloud 浏览器自动化同步正式 GA。此外，Vercel CEO Guillermo 的 TravisCore 建设视频引发巨量关注，swyx 发出 CPU 短缺预警。",
+    "audio_duration": 784,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-16/audio.mp3",
+    "tweet_count": 64
+  },
+  {
     "date": "2026-03-15",
     "title": "20260315-Claude Code春假双倍额度、OpenClaw浏览器控制上线、郭宇装置艺术AI公司",
     "summary": "Anthropic 宣布为期两周的春假双倍额度，同步推出 `/effort max` 等一批 Claude Code 新功能。OpenClaw 迎来高光周末：Chrome DevTools MCP 正式集成上线、NVIDIA 工程师协助安全审查、Microsoft 加入 Teams 集成建设、lossless-claw 插件收藏量破三千。郭宇用纯 Qwen 3.5 六个 agent 在东京\"开\"了一家装置艺术公司 KOUROKU，跑了 1036 轮后因 sandbox 超时终止。Aaron Levie 提出 agent 采购论：没有好 API 的平台将对 agent 隐形。",
