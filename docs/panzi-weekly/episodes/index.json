@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-16",
+    "title": "20260316-比特币挖完95%，固件才是新算力",
+    "summary": "本期聚焦比特币挖矿行业本周最重要的几个信号：比特币正式挖出第2000万枚，标志着行业从\"补贴驱动\"向\"手续费与能源效率驱动\"时代转型；Braiins发布GDA案例研究，展示了在不添置任何新硬件的情况下，仅靠固件切换实现相当于16MW额外产能的实操成果；MARA高管开放直播Q&A，围绕Exaion和Starwood Digital Ventures两项战略合作释放更多信息；Bitfarms推进股东投票，加速向北美数字基础设施公司转型；Bitdeer在AI云业务持续加码，将NVIDIA Nemotron 3 Super接入其Model Studio。",
+    "audio_duration": 764,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/panzi-weekly/episodes/2026-03-16/audio.mp3",
+    "tweet_count": 29
+  },
+  {
     "date": "2026-03-09",
     "title": "20260309-矿机废热供暖、算力V型反弹与MARA辟谣",
     "summary": "本期聚焦三个核心话题：矿机废热供暖正在从极客爱好演变为有产品、有社区的细分赛道；比特币网络算力V型反弹至1.2 ZH/s，而Braiins的案例研究揭示了固件优化带来40%算力提升的真实空间；MARA公开辟谣比特币储备策略被误读，折射出矿业上市公司叙事管理能力的提升。此外，Riot 2025年营收创纪录，Morphware拿下巴拉圭国家电力局合作框架，Auradine更名Velaura AI转型超低功耗AI计算。",
