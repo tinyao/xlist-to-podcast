@@ -108,7 +108,7 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
 
     # 3. TTS 转音频
     logger.info(f"[{podcast.name}] TTS 转换...")
-    mp3_bytes, duration = await asyncio.to_thread(text_to_speech, script, podcast.voice)
+    mp3_bytes, duration = await asyncio.to_thread(text_to_speech, script, podcast.voice, podcast.tts_provider)
 
     audio_rel = f"{podcast.id}/episodes/{today}/audio.mp3"
     (ep_dir / "audio.mp3").write_bytes(mp3_bytes)

@@ -22,6 +22,10 @@ class Settings(BaseSettings):
     # GitHub Pages 站点地址（如 "https://podcast.example.com"）
     site_url: str = ""
 
+    # Volcengine Doubao TTS (optional, needed when tts_provider=doubao)
+    volcengine_tts_appid: str = ""
+    volcengine_tts_token: str = ""
+
     # 阿里云 OSS（可选，全部配置后启用）
     oss_access_key_id: str = ""
     oss_access_key_secret: str = ""
