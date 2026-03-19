@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-19",
+    "title": "20260319-Google杀入vibe设计、kepano偏说不用AI",
+    "summary": "Google 昨天双线出击，发布 vibe 设计平台 Stitch，并宣布全面重建 Google AI Studio 的 vibe coding 体验；Andrej Karpathy 收到 NVIDIA 赠送的全球第一台 DGX Station GB300，背后有一段跨越十一年的故事；Greg Isenberg 的 58 分钟 AI agent 免费入门课拿下今日最高收藏量；而 kepano 花了一年做了一个\"只用规则、不用 AI\"的浏览器扩展，在满屏 AI 公告里说了一句反话。",
+    "audio_duration": 883,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-19/audio.mp3",
+    "tweet_count": 84
+  },
+  {
     "date": "2026-03-17",
     "title": "20260317-Claude Code配Obsidian火了、GPT-5.4首周十亿、新词在路上",
     "summary": "GPT-5.4 发布满一周，Sam Altman 公布每天五万亿 token、年化十亿美元新增收入的数据，同时谈到\"humanity\"正在成为模型下一个竞争维度。Claude Code 团队的 Thariq 发出今日最高互动推文，说需要一个比\"vibe coding\"更好的词。Greg Isenberg 的 Claude Code 配 Obsidian 工作流视频拿下近三千收藏，是本期最值得实践的内容。Peter 联合 NVIDIA 推出 OpenShell 和 NemoClaw，朝 agent 可信安全迈出具体一步。",
