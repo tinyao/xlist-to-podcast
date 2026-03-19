@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-20",
+    "title": "20260320-Claude Code进了你口袋、企业要给Agent办身份证",
+    "summary": "Claude Code 正式支持通过 Telegram 和 Discord 控制，coding agent 开始走出桌面进入手机；Google AI Studio vibe coding 体验正式上线，功能和路线图全部披露；Aaron Levie 与 20+ 企业 AI 负责人深度交流，带回了关于 agent 身份认证和 token 预算的具体观察；郭宇发布第 12 个产品 mails.dev，为 agent 提供邮件基础设施；Apple 对 Replit 和 Vibecode 踩刹车，vibe coding 与 App Store 的摩擦正式开始。",
+    "audio_duration": 712,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-20/audio.mp3",
+    "tweet_count": 70
+  },
+  {
     "date": "2026-03-19",
     "title": "20260319-Google杀入vibe设计、kepano偏说不用AI",
     "summary": "Google 昨天双线出击，发布 vibe 设计平台 Stitch，并宣布全面重建 Google AI Studio 的 vibe coding 体验；Andrej Karpathy 收到 NVIDIA 赠送的全球第一台 DGX Station GB300，背后有一段跨越十一年的故事；Greg Isenberg 的 58 分钟 AI agent 免费入门课拿下今日最高收藏量；而 kepano 花了一年做了一个\"只用规则、不用 AI\"的浏览器扩展，在满屏 AI 公告里说了一句反话。",
