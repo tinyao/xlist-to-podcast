@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-21",
+    "title": "20260321-token预算定产出、OpenClaw生态百万周活",
+    "summary": "Jensen Huang 的一句话把 token 预算和个人产出的关系说得很直接：一个顶级工程师如果不消耗足够多的算力，你应该感到警觉。今天从这个角度出发，Anthropic 的 PM 团队公开了 AI 时代的产品管理新方法论；OpenClaw 生态密集运动，Greg Isenberg 的一小时实操课拿下 3000+ 书签，ClawHub 达到百万周活；Apple 与 vibe coding 的对决有新进展，Replit CEO 正面回应，Vibecode 转向 Android。",
+    "audio_duration": 594,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-21/audio.mp3",
+    "tweet_count": 58
+  },
+  {
     "date": "2026-03-20",
     "title": "20260320-Claude Code进了你口袋、企业要给Agent办身份证",
     "summary": "Claude Code 正式支持通过 Telegram 和 Discord 控制，coding agent 开始走出桌面进入手机；Google AI Studio vibe coding 体验正式上线，功能和路线图全部披露；Aaron Levie 与 20+ 企业 AI 负责人深度交流，带回了关于 agent 身份认证和 token 预算的具体观察；郭宇发布第 12 个产品 mails.dev，为 agent 提供邮件基础设施；Apple 对 Replit 和 Vibecode 踩刹车，vibe coding 与 App Store 的摩擦正式开始。",
