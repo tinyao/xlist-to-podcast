@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-21",
+    "title": "20260321-PM手册要重写了，框架开始内置AGENTS.md",
+    "summary": "Anthropic 产品团队 cat 发布了一篇关于 AI 时代 PM 工作方式变化的深度文章，获得近千收藏；Karpathy 上了 No Priors 播客，谈到\"AI psychosis\"、coding agent 掌握程度和 AutoResearch；Vercel 发布 Next.js 16.2，将 AGENTS.md 设为默认模板，框架层面正式拥抱 agent-native 设计；此外 Jensen Huang 关于 token 预算的表述引发广泛讨论，多个 Claude Code 和生态工具也有小幅更新。",
+    "audio_duration": 734,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-21/audio.mp3",
+    "tweet_count": 53
+  },
+  {
     "date": "2026-03-20",
     "title": "20260320-Claude Code进了你口袋、企业要给Agent办身份证",
     "summary": "Claude Code 正式支持通过 Telegram 和 Discord 控制，coding agent 开始走出桌面进入手机；Google AI Studio vibe coding 体验正式上线，功能和路线图全部披露；Aaron Levie 与 20+ 企业 AI 负责人深度交流，带回了关于 agent 身份认证和 token 预算的具体观察；郭宇发布第 12 个产品 mails.dev，为 agent 提供邮件基础设施；Apple 对 Replit 和 Vibecode 踩刹车，vibe coding 与 App Store 的摩擦正式开始。",
