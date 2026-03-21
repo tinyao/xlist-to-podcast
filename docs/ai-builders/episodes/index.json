@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-22",
+    "title": "20260322-建Agent是一门手艺：7000收藏背后的实践路径",
+    "summary": "Thariq 发布了一份 agent 建造者合集，7000+ 收藏，涵盖 Skills、文件系统、bash、prompt caching 等核心实践，几乎是一份完整的学习路径。Aaron Levie 分析了 agent 技术栈的\"苦涩教训周期\"——RAG 被上下文窗口替代，但新能力又带来沙箱等新问题，这个循环会持续多年。Zara Zhang 的观察引发广泛共鸣：AI 重度用户普遍变得更忙更焦虑，因为 AI 10 倍了生产力的同时带来了 20 倍的可能性。",
+    "audio_duration": 737,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-22/audio.mp3",
+    "tweet_count": 40
+  },
+  {
     "date": "2026-03-21",
     "title": "20260321-PM手册要重写了，框架开始内置AGENTS.md",
     "summary": "Anthropic 产品团队 cat 发布了一篇关于 AI 时代 PM 工作方式变化的深度文章，获得近千收藏；Karpathy 上了 No Priors 播客，谈到\"AI psychosis\"、coding agent 掌握程度和 AutoResearch；Vercel 发布 Next.js 16.2，将 AGENTS.md 设为默认模板，框架层面正式拥抱 agent-native 设计；此外 Jensen Huang 关于 token 预算的表述引发广泛讨论，多个 Claude Code 和生态工具也有小幅更新。",
