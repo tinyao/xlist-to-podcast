@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-23",
+    "title": "20260323-代码是输出，我们在AI的2010年",
+    "summary": "Vercel CEO Guillermo Rauch 发出了一个鲜明的判断：代码是输出，不是输入，工程师的注意力应该从\"代码写得漂不漂亮\"转移到需求、反馈和生产环境信号上。与此同时，Peter Steinberger 指出 AI coding 的速度瓶颈已经从 token 速度转移到算力，Karpathy 用 OpenClaw 控制家里设备的视频让这个趋势更加具体。Aaron Levie 用云计算的历史数据说明，我们现在大约在\"AI 的 2010 年\"。Claude Code 的 `/init` 命令也迎来了重要更新，开始主动帮助用户完成项目配置。",
+    "audio_duration": 600,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-23/audio.mp3",
+    "tweet_count": 38
+  },
+  {
     "date": "2026-03-21",
     "title": "20260321-PM手册要重写了，框架开始内置AGENTS.md",
     "summary": "Anthropic 产品团队 cat 发布了一篇关于 AI 时代 PM 工作方式变化的深度文章，获得近千收藏；Karpathy 上了 No Priors 播客，谈到\"AI psychosis\"、coding agent 掌握程度和 AutoResearch；Vercel 发布 Next.js 16.2，将 AGENTS.md 设为默认模板，框架层面正式拥抱 agent-native 设计；此外 Jensen Huang 关于 token 预算的表述引发广泛讨论，多个 Claude Code 和生态工具也有小幅更新。",
