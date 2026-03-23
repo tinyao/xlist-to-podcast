@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Sat, 21 Mar 2026 01:43:13 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 23:22:00 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,49 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260324-Claude Code长出了手脚，边界比你想的消失得快</title>
+      <description>## 今日摘要
+
+Claude Code Desktop 正式支持鼠标键盘屏幕控制，同时一封要求 AI 犯错退款的邮件截图在推特上引发近六千点赞，折射出用户对 agent 责任归属的新期待。Greg Isenberg 演示用 Claude Code 三十分钟上线百条广告，Zara Zhang 的 codebase-to-course skill 引爆转发——两者共同说明 Claude Code 的核心用户早已超出程序员范围。Sam Altman 从核聚变公司 Helion 辞去董事职务，以推进 OpenAI 与 Helion 的大规模能源合作；Dreamer 整队并入 Meta Superintelligence Labs，从 beta 上线到整合不到两个月。
+
+## 重点话题
+
+- **Claude Code Desktop 接管鼠标键盘**：computer use 功能正式落地，配合 Dispatch 工具可实现远程控制；Peter Yang 发起的 Claude Code vs OpenClaw 对比引发百条真实用户反馈
+- **退款邮件走红**：OpenClaw 用户要求因"AI 犯错"退款的截图拿到近六千点赞，折射 agent 责任归属正在成为真实议题
+- **Claude Code 走进广告部门和课堂**：Greg Isenberg 演示三十分钟上线百条 Facebook 广告；Zara Zhang 发布 codebase-to-course，帮助 vibe coder 理解自己生成的代码
+- **Sam Altman 从 Helion 辞职**：为 OpenAI 与这家核聚变公司探索大规模合作让路，AI 能源布局开始浮出水面
+- **Dreamer 整队并入 Meta**：personal AI software 团队从上线到并入 Meta Superintelligence Labs 不到两个月
+
+## 快讯
+
+- Justine Moore 一句话走红：「我从来没学会写代码，先是太难了，后来是太简单了。」
+- Lenny Rachitsky 读者调查：多数人觉得 AI 让工作更好，但岗位安全感同步下降，工作量没有减少
+- Factory Missions 向所有用户开放，支持从头搭应用、代码迁移等长任务场景
+- Devin 今年每月用量增长超 50%，连 Cognition 内部都感到意外
+- 郭宇 vibelab 上线直播回放功能；Tailscale 发布 Aperture，与其 nkmc.ai 思路几乎一致
+
+## 值得阅读
+
+- [Claude Code Desktop computer use 文档](https://code.claude.com/docs/en/desktop#let-claude-use-your-computer)
+- [Zara Zhang — codebase-to-course GitHub](https://github.com/zarazhangrui/codebase-to-course)
+- [OpenClaw beta v2026.3.22-beta.1](https://github.com/openclaw/openclaw/releases/tag/v2026.3.22-beta.1)
+- [Littlebird — full context AI 官网](https://littlebird.ai/)
+- [nkmc.ai — 郭宇的 API Key 网关](http://nkmc.ai)</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-24/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-24/audio.mp3" length="11503680" type="audio/mpeg"/>
+      <pubDate>Mon, 23 Mar 2026 23:14:01 +0000</pubDate>
+      <itunes:duration>575</itunes:duration>
+      <itunes:summary>## 今日摘要
+
+Claude Code Desktop 正式支持鼠标键盘屏幕控制，同时一封要求 AI 犯错退款的邮件截图在推特上引发近六千点赞，折射出用户对 agent 责任归属的新期待。Greg Isenberg 演示用 Claude Code 三十分钟上线百条广告，Zara Zhang 的 codebase-to-course skill 引爆转发——两者共同说明 Claude Code 的核心用户早已超出程序员范围。Sam Altman 从核聚变公司 Helion 辞去董事职务，以推进 OpenAI 与 Helion 的大规模能源合作；Dreamer 整队并入 Meta Superintelligence Labs，从 beta 上线到整合不到两个月。
+
+## 重点话题
+
+- **Claude Code Desktop 接管鼠标键盘**：computer use 功能正式落地，配合 Dispatch 工具可实现远程控制；Peter Yang 发起的 Claude Code vs OpenClaw 对比引发百条真实用户反馈
+- **退款邮件走红**：OpenClaw 用户要求因"</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260321-PM手册要重写了，框架开始内置AGENTS.md</title>
       <description>## 今日摘要
