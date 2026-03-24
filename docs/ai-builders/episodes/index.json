@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-24",
+    "title": "20260324-Claude Code长出了手脚，边界比你想的消失得快",
+    "summary": "Claude Code Desktop 正式支持鼠标键盘屏幕控制，同时一封要求 AI 犯错退款的邮件截图在推特上引发近六千点赞，折射出用户对 agent 责任归属的新期待。Greg Isenberg 演示用 Claude Code 三十分钟上线百条广告，Zara Zhang 的 codebase-to-course skill 引爆转发——两者共同说明 Claude Code 的核心用户早已超出程序员范围。Sam Altman 从核聚变公司 Helion 辞去董事职务，以推进 OpenAI 与 Helion 的大规模能源合作；Dreamer 整队并入 Meta Superintelligence Labs，从 beta 上线到整合不到两个月。",
+    "audio_duration": 575,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-24/audio.mp3",
+    "tweet_count": 58
+  },
+  {
     "date": "2026-03-21",
     "title": "20260321-PM手册要重写了，框架开始内置AGENTS.md",
     "summary": "Anthropic 产品团队 cat 发布了一篇关于 AI 时代 PM 工作方式变化的深度文章，获得近千收藏；Karpathy 上了 No Priors 播客，谈到\"AI psychosis\"、coding agent 掌握程度和 AutoResearch；Vercel 发布 Next.js 16.2，将 AGENTS.md 设为默认模板，框架层面正式拥抱 agent-native 设计；此外 Jensen Huang 关于 token 预算的表述引发广泛讨论，多个 Claude Code 和生态工具也有小幅更新。",
