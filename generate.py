@@ -59,6 +59,7 @@ def load_podcasts_from_yaml() -> list[Podcast]:
             twitter_list_url=entry["twitter_list_url"],
             twitter_list_id=entry["twitter_list_id"],
             voice=entry.get("voice", "nova"),
+            tts_provider=entry.get("tts_provider", "openai"),
             language=entry.get("language", "zh"),
             publish_hour=entry.get("publish_hour", 8),
             frequency=entry.get("frequency", "daily"),

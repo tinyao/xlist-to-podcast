@@ -51,6 +51,7 @@ class Podcast(BaseModel):
     twitter_list_id: str
     twitter_list_url: str
     voice: str = "nova"
+    tts_provider: str = "openai"  # "openai" or "doubao"
     language: str = "zh"
     cover_path: str = ""
     cover_hash: str = ""

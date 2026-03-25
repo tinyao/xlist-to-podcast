@@ -7,7 +7,10 @@
 #   description     — 播客简介
 #   twitter_list_url — X List 链接
 #   twitter_list_id  — X List 数字 ID
-#   voice           — OpenAI TTS 音色：alloy / echo / fable / onyx / nova / shimmer
+#   voice           — TTS 音色（可选，默认 nova）
+#                     OpenAI: alloy / echo / fable / onyx / nova / shimmer
+#                     豆包: 火山引擎 voice_type（如 zh_female_wanqudashu_moon_bigtts）
+#   tts_provider    — TTS 引擎：openai / doubao，默认 openai（可选）
 #   language        — 语言：zh / en
 #   publish_hour    — 发布时间（北京时间，0-23）
 #   frequency       — 发布频率：daily（每天）/ weekly（每周），默认 daily（可选）
