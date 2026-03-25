@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-25",
+    "title": "20260325-LiteLLM供应链告急，Figma向agent敞开了门",
+    "summary": "LiteLLM PyPI 遭供应链攻击，单次 pip install 可泄露所有凭据，Karpathy 发出警告；Claude Code 推出 Auto Mode，彻底告别权限弹窗；Figma MCP 进入开放 beta，AI agent 可直接在画布上设计；Vercel CEO 分享内部实践，几乎所有 SaaS 工具已被生成式 app 替代；Lenny 2026 年初就业报告显示 PM 和工程师需求创新高，设计岗持平。",
+    "audio_duration": 697,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-25/audio.mp3",
+    "tweet_count": 98
+  },
+  {
     "date": "2026-03-24",
     "title": "20260324-Claude Code长出了手脚，边界比你想的消失得快",
     "summary": "Claude Code Desktop 正式支持鼠标键盘屏幕控制，同时一封要求 AI 犯错退款的邮件截图在推特上引发近六千点赞，折射出用户对 agent 责任归属的新期待。Greg Isenberg 演示用 Claude Code 三十分钟上线百条广告，Zara Zhang 的 codebase-to-course skill 引爆转发——两者共同说明 Claude Code 的核心用户早已超出程序员范围。Sam Altman 从核聚变公司 Helion 辞去董事职务，以推进 OpenAI 与 Helion 的大规模能源合作；Dreamer 整队并入 Meta Superintelligence Labs，从 beta 上线到整合不到两个月。",
