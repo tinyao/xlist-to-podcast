@@ -1,0 +1,16 @@
+{
+  "id": "2308b709-b0e0-4a62-84cb-63a360c49fd0",
+  "podcast_id": "ai-builders",
+  "date": "2026-03-27",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "X API 403: {\"account_id\":2027398785715048448,\"reset_date\":\"2026-03-27\",\"title\":\"SpendCapReached\",\"detail\":\"Your enrolled account [2027398785715048448] has reached its billing cycle spend cap. API requests will be blocked until the next cycle begins on 2026-03-27. To resume access immediately, you can increase ",
+  "created_at": "2026-03-26T23:12:05.682642",
+  "audio_url": ""
+}
