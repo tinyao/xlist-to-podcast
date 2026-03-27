@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-28",
+    "title": "20260328-给狗造mRNA疫苗，以及人类的上下文窗口才是瓶颈",
+    "summary": "Paul Conyngham 用 ChatGPT 和 AlphaFold 为爱犬 Rosie 设计了个性化 mRNA 癌症疫苗，Sam Altman 亲自分享并说\"这应该成为一家公司\"，是昨日互动量最高的故事。Guillermo Rauch 的一条推文引发热议：在 agent 时代 CLI 正回归中心地位。Zara Zhang 描述了 AI 诱发的注意力碎片化问题，并总结出一句精准的话：\"瓶颈不是 AI 的上下文窗口，是人的。\" OpenAI Codex 开放 plugins 接入企业工具链，Stripe 进入 agent 基础设施领域，Gemini 推出跨平台记忆迁移功能。",
+    "audio_duration": 655,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-28/audio.mp3",
+    "tweet_count": 45
+  },
+  {
     "date": "2026-03-25",
     "title": "20260325-LiteLLM供应链告急，Figma向agent敞开了门",
     "summary": "LiteLLM PyPI 遭供应链攻击，单次 pip install 可泄露所有凭据，Karpathy 发出警告；Claude Code 推出 Auto Mode，彻底告别权限弹窗；Figma MCP 进入开放 beta，AI agent 可直接在画布上设计；Vercel CEO 分享内部实践，几乎所有 SaaS 工具已被生成式 app 替代；Lenny 2026 年初就业报告显示 PM 和工程师需求创新高，设计岗持平。",
