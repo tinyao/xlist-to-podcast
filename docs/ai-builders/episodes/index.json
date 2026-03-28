@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-29",
+    "title": "20260329-用AI论证反面，才算真的想清楚了",
+    "summary": "Karpathy 今天用一个亲身经历说清楚了 LLM sycophancy 的风险——他花四小时打磨出的论证，被同一个模型用五分钟推翻；Peter Steinberger 宣布 OpenClaw 将成为 MCP，接入 Teams、Telegram、Slack，agent 消息通道正在走向标准化；Aaron Levie 提出\"enterprise context gap\"框架，解释了为何编程 AI 远快于企业知识工作 AI；技术层面，Cheng Lou 发布纯 TypeScript 文字测量库，绕开 DOM 限制，引来 Guillermo 高调转发。",
+    "audio_duration": 701,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-29/audio.mp3",
+    "tweet_count": 50
+  },
+  {
     "date": "2026-03-25",
     "title": "20260325-LiteLLM供应链告急，Figma向agent敞开了门",
     "summary": "LiteLLM PyPI 遭供应链攻击，单次 pip install 可泄露所有凭据，Karpathy 发出警告；Claude Code 推出 Auto Mode，彻底告别权限弹窗；Figma MCP 进入开放 beta，AI agent 可直接在画布上设计；Vercel CEO 分享内部实践，几乎所有 SaaS 工具已被生成式 app 替代；Lenny 2026 年初就业报告显示 PM 和工程师需求创新高，设计岗持平。",
