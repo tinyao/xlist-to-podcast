@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-30",
+    "title": "20260330-可以租用的智能：从删日历到九个Agent",
+    "summary": "Boris Cherny 分享了在 Anthropic 工作收到用户来信的细节，与 Justine Moore \"可以租用智能了\"的感慨一起，触碰了 AI 与人之间关系被悄然重塑这件事。Greg Isenberg 的四个 .md 文件教程成为今天被保存最多的内容，切实解决了 Claude Code 每次开对话都要重建上下文的摩擦。Lenny Rachitsky 发布了 Claire Vo 的深度访谈，从删家庭日历到跑 9 个 agent，提供了迄今最具体的个人 agent 使用框架。Peter Yang 与 Jenny Wen 的 40 分钟访谈，则给出了 Anthropic 内部构建产品方式的难得内部视角。",
+    "audio_duration": 704,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-30/audio.mp3",
+    "tweet_count": 42
+  },
+  {
     "date": "2026-03-25",
     "title": "20260325-LiteLLM供应链告急，Figma向agent敞开了门",
     "summary": "LiteLLM PyPI 遭供应链攻击，单次 pip install 可泄露所有凭据，Karpathy 发出警告；Claude Code 推出 Auto Mode，彻底告别权限弹窗；Figma MCP 进入开放 beta，AI agent 可直接在画布上设计；Vercel CEO 分享内部实践，几乎所有 SaaS 工具已被生成式 app 替代；Lenny 2026 年初就业报告显示 PM 和工程师需求创新高，设计岗持平。",
