@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-03-31",
+    "title": "20260331-四万五千个书签：Boris 拆解 Claude Code 的真实玩法",
+    "summary": "Claude Code 工程师 Boris Cherny 发布 15 条隐藏功能连续帖，4.5 万书签刷新记录；Anthropic 同步上线 computer use 功能，Claude 可直接操控 UI 界面；Aaron Levie 深度分析 agent 时代下基础设施的结构性变化；Greg Isenberg 给出 7 条 vibe coding 项目分发策略；企业 CIO 对 AI-native 创业公司的开放程度超出市场预期。",
+    "audio_duration": 649,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-31/audio.mp3",
+    "tweet_count": 70
+  },
+  {
     "date": "2026-03-30",
     "title": "20260330-可以租用的智能：从删日历到九个Agent",
     "summary": "Boris Cherny 分享了在 Anthropic 工作收到用户来信的细节，与 Justine Moore \"可以租用智能了\"的感慨一起，触碰了 AI 与人之间关系被悄然重塑这件事。Greg Isenberg 的四个 .md 文件教程成为今天被保存最多的内容，切实解决了 Claude Code 每次开对话都要重建上下文的摩擦。Lenny Rachitsky 发布了 Claire Vo 的深度访谈，从删家庭日历到跑 9 个 agent，提供了迄今最具体的个人 agent 使用框架。Peter Yang 与 Jenny Wen 的 40 分钟访谈，则给出了 Anthropic 内部构建产品方式的难得内部视角。",
