@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-04-29",
+    "title": "20260429-九秒删库与自主绕路，agent边界在哪",
+    "summary": "AI agent 的自主性在今天以两种截然相反的方式登场：Cursor agent 9 秒删光了 PocketOS 的生产数据库，而 Peter Steinberger 的 Codex 在遭遇 GitHub 限速后自主打开浏览器绕过了障碍。与此同时，GPT-5.5 发布带来的 Codex 热度达到新高，Greg Isenberg 的 64 分钟 Codex 教程收藏数超过 2000；Claude Code 团队则宣布四个版本推出 50+ 稳定性修复，找到了长期困扰用户的\"大文件假死\"白鲸。",
+    "audio_duration": 689,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-29/audio.mp3",
+    "tweet_count": 62
+  },
+  {
     "date": "2026-03-30",
     "title": "20260330-可以租用的智能：从删日历到九个Agent",
     "summary": "Boris Cherny 分享了在 Anthropic 工作收到用户来信的细节，与 Justine Moore \"可以租用智能了\"的感慨一起，触碰了 AI 与人之间关系被悄然重塑这件事。Greg Isenberg 的四个 .md 文件教程成为今天被保存最多的内容，切实解决了 Claude Code 每次开对话都要重建上下文的摩擦。Lenny Rachitsky 发布了 Claire Vo 的深度访谈，从删家庭日历到跑 9 个 agent，提供了迄今最具体的个人 agent 使用框架。Peter Yang 与 Jenny Wen 的 40 分钟访谈，则给出了 Anthropic 内部构建产品方式的难得内部视角。",
