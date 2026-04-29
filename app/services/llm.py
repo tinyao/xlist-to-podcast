@@ -20,7 +20,7 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 _OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-_OPENROUTER_MODEL = "anthropic/claude-sonnet-4-6"
+_OPENROUTER_MODEL = "deepseek/deepseek-v4-pro"
 
 _CLAUDE_CLI_TIMEOUT = 1200
 

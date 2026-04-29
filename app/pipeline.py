@@ -13,7 +13,7 @@ Twitter 抓取 → LLM 生成 → TTS → 写文件 → 更新 feed.xml
 import asyncio
 import logging
 import re
-from datetime import datetime, timedelta, timezone, date
+from datetime import datetime, time, timedelta, timezone, date
 from pathlib import Path
 from typing import Optional
 
@@ -180,8 +180,17 @@ async def regenerate_episode(podcast_id: str, ep_date: date, extra_prompt: str =
         logger.warning(f"[{podcast.name}] posts.md 中未识别到推文，仍然继续")
     tweets = FetchResult(count=tweet_count, text=posts_text)
 
-    # 沿用已有 episode.json 的 created_at 等元数据
-    episode = await get_episode(podcast.id, ep_date) or Episode(podcast_id=podcast.id, date=ep_date)
+    # 沿用已有 episode.json 的 created_at；新建时把 created_at 钉在 ep_date 中午 UTC，
+    # 避免重新生成历史节目时 feed.xml 的 pubDate 全部贴成今天。
+    existing = await get_episode(podcast.id, ep_date)
+    if existing:
+        episode = existing
+    else:
+        episode = Episode(
+            podcast_id=podcast.id,
+            date=ep_date,
+            created_at=datetime.combine(ep_date, time(12, 0)),
+        )
     episode.status = "processing"
     episode.error_msg = ""
     await save_episode(episode)

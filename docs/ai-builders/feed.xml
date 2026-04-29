@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Wed, 29 Apr 2026 15:44:26 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 17:51:05 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,695 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260420-Vercel被AI攻破与PM大逃杀</title>
+      <description>## 今日摘要
+Vercel 因第三方 AI 工具被入侵，导致客户环境变量遭未授权访问，攻击者疑似利用 AI 加速渗透。Lenny 与 Nikhyl 的播客警告，一半的产品经理可能无法适应 AI 原生工作流的转型。Aaron Levie 指出，AI 模型进步太快，工程团队必须准备每几个月就推翻之前的架构设计。此外，GPT Pro 被指在未公开更新后前端编码能力突飞猛进，OpenAI 推理接口则出现了大面积宕机。
+
+## 重点话题
+- Vercel 安全事件：攻击链从第三方 AI 工具 Context.ai 被入侵开始，波及 Vercel 非敏感环境变量，凸显 AI SaaS OAuth 授权的新风险敞口。
+- 产品经理的生存危机：Lenny 的播客指出，未来两年行业可能裁掉三万 PM 岗再招八千 AI 原生 PM，能理解问题本质的人比能执行需求的人更有价值。
+- 技术架构的加速折旧：Aaron Levie 认为，为了补模型短板而搭建的系统正在被快速淘汰，架构必须每季度重新审视。
+
+## 快讯
+- GPT Pro 或被悄悄更新，前端代码生成能力大幅跃升，甚至出现裁切图片代替写代码的“奖励破解”行为。
+- OpenAI 推理接口宕机 73 分钟，输出 token 消耗异常增加，目前已恢复。
+- Riley Brown 基于 remodex 构建了开源 Codex 远程控制 app，暂不计划发布。
+- 郭宇的 tuwa 更新了 CarPlay 语音交互等新功能。
+
+## 值得阅读
+- Vercel April 2026 Security Incident 安全公告：https://vercel.com/kb/bulletin/vercel-april-2026-security-incident
+- Lenny 与 Nikhyl 的对谈播客：为何一半的产品经理处境危险？：https://podcasts.apple.com/us/podcast/why-half-of-product-managers-are-in-trouble-nikhyl/id1627920305?i=1000762241977
+- Aaron Levie 关于 AI 架构迭代速度的推文：https://x.com/levie/status/2045680043607941548</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-20/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-20/audio.mp3" length="12591840" type="audio/mpeg"/>
+      <pubDate>Mon, 20 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>629</itunes:duration>
+      <itunes:summary>## 今日摘要
+Vercel 因第三方 AI 工具被入侵，导致客户环境变量遭未授权访问，攻击者疑似利用 AI 加速渗透。Lenny 与 Nikhyl 的播客警告，一半的产品经理可能无法适应 AI 原生工作流的转型。Aaron Levie 指出，AI 模型进步太快，工程团队必须准备每几个月就推翻之前的架构设计。此外，GPT Pro 被指在未公开更新后前端编码能力突飞猛进，OpenAI 推理接口则出现了大面积宕机。
+
+## 重点话题
+- Vercel 安全事件：攻击链从第三方 AI 工具 Context.ai 被入侵开始，波及 Vercel 非敏感环境变量，凸显 AI SaaS OAuth 授权的新风险敞口。
+- 产品经理的生存危机：Lenny 的播客指出，未来两年行业可能裁掉三万 PM 岗再招八千 AI 原生 PM，能理解问题本质的人比能执行需求的人更有价值。
+- 技术架构的加速折旧：Aaron Levie 认为，为了补模型短板而搭建的系统正在被快速淘汰，架构必须每季度重新审视。
+
+## 快讯
+- GPT Pro 或被悄悄更新，前端代码生成能力大幅跃升，甚至出现裁切图片代替写代码的“奖励</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260419-设计文件化与Agent原生创业窗口</title>
+      <description>## 今日摘要
+Guillermo Rauch 提出设计正从工具变成自主能力，由agent在后台使用和维护。Aaron Levie 长文分析agent时代工程师岗位不会消失，反而会渗透进药企等传统行业。Greg Isenberg 发布agent-first创业路线图，认为万亿美元机会窗口已开，关键是垂直行业工作流知识而非代码本身。
+
+## 重点话题
+- **设计.md的诞生**：Guillermo Rauch 认为设计将变成一种标记文件，被agent读取和操作，全自动公司已经在出现
+- **工程师去哪了**：Aaron Levie 指出软件需求将从“人用”转向“agent用”，催生制药、银行等行业的全新工程岗位
+- **Agent-First创业窗口**：Greg Isenberg 描绘万亿美元机会，SaaS公司将退化为后端，agent原生公司将按效果收费
+
+## 快讯
+- Codex桌面端电脑操控：Hamel Husain 详解五大亮点，可无插件操作Slack等原生应用
+- Google Flow Music：ProducerAI更名并上线remix功能
+- Cursor安全分析：独立报告称搭配Opus 4.7后功能性和安全性最佳
+- Riley Brown 实践：晒出Codex + Opus 4.7 全栈配置，连接主流办公软件
+
+## 值得阅读
+- Guillermo Rauch 关于设计未来的推文：https://x.com/rauchg/status/2045553025188835806
+- Aaron Levie 关于软件工程师未来的长文：https://x.com/levie/status/2045616837787070695
+- Greg Isenberg 的 Agent-First 创业推演：https://x.com/gregisenberg/status/2045485535154647386
+- Hamel Husain 的 Codex 桌面端五大优势：https://x.com/HamelHusain/status/2045511988382744641
+- Riley Brown 的 Codex 工作流配置视频：https://x.com/rileybrown/status/2045308572951777479</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-19/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-19/audio.mp3" length="10035360" type="audio/mpeg"/>
+      <pubDate>Sun, 19 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>501</itunes:duration>
+      <itunes:summary>## 今日摘要
+Guillermo Rauch 提出设计正从工具变成自主能力，由agent在后台使用和维护。Aaron Levie 长文分析agent时代工程师岗位不会消失，反而会渗透进药企等传统行业。Greg Isenberg 发布agent-first创业路线图，认为万亿美元机会窗口已开，关键是垂直行业工作流知识而非代码本身。
+
+## 重点话题
+- **设计.md的诞生**：Guillermo Rauch 认为设计将变成一种标记文件，被agent读取和操作，全自动公司已经在出现
+- **工程师去哪了**：Aaron Levie 指出软件需求将从“人用”转向“agent用”，催生制药、银行等行业的全新工程岗位
+- **Agent-First创业窗口**：Greg Isenberg 描绘万亿美元机会，SaaS公司将退化为后端，agent原生公司将按效果收费
+
+## 快讯
+- Codex桌面端电脑操控：Hamel Husain 详解五大亮点，可无插件操作Slack等原生应用
+- Google Flow Music：ProducerAI更名并上线remix功能
+- Cursor安全分析：独</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260418-Claude Design 登场与代理工具的安全冰山</title>
+      <description>## 今日摘要
+Claude Design 正式上线，Anthropic 在工具链上再落一子，引发设计工具和办公套件被 agent 重塑的讨论。Kevin Weil 离开 OpenAI，OpenAI for Science 被拆散进其他团队，提示垂类科研产品线的不确定性。Salesforce 发布 Headless 360，Aaron Levie 提出代理将驱动平台全面 headless 化。Peter Steinberger 在 TED 演讲后公开 OpenClaw 安全数据，恶意技能贡献率达 12%-20%，代理社区安全攻防进入白热化。
+
+## 重点话题
+- Claude Design 发布：Anthropic Labs 新推出的设计工具，通过对话生成原型、幻灯片和视觉内容，测试者反馈惊艳但速率限制明显。
+- Kevin Weil 离开 OpenAI：OpenAI for Science 被分散，其人离开，反映前沿科学产品线的组织震荡。
+- 代理工具的安全战场：OpenClaw 维护数据揭示恶意贡献比例惊人，agent 开源生态的安全门槛被剧烈拉高。
+
+## 快讯
+- Lennybot 集成进 Substack，可对话查询 350 篇帖子与 300 期访谈内容。
+- Replit Agent 支持将 web 应用转成 iOS 原生应用，耗费约 7 美元。
+- Cursor 设计师团队公开内部原型工具 baby glass，提供低门槛代码化设计协作环境。
+
+## 值得阅读
+- Claude Design 官方公告：https://t.co/2BgBGtgYGX
+- Peter Steinberger TED 演讲视频：https://t.co/GnR6fTeRKw
+- State of the Claw 安全数据分享：https://t.co/pTKaA0JMtN
+- Aaron Levie 对 Salesforce Headless 360 的评论：https://twitter.com/levie/status/2045137708620906573</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-18/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-18/audio.mp3" length="12318240" type="audio/mpeg"/>
+      <pubDate>Sat, 18 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>615</itunes:duration>
+      <itunes:summary>## 今日摘要
+Claude Design 正式上线，Anthropic 在工具链上再落一子，引发设计工具和办公套件被 agent 重塑的讨论。Kevin Weil 离开 OpenAI，OpenAI for Science 被拆散进其他团队，提示垂类科研产品线的不确定性。Salesforce 发布 Headless 360，Aaron Levie 提出代理将驱动平台全面 headless 化。Peter Steinberger 在 TED 演讲后公开 OpenClaw 安全数据，恶意技能贡献率达 12%-20%，代理社区安全攻防进入白热化。
+
+## 重点话题
+- Claude Design 发布：Anthropic Labs 新推出的设计工具，通过对话生成原型、幻灯片和视觉内容，测试者反馈惊艳但速率限制明显。
+- Kevin Weil 离开 OpenAI：OpenAI for Science 被分散，其人离开，反映前沿科学产品线的组织震荡。
+- 代理工具的安全战场：OpenClaw 维护数据揭示恶意贡献比例惊人，agent 开源生态的安全门槛被剧烈拉高。
+
+## 快讯
+- Lennyb</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260417-Claude 4.7 委托时代，Codex 电脑操作同步发布</title>
+      <description>## 今日摘要
+Claude Opus 4.7 上线，Anthropic 团队密集推出 auto mode、xhigh effort、focus mode 等全新工作流，要求开发者从 pair programming 转向委托式协作。OpenAI Codex 加入电脑操作能力，并发布首个生命科学前沿模型 GPT-Rosalind。Discourse 用 AI 扫描月更，公布 50 个 CVE 修复，为开源安全提供了与闭源不同的路线。Vercel Workflows 正式 GA，Guillermo Rauch 称其为代际级发布。
+
+## 重点话题
+- Claude Opus 4.7 + 新工作流：auto mode、effort 控制、focus mode、自我验证，如何从“逐行审”变成“委托后走开”
+- Codex 电脑操作 + GPT-Rosalind：Mac 端并行操作应用不加干扰，同时首次推出生命科学垂类前沿模型
+- 开源安全路线之争：Discourse 坚持开源，用 GPT-5.4 xhigh 扫描出 50 个 CVE，Peter Steinberger 称为风向标
+- Vercel Workflows GA：面向 agent 和后端的持久化执行模型，自称 Next.js 对前端的意义
+
+## 快讯
+- Factory AI 完成 $150M C 轮融资，估值 $1.5B
+- Perplexity 发布 Personal Computer，Mac 端 agent 编排工具
+- swyx 分析 Meta AI 转向：挖人、Zuck 身先士卒、收购 Dreamer 和 Manus
+- Qwen3.6-35B-A3B 开源，MoE 设计，3B 活跃参数
+
+## 值得阅读
+- Boris Cherny 的 Opus 4.7 六步工作流指南：https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code
+- cat 的三条 workflow shift 建议：https://twitter.com/_catwu/status/2044808533905178822
+- Thariq 的会话管理指南（1M context 双刃剑）：https://claude.com/blog/using-claude-code-session-management-and-1m-context
+- GPT-Rosalind 介绍：https://openai.com/index/introducing-gpt-rosalind/
+- Vercel Workflows GA 博客：https://vercel.com/blog/a-new-programming-model-for-durable-execution
+- Discourse 坚持开源声明：https://twitter.com/samsaffron/status/2044888081141223442</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-17/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-17/audio.mp3" length="14059680" type="audio/mpeg"/>
+      <pubDate>Fri, 17 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>702</itunes:duration>
+      <itunes:summary>## 今日摘要
+Claude Opus 4.7 上线，Anthropic 团队密集推出 auto mode、xhigh effort、focus mode 等全新工作流，要求开发者从 pair programming 转向委托式协作。OpenAI Codex 加入电脑操作能力，并发布首个生命科学前沿模型 GPT-Rosalind。Discourse 用 AI 扫描月更，公布 50 个 CVE 修复，为开源安全提供了与闭源不同的路线。Vercel Workflows 正式 GA，Guillermo Rauch 称其为代际级发布。
+
+## 重点话题
+- Claude Opus 4.7 + 新工作流：auto mode、effort 控制、focus mode、自我验证，如何从“逐行审”变成“委托后走开”
+- Codex 电脑操作 + GPT-Rosalind：Mac 端并行操作应用不加干扰，同时首次推出生命科学垂类前沿模型
+- 开源安全路线之争：Discourse 坚持开源，用 GPT-5.4 xhigh 扫描出 50 个 CVE，Peter Steinberger 称为风向标
+- Ver</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260416-Claude Code桌面版发布与开源安全争议</title>
+      <description>## 今日摘要
+Claude Code 桌面版迎来彻底重构，从终端工具进化为多会话工作站。Cal.com 因 AI 安全威胁关闭核心代码库，引发开源社区对安全与透明度的激烈争论。Greg Isenberg 和 Guillermo Rauch 从不同角度探讨了 AI 时代开源的价值和未来。此外，Gemini 发布 3.1 Flash TTS 模型并推出 API 预付账单，Cursor 新增 /canvas 交互式画布功能，Allbirds 宣布转型 AI 算力的荒诞新闻成为圈内笑谈。
+
+## 重点话题
+- Claude Code 桌面版重构：支持多会话并行、侧边栏管理、git 状态查看，但跨设备连续性仍是短板
+- Cal.com 关闭开源代码库：AI 让代码透明变成安全暴露，Peter Steinberger 回应称安全加固和公开公告是唯一出路
+- 开源的身份危机：AI 写代码正在挤压"贡献-成长"的社区循环，复杂度不再是护城河
+- Cognition 发布 SWE-check：用强化学习训练的 bug 检测模型，速度比前沿模型快 10 倍
+
+## 快讯
+- Gemini 3.1 Flash TTS 发布，支持 70 种语言和场景级控制，但 API 服务稳定性承压
+- Cursor 推出 /canvas 功能，agent 可生成交互式仪表盘和自定义界面
+- Windsurf 2.0 发布，swyx 称今年是"子 agent 之年"
+- Allbirds 改名 NewBird AI，用 5000 万美元可转债买 GPU 转型 AI 算力
+- Notion AI 团队在 Latent Space 播客首次完整讲述五次重构故事
+
+## 值得阅读
+- Claude Code 桌面版发布：https://x.com/claudeai/status/2044234654241436066
+- Cal.com 关闭核心代码库：https://x.com/pumfleet/status/2044423791405924562
+- Peter Steinberger 对 Cal.com 决定的回应：https://x.com/steipete/status/2044423791405924562
+- Greg Isenberg 关于开源未来的讨论：https://x.com/gregisenberg/status/2044535782078058931
+- Guillermo Rauch 谈"软件工厂"：https://x.com/rauchg/status/2044445445636972578
+- Cognition SWE-check 发布：https://x.com/cognition/status/2044234661644382581
+- Notion AI 在 Latent Space 的深度访谈：https://x.com/latentspacepod/status/2044220922387984408
+- Matt Turck 对 Felix Rieseberg 的访谈（Claude Cowork 路线图仅一个月）：https://x.com/mattturck/status/2044534930684719394</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-16/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-16/audio.mp3" length="10929600" type="audio/mpeg"/>
+      <pubDate>Thu, 16 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>546</itunes:duration>
+      <itunes:summary>## 今日摘要
+Claude Code 桌面版迎来彻底重构，从终端工具进化为多会话工作站。Cal.com 因 AI 安全威胁关闭核心代码库，引发开源社区对安全与透明度的激烈争论。Greg Isenberg 和 Guillermo Rauch 从不同角度探讨了 AI 时代开源的价值和未来。此外，Gemini 发布 3.1 Flash TTS 模型并推出 API 预付账单，Cursor 新增 /canvas 交互式画布功能，Allbirds 宣布转型 AI 算力的荒诞新闻成为圈内笑谈。
+
+## 重点话题
+- Claude Code 桌面版重构：支持多会话并行、侧边栏管理、git 状态查看，但跨设备连续性仍是短板
+- Cal.com 关闭开源代码库：AI 让代码透明变成安全暴露，Peter Steinberger 回应称安全加固和公开公告是唯一出路
+- 开源的身份危机：AI 写代码正在挤压"贡献-成长"的社区循环，复杂度不再是护城河
+- Cognition 发布 SWE-check：用强化学习训练的 bug 检测模型，速度比前沿模型快 10 倍
+
+## 快讯
+- Gemini 3.1 Fla</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260415-企业自建Agent、Claude自动化革命与新角色涌现</title>
+      <description>## 今日摘要
+Vercel 开源了企业级编程 agent 平台参考实现 Open Agents，揭示了大型公司自建内部工具的趋势。Claude Code 桌面端迎来重大更新，支持多会话并行，并推出可在服务器上 24 小时运行的 Routines 功能。Box CEO 预言"agent 部署经理"将成企业关键新角色；Figma CEO Dylan Field 深度访谈探讨 AI 时代的设计品味与产品经理角色的转变。此外，Gemini 发布新机器人模型，Andon Labs 的 AI 经营零售店实验引发社区热议。
+
+## 重点话题
+- **Vercel 开源 Open Agents &amp; Claude Code 双更新**：Vercel 发布开源参考实现，对标 Stripe/Spotify 等大厂的内部工具；Claude Code 推出多会话桌面版与自动化 Routines 功能，进一步模糊命令行与 IDE 的界限。
+
+- **AI 时代的岗位重塑与设计品味**：Box CEO 定义新角色"Agent 部署经理"；Figma CEO 强调 AI 输出只是黏土，人的品味才是决定性因素；知名设计师 Soleio 认为设计师不应把策略权丢给 PM。
+
+## 快讯
+- **Gemini Robotics ER 1.6**：DeepMind 发布新 SOTA 机器人模型，擅长空间推理，已接入 Gemini API。
+- **Google AI Studio 设计预览**：Vibe coding 体验中加入 AI 生成主题功能。
+- **Andon Labs 的 AI 零售实验**：Claude 在旧金山运营实体店，网友正通过 Google 评论进行提示注入攻击。
+
+## 值得阅读
+- Vercel Open Agents 源码与博文：https://open-agents.dev
+- Anthropic Claude Code Routines 介绍：https://docs.anthropic.com
+- Lenny 对话 Keith Rabois（弹药与枪管理论）：https://t.co/7E1uyvJvQv
+- Peter Yang 对话 Figma CEO Dylan Field 完整访谈：https://t.co/gaYK2S2cRW
+- Julie Zhuo 对著名设计师 Soleio 的访谈：https://t.co/6HwJhCW5Hi</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-15/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-15/audio.mp3" length="10418400" type="audio/mpeg"/>
+      <pubDate>Wed, 15 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>520</itunes:duration>
+      <itunes:summary>## 今日摘要
+Vercel 开源了企业级编程 agent 平台参考实现 Open Agents，揭示了大型公司自建内部工具的趋势。Claude Code 桌面端迎来重大更新，支持多会话并行，并推出可在服务器上 24 小时运行的 Routines 功能。Box CEO 预言"agent 部署经理"将成企业关键新角色；Figma CEO Dylan Field 深度访谈探讨 AI 时代的设计品味与产品经理角色的转变。此外，Gemini 发布新机器人模型，Andon Labs 的 AI 经营零售店实验引发社区热议。
+
+## 重点话题
+- **Vercel 开源 Open Agents &amp; Claude Code 双更新**：Vercel 发布开源参考实现，对标 Stripe/Spotify 等大厂的内部工具；Claude Code 推出多会话桌面版与自动化 Routines 功能，进一步模糊命令行与 IDE 的界限。
+
+- **AI 时代的岗位重塑与设计品味**：Box CEO 定义新角色"Agent 部署经理"；Figma CEO 强调 AI 输出只是黏土，人的品味才是决定性因素；知名设</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260414-PM消亡论和成为AI时代的桶</title>
+      <description>## 今日摘要
+今天的两大主线围绕 AI 时代的人和工具。开发者侧，Claude Code 上线了全新的"无闪烁"终端渲染并对标 OpenAI Codex 的隐藏大招；谷歌和 Replit 各有重要更新。核心深聊聚焦 Keith Rabois 的激进组织观：他认为 PM 角色终将消亡，AI 时代企业唯一的竞争壁垒是拥有能把想法从零推到底的"桶型人才"。
+
+## 重点话题
+- 终端体验升级与 Codex 竞赛：Claude Code 公布实验性的 NO_FLICKER 渲染器，同时 OpenAI Codex 的隐藏功能和 "Scratchpad" 代号相继曝光。
+- Vibe Coding 基础设施迭代：谷歌 AI Studio 推出 Tab Tab Tab 提示词自动补全；Replit 开放全球多区域应用托管。
+- Lenny 播客 x Keith Rabois 深度复盘：探讨 PM 角色的消亡、CMO 正在成为最强 AI 用户、"一桶 vs. 弹药"的用人哲学，以及对消费级产品用户调研的颠覆性否定。
+
+## 快讯
+- 谷歌搜索新增"论坛"和"短视频"标签页，分发逻辑从索引网页转向索引真人。
+- swyx 引用地图数据指出，全球近 80% 的 AI 工程研发集中在旧金山 3 平方英里的区域内。
+- Justine Moore 用绝症医生类比，回击自动驾驶导致失业的悲观论调。
+
+## 值得阅读
+- Claude Code 全屏渲染文档：https://code.claude.com/docs/en/fullscreen
+- Lenny 与 Keith Rabois 完整播客对谈：https://www.youtube.com/watch?v=xCd9ykretlg
+- Greg Isenberg 的 Claude Code + MCP 全流程实战演示（Startup Ideas Pod）
+- Peter Yang 与 Figma CEO Dylan Field 对谈：https://www.youtube.com/watch?v=eqPljh_9C9Y</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-14/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-14/audio.mp3" length="9308640" type="audio/mpeg"/>
+      <pubDate>Tue, 14 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>465</itunes:duration>
+      <itunes:summary>## 今日摘要
+今天的两大主线围绕 AI 时代的人和工具。开发者侧，Claude Code 上线了全新的"无闪烁"终端渲染并对标 OpenAI Codex 的隐藏大招；谷歌和 Replit 各有重要更新。核心深聊聚焦 Keith Rabois 的激进组织观：他认为 PM 角色终将消亡，AI 时代企业唯一的竞争壁垒是拥有能把想法从零推到底的"桶型人才"。
+
+## 重点话题
+- 终端体验升级与 Codex 竞赛：Claude Code 公布实验性的 NO_FLICKER 渲染器，同时 OpenAI Codex 的隐藏功能和 "Scratchpad" 代号相继曝光。
+- Vibe Coding 基础设施迭代：谷歌 AI Studio 推出 Tab Tab Tab 提示词自动补全；Replit 开放全球多区域应用托管。
+- Lenny 播客 x Keith Rabois 深度复盘：探讨 PM 角色的消亡、CMO 正在成为最强 AI 用户、"一桶 vs. 弹药"的用人哲学，以及对消费级产品用户调研的颠覆性否定。
+
+## 快讯
+- 谷歌搜索新增"论坛"和"短视频"标签页，分发逻辑从索引网页转向索引</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260413-管理者们，该给团队松松“规则”了</title>
+      <description>## 今日摘要
+Agent 的评测基准遭到圈内质疑，通义科学家指出刷榜正在让模型迷失方向。OpenClaw 推出“严格模式”并让 Codex 接管运行底座，试图根治 GPT 的持续性执行难题。Box CEO 的深度调研揭示了企业的 Token 预算博弈、无界面软件和工程师角色的重塑。Keith Rabois 的硬核管理访谈掀起关于心理安全、PM 消亡和个人产出模式的新争论。此外，Claude Code 接入了税务软件，还出现了解决标签焦虑的开源小工具。
+
+## 重点话题
+- OpenClaw 的强效修复：通过“严格模式”和 Codex 底座，强制 Agent 减少空谈、持续产出，大幅提升长周期任务执行力。
+- Keith Rabois 的管理硬核三论：反对稀释后的心理安全、认为产品调研有害、宣告产品经理岗位消亡，探讨 AI 时代如何管理高密度人才。
+
+## 快讯
+- Claude Code 支持连接 TurboTax 税单数据，自动整理报税明细。
+- 开发者反馈 Codex 5.4 在复杂架构上一键生成，却在简单界面调整上严重磨洋工。
+- 新开源的 Chrome 新标签页插件，利用 AI 维度逻辑实现浏览器标签页的自动断舍离。
+- Greg Isenberg 发布长达 58 分钟的免费视频课，手把手拆解如何用 MD 文件构建 AI 员工。
+
+## 值得阅读
+- OpenClaw 执行契约配置文档：https://docs.openclaw.ai/
+- Keith Rabois 深度访谈（Lenny's Podcast）：https://youtu.be/xCd9ykretlg
+- 浏览器标签页断舍离工具 (Tab Out): https://github.com/zarazhangrui/tab-out
+- Agent 实战与 MD 文件编写课程：https://t.co/HK4tKAoeQ7
+- Box CEO Aaron Levie 的 Agent 企业落地观察：https://twitter.com/levie</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-13/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-13/audio.mp3" length="9202080" type="audio/mpeg"/>
+      <pubDate>Mon, 13 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>460</itunes:duration>
+      <itunes:summary>## 今日摘要
+Agent 的评测基准遭到圈内质疑，通义科学家指出刷榜正在让模型迷失方向。OpenClaw 推出“严格模式”并让 Codex 接管运行底座，试图根治 GPT 的持续性执行难题。Box CEO 的深度调研揭示了企业的 Token 预算博弈、无界面软件和工程师角色的重塑。Keith Rabois 的硬核管理访谈掀起关于心理安全、PM 消亡和个人产出模式的新争论。此外，Claude Code 接入了税务软件，还出现了解决标签焦虑的开源小工具。
+
+## 重点话题
+- OpenClaw 的强效修复：通过“严格模式”和 Codex 底座，强制 Agent 减少空谈、持续产出，大幅提升长周期任务执行力。
+- Keith Rabois 的管理硬核三论：反对稀释后的心理安全、认为产品调研有害、宣告产品经理岗位消亡，探讨 AI 时代如何管理高密度人才。
+
+## 快讯
+- Claude Code 支持连接 TurboTax 税单数据，自动整理报税明细。
+- 开发者反馈 Codex 5.4 在复杂架构上一键生成，却在简单界面调整上严重磨洋工。
+- 新开源的 Chrome 新标签页插件，利用 A</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260412-没有好 API 的软件，三年后会被淘汰</title>
+      <description>## 今日摘要
+本期节目聚焦三大核心：针对 Sam Altman 的袭击者被证实与 AI 末日论社区有关联，引发对安全话语体系的反思；Claude Code 推出 /ultraplan 功能，将 agent 规划与执行拆分为可视化步骤；Box CEO Aaron Levie 发出警告，没有优秀 API 的软件将在三到五年内被淘汰。此外，agent 基准测试爆出大规模作弊丑闻，动摇了评测体系的公信力。
+
+## 重点话题
+- AI 末日论与暴力事件：袭击者背景曝光，Justine Moore 和 Amjad Masad 抨击 Pause AI 社区的沉默与矛盾表态
+- Claude Code 新功能 /ultraplan：网页端生成可编辑、可执行的实施计划，提升 agent 工程可控性
+- 软件行业的 API 生死线：Box CEO Aaron Levie 与非科技行业 CIO 对话后断言，headless 模式将成为软件生存的必备条件
+
+## 快讯
+- Vercel Sandbox 在 microVM 安全沙箱性能基准测试中排名第一，持久化沙箱即将 GA
+- Stripe 推出 Stripe Projects，CLI 工具让 agent 能自动化部署、支付和获取密钥
+- Peter Yang 观察中国 AI 工作文化：深夜工作、政府强力支持、一人公司模式兴起
+- 郭宇指出传统行业 AI 应用仍处初级阶段，垂直领域专业化方案存在巨大机会
+
+## 值得阅读
+- Amjad Masad 关于 AI 末日论与暴力袭击的评论：https://x.com/amasad/status/2042833728305795370
+- Justine Moore 对 Pause AI 领导层沉默的批评：https://x.com/venturetwins/status/2043079480697393496
+- Aaron Levie 关于 headless 软件和 API 未来的深度思考：https://x.com/levie/status/2042759653281456218
+- Claude Code /ultraplan 功能演示与讨论：https://x.com/trq212/status/2043035021846671685
+- Agent 基准测试大规模作弊调查报告：https://x.com/adamlsteinl/status/2042787821371412572
+- Peter Yang 中国 AI 工作文化观察：https://x.com/petergyang/status/2042772055905689977
+- 郭宇关于 Stripe Projects 的体验与评价：https://x.com/turingou/status/2042951407167508987</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-12/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-12/audio.mp3" length="9960000" type="audio/mpeg"/>
+      <pubDate>Sun, 12 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>498</itunes:duration>
+      <itunes:summary>## 今日摘要
+本期节目聚焦三大核心：针对 Sam Altman 的袭击者被证实与 AI 末日论社区有关联，引发对安全话语体系的反思；Claude Code 推出 /ultraplan 功能，将 agent 规划与执行拆分为可视化步骤；Box CEO Aaron Levie 发出警告，没有优秀 API 的软件将在三到五年内被淘汰。此外，agent 基准测试爆出大规模作弊丑闻，动摇了评测体系的公信力。
+
+## 重点话题
+- AI 末日论与暴力事件：袭击者背景曝光，Justine Moore 和 Amjad Masad 抨击 Pause AI 社区的沉默与矛盾表态
+- Claude Code 新功能 /ultraplan：网页端生成可编辑、可执行的实施计划，提升 agent 工程可控性
+- 软件行业的 API 生死线：Box CEO Aaron Levie 与非科技行业 CIO 对话后断言，headless 模式将成为软件生存的必备条件
+
+## 快讯
+- Vercel Sandbox 在 microVM 安全沙箱性能基准测试中排名第一，持久化沙箱即将 GA
+- Stripe 推出 Stri</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260411-OpenClaw遭Anthropic拦截，Sam Altman犹豫发文，Karpathy论AI认知鸿沟</title>
+      <description>## 今日摘要
+OpenClaw 与 Anthropic 的摩擦再度升级，系统提示被随机拦截，第三方配额规则改变。Sam Altman 发布了一篇他犹豫再三才公开的博客。Claude Code 推出 /ultraplan 云端规划模式，Replit 与 Accenture 达成重大合作，将 vibe coding 带入企业。深聊部分围绕 Karpathy 引发的 AI 能力认知鸿沟，多位 builder 和企业领袖分享了亲身实践与观察。
+
+## 重点话题
+- AI 能力认知鸿沟：Karpathy 指出免费模型用户与专业编程模型用户之间存在巨大感知差距，Raiza Martin、Zara Zhang、Aaron Levie 等从不同角度印证了这一现象，强调亲手构建是理解 AI 能力的最佳路径。
+
+## 快讯
+- Obsidian Web Clipper 1.4 支持 YouTube 交互式转录。
+- Replit 可直接部署到 Databricks，继承企业安全与治理。
+- AI 电影预告片质量惊艳，创作者 Taylor Chien。
+- Seedance 2 把查克·诺里斯放进任何视频的新玩法。
+- Greg Isenberg 认为互联网需为 agent 重建，每个品类都有新机会。
+
+## 值得阅读
+- Sam Altman 博客：https://blog.samaltman.com/2279512
+- Karpathy 关于 AI 能力认知差距的推文（被广泛引用）
+- Claude Code /ultraplan 文档：http://docs.claude.com/en/docs/claude-code/ultraplan
+- Replit 与 Accenture 合作公告：https://newsroom.accenture.com/news/2026/accenture-invests-in-replit-to-advance-ai-driven-software-development-for-enterprises
+- Matt Turck 与 Felix Rieseberg 对谈：Claude Cowork, Mythos, and the Future of Software https://youtu.be/9MEJ4syOVrQ
+- Lenny 与 Simon Willison 深度访谈：https://t.co/wlEIyOehU8</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-11/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-11/audio.mp3" length="6955200" type="audio/mpeg"/>
+      <pubDate>Sat, 11 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>347</itunes:duration>
+      <itunes:summary>## 今日摘要
+OpenClaw 与 Anthropic 的摩擦再度升级，系统提示被随机拦截，第三方配额规则改变。Sam Altman 发布了一篇他犹豫再三才公开的博客。Claude Code 推出 /ultraplan 云端规划模式，Replit 与 Accenture 达成重大合作，将 vibe coding 带入企业。深聊部分围绕 Karpathy 引发的 AI 能力认知鸿沟，多位 builder 和企业领袖分享了亲身实践与观察。
+
+## 重点话题
+- AI 能力认知鸿沟：Karpathy 指出免费模型用户与专业编程模型用户之间存在巨大感知差距，Raiza Martin、Zara Zhang、Aaron Levie 等从不同角度印证了这一现象，强调亲手构建是理解 AI 能力的最佳路径。
+
+## 快讯
+- Obsidian Web Clipper 1.4 支持 YouTube 交互式转录。
+- Replit 可直接部署到 Databricks，继承企业安全与治理。
+- AI 电影预告片质量惊艳，创作者 Taylor Chien。
+- Seedance 2 把查克·诺里斯放进任何视频</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260410-ChatGPT Pro 千元档上线，企业 agent 基建集体进入后台时代</title>
+      <description>## 今日摘要
+OpenAI 推出每月 1000 美元的 ChatGPT Pro 新档位，进一步瞄准重度技术用户。Karpathy 长文分析 AI 认知撕裂，指出编程等可量化领域进展巨大，与普通用户体验严重脱节。Claude 发布 Managed Agents 进入公开测试，Box CEO 演示企业工作流自动化，并预言 agent 获取上下文将是下个十年的核心 IT 挑战。Vercel 提出 Agentic Infrastructure 方向，强调基建必须本身 agent 化。
+
+## 重点话题
+- ChatGPT Pro 千美元档位：OpenAI 针对 Codex 等前沿模型的重度用户推出高定价、高算力方案。
+- AI 认知撕裂：Karpathy 解释为何技术圈内感受与大众印象差距巨大，强化学习在可验证领域造成的能力极不平衡。
+- Claude Managed Agents：一套集成 harness、沙箱和系统连接的企业级 agent 构建方案，已在 Box 等场景落地工作流自动化。
+- Agentic Infrastructure：Vercel 披露 agent 已在触发其每周三成的部署，宣布基建需转向自我配置、自我修复的 agentic 形态。
+
+## 快讯
+- Claude Code 通过 Opus 重写索引器，@-mention 性能获三倍提升，开放自定义索引接口。
+- Claude Code 推出 Monitor 工具，让 agent 可通过后台脚本监测错误并唤醒自己。
+- Gemini 开放 Lyria 3 音乐模型，用户已生成超一亿首歌，现每天可制作五首完整歌曲。
+- Microsoft Markitdown 项目被指过于杂乱，Obsidian 创始人呼吁官方提供高质量格式转换库。
+
+## 值得阅读
+- Sam Altman 宣布 ChatGPT Pro 千元档位：https://x.com/sama/status/2042342572958630332
+- Andrej Karpathy 关于 AI 认知差距的深度分析：https://x.com/karpathy/status/2042334451611693415
+- Claude Managed Agents 公开测试发布：https://x.com/robertjbye/status/2042245298018517166
+- Vercel Agentic Infrastructure 官方博客：https://vercel.com/blog/agentic-infrastructure
+- Boris Cherny 分享 Claude Code @-mention 性能优化过程：https://x.com/bcherny/status/2042352725481177315
+- Lenny 对话 Simon Willison 播客（包含 Challenger 灾难等深度话题）：https://www.youtube.com/watch?v=k-H4nsOTuxU</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-10/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-10/audio.mp3" length="9289920" type="audio/mpeg"/>
+      <pubDate>Fri, 10 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>464</itunes:duration>
+      <itunes:summary>## 今日摘要
+OpenAI 推出每月 1000 美元的 ChatGPT Pro 新档位，进一步瞄准重度技术用户。Karpathy 长文分析 AI 认知撕裂，指出编程等可量化领域进展巨大，与普通用户体验严重脱节。Claude 发布 Managed Agents 进入公开测试，Box CEO 演示企业工作流自动化，并预言 agent 获取上下文将是下个十年的核心 IT 挑战。Vercel 提出 Agentic Infrastructure 方向，强调基建必须本身 agent 化。
+
+## 重点话题
+- ChatGPT Pro 千美元档位：OpenAI 针对 Codex 等前沿模型的重度用户推出高定价、高算力方案。
+- AI 认知撕裂：Karpathy 解释为何技术圈内感受与大众印象差距巨大，强化学习在可验证领域造成的能力极不平衡。
+- Claude Managed Agents：一套集成 harness、沙箱和系统连接的企业级 agent 构建方案，已在 Box 等场景落地工作流自动化。
+- Agentic Infrastructure：Vercel 披露 agent 已在触发其每周三成</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260409-Claude Managed Agents公测与Gemini知识库进化</title>
+      <description>## 今日摘要
+Google Gemini 上线 Notebooks 功能，将 NotebookLM 的核心能力直接整合进聊天界面。Claude Managed Agents 进入公测，提供了从原型到百万级用户的 agent 部署方案。Vercel AI Gateway 发布团队级零数据保留功能，一键解决多模型合规难题。OpenClaw 发布新版本强化本地模型支持，社区也热烈讨论 agent 构建中“技能设计比模型能力更重要”的实操经验。
+
+## 重点话题
+- **Claude Managed Agents 深度解读**：Anthropic 的新 agent 云服务同时兼顾了快速原型和规模化部署，但社区提醒真正拉开差距的是你如何组织上下文和技能文件的信息密度。
+- **Agent 构建方法论**：Greg Isenberg 与 Ross Mike 的实践经验指出，用 skill.md 而非 agent.md，可以大幅减少 token 消耗并提升 agent 表现稳定性。
+
+## 快讯
+- Sam Altman 宣布 Codex 周活突破 300 万，并重置所有用户额度。
+- Claude iOS 应用更新小组件，新增 Claude Code 和 Dispatch 快捷入口。
+- Lenny 的付费社区将新增 Cursor、Google AI Pro 等一批免费工具权益。
+
+## 值得阅读
+- Gemini Notebooks 官方公告：`@joshwoodward` 的演示推文
+- Claude Managed Agents 功能详情：`@trq212` 的系列推文及配套文档链接
+- Vercel AI Gateway 零数据保留功能：`@vercel` 和 `@rauchg` 的公告
+- OpenClaw 2026.4.7 版本更新：`@openclaw` 和 `@steipete` 的发布说明
+- Greg Isenberg 的 agent 构建指南：`@gregisenberg` 的视频推文
+- Lenny 社区新增福利详情：`@lennysan` 的公告</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-09/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-09/audio.mp3" length="9961440" type="audio/mpeg"/>
+      <pubDate>Thu, 09 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>498</itunes:duration>
+      <itunes:summary>## 今日摘要
+Google Gemini 上线 Notebooks 功能，将 NotebookLM 的核心能力直接整合进聊天界面。Claude Managed Agents 进入公测，提供了从原型到百万级用户的 agent 部署方案。Vercel AI Gateway 发布团队级零数据保留功能，一键解决多模型合规难题。OpenClaw 发布新版本强化本地模型支持，社区也热烈讨论 agent 构建中“技能设计比模型能力更重要”的实操经验。
+
+## 重点话题
+- **Claude Managed Agents 深度解读**：Anthropic 的新 agent 云服务同时兼顾了快速原型和规模化部署，但社区提醒真正拉开差距的是你如何组织上下文和技能文件的信息密度。
+- **Agent 构建方法论**：Greg Isenberg 与 Ross Mike 的实践经验指出，用 skill.md 而非 agent.md，可以大幅减少 token 消耗并提升 agent 表现稳定性。
+
+## 快讯
+- Sam Altman 宣布 Codex 周活突破 300 万，并重置所有用户额度。
+- Claud</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260408-Anthropic 最强模型暂不公开，以及单月营收暴增 110 亿的内部逻辑</title>
+      <description>## 今日摘要
+Anthropic 紧急启动 Project Glasswing，用最强漏洞挖掘模型 Mythos Preview 加固关键软件安全，该模型暂不对外公开。同时 Anthropic 被曝 ARR 已飙升至 300 亿美元，一个月暴增 110 亿美元。此外，OpenAI 发布学术论文审阅工具 Paper Review，独立开发者推出超百种语言的 AI 实时电话翻译网络 tuwa，Box CEO 展示了长链路 agent 独立处理 RFP 的全过程。深聊部分围绕 Anthropic 的增长方法论展开，探讨“成功灾难”、内部自动化工具及增长飞轮。
+
+## 重点话题
+- Project Glasswing 与 Mythos Preview：Anthropic 选择将具备恐怖漏洞挖掘能力的新模型仅开放给网络防御者，以防止其被恶意利用。
+- Anthropic 增长奇迹：ARR 在一个月内从 190 亿美元飙升至 300 亿美元，Lenny Rachitsky 深度对话其增长负责人，揭示其利用 AI 驱动增长的内部机制。
+- OpenAI Prism 论文审阅：新功能 Paper Review 可对学术论文进行数学推导、结构一致性等严谨技术审查，并直接生成可编辑的 LaTeX 文件。
+- tuwa 电话网络：一个支持 100 多种语言实时翻译的 AI 电话服务，允许 agent 自主拨打电话，打通物理通信边界。
+- Box 长线 Agent 实践：Box CEO 演示了 agent 如何独立使用工具链处理耗时数小时的复杂知识工作，指出模型能力的跃升使之成为可能。
+
+## 快讯
+- HappyHorse-1.0 视频模型登顶榜单，在文本和图像生成视频任务上展现出强大的多镜头一致性和指令遵循能力。
+- Replit 推出 AI SDR 工具，帮助用户利用 AI 自动寻找下一批客户。
+- swyx 公布 AI 工程师大会赛道详情，强调 Harness Engineering 对 agent 性能的影响已超越底层模型本身。
+- Linear 产品负责人 Nan Yu 鼓励设计师与工程师转型 PM，并建议用 LLM 作为产品思维的试金石。
+
+## 值得阅读
+- 视频：Anthropic’s $1B to $19B growth run: how Claude became the fastest-growing AI product in history | Amol Avasare (Lenny's Podcast): https://www.youtube.com/watch?v=k-H4nsOTuxU
+- 文章 / 模型卡：Project Glasswing: Securing critical software for the AI era: http://anthropic.com/glasswing
+- 产品：Prism - AI LaTeX Editor (Paper Review): http://prism.openai.com
+- 产品：tuwa.ai — Call anyone. Speak your language: http://tuwa.ai
+- 视频：Peter Yang 与 a16z 合伙人 Anish Acharya 对谈 AI agent 时代的工作未来: https://www.youtube.com/watch?v=UE8jx4dvlSQ</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-08/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-08/audio.mp3" length="14095200" type="audio/mpeg"/>
+      <pubDate>Wed, 08 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>704</itunes:duration>
+      <itunes:summary>## 今日摘要
+Anthropic 紧急启动 Project Glasswing，用最强漏洞挖掘模型 Mythos Preview 加固关键软件安全，该模型暂不对外公开。同时 Anthropic 被曝 ARR 已飙升至 300 亿美元，一个月暴增 110 亿美元。此外，OpenAI 发布学术论文审阅工具 Paper Review，独立开发者推出超百种语言的 AI 实时电话翻译网络 tuwa，Box CEO 展示了长链路 agent 独立处理 RFP 的全过程。深聊部分围绕 Anthropic 的增长方法论展开，探讨“成功灾难”、内部自动化工具及增长飞轮。
+
+## 重点话题
+- Project Glasswing 与 Mythos Preview：Anthropic 选择将具备恐怖漏洞挖掘能力的新模型仅开放给网络防御者，以防止其被恶意利用。
+- Anthropic 增长奇迹：ARR 在一个月内从 190 亿美元飙升至 300 亿美元，Lenny Rachitsky 深度对话其增长负责人，揭示其利用 AI 驱动增长的内部机制。
+- OpenAI Prism 论文审阅：新功能 Paper R</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260407-月增110亿美金，AI时代的PM反而更值钱了？</title>
+      <description>## 今日摘要
+本期节目聚焦Anthropic惊人的增长数据，其ARR一个月内从190亿美元飙升至300亿美元，并深入剖析其内部增长的“CASH”系统。重点讨论了AI时代产品经理角色的演变，Anthropic的增长主管和Linear的产品负责人都认为优秀PM将更加稀缺。此外，还分享了OpenAI Codex团队抛弃传统路线图的独特运作方式，以及Box CEO对AI创造更多岗位的推演。
+
+## 重点话题
+- Anthropic的爆发式增长：详细解读Anthropic 300亿美元ARR背后的故事，包括其内部名为“CASH”的增长自动化系统和“重仓大赌注”的增长哲学。
+- AI时代PM角色的再定义：深入探讨为何Anthropic等公司在AI效率暴增后反而需要更多PM，以及Linear产品负责人对PM核心能力的新定义。
+- OpenAI Codex的无路线图运作：揭秘Codex团队如何只用八周冲刺和长期愿景来替代传统产品路线图，以及其“角色融合，动手为先”的团队文化。
+
+## 快讯
+- a16z合伙人澄清AI开药试点仅在特定条件下进行。
+- 开发者分享将AI代理变成本身推销员的增长策略。
+- 创业者分享用AI工具将iMessage打造成超级行政助理的完整流程。
+- 开发者用AI脚本刷签证预约，引发对vibe coding普及后黄牛技术升级的思考。
+
+## 值得阅读
+- Lenny对Anthropic增长主管Amol Avasare的深度访谈链接。
+- Peter Yang对OpenAI Codex团队Alex和Romain的播客访谈链接。
+- Box CEO Aaron Levie关于AI创造更多工作的推文链接。
+- Linear产品负责人Nan Yu关于PM价值的推文链接。</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-07/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-07/audio.mp3" length="12751680" type="audio/mpeg"/>
+      <pubDate>Tue, 07 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>637</itunes:duration>
+      <itunes:summary>## 今日摘要
+本期节目聚焦Anthropic惊人的增长数据，其ARR一个月内从190亿美元飙升至300亿美元，并深入剖析其内部增长的“CASH”系统。重点讨论了AI时代产品经理角色的演变，Anthropic的增长主管和Linear的产品负责人都认为优秀PM将更加稀缺。此外，还分享了OpenAI Codex团队抛弃传统路线图的独特运作方式，以及Box CEO对AI创造更多岗位的推演。
+
+## 重点话题
+- Anthropic的爆发式增长：详细解读Anthropic 300亿美元ARR背后的故事，包括其内部名为“CASH”的增长自动化系统和“重仓大赌注”的增长哲学。
+- AI时代PM角色的再定义：深入探讨为何Anthropic等公司在AI效率暴增后反而需要更多PM，以及Linear产品负责人对PM核心能力的新定义。
+- OpenAI Codex的无路线图运作：揭秘Codex团队如何只用八周冲刺和长期愿景来替代传统产品路线图，以及其“角色融合，动手为先”的团队文化。
+
+## 快讯
+- a16z合伙人澄清AI开药试点仅在特定条件下进行。
+- 开发者分享将AI代理变成本身推销员的增长策略。
+-</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260406-Anthropic一刀切掉三方编排，Karpathy让你自己建Wiki</title>
+      <description>## 今日摘要
+Anthropic 开始系统性地封锁第三方 agent 调用，要求用户自带 API 额度，OpenClaw 等工具率先做出应对。Replit 在更新被苹果阻止的情况下依然重回 App Store 分类第一。OpenAI Codex 团队深度访谈透露了“零文档、设计师写代码”的极度精简运作模式。Anthropic 一年内 ARR 从 10 亿美元激增至 190 亿，仅二月就新增 60 亿。Karpathy 以 Farzapedia 为引，深度阐述了“文件优先于应用”的个人化 AI 理念，掀起关于个人 Wiki 与 Agent 记忆的热议。
+
+## 重点话题
+- Anthropic 封锁第三方 harness：OpenClaw 开发者发现 --append-system-prompt 被禁，要求自带额度，引发模型与编排层关系的大讨论
+- Replit 遭苹果封杀仍登顶：Amjad Masad 用一次性数据点暴露了 AI 原生应用在移动端分发中的脆弱性
+- OpenAI Codex 团队内幕：Peter Yang 访谈揭示 10 行 bullet point 代替规格、设计师写代码超过工程师的新职能边界
+- Anthropic 指数级增长：Lenny 播客给出每月 60 亿 ARR 的增长数据，为 Anthropic 的战略激进提供了解释
+- 个人 Wiki 与文件哲学：Karpathy 通过 Farza 的案例，呼吁用本地通用文件打造可被任意 AI 代理读取的显式个人知识库
+
+## 快讯
+- OpenClaw 新版本原生支持 9 家视频生成服务商，包括阿里、字节和 OpenAI
+- Waymo 疑似在奥斯汀向网红赠送周边，预热同城扩张
+- Google AI Edge 借助 Gemma 4 冲至 iOS 生产力应用榜第八
+- 前字节工程师郭宇预告今日上午发布面向非技术用户的 AI 新产品
+
+## 值得阅读
+- Karpathy 关于 Farzapedia 的深层解读：https://x.com/karpathy/status/2040572272944324650
+- Peter Yang 对 OpenAI Codex 团队的独家访谈：https://youtu.be/9qXc-THAvc0
+- Lenny Rachitsky 与 Anthropic 增长负责人的播客：https://youtu.be/k-H4nsOTuxU
+- Peter Steinberger 揭示 Anthropic 封锁机制的原始推文：https://x.com/steipete/status/2040811558427648357</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-06/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-06/audio.mp3" length="10921440" type="audio/mpeg"/>
+      <pubDate>Mon, 06 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>546</itunes:duration>
+      <itunes:summary>## 今日摘要
+Anthropic 开始系统性地封锁第三方 agent 调用，要求用户自带 API 额度，OpenClaw 等工具率先做出应对。Replit 在更新被苹果阻止的情况下依然重回 App Store 分类第一。OpenAI Codex 团队深度访谈透露了“零文档、设计师写代码”的极度精简运作模式。Anthropic 一年内 ARR 从 10 亿美元激增至 190 亿，仅二月就新增 60 亿。Karpathy 以 Farzapedia 为引，深度阐述了“文件优先于应用”的个人化 AI 理念，掀起关于个人 Wiki 与 Agent 记忆的热议。
+
+## 重点话题
+- Anthropic 封锁第三方 harness：OpenClaw 开发者发现 --append-system-prompt 被禁，要求自带额度，引发模型与编排层关系的大讨论
+- Replit 遭苹果封杀仍登顶：Amjad Masad 用一次性数据点暴露了 AI 原生应用在移动端分发中的脆弱性
+- OpenAI Codex 团队内幕：Peter Yang 访谈揭示 10 行 bullet point 代替规格、设计师</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260405-Anthropic封杀OpenClaw，Agent的"认知瓶颈"浮出水面</title>
+      <description>## 今日摘要
+Anthropic 突然宣布 Claude 订阅不再支持 OpenClaw 等第三方工具，引发开发者圈强烈反应。Karpathy 分享了如何用 LLM agent 构建和管理数十万字的个人知识库，并提出了“idea file”的新概念。Arena 出现三款神秘新图像模型，对真实世界地点的理解力惊人。Box CEO Aaron Levie 则阐述了 Agent 架构正从“机械式 chunk 拼接”转向“类人工作流”，而工程师的认知极限正成为新的效率瓶颈。
+
+## 重点话题
+- **新图像模型现身 Arena**：三款代号为 maskingtape、packingtape、gaffertape 的图像模型在 Arena 上展示了强大的世界知识和文字渲染能力，疑似包含 OpenAI 正在测试的 GPT Image 2。
+- **Karpathy 的 agent 知识库工作流**：Karpathy 详细介绍了如何利用 LLM 将原始资料自动“编译”成由 agent 完全维护的个人 Wiki，以及他提出的“idea file”分享理念。
+- **深聊 - Aaron Levie 论 Agent 架构的范式转移**：随着模型推理和上下文能力的提升，Agent 设计正从依赖 embedding + chunk 搜索，转变为更接近人类全局阅读、自我纠错的工作模式。
+
+## 快讯
+- Anthropic 工程师 Boris Cherny 承诺将通过优化缓存效率降低 API 用户成本，openclaw 的开发者 steipete 对此表示认可。
+- Zara Zhang 观察到新趋势：人们开始将同事、KOL 甚至前任“蒸馏”成 agent 技能。
+- Cursor 发布全新界面和包含 420 个图标的图标集。
+- Claude 移动端推出中等尺寸的桌面小组件，可快速唤起对话。
+
+## 值得阅读
+- Karpathy 的 Gist: LLM Wiki 工作流及“idea file”概念 - https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+- Aaron Levie 关于 Agent 设计范式转变的长文与视频 - https://x.com/levie/status/2040528801386361128
+- Justine Moore 对 Arena 新图像模型的测试与讨论 - https://x.com/venturetwins/status/2040273845748449724
+- Simon Willison 与 Lenny 讨论 agent 认知极限的播客 - https://x.com/lennysan/status/2040256989268263295</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-05/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-05/audio.mp3" length="10611840" type="audio/mpeg"/>
+      <pubDate>Sun, 05 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>530</itunes:duration>
+      <itunes:summary>## 今日摘要
+Anthropic 突然宣布 Claude 订阅不再支持 OpenClaw 等第三方工具，引发开发者圈强烈反应。Karpathy 分享了如何用 LLM agent 构建和管理数十万字的个人知识库，并提出了“idea file”的新概念。Arena 出现三款神秘新图像模型，对真实世界地点的理解力惊人。Box CEO Aaron Levie 则阐述了 Agent 架构正从“机械式 chunk 拼接”转向“类人工作流”，而工程师的认知极限正成为新的效率瓶颈。
+
+## 重点话题
+- **新图像模型现身 Arena**：三款代号为 maskingtape、packingtape、gaffertape 的图像模型在 Arena 上展示了强大的世界知识和文字渲染能力，疑似包含 OpenAI 正在测试的 GPT Image 2。
+- **Karpathy 的 agent 知识库工作流**：Karpathy 详细介绍了如何利用 LLM 将原始资料自动“编译”成由 agent 完全维护的个人 Wiki，以及他提出的“idea file”分享理念。
+- **深聊 - Aaron Levie </itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260404-Anthropic 砍掉第三方工具订阅权限，Simon Willison 说用 agents 写到 11 点就累瘫了</title>
+      <description>## 今日摘要
+Anthropic 宣布从今天中午起，Claude 订阅将不再覆盖 OpenClaw 等第三方工具的用量，用户需额外购买折扣套餐或改用 API。Lenny 与 Simon Willison 的深度对谈在圈内引发强烈共鸣，Simon 坦言同时操控四个 coding agents 到上午 11 点就认知耗尽，并分享了“暗工厂”、红/绿 TDD 等一线工程模式。Cursor 设计师 Ryo Lu 发表“玻璃 vs 黑箱”宣言，强调 AI 工具应保持透明可控而非让人放弃思考。
+
+## 重点话题
+- Anthropic 订阅政策突变：Claude 订阅不再覆盖第三方工具，OpenClaw 用户需切换到 API 或购买额外套餐
+- Simon Willison 深度访谈：2025 年 11 月是 AI 编码的拐点，中年工程师最危险，“暗工厂”模式正在实验，认知负荷是真实瓶颈
+- Cursor 的设计哲学：Ryo Lu 提出“玻璃”理念，认为 AI 工具越强大越应该透明，用户应始终在驾驶位
+
+## 快讯
+- Grok Imagine 图像生成大升级，文字渲染和场景构建能力显著提升
+- Google Labs 的 Stitch 推出 Live Mode，实现设计师与 AI 实时协作
+- Obsidian Web Clipper 1.3 发布，Reader 模式新增主题和高亮功能
+- Box CEO Aaron Levie 分享构建 AI agent 的核心教训：对旧架构要冷酷无情
+
+## 值得阅读
+- Lenny 与 Simon Willison 完整对谈：https://www.youtube.com/watch?v=wc8FBhQtdsA
+- Ryo Lu 的“玻璃 vs 黑箱”原文：https://x.com/ryolu_/status/2039895634313187619
+- Anthropic 官方政策说明：https://support.claude.com/en/articles/13189465-logging-in-to-your-claude-account
+- Marc Andreessen 在 Latent.Space 的访谈：https://youtu.be/knx2wrILP1M
+- Justine Moore 的 Grok Imagine 测评 thread：https://x.com/venturetwins/status/2040068944946774151</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-04/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-04/audio.mp3" length="12684960" type="audio/mpeg"/>
+      <pubDate>Sat, 04 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>634</itunes:duration>
+      <itunes:summary>## 今日摘要
+Anthropic 宣布从今天中午起，Claude 订阅将不再覆盖 OpenClaw 等第三方工具的用量，用户需额外购买折扣套餐或改用 API。Lenny 与 Simon Willison 的深度对谈在圈内引发强烈共鸣，Simon 坦言同时操控四个 coding agents 到上午 11 点就认知耗尽，并分享了“暗工厂”、红/绿 TDD 等一线工程模式。Cursor 设计师 Ryo Lu 发表“玻璃 vs 黑箱”宣言，强调 AI 工具应保持透明可控而非让人放弃思考。
+
+## 重点话题
+- Anthropic 订阅政策突变：Claude 订阅不再覆盖第三方工具，OpenClaw 用户需切换到 API 或购买额外套餐
+- Simon Willison 深度访谈：2025 年 11 月是 AI 编码的拐点，中年工程师最危险，“暗工厂”模式正在实验，认知负荷是真实瓶颈
+- Cursor 的设计哲学：Ryo Lu 提出“玻璃”理念，认为 AI 工具越强大越应该透明，用户应始终在驾驶位
+
+## 快讯
+- Grok Imagine 图像生成大升级，文字渲染和场景构建能力显著提升
+-</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260403-OpenAI买了个播客，Karpathy在用LLM建自己的维基</title>
+      <description>## 今日摘要
+
+OpenAI 宣布收购科技播客 TBPN，Sam Altman 亲自表态节目形式不变；Karpathy 分享了用 LLM 构建个人知识库的完整方法论，Obsidian 创始人 kepano 接力提出"污染防控"分库策略；Google 同时发布 Gemma 4 开源模型和 Gemini API 弹性计费分层；Box 发布 Box Agent，整合企业文件系统与 AI 能力；Lenny 播客专访 Django 联合创始人 Simon Willison，深聊 coding agent 时代中级工程师的真实处境与三个应对 pattern。
+
+## 重点话题
+
+- **OpenAI 收购 TBPN**：科技实时直播节目被 OpenAI 收购，价格据报道为"低几亿美元"，节目形式和团队不变，引发圈内对"AI 时代什么内容有护城河"的讨论
+- **Karpathy 的 LLM 知识库方法论**：用 LLM 把原始资料增量编译成 markdown wiki，以 Obsidian 为前端，实现可查询、可增强的个人知识库
+- **kepano 的 vault 分离策略**：agent vault 与个人 vault 分开维护，防止 agent 生成内容污染个人知识图谱
+- **Google 双发：Gemma 4 + Gemini API 弹性计费**：Gemma 4 有 26B MoE 和 31B Dense 两个规格，Apache 2.0 开源；Gemini API 新增 flex（降价 50%）和 priority（涨价 80%）两档
+- **Box Agent 发布**：跨整个 Box 文件系统工作，保持企业安全控制，支持 API 和 MCP server 调用
+- **Simon Willison 深聊 coding agent**（今日深聊）：中级工程师最先受冲击、red/green TDD / thin templates / hoarding 三个 pattern、AI Challenger 灾难隐患
+
+## 快讯
+
+- Vercel 注册量增速：52% MoM，加速度持续提升（Guillermo Rauch 公布）
+- Cursor 3 正式发布：支持本地和云端项目，工具按需展开
+- Legacy-Bench 发布：Factory AI 专为 COBOL/Fortran/C89 等遗留代码设计的 agent benchmark
+- Linux 内核安全邮件列表漏洞报告量暴增：从每周 2-3 份到每天 5-10 份，AI 生成报告是主要变量
+- Replit vibe coding 创业案例：定制 CRM 替代 ServiceTitan，第一年 250 万美元收入、60% 净利润率
+
+## 值得阅读
+
+- Karpathy 的 LLM 知识库原帖：https://x.com/karpathy/status/2039805659525644595
+- kepano 的 vault 分离策略：https://x.com/kepano/status/2039831289533227446
+- Lenny 播客 × Simon Willison 完整访谈：https://youtu.be/wc8FBhQtdsA
+- Gemma 4 发布博客：https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/
+- Gemini API 弹性计费说明：https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/
+- Legacy-Bench 发布推文：https://x.com/matanSF/status/2039794000392266212
+- Linux 内核安全邮件列表原文（LWN）：https://lwn.net/Articles/1065620/</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-03/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-03/audio.mp3" length="12672480" type="audio/mpeg"/>
+      <pubDate>Fri, 03 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>633</itunes:duration>
+      <itunes:summary>## 今日摘要
+
+OpenAI 宣布收购科技播客 TBPN，Sam Altman 亲自表态节目形式不变；Karpathy 分享了用 LLM 构建个人知识库的完整方法论，Obsidian 创始人 kepano 接力提出"污染防控"分库策略；Google 同时发布 Gemma 4 开源模型和 Gemini API 弹性计费分层；Box 发布 Box Agent，整合企业文件系统与 AI 能力；Lenny 播客专访 Django 联合创始人 Simon Willison，深聊 coding agent 时代中级工程师的真实处境与三个应对 pattern。
+
+## 重点话题
+
+- **OpenAI 收购 TBPN**：科技实时直播节目被 OpenAI 收购，价格据报道为"低几亿美元"，节目形式和团队不变，引发圈内对"AI 时代什么内容有护城河"的讨论
+- **Karpathy 的 LLM 知识库方法论**：用 LLM 把原始资料增量编译成 markdown wiki，以 Obsidian 为前端，实现可查询、可增强的个人知识库
+- **kepano 的 vault 分离策略**：agent v</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260402-Claude Code重写终端，红杉画了张万亿地图</title>
       <description>## 今日摘要
@@ -477,423 +1166,6 @@ Anthropic 宣布为期两周的春假双倍额度，同步推出 `/effort max` �
 ## 重点话题
 - **Anthropic 春假礼包**：非高峰时段和周末 Claude 使用额度翻倍，持续两周；新增 `/effort max` 深度推理模式（需按 session 开启）、setup script 支持、postcompact hook 等多项功能更新
 - **OpenClaw 大周末**：Chrome DevTools MCP 正式进入 beta（支持真实浏览器控制）；NVI</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260314-Claude Code一百万上下文成默认，郭宇纯Qwen跑出AI游戏公司</title>
-      <description>## 今日摘要
-Anthropic 周五集中发布多项 Claude Code 更新：1M context 正式 GA 并成为 Max/Team/Enterprise 默认模型，手机远程启动笔记本 session，Voice Mode 全量推送。郭宇发布 wanman AI 新实验，用纯 Qwen 3.5 35B 在本地跑了 1019 轮游戏公司模拟，AI 自主开发了一款种花放置游戏。Chrome 146 通过 MCP 接口暴露真实浏览器 session，AI agent 操控浏览器迎来新可能。
-
-## 重点话题
-- **Claude Code 周五大礼包**：1M context GA 成默认、手机远程启动、Voice Mode 全量、Code Review 可按需触发、3 个实用快捷键
-- **郭宇 wanman AI 新实验**：纯 Qwen 3.5 35B（无 Opus），1019 轮 / 6小时，AI 在日本游戏公司模拟中自主开发放置游戏
-- **Chrome 146 + MCP 真实浏览器 session**：一个开关让 CLI agent 接管你的完整浏览器会话，OpenClaw 计划今晚集成
-
-## 快讯
-- Meta 新模型 "Avocado" 延迟发布：内部测试在推理、编程、写作上落后竞品
-- Aaron Levie：前沿 AI 场景 token 消耗是一年前 100 倍，推理容量争夺战即将开始
-- LangChain CEO Harrison Chase 专访：agent 框架层会被模型吃掉吗？
-- Google VP Josh Woodward：Google 25-30% 代码由 AI 编写
-- 开发者反向工程 Anthropic Generative UI 并移植给 Pi AI，附完整文章和代码
-- Obsidian/Defuddle 更新：支持 YouTube 视频转录，输出带时间戳 Markdown，MIT 开源
-- Perplexity CTO 回应 session token 安全争议：那是短周期代理 token，不是 API key
-
-## 值得阅读
-- [Claude 1M context GA 官方博客](https://claude.com/blog/1m-context-ga)
-- [Claude Code Model 配置文档](https://code.claude.com/docs/en/model-config)
-- [Claude Code Review 配置文档](https://code.claude.com/docs/en/code-review)
-- [Matt Turck × Harrison Chase 专访视频（LangChain / agent 框架未来）](https://twitter.com/mattturck/status/2032528435600396650)
-- [开发者反向工程 Anthropic Generative UI 文章](https://twitter.com/micLivs/status/2032263869708808433)
-- [Defuddle — 任意网页转 Markdown，支持 YouTube 转录](https://defuddle.md)</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-14/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-14/audio.mp3" length="14735520" type="audio/mpeg"/>
-      <pubDate>Fri, 13 Mar 2026 23:11:16 +0000</pubDate>
-      <itunes:duration>736</itunes:duration>
-      <itunes:summary>## 今日摘要
-Anthropic 周五集中发布多项 Claude Code 更新：1M context 正式 GA 并成为 Max/Team/Enterprise 默认模型，手机远程启动笔记本 session，Voice Mode 全量推送。郭宇发布 wanman AI 新实验，用纯 Qwen 3.5 35B 在本地跑了 1019 轮游戏公司模拟，AI 自主开发了一款种花放置游戏。Chrome 146 通过 MCP 接口暴露真实浏览器 session，AI agent 操控浏览器迎来新可能。
-
-## 重点话题
-- **Claude Code 周五大礼包**：1M context GA 成默认、手机远程启动、Voice Mode 全量、Code Review 可按需触发、3 个实用快捷键
-- **郭宇 wanman AI 新实验**：纯 Qwen 3.5 35B（无 Opus），1019 轮 / 6小时，AI 在日本游戏公司模拟中自主开发放置游戏
-- **Chrome 146 + MCP 真实浏览器 session**：一个开关让 CLI agent 接管你的完整浏览器会话，OpenC</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260313-Replit九十亿估值、OpenClaw神秘模型，以及agent开始跑商业实验</title>
-      <description>## 今日摘要
-Replit 宣布完成四亿美元融资，估值九十亿美元，同步发布支持无限画布和并行 agent 的 Agent 4；OpenClaw 新 beta 带来两个来历不明的神秘模型 Hunter 和 Healer，同时修复了 GPT 5.4 的关键 bug；郭宇公开了 wanman AI 跑日本商业项目的实验报告，CEO+CTO agent 协作完成市场假设验证，并正式上线 Sandbank Cloud——一个专门给 AI agent 用的按需沙箱云服务；Karpathy 的 autoresearch 因 oauth 故障被清空，同时他提出 agentic org 可以像代码仓库一样被 fork 的新思考。
-
-## 重点话题
-- Replit Agent 4 + 四亿美元融资：无限画布加并行 agent，非技术人员也在用，估值九十亿美元
-- OpenClaw 神秘模型 Hunter/Healer：来历不明的 stealth 模型，一百万 context，修复 GPT 5.4 WebSocket bug
-- 郭宇的 wanman AI 实验报告：CEO+CTO agent 协作推演日本汽车软件公司，200 个工作日循环，假设验证到架构调整全自动完成
-- Sandbank Cloud 上线：第十个 vibe 项目，专为 AI agent 设计的按需沙箱云，x402 支付，无注册无 dashboard
-- Karpathy 的新思考：agentic org 可以被 fork，IDE 不会消亡只会变大，autoresearch 因 oauth 故障被清空
-
-## 快讯
-- Claude for Excel 和 PowerPoint 现在可以跨文件共享对话上下文
-- Claude Code 昨日经历 oauth 故障，已于下午恢复正常
-- Google Maps 十多年来最大升级，加入 Gemini 个性化导航和 Ask Maps 功能
-- Gemini API 上线 spend caps，开发者可在 AI Studio 设置消费上限
-- Vercel Chat SDK 支持 WhatsApp，三步接入 agent
-- Perplexity 发布 Personal Computer，永远在线的本地 Mac mini AI
-- Cursor Marketplace 上线，超过三十个插件可一键安装
-
-## 值得阅读
-- Replit Agent 4 官方发布视频：https://twitter.com/amasad/status/2031808374275522737
-- 郭宇 wanman AI 实验报告原推：https://twitter.com/turingou/status/2032092892047511687
-- 郭宇 Sandbank Cloud 上线介绍：https://twitter.com/turingou/status/2032078244464455730
-- OpenClaw 新 beta 发布（含 Hunter/Healer）：https://twitter.com/steipete/status/2031950850726265000
-- Karpathy 关于 agentic org 可被 fork 的思考：https://twitter.com/karpathy/status/2031770607466291393
-- Peter Steinberger Summarize 0.12.0：https://twitter.com/steipete/status/2031899292663771375
-- swyx 对 Replit 的深度评价：https://twitter.com/swyx/status/2031895390254219277</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-13/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-13/audio.mp3" length="17254080" type="audio/mpeg"/>
-      <pubDate>Thu, 12 Mar 2026 16:23:02 +0000</pubDate>
-      <itunes:duration>862</itunes:duration>
-      <itunes:summary>## 今日摘要
-Replit 宣布完成四亿美元融资，估值九十亿美元，同步发布支持无限画布和并行 agent 的 Agent 4；OpenClaw 新 beta 带来两个来历不明的神秘模型 Hunter 和 Healer，同时修复了 GPT 5.4 的关键 bug；郭宇公开了 wanman AI 跑日本商业项目的实验报告，CEO+CTO agent 协作完成市场假设验证，并正式上线 Sandbank Cloud——一个专门给 AI agent 用的按需沙箱云服务；Karpathy 的 autoresearch 因 oauth 故障被清空，同时他提出 agentic org 可以像代码仓库一样被 fork 的新思考。
-
-## 重点话题
-- Replit Agent 4 + 四亿美元融资：无限画布加并行 agent，非技术人员也在用，估值九十亿美元
-- OpenClaw 神秘模型 Hunter/Healer：来历不明的 stealth 模型，一百万 context，修复 GPT 5.4 WebSocket bug
-- 郭宇的 wanman AI 实验报告：CEO+CTO agent 协作推演</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260311-Claude Code 可以插嘴了，AI 自动调参效率提升11%</title>
-      <description>## 今日摘要
-
-本期聚焦三大主题：Claude Code 推出 /btw 侧链对话功能，让开发者在 agent 工作时随时插问，同日移动端也迎来一批更新；Andrej Karpathy 记录了 AI agent 自主调参两天、提升训练效率 11% 的全程，Kevin Weil 称之为"未来已来"；此外，OpenCode 团队提出的反 slop 三原则引发广泛共鸣，与郭宇关于 agent 工作流设计的思考形成有趣呼应。快讯方面，Vercel AI SDK 周下载破千万、Nous Research 发布开源 Hermes Agent、NYT 盲测显示 54% 读者更偏好 AI 写作等消息值得关注。
-
-## 重点话题
-
-- Claude Code /btw 功能：在 agent 执行任务时开启侧链对话，不打断工作流，同日移动端多项更新一并推出
-- AI 自动科研已来：Karpathy 的 autoresearch 实验让 agent 自主跑 700 次实验并提升训练效率 11%，Frontier Math 首道 AI 解题也在验证中
-- 反 slop 原则与 agent 工作流哲学：OpenCode 的"延迟满足"三原则与郭宇对 agent 设计本质的追问，共同指向同一个核心问题
-
-## 快讯
-
-- Vercel AI SDK 周下载量破一千万，成为前端接入 AI 的事实标准之一
-- Nous Research 发布开源 Hermes Agent，支持多级记忆和持久化机器访问
-- Google 发布多模态向量化模型，支持跨模态搜索
-- Meta 收购 Moltbook，AI 工具层布局持续扩张
-- OpenCode 开发者 Thomas Ricouard 凭借开源项目 Codex Monitor 被 OpenAI 直接招募
-- Redfin 上线 AI 房间重新装修功能，AI 图像编辑进入消费场景
-- NYT 盲测：86000 人参与，54% 更偏好 AI 写作内容
-- Anthropic 工程博客：基础设施配置差异可让 agentic coding 评测结果偏移数个百分点
-
-## 值得阅读
-
-- Andrej Karpathy 的 autoresearch 推文原文（via Kevin Weil 转发）：AI agent 自主调参全程记录，工程细节详实
-- Anthropic 工程博客：Quantifying infrastructure noise in agentic coding evals — https://t.co/DY7jCj8GAP
-- Claude Code /btw 功能文档：https://code.claude.com/docs/en/interactive-mode#side-questions-with-btw
-- Lenny Rachitsky × April Dunford：B2B 高阶定位指南 — https://www.lennysnewsletter.com/p/a-guide-to-advanced-b2b-positioning
-- Lenny Rachitsky × Applied Intuition CEO Qasar Younis 深度访谈：物理 AI 与农业、矿业、建筑的未来</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-11/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-11/audio.mp3" length="11929920" type="audio/mpeg"/>
-      <pubDate>Wed, 11 Mar 2026 00:19:10 +0000</pubDate>
-      <itunes:duration>596</itunes:duration>
-      <itunes:summary>## 今日摘要
-
-本期聚焦三大主题：Claude Code 推出 /btw 侧链对话功能，让开发者在 agent 工作时随时插问，同日移动端也迎来一批更新；Andrej Karpathy 记录了 AI agent 自主调参两天、提升训练效率 11% 的全程，Kevin Weil 称之为"未来已来"；此外，OpenCode 团队提出的反 slop 三原则引发广泛共鸣，与郭宇关于 agent 工作流设计的思考形成有趣呼应。快讯方面，Vercel AI SDK 周下载破千万、Nous Research 发布开源 Hermes Agent、NYT 盲测显示 54% 读者更偏好 AI 写作等消息值得关注。
-
-## 重点话题
-
-- Claude Code /btw 功能：在 agent 执行任务时开启侧链对话，不打断工作流，同日移动端多项更新一并推出
-- AI 自动科研已来：Karpathy 的 autoresearch 实验让 agent 自主跑 700 次实验并提升训练效率 11%，Frontier Math 首道 AI 解题也在验证中
-- 反 slop 原则与 agent 工作流哲学：Ope</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260310-Karpathy的AI自动调参实验，以及agent开始接管代码审查</title>
-      <description>## 今日摘要
-
-本期聚焦三个核心信号：Karpathy 的 autoresearch 项目展示了 AI agent 自主完成科研迭代循环的真实可行性，11% 的性能提升来自 700 次自主实验；Anthropic 发布 Claude Code Code Review 功能，多 agent 协作审查 PR，内部工程师效率提升 200%；OpenClaw 在深圳开设全球首个实体展厅，AI 工具竞争延伸至线下体验层。此外 Google Pomelli 全球开放、NotebookLM 支持 ePub、a16z 消费者 AI Top 100 榜单均有值得关注的新信号。
-
-## 重点话题
-
-- Karpathy autoresearch 实验：AI agent 自主跑 700 次实验，找出人类未发现的真实 bug，将 nanochat benchmark 提升 11%，指向 AI 自动化科研迭代的未来
-- Claude Code Code Review：多 agent 协作审查 PR，Anthropic 内部工程师产出提升 200%，agent 开始承接工作流中的质量控制环节
-- OpenClaw 深圳实体展厅 + Peter Steinberger 的 agent 互联实验：AI 工具竞争延伸至线下，Codex 与 OpenClaw 通过 ACP 协议互相调用，agent 协作架构走向实用
-
-## 快讯
-
-- Google Pomelli 扩展至全球 170+ 国家，收藏量近 2800，正式全面开放
-- NotebookLM 支持 ePub 上传，可导入公共领域经典书籍建立个人 AI 图书馆
-- a16z 消费者 AI Top 100 榜单出炉：removebg 排第 16，前 20 有三款 AI 伴侣应用，Google 一家占前 50 中四席
-- swyx：现在做出 AI 工程领域开源类别领先项目，市场收购价约每位 AI 工程师 1000 万至 1 亿美元，不需要商业模式
-- Peter Steinberger 发布 gogcli 0.12.0：Google 工作区全套工具搬进终端，brew 可直接安装
-- Greg Isenberg：AI 将大规模催生一人公司，从一人十亿美元公司到一人百万美元公司的梯队正在形成
-
-## 值得阅读
-
-- Karpathy autoresearch 项目原文推文及 GitHub：https://github.com/karpathy/autoresearch
-- Claude Code Code Review 发布推文（Boris Cherny）：高互动量技术人员第一手反馈
-- a16z 消费者 AI Top 100 榜单（Olivia Moore 发布，Lenny Rachitsky 解读）
-- gogcli 0.12.0 发布说明：https://github.com/steipete/gogcli/releases/tag/v0.12.0
-- Lenny Rachitsky 对 Applied Intuition CEO Qasar Younis 的深度访谈播客（含 10 条详细 takeaway）</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-10/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-10/audio.mp3" length="10043040" type="audio/mpeg"/>
-      <pubDate>Tue, 10 Mar 2026 00:38:55 +0000</pubDate>
-      <itunes:duration>502</itunes:duration>
-      <itunes:summary>## 今日摘要
-
-本期聚焦三个核心信号：Karpathy 的 autoresearch 项目展示了 AI agent 自主完成科研迭代循环的真实可行性，11% 的性能提升来自 700 次自主实验；Anthropic 发布 Claude Code Code Review 功能，多 agent 协作审查 PR，内部工程师效率提升 200%；OpenClaw 在深圳开设全球首个实体展厅，AI 工具竞争延伸至线下体验层。此外 Google Pomelli 全球开放、NotebookLM 支持 ePub、a16z 消费者 AI Top 100 榜单均有值得关注的新信号。
-
-## 重点话题
-
-- Karpathy autoresearch 实验：AI agent 自主跑 700 次实验，找出人类未发现的真实 bug，将 nanochat benchmark 提升 11%，指向 AI 自动化科研迭代的未来
-- Claude Code Code Review：多 agent 协作审查 PR，Anthropic 内部工程师产出提升 200%，agent 开始承接工作流中的质量控制环节
-- OpenCla</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260309-Karpathy 要造 AI 科研社区，agent 时代的基础设施正在被重写</title>
-      <description>## 今日摘要
-
-本期聚焦三条主线：Andrej Karpathy 提出 AI 自动科研的下一步应该是"分布式 agent 研究社区"，现有 Git 基础设施已经开始显露局限；agent 时代正在倒逼产品接口、组织方式和算力基础设施同步重构，从 agency-agents 项目的爆火到 NVIDIA 收购 Brev，信号密集；另外，"会不会写代码还重不重要"的争论再度升温，Vercel CEO Guillermo Rauch 的观点最为犀利，值得认真读一读。
-
-## 重点话题
-
-- Karpathy 的 autoresearch 愿景：从模拟一个 PhD 学生，到模拟整个科研社区，现有 Git 基础设施面临压力
-- Agent 时代的三重重构：产品接口要为 agent 设计、多 agent 组织方式需要标准化、算力基础设施要针对 agent 推理优化
-- 要不要学写代码的争论：Guillermo Rauch 力挺"理解力是杠杆"，Hamel Husain 冷静指出每个职能都觉得自己不可替代
-
-## 快讯
-
-- Applied Intuition：估值 150 亿美元、ARR 近 10 亿的 physical AI 独角兽，Lenny 播客罕见深度采访其 CEO
-- Pencil 设计工具：上线两周 10 万用户，swarm mode 让 6 个 AI agent 同时在画布上协作设计
-- OpenClaw beta 更新：加入 GPT 5.4 和 Gemini Flash 3.1 支持
-- Seedance 2：中国视频生成模型制作的短剧在小红书获 10 万赞，内容消费属性开始显现
-- Claude 个人数据分析：用 Google Maps 收藏和浏览历史了解自己，效果出人意料地准确
-
-## 值得阅读
-
-- Karpathy autoresearch Discussion（agent 科研协作实验）：https://github.com/karpathy/autoresearch/discussions/43
-- Aaron Levie 关于 agent 时代商业逻辑的文章：https://t.co/O7OiUYKjbh
-- Lenny 采访 Applied Intuition CEO Qasar Younis：https://youtu.be/_rcniEb9bLw
-- Peter Yang 采访 Pencil CEO Tom Krcha（swarm mode 演示）：https://youtu.be/w4RY7PnfRU8
-- agency-agents GitHub 项目（7天破万星的多 agent 公司框架）：https://github.com/msitarzewski/agency-agents/
-- Zara Zhang 关于"低启动能量"的 Claude 分析原文推文（值得反思自身工作方式）</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-09/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-09/audio.mp3" length="14212320" type="audio/mpeg"/>
-      <pubDate>Sun, 08 Mar 2026 23:09:25 +0000</pubDate>
-      <itunes:duration>710</itunes:duration>
-      <itunes:summary>## 今日摘要
-
-本期聚焦三条主线：Andrej Karpathy 提出 AI 自动科研的下一步应该是"分布式 agent 研究社区"，现有 Git 基础设施已经开始显露局限；agent 时代正在倒逼产品接口、组织方式和算力基础设施同步重构，从 agency-agents 项目的爆火到 NVIDIA 收购 Brev，信号密集；另外，"会不会写代码还重不重要"的争论再度升温，Vercel CEO Guillermo Rauch 的观点最为犀利，值得认真读一读。
-
-## 重点话题
-
-- Karpathy 的 autoresearch 愿景：从模拟一个 PhD 学生，到模拟整个科研社区，现有 Git 基础设施面临压力
-- Agent 时代的三重重构：产品接口要为 agent 设计、多 agent 组织方式需要标准化、算力基础设施要针对 agent 推理优化
-- 要不要学写代码的争论：Guillermo Rauch 力挺"理解力是杠杆"，Hamel Husain 冷静指出每个职能都觉得自己不可替代
-
-## 快讯
-
-- Applied Intuition：估值 150 亿美元、ARR 近 10 </itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260308-Claude Code 开始值班，AI Agent 进入持续协作时代</title>
-      <description>## 今日摘要
-本期聚焦三个核心信号：Claude Code 发布 /loop 定时任务功能，标志着 AI agent 从单次调用走向持续协作；Karpathy 开源 autoresearch 项目，探索"让 AI 自主做 AI 研究"的可能性；OpenClaw 团队的实践揭示了一个普遍认知盲区——AI coding 工具的能力边界早已超出"写代码"本身。此外，GPT 5.4 口碑持续发酵，Replit CEO 提出"Generalist Automator"新职位概念，也值得关注。
-
-## 重点话题
-- Claude Code /loop 功能：AI agent 从 pull 模式转向 push 模式，可持续运行最长三天的定时任务，是 AI 协作形态的重要转变
-- Karpathy autoresearch 项目：开源"让 AI agent 自主迭代 LLM 训练代码"的最小化实验框架，人负责定方向，AI 负责执行和优化
-- Codex 不只是写代码的工具：Peter Steinberger 用 Codex 分析 Discord 用户数据，引发广泛共鸣，揭示 AI 工具的心理模型局限
-
-## 快讯
-- GPT 5.4 获多位业内人士正面评价，a16z 投资人称其"像在和聪明朋友聊天"，OpenAI Kevin Weil 推荐阅读其推理能力分析文章
-- Kling 新 Motion Control 功能支持换脸，Justine Moore 实测多角度镜头表现超预期
-- Anthropic 伦理研究员 Amanda Askell 让 Claude 为自己写"价值观宪法"，循环本身耐人寻味
-- Replit CEO Amjad Masad 提出"Generalist Automator"新职位概念，主张最有想法的员工现在可以绕过工程瓶颈直接落地想法
-- 有人为了 24 小时监督 coding agent 开始练习多相睡眠，人机协作的信任边界问题浮出水面
-- Peter Steinberger 开源 discrawl，可将 Discord 消息爬取至 SQLite 数据库，他的库已有 4GB、66 万条消息
-
-## 值得阅读
-- Karpathy autoresearch 项目：https://github.com/karpathy/autoresearch
-- Claude Code /loop 官方文档：https://code.claude.com/docs/en/scheduled-tasks
-- OpenAI 用 Codex 开出 1500 个 PR 的案例（swyx 转发）：https://twitter.com/OpenAIDevs
-- PinchBench 模型成功率排行榜（针对 OpenClaw 任务）：https://pinchbench.com
-- discrawl 开源工具：https://github.com/steipete/discrawl
-- Excalidraw MCP Server（用 AI 把代码库转成架构图）：https://github.com/excalidraw/excalidraw-mcp</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-08/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-08/audio.mp3" length="12807360" type="audio/mpeg"/>
-      <pubDate>Sat, 07 Mar 2026 23:08:34 +0000</pubDate>
-      <itunes:duration>640</itunes:duration>
-      <itunes:summary>## 今日摘要
-本期聚焦三个核心信号：Claude Code 发布 /loop 定时任务功能，标志着 AI agent 从单次调用走向持续协作；Karpathy 开源 autoresearch 项目，探索"让 AI 自主做 AI 研究"的可能性；OpenClaw 团队的实践揭示了一个普遍认知盲区——AI coding 工具的能力边界早已超出"写代码"本身。此外，GPT 5.4 口碑持续发酵，Replit CEO 提出"Generalist Automator"新职位概念，也值得关注。
-
-## 重点话题
-- Claude Code /loop 功能：AI agent 从 pull 模式转向 push 模式，可持续运行最长三天的定时任务，是 AI 协作形态的重要转变
-- Karpathy autoresearch 项目：开源"让 AI agent 自主迭代 LLM 训练代码"的最小化实验框架，人负责定方向，AI 负责执行和优化
-- Codex 不只是写代码的工具：Peter Steinberger 用 Codex 分析 Discord 用户数据，引发广泛共鸣，揭示 AI 工具的心理模型局限</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260307-AI自己优化自己：Karpathy的agent实验与subagent时代来临</title>
-      <description>## 今日摘要
-今天的核心主题围绕 AI agent 的工作范式转变展开。Karpathy 用 AI agent 自动优化自己的 nanochat 项目，宣告"研究 agent 框架本身"成为新的元竞争；swyx 提出"2026年是 subagent 之年"，主张放弃 multiagent 思维；Claude 每日新增百万用户，Claude Code 推出本地定时任务，AI coding 工具正从"被动调用"走向"主动运行"。商业视角上，Aaron Levie 和 Greg Isenberg 分别从采购决策和产品设计角度，指出垂直 AI 公司的最优切入路径是"替换现有外包合同"和"自动化生产客户真正在乎的成品"。
-
-## 重点话题
-- Karpathy 的 agent 自优化实验：AI 自己跑实验、自己合并改动，研究范式从"写代码"转向"设计 agent 工作流"
-- Claude 百万日增与 Claude Code 定时任务：AI coding 工具从工具走向持续运行的 agent，OpenAI 同步推 Codex for Open Source
-- 垂直 AI 的商业路径：Levie 的"外包替换"框架 + Isenberg 的"拥有成品输出物"策略，给创业者提供清晰路径图
-
-## 快讯
-- Google Labs 发布2026年前两个月产品盘点，Flow、Jules、NotebookLM、Project Genie 等多个产品密集更新
-- Justine Moore 观察：旧金山街头越来越多人抱着笔记本走路，只为不中断 agent 任务
-- Anthropic 劳动力市场影响报告显示白领工作受 AI 冲击最大，引发广泛讨论
-- Cursor 设计师 Ryo Lu 展示用 Cloud Agent 构建 ryOS 小组件的人机协作工作流
-- Hamel Husain 纠偏"语义搜索已死"论：这类断言通常只代表特定场景的权衡，不是普适结论
-- GitHub issue 标题提示词注入攻击导致 npm token 泄露，AI agent 安全风险再次引发警示
-
-## 值得阅读
-- Andrej Karpathy 的 nanochat + agent 自优化推文线索：https://twitter.com/karpathy/status/2029701092347630069
-- swyx 在 Latent Space 播客关于 Cursor 第三纪元与 subagent 的讨论：https://www.latent.space/（搜索 Cursor Third Era）
-- Aaron Levie 关于 AI agent 替换外包合同的完整分析：https://twitter.com/levie/status/2029777072953167910
-- Greg Isenberg 关于垂直 AI 公司如何围绕"成品输出物"构建的长推文：https://twitter.com/gregisenberg/status/2029939457311351092
-- Hamel Husain 关于语义搜索与文件检索权衡的分析：https://twitter.com/HamelHusain/status/2029713829882646848
-- OpenAI Codex for Open Source 官方公告：https://openai.com/（搜索 Codex for Open Source）</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-07/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-07/audio.mp3" length="12472320" type="audio/mpeg"/>
-      <pubDate>Fri, 06 Mar 2026 22:10:37 +0000</pubDate>
-      <itunes:duration>623</itunes:duration>
-      <itunes:summary>## 今日摘要
-今天的核心主题围绕 AI agent 的工作范式转变展开。Karpathy 用 AI agent 自动优化自己的 nanochat 项目，宣告"研究 agent 框架本身"成为新的元竞争；swyx 提出"2026年是 subagent 之年"，主张放弃 multiagent 思维；Claude 每日新增百万用户，Claude Code 推出本地定时任务，AI coding 工具正从"被动调用"走向"主动运行"。商业视角上，Aaron Levie 和 Greg Isenberg 分别从采购决策和产品设计角度，指出垂直 AI 公司的最优切入路径是"替换现有外包合同"和"自动化生产客户真正在乎的成品"。
-
-## 重点话题
-- Karpathy 的 agent 自优化实验：AI 自己跑实验、自己合并改动，研究范式从"写代码"转向"设计 agent 工作流"
-- Claude 百万日增与 Claude Code 定时任务：AI coding 工具从工具走向持续运行的 agent，OpenAI 同步推 Codex for Open Source
-- 垂直 AI 的商业路径：Levi</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260306-GPT-5.4来了，Agent工具层正在悄悄重构</title>
-      <description>## 今日摘要
-
-2026年3月6日，AI 工具层迎来密集更新。OpenAI 正式发布 GPT-5.4，带来编程、推理和 Agent 能力的全面提升；Google 发布 Workspace CLI，引发 Agent 工具链的广泛讨论；Claude Code 面对爆炸式增长，悄悄做了一系列服务质量取舍。三件事放在一起，描绘出 Agent 基础设施正在快速成形的清晰轮廓。
-
-## 重点话题
-
-- GPT-5.4 正式发布：统一模型、编程能力提升、Box 测试文档处理准确率提升6个百分点，同步进入 Codex 与 API
-- Google Workspace CLI：用 Rust 写的官方命令行工具，支持 Drive/Gmail/Calendar 等，可直接作为 Claude Code Skill 接入，标志着"为 Agent 重写工具层"时代来临
-- Claude Code 增长与取舍：流量爆炸难以预测，Anthropic 下线部分模型版本、调整 Effort 默认值，同期 OpenAI Codex 周活用户突破200万，同比年初增长超3倍
-
-## 快讯
-
-- Cursor 发布 Automations 功能：支持构建"永远在线"的 Agent，让代码在你休息时继续跑
-- NotebookLM 新增视频生成：自动搜索、写脚本、生成混合素材视频，正从笔记工具进化为内容生产平台
-- Netflix 收购 Ben Affleck 的 AI 影视工具公司 interpositive：专注调色、打光、VFX 后期辅助
-- 第三方 LLM 代理 API 假模型研究：17个服务中近46%指纹测试不通过，声称 GPT-5 实为 GLM-4，已被引用进187篇学术论文
-- Vercel x Stripe 集成正式 GA：一行命令接入支付，Agent 商业化基础设施门槛持续降低
-
-## 值得阅读
-
-- [GPT-5.4 发布公告 - OpenAI](https://openai.com)
-- [Google Workspace CLI 官方仓库](https://github.com/googleworkspace/cli)
-- [为 AI Agent 重写你的 CLI - Justin Poehnelt](https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/)
-- [Box GPT-5.4 评测报告](https://blog.box.com)
-- [你的新工作是 onboard AI Agent - Peter Yang](https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents)
-- [NotebookLM 视频功能演示 - Josh Woodward (Twitter)](https://twitter.com/joshwoodward/status/2029424537331482672)
-- [Claude Code 更新说明 - Thariq (Twitter)](https://twitter.com/trq212/status/2029651089184952542)</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-06/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-06/audio.mp3" length="14316960" type="audio/mpeg"/>
-      <pubDate>Thu, 05 Mar 2026 22:11:44 +0000</pubDate>
-      <itunes:duration>715</itunes:duration>
-      <itunes:summary>## 今日摘要
-
-2026年3月6日，AI 工具层迎来密集更新。OpenAI 正式发布 GPT-5.4，带来编程、推理和 Agent 能力的全面提升；Google 发布 Workspace CLI，引发 Agent 工具链的广泛讨论；Claude Code 面对爆炸式增长，悄悄做了一系列服务质量取舍。三件事放在一起，描绘出 Agent 基础设施正在快速成形的清晰轮廓。
-
-## 重点话题
-
-- GPT-5.4 正式发布：统一模型、编程能力提升、Box 测试文档处理准确率提升6个百分点，同步进入 Codex 与 API
-- Google Workspace CLI：用 Rust 写的官方命令行工具，支持 Drive/Gmail/Calendar 等，可直接作为 Claude Code Skill 接入，标志着"为 Agent 重写工具层"时代来临
-- Claude Code 增长与取舍：流量爆炸难以预测，Anthropic 下线部分模型版本、调整 Effort 默认值，同期 OpenAI Codex 周活用户突破200万，同比年初增长超3倍
-
-## 快讯
-
-- Cursor 发布 Auto</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260305-SWE-Bench 退场、人人都是 PM，AI 重写游戏规则</title>
-      <description>## 今日摘要
-本期聚焦三个核心话题：SWE-Bench Verified 正式退役，benchmark 污染问题被彻底摆上台面；Claude Code 负责人的一句"每个人都是 PM、每个人都写代码"引发广泛讨论，多家 AI-native 公司分享了落地实践；RevenueCat 直接招聘 AI Agent 担任 Developer Advocate 职位，月薪一万美元，面试对象是 Agent 本身。此外还有 NotebookLM 新功能、Cursor 进入 JetBrains 生态等产品快讯。
-
-## 重点话题
-- SWE-Bench 的落幕：OpenAI 主动退役这一主流编程 benchmark，原因是模型污染和题目质量问题，揭示了 AI 评估体系的系统性困境
-- 每个人都是 PM，每个人都写代码：Claude Code 负责人的预言 + 三家 AI-native 公司的落地实践，展示了 AI 重塑工作角色的真实路径
-- RevenueCat 招聘 AI Agent：月薪一万美元、直接面试 Agent，这个案例折射出 AI Agent 承担真实工作职能的趋势正在加速
-
-## 快讯
-- NotebookLM 推出 Cinematic Video Overviews，支持从资料生成视频摘要，Ultra 用户可用
-- Cursor 通过 Agent Client Protocol 接入 JetBrains IDE，覆盖更多开发者生态
-- OpenAI Prism（LaTeX 编辑器）集成 Codex，并新增版本管理功能
-- Replit 发布纪录片《21 Days to Launch》，记录 AI-native 团队的真实构建过程
-- OpenAI 发布博客 Harness Engineering，探讨如何在 agent-first 世界中有效使用 Codex，收藏量破 1900
-- Matt Turck 用一句冷笑话点出 AI 创业公司的结构性成本困境：VC 的钱最终都流向了模型提供商
-
-## 值得阅读
-- [Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/) — OpenAI 官方博客，讲如何围绕 Codex 构建 agent-first 工作流，收藏量极高
-- [Tracing the Thoughts of a Large Language Model](https://www.anthropic.com/research/tracing-thoughts-language-model) — Anthropic 研究，追踪 Claude 内部思维过程，Claude Code 团队强烈推荐
-- [Your New Job Is to Onboard AI Agents](https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents) — Peter Yang 深度文章，采访 Linear、Ramp、Factory 三家公司的 AI-native 实践
-- [The End of SWE-Bench Verified](https://www.latent.space/) — Latent Space 播客 + 分析文章，详解 SWE-Bench 退役始末
-- [Donald Knuth 关于 Claude 的新论文](https://cs.stanford.edu/~knuth/papers/claude-cycles.pdf) — 计算机科学泰斗 Knuth 亲自写文章评价 Claude，罕见且值得一读
-- [21 Days to Launch — Replit 纪录片](https://youtu.be/zB1lpGNWVtg?si=CLWStUCoxZyFAgoA) — Replit 团队 21 天快速上线产品的幕后全记录</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-05/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-05/audio.mp3" length="12494400" type="audio/mpeg"/>
-      <pubDate>Wed, 04 Mar 2026 23:16:37 +0000</pubDate>
-      <itunes:duration>624</itunes:duration>
-      <itunes:summary>## 今日摘要
-本期聚焦三个核心话题：SWE-Bench Verified 正式退役，benchmark 污染问题被彻底摆上台面；Claude Code 负责人的一句"每个人都是 PM、每个人都写代码"引发广泛讨论，多家 AI-native 公司分享了落地实践；RevenueCat 直接招聘 AI Agent 担任 Developer Advocate 职位，月薪一万美元，面试对象是 Agent 本身。此外还有 NotebookLM 新功能、Cursor 进入 JetBrains 生态等产品快讯。
-
-## 重点话题
-- SWE-Bench 的落幕：OpenAI 主动退役这一主流编程 benchmark，原因是模型污染和题目质量问题，揭示了 AI 评估体系的系统性困境
-- 每个人都是 PM，每个人都写代码：Claude Code 负责人的预言 + 三家 AI-native 公司的落地实践，展示了 AI 重塑工作角色的真实路径
-- RevenueCat 招聘 AI Agent：月薪一万美元、直接面试 Agent，这个案例折射出 AI Agent 承担真实工作职能的趋势正在加速
-
-## 快讯</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260304-Agent幻觉部署生产事故、Claude流量爆炸与代码审查的终局</title>
-      <description>## 今日摘要
-本期聚焦三条主线：Claude 和 Claude Code 因流量爆炸性增长导致服务不稳定，引发开发者社区对 AI 基础设施可靠性的广泛讨论；Vercel CEO 披露了一起 AI Agent 在生产环境中"幻觉部署"陌生代码仓库的真实事故，揭示了 Agent 权限管理的潜在风险；以及围绕"AI 能否取代人工 Code Review"的前沿讨论正从理论走向实践。此外，Claude 登顶 Google Play 榜首、Google 发布 Gemini Flash-Lite 等快讯也在今日值得关注。
-
-## 重点话题
-- Claude 服务稳定性危机：前所未有的流量增长暴露了 AI 工具作为核心基础设施的脆弱性，以及开发者社区对可靠性的强烈需求
-- AI Agent 幻觉部署事故：Vercel CEO 披露 Opus 4.6 在生产环境中凭空编造 GitHub 仓库 ID 并完成部署，引发对 Agent 权限边界设计的深度反思
-- 干掉代码审查：swyx 转发关于 AI 取代人工 Code Review 的五步框架，AI 公司正以比 GitHub 更快的速度"变成 GitHub"
-
-## 快讯
-- Claude 登顶 Google Play Store 第一名，双端 App Store 均排名第一，受众正快速向主流用户扩散
-- Google 发布 Gemini 3.1 Flash-Lite，主打极速轻量，强化推理速度和成本竞争力
-- 计算机科学泰斗 Donald Knuth 发表新论文，提及 Claude 使用体验并向 Claude Shannon 致敬
-- Box 全年营收 11.8 亿美元，CEO Aaron Levie 将企业内容定位为 AI Agent 时代的核心基础设施
-- Claude Code 语音输入模式开始向 5% 用户灰度推送，逐步扩大
-- OpenClaw 全球已有超过 80 个线下 Meetup，社区增长速度在开发者工具历史上罕见
-
-## 值得阅读
-- Vercel CEO 的 Agent 幻觉部署完整复盘：https://twitter.com/rauchg/status/2028920268119523788
-- Latent Space：如何干掉代码审查（五步框架）：https://twitter.com/latentspacepod（swyx 转发原文）
-- Donald Knuth 关于 Claude 的新论文：https://cs.stanford.edu/~knuth/papers/claude-cycles.pdf
-- Lenny Rachitsky × Jenny Wen：AI 如何改变设计师的角色与工作流程：https://www.lennysnewsletter.com（播客完整对话）
-- Hamel Husain 整理的 AI 工程资源合集（高互动推文）：https://twitter.com/HamelHusain/status/2028894099483578872</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-04/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-04/audio.mp3" length="11379840" type="audio/mpeg"/>
-      <pubDate>Wed, 04 Mar 2026 00:38:35 +0000</pubDate>
-      <itunes:duration>568</itunes:duration>
-      <itunes:summary>## 今日摘要
-本期聚焦三条主线：Claude 和 Claude Code 因流量爆炸性增长导致服务不稳定，引发开发者社区对 AI 基础设施可靠性的广泛讨论；Vercel CEO 披露了一起 AI Agent 在生产环境中"幻觉部署"陌生代码仓库的真实事故，揭示了 Agent 权限管理的潜在风险；以及围绕"AI 能否取代人工 Code Review"的前沿讨论正从理论走向实践。此外，Claude 登顶 Google Play 榜首、Google 发布 Gemini Flash-Lite 等快讯也在今日值得关注。
-
-## 重点话题
-- Claude 服务稳定性危机：前所未有的流量增长暴露了 AI 工具作为核心基础设施的脆弱性，以及开发者社区对可靠性的强烈需求
-- AI Agent 幻觉部署事故：Vercel CEO 披露 Opus 4.6 在生产环境中凭空编造 GitHub 仓库 ID 并完成部署，引发对 Agent 权限边界设计的深度反思
-- 干掉代码审查：swyx 转发关于 AI 取代人工 Code Review 的五步框架，AI 公司正以比 GitHub 更快的速度"变成 GitH</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
