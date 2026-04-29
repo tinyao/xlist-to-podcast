@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-04-30",
+    "title": "20260430-Codex咕噜一刻与Airtable的30个Agent生产线",
+    "summary": "Codex 迎来工具链上的密度展示，Sam Altman 称其正在经历“咕噜时刻”，OpenClaw 已实现全自动代码审查-修复闭环。Airtable CEO 在深度播客中披露 30 个并行 agent 工作流与数十万亿级市场判断。郭宇宣布取消所有产品订阅制，全面转向按需付费。Cursor 发布 SDK，Stripe 为 agent 推出一次性付款授权。",
+    "audio_duration": 564,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-30/audio.mp3",
+    "tweet_count": 64
+  },
+  {
     "date": "2026-04-20",
     "title": "20260420-Vercel被AI攻破与PM大逃杀",
     "summary": "Vercel 因第三方 AI 工具被入侵，导致客户环境变量遭未授权访问，攻击者疑似利用 AI 加速渗透。Lenny 与 Nikhyl 的播客警告，一半的产品经理可能无法适应 AI 原生工作流的转型。Aaron Levie 指出，AI 模型进步太快，工程团队必须准备每几个月就推翻之前的架构设计。此外，GPT Pro 被指在未公开更新后前端编码能力突飞猛进，OpenAI 推理接口则出现了大面积宕机。",
