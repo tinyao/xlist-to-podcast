@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-04-02",
+    "title": "20260402-Claude Code重写终端，红杉画了张万亿地图",
+    "summary": "Claude Code 把整个终端渲染重写了，新模式 NO_FLICKER 启用 viewport 虚拟化、支持鼠标。Box CEO Aaron Levie 在 axios 事件后写下「AI 生产力没有免费午餐」，给企业级 vibe coding 划了边界。红杉发布《Services is the new software》——一张超过 1 万亿美元服务市场被 AI agent 接管的地图，让 Greg 与 Aaron 两种世界观的对照变得格外清晰。Cloudflare 顺势用 EmDash 示范了下一代 plugin 沙箱的形态。",
+    "audio_duration": 672,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-02/audio.mp3",
+    "tweet_count": 79
+  },
+  {
     "date": "2026-04-01",
     "title": "20260401-axios供应链告急，软件的灵魂去哪了",
     "summary": "npm axios 1.14.1 被植入恶意代码，Socket Security 在攻击发布 6 分钟内检测到，AI 辅助安全审查首次在真实供应链攻击中被验证有效。Claude Code 源码因 Bun bug 疑似意外泄露。微软任命专职 CVP 负责 OpenClaw × M365 整合，Vercel 公开内部\"负责任用 agent\"指南。Cursor 设计师 Ryo Lu 发长文探讨：AI 加速时代，那些真正在意的人将更稀有，也更有价值。",

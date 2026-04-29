@@ -4,6 +4,7 @@ import re
 import shutil
 import subprocess
 import threading
+import time
 from datetime import date
 from pathlib import Path
 from typing import TYPE_CHECKING, List, Optional
@@ -179,6 +180,11 @@ def _generate_via_claude_cli(prompt: str) -> str:
 
     final_text = ""
     last_event_type = ""
+    last_event_at = 0.0
+    assistant_chunks: list[str] = []
+    event_counts: dict[str, int] = {}
+    start = time.monotonic()
+    last_progress_log = start
     try:
         for raw in proc.stdout:  # type: ignore[union-attr]
             stripped = raw.strip()
@@ -189,15 +195,36 @@ def _generate_via_claude_cli(prompt: str) -> str:
             except json.JSONDecodeError:
                 logger.debug("[claude-cli non-json] %s", stripped[:200])
                 continue
+            now = time.monotonic()
+            elapsed = now - start
             ev_type = event.get("type", "")
             last_event_type = ev_type
+            last_event_at = elapsed
+            event_counts[ev_type] = event_counts.get(ev_type, 0) + 1
             if ev_type == "system" and event.get("subtype") == "init":
                 logger.info(
                     "[claude-cli] session started (model=%s)",
                     event.get("model", "?"),
                 )
+            elif ev_type == "assistant":
+                msg = event.get("message", {}) or {}
+                for block in msg.get("content", []) or []:
+                    if isinstance(block, dict) and block.get("type") == "text":
+                        assistant_chunks.append(block.get("text", "") or "")
+                if now - last_progress_log >= 30:
+                    total = sum(len(c) for c in assistant_chunks)
+                    logger.info(
+                        "[claude-cli] %.0fs elapsed, %d assistant events, %d chars accumulated",
+                        elapsed, event_counts.get("assistant", 0), total,
+                    )
+                    last_progress_log = now
             elif ev_type == "result":
                 final_text = event.get("result", "") or final_text
+                logger.info(
+                    "[claude-cli] result event at %.0fs (assistant events=%d, accumulated=%d chars, result=%d chars)",
+                    elapsed, event_counts.get("assistant", 0),
+                    sum(len(c) for c in assistant_chunks), len(final_text),
+                )
 
         proc.wait()
         stderr_thread.join(timeout=5)
@@ -205,26 +232,49 @@ def _generate_via_claude_cli(prompt: str) -> str:
     finally:
         watchdog.cancel()
 
+    accumulated = "".join(assistant_chunks)
+
+    def _try_fallback(reason: str) -> str:
+        if final_text:
+            return final_text
+        if accumulated:
+            logger.warning(
+                "[claude-cli] %s; falling back to %d chars accumulated from %d assistant events "
+                "(last event: %s at %.0fs)",
+                reason, len(accumulated), event_counts.get("assistant", 0),
+                last_event_type or "none", last_event_at,
+            )
+            return accumulated
+        return ""
+
     if timed_out.is_set():
+        recovered = _try_fallback(f"timed out after {_CLAUDE_CLI_TIMEOUT}s")
+        if recovered:
+            return recovered
         raise RuntimeError(
             f"Claude CLI timed out after {_CLAUDE_CLI_TIMEOUT}s "
-            f"(last event: {last_event_type or 'none'}). "
+            f"(last event: {last_event_type or 'none'} at {last_event_at:.0f}s, "
+            f"events={event_counts}). "
             f"stderr tail: {' | '.join(stderr_lines[-10:])}"
         )
 
     if proc.returncode != 0:
+        recovered = _try_fallback(f"exit {proc.returncode}")
+        if recovered:
+            return recovered
         raise RuntimeError(
             f"Claude CLI exit {proc.returncode} (last event {last_event_type}): "
             + "\n".join(stderr_lines[-20:])
         )
 
-    if not final_text:
-        raise RuntimeError(
-            f"Claude CLI returned no result event. stderr tail: "
-            f"{' | '.join(stderr_lines[-10:])}"
-        )
-
-    return final_text
+    recovered = _try_fallback("no result event")
+    if recovered:
+        return recovered
+    raise RuntimeError(
+        f"Claude CLI returned no result event and no assistant text. "
+        f"events={event_counts}. stderr tail: "
+        f"{' | '.join(stderr_lines[-10:])}"
+    )
 
 
 def _generate_via_openrouter(prompt: str) -> str:

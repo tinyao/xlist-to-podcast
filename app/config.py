@@ -10,11 +10,11 @@ class Settings(BaseSettings):
     # OpenAI (TTS)
     openai_api_key: str = ""
 
-    # OpenRouter (LLM fallback)
+    # OpenRouter (default LLM backend)
     openrouter_api_key: str = ""
 
-    # LLM backend: "claude-cli" (default) or "openrouter"
-    llm_backend: str = "claude-cli"
+    # LLM backend: "openrouter" (default) or "claude-cli"
+    llm_backend: str = "openrouter"
 
     # 本地文件服务 base URL（生产环境改为实际域名）
     server_base_url: str = "http://localhost:8000"
