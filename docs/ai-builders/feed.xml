@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Wed, 29 Apr 2026 17:51:05 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 23:36:07 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -746,7 +746,7 @@ Claude Code 把整个终端渲染重写了，新模式 NO_FLICKER 启用 viewpor
 - Linear 的销售用 Agent skill 直接做产品交流：https://x.com/thenanyu/status/2039427973644714245</description>
       <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-02/audio.mp3</guid>
       <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-02/audio.mp3" length="13448160" type="audio/mpeg"/>
-      <pubDate>Wed, 29 Apr 2026 14:49:48 +0000</pubDate>
+      <pubDate>Thu, 02 Apr 2026 12:00:00 +0000</pubDate>
       <itunes:duration>672</itunes:duration>
       <itunes:summary>## 今日摘要
 
@@ -788,7 +788,7 @@ npm axios 1.14.1 被植入恶意代码，Socket Security 在攻击发布 6 分�
 - Junyang Lin 转发 Meta-Harness https://x.com/JustinLin610/status/2038783276937310582</description>
       <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-01/audio.mp3</guid>
       <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-01/audio.mp3" length="10055040" type="audio/mpeg"/>
-      <pubDate>Wed, 29 Apr 2026 08:56:31 +0000</pubDate>
+      <pubDate>Wed, 01 Apr 2026 12:00:00 +0000</pubDate>
       <itunes:duration>502</itunes:duration>
       <itunes:summary>## 今日摘要
 npm axios 1.14.1 被植入恶意代码，Socket Security 在攻击发布 6 分钟内检测到，AI 辅助安全审查首次在真实供应链攻击中被验证有效。Claude Code 源码因 Bun bug 疑似意外泄露。微软任命专职 CVP 负责 OpenClaw × M365 整合，Vercel 公开内部"负责任用 agent"指南。Cursor 设计师 Ryo Lu 发长文探讨：AI 加速时代，那些真正在意的人将更稀有，也更有价值。
@@ -1166,6 +1166,45 @@ Anthropic 宣布为期两周的春假双倍额度，同步推出 `/effort max` �
 ## 重点话题
 - **Anthropic 春假礼包**：非高峰时段和周末 Claude 使用额度翻倍，持续两周；新增 `/effort max` 深度推理模式（需按 session 开启）、setup script 支持、postcompact hook 等多项功能更新
 - **OpenClaw 大周末**：Chrome DevTools MCP 正式进入 beta（支持真实浏览器控制）；NVI</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260314-Claude Code一百万上下文成默认，郭宇纯Qwen跑出AI游戏公司</title>
+      <description>## 今日摘要
+Anthropic 周五集中发布多项 Claude Code 更新：1M context 正式 GA 并成为 Max/Team/Enterprise 默认模型，手机远程启动笔记本 session，Voice Mode 全量推送。郭宇发布 wanman AI 新实验，用纯 Qwen 3.5 35B 在本地跑了 1019 轮游戏公司模拟，AI 自主开发了一款种花放置游戏。Chrome 146 通过 MCP 接口暴露真实浏览器 session，AI agent 操控浏览器迎来新可能。
+
+## 重点话题
+- **Claude Code 周五大礼包**：1M context GA 成默认、手机远程启动、Voice Mode 全量、Code Review 可按需触发、3 个实用快捷键
+- **郭宇 wanman AI 新实验**：纯 Qwen 3.5 35B（无 Opus），1019 轮 / 6小时，AI 在日本游戏公司模拟中自主开发放置游戏
+- **Chrome 146 + MCP 真实浏览器 session**：一个开关让 CLI agent 接管你的完整浏览器会话，OpenClaw 计划今晚集成
+
+## 快讯
+- Meta 新模型 "Avocado" 延迟发布：内部测试在推理、编程、写作上落后竞品
+- Aaron Levie：前沿 AI 场景 token 消耗是一年前 100 倍，推理容量争夺战即将开始
+- LangChain CEO Harrison Chase 专访：agent 框架层会被模型吃掉吗？
+- Google VP Josh Woodward：Google 25-30% 代码由 AI 编写
+- 开发者反向工程 Anthropic Generative UI 并移植给 Pi AI，附完整文章和代码
+- Obsidian/Defuddle 更新：支持 YouTube 视频转录，输出带时间戳 Markdown，MIT 开源
+- Perplexity CTO 回应 session token 安全争议：那是短周期代理 token，不是 API key
+
+## 值得阅读
+- [Claude 1M context GA 官方博客](https://claude.com/blog/1m-context-ga)
+- [Claude Code Model 配置文档](https://code.claude.com/docs/en/model-config)
+- [Claude Code Review 配置文档](https://code.claude.com/docs/en/code-review)
+- [Matt Turck × Harrison Chase 专访视频（LangChain / agent 框架未来）](https://twitter.com/mattturck/status/2032528435600396650)
+- [开发者反向工程 Anthropic Generative UI 文章](https://twitter.com/micLivs/status/2032263869708808433)
+- [Defuddle — 任意网页转 Markdown，支持 YouTube 转录](https://defuddle.md)</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-14/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-14/audio.mp3" length="14735520" type="audio/mpeg"/>
+      <pubDate>Fri, 13 Mar 2026 23:11:16 +0000</pubDate>
+      <itunes:duration>736</itunes:duration>
+      <itunes:summary>## 今日摘要
+Anthropic 周五集中发布多项 Claude Code 更新：1M context 正式 GA 并成为 Max/Team/Enterprise 默认模型，手机远程启动笔记本 session，Voice Mode 全量推送。郭宇发布 wanman AI 新实验，用纯 Qwen 3.5 35B 在本地跑了 1019 轮游戏公司模拟，AI 自主开发了一款种花放置游戏。Chrome 146 通过 MCP 接口暴露真实浏览器 session，AI agent 操控浏览器迎来新可能。
+
+## 重点话题
+- **Claude Code 周五大礼包**：1M context GA 成默认、手机远程启动、Voice Mode 全量、Code Review 可按需触发、3 个实用快捷键
+- **郭宇 wanman AI 新实验**：纯 Qwen 3.5 35B（无 Opus），1019 轮 / 6小时，AI 在日本游戏公司模拟中自主开发放置游戏
+- **Chrome 146 + MCP 真实浏览器 session**：一个开关让 CLI agent 接管你的完整浏览器会话，OpenC</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
