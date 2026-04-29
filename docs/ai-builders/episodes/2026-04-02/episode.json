@@ -1,0 +1,16 @@
+{
+  "id": "c9e5b138-b03a-49ff-abe6-cdceea6fd316",
+  "podcast_id": "ai-builders",
+  "date": "2026-04-02",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "Claude CLI timed out after 1200s (last event: assistant). stderr tail: ",
+  "created_at": "2026-04-29T09:02:49.073066",
+  "audio_url": ""
+}
