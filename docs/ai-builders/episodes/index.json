@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-04-01",
+    "title": "20260401-axios供应链告急，软件的灵魂去哪了",
+    "summary": "npm axios 1.14.1 被植入恶意代码，Socket Security 在攻击发布 6 分钟内检测到，AI 辅助安全审查首次在真实供应链攻击中被验证有效。Claude Code 源码因 Bun bug 疑似意外泄露。微软任命专职 CVP 负责 OpenClaw × M365 整合，Vercel 公开内部\"负责任用 agent\"指南。Cursor 设计师 Ryo Lu 发长文探讨：AI 加速时代，那些真正在意的人将更稀有，也更有价值。",
+    "audio_duration": 502,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-01/audio.mp3",
+    "tweet_count": 54
+  },
+  {
     "date": "2026-03-30",
     "title": "20260330-可以租用的智能：从删日历到九个Agent",
     "summary": "Boris Cherny 分享了在 Anthropic 工作收到用户来信的细节，与 Justine Moore \"可以租用智能了\"的感慨一起，触碰了 AI 与人之间关系被悄然重塑这件事。Greg Isenberg 的四个 .md 文件教程成为今天被保存最多的内容，切实解决了 Claude Code 每次开对话都要重建上下文的摩擦。Lenny Rachitsky 发布了 Claire Vo 的深度访谈，从删家庭日历到跑 9 个 agent，提供了迄今最具体的个人 agent 使用框架。Peter Yang 与 Jenny Wen 的 40 分钟访谈，则给出了 Anthropic 内部构建产品方式的难得内部视角。",
