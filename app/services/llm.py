@@ -1,7 +1,9 @@
+import json
 import logging
 import re
 import shutil
 import subprocess
+import threading
 from datetime import date
 from pathlib import Path
 from typing import TYPE_CHECKING, List, Optional
@@ -18,6 +20,8 @@ logger = logging.getLogger(__name__)
 
 _OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 _OPENROUTER_MODEL = "anthropic/claude-sonnet-4-6"
+
+_CLAUDE_CLI_TIMEOUT = 1200
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
@@ -114,10 +118,13 @@ def _build_prompt(
 
 
 def _generate_via_claude_cli(prompt: str) -> str:
-    """Call Claude CLI to generate content.
+    """Call Claude CLI via streaming JSON, draining stderr concurrently.
 
-    Pipes prompt via stdin to avoid OS argument length limits
-    with large prompts (100+ tweets + recent episode context).
+    capture_output=True buffers stdout/stderr until process exit; a chatty
+    stderr can fill its 64 KB pipe buffer and silently deadlock the child,
+    which is how this hung for the full timeout in CI. Popen + per-stream
+    threads avoid that, and stream-json gives us live progress events plus
+    a deterministic `result` event to extract the final text from.
     """
     claude_path = shutil.which("claude")
     if not claude_path:
@@ -126,27 +133,98 @@ def _generate_via_claude_cli(prompt: str) -> str:
         )
 
     logger.info("Using Claude CLI for content generation (%d chars prompt)", len(prompt))
-    result = subprocess.run(
+    proc = subprocess.Popen(
         [
             claude_path,
             "-p",
             "--model", "sonnet",
             "--max-turns", "1",
-            "--output-format", "text",
+            "--output-format", "stream-json",
+            "--verbose",
             "--no-session-persistence",
         ],
-        input=prompt,
-        capture_output=True,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
         text=True,
-        timeout=1200,
+        bufsize=1,
     )
 
-    if result.returncode != 0:
+    stderr_lines: list[str] = []
+    timed_out = threading.Event()
+
+    def _drain_stderr() -> None:
+        for raw in proc.stderr:  # type: ignore[union-attr]
+            stripped = raw.rstrip()
+            if stripped:
+                stderr_lines.append(stripped)
+                logger.debug("[claude-cli stderr] %s", stripped)
+
+    def _write_stdin() -> None:
+        try:
+            proc.stdin.write(prompt)  # type: ignore[union-attr]
+        finally:
+            proc.stdin.close()  # type: ignore[union-attr]
+
+    def _on_timeout() -> None:
+        timed_out.set()
+        proc.kill()
+
+    stderr_thread = threading.Thread(target=_drain_stderr, daemon=True)
+    stdin_thread = threading.Thread(target=_write_stdin, daemon=True)
+    stderr_thread.start()
+    stdin_thread.start()
+    watchdog = threading.Timer(_CLAUDE_CLI_TIMEOUT, _on_timeout)
+    watchdog.start()
+
+    final_text = ""
+    last_event_type = ""
+    try:
+        for raw in proc.stdout:  # type: ignore[union-attr]
+            stripped = raw.strip()
+            if not stripped:
+                continue
+            try:
+                event = json.loads(stripped)
+            except json.JSONDecodeError:
+                logger.debug("[claude-cli non-json] %s", stripped[:200])
+                continue
+            ev_type = event.get("type", "")
+            last_event_type = ev_type
+            if ev_type == "system" and event.get("subtype") == "init":
+                logger.info(
+                    "[claude-cli] session started (model=%s)",
+                    event.get("model", "?"),
+                )
+            elif ev_type == "result":
+                final_text = event.get("result", "") or final_text
+
+        proc.wait()
+        stderr_thread.join(timeout=5)
+        stdin_thread.join(timeout=5)
+    finally:
+        watchdog.cancel()
+
+    if timed_out.is_set():
         raise RuntimeError(
-            f"Claude CLI failed (exit code {result.returncode}): {result.stderr}"
+            f"Claude CLI timed out after {_CLAUDE_CLI_TIMEOUT}s "
+            f"(last event: {last_event_type or 'none'}). "
+            f"stderr tail: {' | '.join(stderr_lines[-10:])}"
         )
 
-    return result.stdout
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"Claude CLI exit {proc.returncode} (last event {last_event_type}): "
+            + "\n".join(stderr_lines[-20:])
+        )
+
+    if not final_text:
+        raise RuntimeError(
+            f"Claude CLI returned no result event. stderr tail: "
+            f"{' | '.join(stderr_lines[-10:])}"
+        )
+
+    return final_text
 
 
 def _generate_via_openrouter(prompt: str) -> str:
