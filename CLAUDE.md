@@ -12,6 +12,7 @@ python -m generate --podcast <ID>          # only process one podcast
 python -m generate --force --podcast <ID>  # combine flags
 python -m generate --test-feishu           # test Feishu notification with latest episode
 python -m generate --test-feishu --podcast <ID>
+python -m generate --regenerate-date YYYY-MM-DD --podcast <ID>  # reuse existing posts.md, redo LLM+TTS+feed
 python preview_content.py --podcast <ID> --date YYYY-MM-DD                  # preview LLM output with existing posts
 python preview_content.py --podcast <ID> --date YYYY-MM-DD --prompt <file>  # use custom prompt file
 python preview_content.py --podcast <ID> --date YYYY-MM-DD --extra-prompt "..." # append extra instructions

@@ -6,6 +6,7 @@ GitHub Actions 入口：从 podcasts.yaml 加载配置，生成播客节目并�
   python -m generate --force            # 忽略小时检查，强制生成
   python -m generate --podcast ID       # 只处理指定播客
   python -m generate --force --podcast ID
+  python -m generate --regenerate-date YYYY-MM-DD --podcast ID  # 复用已有 posts.md 重新生成某一期
   python -m generate --test-feishu              # 用最新 episode 测试飞书通知
   python -m generate --test-feishu --podcast ID # 测试指定播客的飞书通知
 """
@@ -30,7 +31,7 @@ from app.storage import (
 from app.services.oss import upload_file_sync, is_enabled as oss_enabled
 from app.services.feishu import send_feishu_notification
 from app.config import settings
-from app.pipeline import generate_episode
+from app.pipeline import generate_episode, regenerate_episode
 
 logging.basicConfig(
     level=logging.INFO,
@@ -981,15 +982,48 @@ async def main(force: bool = False, podcast_id: Optional[str] = None, max_posts:
     logger.info("全部完成")
 
 
+async def main_regenerate(podcast_id: str, ep_date: date) -> None:
+    """复用已有 posts.md 重新生成某一期 episode：跳过推文抓取与 publish_hour 检查。"""
+    all_podcasts = load_podcasts_from_yaml()
+    matched = [p for p in all_podcasts if p.id == podcast_id]
+    if not matched:
+        logger.error(f"未找到播客 ID: {podcast_id}")
+        sys.exit(1)
+    podcast = matched[0]
+
+    logger.info(f"[{podcast.name}] 初始化（重新生成模式）...")
+    await asyncio.to_thread(bootstrap_podcast, podcast)
+
+    logger.info(f"[{podcast.name}] 开始重新生成 {ep_date} 的节目...")
+    await regenerate_episode(podcast.id, ep_date, extra_prompt=podcast.extra_prompt)
+
+    await asyncio.to_thread(inject_episode_urls, podcast, ep_date)
+    await asyncio.to_thread(write_site_files, [podcast])
+
+    logger.info("重新生成完成")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="生成播客节目并上传到 OSS")
     parser.add_argument("--force", action="store_true", help="忽略 publish_hour 检查")
     parser.add_argument("--podcast", type=str, default=None, help="只处理指定播客 ID")
     parser.add_argument("--max-posts", type=int, default=None, help="最大抓取推文数")
     parser.add_argument("--test-feishu", action="store_true", help="用最新已有 episode 测试飞书通知")
+    parser.add_argument("--regenerate-date", type=str, default=None,
+                        help="重新生成指定日期的 episode（YYYY-MM-DD），跳过推文抓取，必须配合 --podcast 使用")
     args = parser.parse_args()
 
     if args.test_feishu:
         test_feishu(podcast_id=args.podcast)
+    elif args.regenerate_date:
+        if not args.podcast:
+            logger.error("--regenerate-date 必须配合 --podcast 使用")
+            sys.exit(1)
+        try:
+            ep_date = date.fromisoformat(args.regenerate_date)
+        except ValueError:
+            logger.error(f"--regenerate-date 格式错误（应为 YYYY-MM-DD）: {args.regenerate_date}")
+            sys.exit(1)
+        asyncio.run(main_regenerate(args.podcast, ep_date))
     else:
         asyncio.run(main(force=args.force, podcast_id=args.podcast, max_posts=args.max_posts))

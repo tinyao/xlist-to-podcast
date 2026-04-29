@@ -12,6 +12,7 @@ Twitter 抓取 → LLM 生成 → TTS → 写文件 → 更新 feed.xml
 """
 import asyncio
 import logging
+import re
 from datetime import datetime, timedelta, timezone, date
 from pathlib import Path
 from typing import Optional
@@ -20,7 +21,7 @@ from app.storage import (
     Podcast, Episode,
     get_podcast, get_episode, save_episode, list_episodes,
 )
-from app.services.twitter import fetch_list_tweets
+from app.services.twitter import fetch_list_tweets, FetchResult
 from app.services.llm import generate_content
 from app.services.tts import text_to_speech
 from app.services.feed import build_feed
@@ -29,7 +30,9 @@ from app.services.oss import upload_file_sync, is_enabled as oss_enabled
 
 logger = logging.getLogger(__name__)
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
 STATIC_DIR = Path("data/static")
+DOCS_DIR = REPO_ROOT / "docs"
 SHANGHAI_TZ = timezone(timedelta(hours=8))
 MIN_TWEETS = 3
 
@@ -83,19 +86,25 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
         await save_episode(episode)
         return
 
-    posts_text = tweets.text
-    (ep_dir / "posts.md").write_text(posts_text, encoding="utf-8")
+    (ep_dir / "posts.md").write_text(tweets.text, encoding="utf-8")
 
-    # 1.5 获取近期 episodes（仅 daily 播客）
+    await _finalize_episode(podcast, episode, today, tweets, frequency, extra_prompt)
+
+
+async def _finalize_episode(podcast: Podcast, episode: Episode, ep_date: date, tweets: FetchResult, frequency: str, extra_prompt: str) -> None:
+    """LLM → TTS → episode.json → feed.xml → 飞书通知。被首次生成和重新生成共享。"""
+    ep_dir = _episode_dir(podcast.id, ep_date)
+
+    # 1. 获取近期 episodes（仅 daily 播客）
     recent_episodes = []
     if frequency == "daily":
         all_eps = await list_episodes(podcast.id, limit=5)
-        recent_episodes = [e for e in all_eps if e.status == "done" and e.date < today][:2]
+        recent_episodes = [e for e in all_eps if e.status == "done" and e.date < ep_date][:2]
 
     # 2. LLM 生成 script + shownotes + title
     logger.info(f"[{podcast.name}] 生成内容（{len(tweets)} 条推文）...")
     script, shownotes, title = await asyncio.to_thread(
-        generate_content, tweets, podcast.name, podcast.language, today, frequency, extra_prompt,
+        generate_content, tweets, podcast.name, podcast.language, ep_date, frequency, extra_prompt,
         prompt_file=podcast.prompt_file,
         recent_episodes=recent_episodes,
     )
@@ -103,14 +112,14 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
     (ep_dir / "script.md").write_text(script, encoding="utf-8")
     (ep_dir / "shownotes.md").write_text(shownotes, encoding="utf-8")
 
-    date_str = today.strftime("%Y年%m月%d日") if podcast.language == "zh" else today.strftime("%B %d, %Y")
+    date_str = ep_date.strftime("%Y年%m月%d日") if podcast.language == "zh" else ep_date.strftime("%B %d, %Y")
     title = title or f"{podcast.name} · {date_str}"
 
     # 3. TTS 转音频
     logger.info(f"[{podcast.name}] TTS 转换...")
     mp3_bytes, duration = await asyncio.to_thread(text_to_speech, script, podcast.voice, podcast.tts_provider)
 
-    audio_rel = f"{podcast.id}/episodes/{today}/audio.mp3"
+    audio_rel = f"{podcast.id}/episodes/{ep_date}/audio.mp3"
     (ep_dir / "audio.mp3").write_bytes(mp3_bytes)
     if oss_enabled():
         await asyncio.to_thread(upload_file_sync, audio_rel, mp3_bytes)
@@ -124,6 +133,7 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
     episode.audio_size = len(mp3_bytes)
     episode.tweet_count = len(tweets)
     episode.status = "done"
+    episode.error_msg = ""
     await save_episode(episode)
 
     # 5. 重新生成 feed.xml
@@ -142,3 +152,45 @@ async def _run_pipeline(podcast: Podcast, episode: Episode, today: date, max_pos
             logger.warning(f"[{podcast.name}] 飞书通知发送失败", exc_info=True)
 
     logger.info(f"[{podcast.name}] 生成完成：{title}")
+
+
+async def regenerate_episode(podcast_id: str, ep_date: date, extra_prompt: str = "") -> None:
+    """复用已有 posts.md 重新生成某一期：跳过推文抓取，重跑 LLM + TTS + feed + 通知。"""
+    podcast = await get_podcast(podcast_id)
+    if not podcast or not podcast.is_active:
+        logger.error(f"未找到或未启用的播客: {podcast_id}")
+        return
+
+    ep_dir = _episode_dir(podcast.id, ep_date)
+    posts_path = ep_dir / "posts.md"
+
+    # data/static/ 没有就从 docs/ 拷过来（CI 环境下 bootstrap 只恢复 episode.json）
+    if not posts_path.exists():
+        docs_posts = DOCS_DIR / podcast.id / "episodes" / str(ep_date) / "posts.md"
+        if not docs_posts.exists():
+            raise FileNotFoundError(
+                f"找不到 posts.md，无法重新生成: {docs_posts}（同时检查了 {posts_path}）"
+            )
+        posts_path.write_text(docs_posts.read_text(encoding="utf-8"), encoding="utf-8")
+        logger.info(f"[{podcast.name}] 从 docs/ 恢复 posts.md")
+
+    posts_text = posts_path.read_text(encoding="utf-8")
+    tweet_count = len(re.findall(r"^\[tweet \d+\]", posts_text, re.MULTILINE))
+    if tweet_count == 0:
+        logger.warning(f"[{podcast.name}] posts.md 中未识别到推文，仍然继续")
+    tweets = FetchResult(count=tweet_count, text=posts_text)
+
+    # 沿用已有 episode.json 的 created_at 等元数据
+    episode = await get_episode(podcast.id, ep_date) or Episode(podcast_id=podcast.id, date=ep_date)
+    episode.status = "processing"
+    episode.error_msg = ""
+    await save_episode(episode)
+
+    logger.info(f"[{podcast.name}] 重新生成 {ep_date} 的 episode（{tweet_count} 条推文，跳过抓取）")
+    try:
+        await _finalize_episode(podcast, episode, ep_date, tweets, podcast.frequency, extra_prompt)
+    except Exception as e:
+        logger.exception(f"[{podcast.name}] 重新生成失败: {e}")
+        episode.status = "failed"
+        episode.error_msg = str(e)
+        await save_episode(episode)
