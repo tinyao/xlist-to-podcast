@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Wed, 29 Apr 2026 23:36:07 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 23:56:07 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,128 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260428-OpenAI挣脱独家云枷锁与AI失忆症</title>
+      <description>## 今日摘要
+OpenAI 宣布与微软的独家云合作关系松绑，可将产品部署到所有云平台。Browser Use 反向推出持久化沙盒产品 Box，agent 基础设施路径之争浮出水面。Box CEO Aaron Levie 提出“盖尔曼失忆症 AI 版”，指出人们高估 AI 替代他人工作、却深谙自身工作的复杂性，这一观察与硅谷和传统企业间的巨大认知鸿沟形成呼应。此外还包括 Snap CEO 的十大反直觉洞见、自建 benchmark 的行业呼吁等快讯。
+
+## 重点话题
+- OpenAI 与微软更新合作：独家云协议松绑，OpenAI 可跨云部署，时间线延至 2032 年
+- Browser Use 反向推出沙盒：从浏览器操控切入，发布 24/7 持久化 agent 运行环境 Box
+- 盖尔曼失忆症的 AI 版本：Aaron Levie 指出人们低估 AI 在他人工作中的“最后一公里”复杂性
+
+## 快讯
+- Peter Steinberger 发布推文本地备份工具 birdclaw，并强烈推荐 Blacksmith Testbox 用于 agent 测试
+- 开发者利用 Google 地图、OpenAI 与 Seedance API 自动生成文旅导览视频
+- Lenny Rachitsky 分享 Snap CEO Evan Spiegel 的十大反直觉洞见，包括聚焦密友而非泛好友、预测 AI 将遭遇社会抵触
+- Google AI 的 Logan Kilpatrick 呼吁所有 AI 公司自建 benchmark 以获取竞争优势
+- Peter Yang 为个人健身 App 搭建 MCP Server，实现 AI 与私人数据的深度打通
+
+## 值得阅读
+- OpenAI 与微软更新合作公告：https://x.com/sama/status/2048755148361707946
+- Browser Use Box 产品发布：https://x.com/larsencc
+- Aaron Levie 关于盖尔曼失忆症 AI 版的推文：https://x.com/levie/status/2048576989930619185
+- Matt Turck 关于硅谷与全球两千强 AI 认知鸿沟的推文：https://x.com/mattturck/status/2048896617424527499
+- Lenny Rachitsky 与 Evan Spiegel 对谈要点：https://x.com/lennysan/status/2048785387376771375
+- Peter Steinberger 的 birdclaw 工具：https://github.com/steipete/birdclaw/releases/
+- Logan Kilpatrick 关于自建 benchmark 的呼吁：https://x.com/OfficialLoganK/status/2048554074107470305
+- 郭宇关于 AI 生成文旅导览视频的观察：https://x.com/turingou/status/2048732783082975270</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-28/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-28/audio.mp3" length="11829600" type="audio/mpeg"/>
+      <pubDate>Tue, 28 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>591</itunes:duration>
+      <itunes:summary>## 今日摘要
+OpenAI 宣布与微软的独家云合作关系松绑，可将产品部署到所有云平台。Browser Use 反向推出持久化沙盒产品 Box，agent 基础设施路径之争浮出水面。Box CEO Aaron Levie 提出“盖尔曼失忆症 AI 版”，指出人们高估 AI 替代他人工作、却深谙自身工作的复杂性，这一观察与硅谷和传统企业间的巨大认知鸿沟形成呼应。此外还包括 Snap CEO 的十大反直觉洞见、自建 benchmark 的行业呼吁等快讯。
+
+## 重点话题
+- OpenAI 与微软更新合作：独家云协议松绑，OpenAI 可跨云部署，时间线延至 2032 年
+- Browser Use 反向推出沙盒：从浏览器操控切入，发布 24/7 持久化 agent 运行环境 Box
+- 盖尔曼失忆症的 AI 版本：Aaron Levie 指出人们低估 AI 在他人工作中的“最后一公里”复杂性
+
+## 快讯
+- Peter Steinberger 发布推文本地备份工具 birdclaw，并强烈推荐 Blacksmith Testbox 用于 agent 测试
+- 开发者利用 Google </itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260422-SpaceX六百亿押注Cursor与百万Agent新职业</title>
+      <description>## 今日摘要
+SpaceX 宣布与 Cursor 深度合作，以百万张 H100 算力 + 六百亿收购期权为筹码，直接进军编程工具赛道。OpenAI 发布 GPT-Image-2，其世界知识与 UI 还原能力引发刷屏；但 Sam Altman 暗示本周还有后续。Aaron Levie 预测“Agent Operator”将成为一个全新的百万人级岗位，这与 Peter Yang 分享的“用 Claude Code 构建第二大脑”实战路径形成深度呼应。
+
+## 重点话题
+- Agent 操作者的诞生：Aaron Levie 预测五年内将出现百万人级别的全新岗位，负责把 agent 系统真正嵌入企业业务流程。Peter Yang 邀请的嘉宾 Ryan 则展示了一个人如何通过深度定制 Claude Code 把自己变成了这个角色。
+
+## 快讯
+- Google Deep Research API 大更新，新增 MCP 支持和 Deep Research Max 模型。
+- Sam Altman 宣布 Codex 月活突破 400 万，今日重置速率上限。
+- Peter Steinberger 回应 OpenClaw 与 Anthropic 的拉锯状态：理论可用，实则被锁。
+- Peter Yang 连续三晚通宵跑 agent，结果早上发现 agent 卡在权限窗上。
+
+## 值得阅读
+- SpaceX + Cursor 合作公告：https://x.com/SpaceX/status/...
+- Aaron Levie 关于 Agent Operator 的长文：https://x.com/levie/status/2046397816755634340
+- Peter Yang 与 Mercury VP Ryan 的播客预告：https://x.com/petergyang/status/2046597450279125132
+- OpenClaw 与 Anthropic 的“僵局”回应：https://x.com/steipete/status/2046685973233189375
+- GPT-Image-2 效果演示：https://x.com/venturetwins/status/2046700418554851630</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-22/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-22/audio.mp3" length="10717920" type="audio/mpeg"/>
+      <pubDate>Wed, 22 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>535</itunes:duration>
+      <itunes:summary>## 今日摘要
+SpaceX 宣布与 Cursor 深度合作，以百万张 H100 算力 + 六百亿收购期权为筹码，直接进军编程工具赛道。OpenAI 发布 GPT-Image-2，其世界知识与 UI 还原能力引发刷屏；但 Sam Altman 暗示本周还有后续。Aaron Levie 预测“Agent Operator”将成为一个全新的百万人级岗位，这与 Peter Yang 分享的“用 Claude Code 构建第二大脑”实战路径形成深度呼应。
+
+## 重点话题
+- Agent 操作者的诞生：Aaron Levie 预测五年内将出现百万人级别的全新岗位，负责把 agent 系统真正嵌入企业业务流程。Peter Yang 邀请的嘉宾 Ryan 则展示了一个人如何通过深度定制 Claude Code 把自己变成了这个角色。
+
+## 快讯
+- Google Deep Research API 大更新，新增 MCP 支持和 Deep Research Max 模型。
+- Sam Altman 宣布 Codex 月活突破 400 万，今日重置速率上限。
+- Peter Steinberger</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
+      <title>20260421-Cloudflare模型大更新与Atlassian数据新政</title>
+      <description>## 今日摘要
+Atlassian 更新隐私政策，默认使用客户数据训练 AI，部分计划无法退出。Cloudflare Workers AI 上线 Opus 4.7 等大量新模型，郭宇晒出百万访问量仅花费七美元的账单。OpenAI 为 Codex 推出 Chronicle 记忆功能，Sam Altman 称其内部代号为“心灵感应”。Vercel CEO 澄清安全事件中“删除”与“轮换”的区别。Aaron Levie 与 Lenny/Nikhyl 播客围绕“AI 是放大器还是淘汰器”展开对立讨论。
+
+## 重点话题
+- Atlassian 数据政策变更：Jira 和 Confluence 数据默认用于 AI 训练，部分计划无法退出
+- Cloudflare Workers AI 上新：Opus 4.7 等模型上线，边缘推理与执行节点合并
+- AI 放大还是淘汰：Aaron Levie 认为岗位复杂度上升，Nikhyl 预测一半 PM 将转型失败
+
+## 快讯
+- Google AI Studio 支持订阅账号登录，速率上限更高
+- 郭宇盛赞 wanman agent，称其为真正面向普通人的 harness 产品
+- Hermes Agent 创始人做客 Greg Isenberg 播客，展示内置记忆与低成本方案
+- 腾讯推出基于 OpenClaw 的 QClaw，支持 WhatsApp 和 Telegram 操控
+- Peter Steinberger 指出 AI 订阅补贴模式正在向编程用户倾斜
+
+## 值得阅读
+- Atlassian 隐私政策更新公告：https://t.co/cJfra1rtj3
+- Cloudflare Workers AI 模型列表：https://t.co/niy58xzWh5
+- Sam Altman 谈 Codex Chronicle 功能：https://t.co/9LAUTaaYAe
+- Aaron Levie 关于 AI 放大效应的长文分析：https://t.co/6cf1wvwogN
+- Lenny 与 Nikhyl 播客完整版：https://t.co/n38pQrXmSE
+- Greg Isenberg 的 Hermes Agent 安装教程视频
+- Peter Yang 分享 OpenClaw 搭配 GPT 模型的失败经历
+- 郭宇关于音乐可视化产品技术选型的深度记录</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-21/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-21/audio.mp3" length="14832000" type="audio/mpeg"/>
+      <pubDate>Tue, 21 Apr 2026 12:00:00 +0000</pubDate>
+      <itunes:duration>741</itunes:duration>
+      <itunes:summary>## 今日摘要
+Atlassian 更新隐私政策，默认使用客户数据训练 AI，部分计划无法退出。Cloudflare Workers AI 上线 Opus 4.7 等大量新模型，郭宇晒出百万访问量仅花费七美元的账单。OpenAI 为 Codex 推出 Chronicle 记忆功能，Sam Altman 称其内部代号为“心灵感应”。Vercel CEO 澄清安全事件中“删除”与“轮换”的区别。Aaron Levie 与 Lenny/Nikhyl 播客围绕“AI 是放大器还是淘汰器”展开对立讨论。
+
+## 重点话题
+- Atlassian 数据政策变更：Jira 和 Confluence 数据默认用于 AI 训练，部分计划无法退出
+- Cloudflare Workers AI 上新：Opus 4.7 等模型上线，边缘推理与执行节点合并
+- AI 放大还是淘汰：Aaron Levie 认为岗位复杂度上升，Nikhyl 预测一半 PM 将转型失败
+
+## 快讯
+- Google AI Studio 支持订阅账号登录，速率上限更高
+- 郭宇盛赞 wanman agent，称其为真正面向普通人的</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260420-Vercel被AI攻破与PM大逃杀</title>
       <description>## 今日摘要
@@ -1042,169 +1164,6 @@ Google 昨天双线出击，发布 vibe 设计平台 Stitch，并宣布全面重
 - **Google Stitch + AI Studio 双线出击**：vibe design 平台正式上线，DESIGN.md 成设计版 CLAUDE.md；AI Studio vibe coding 体验重建四个月后今日发布
 - **Andrej Karpathy 收 NVIDIA DGX GB300**：全球第一台顶级个人超算，背后是 2015 年 GTC 大会的十一年循环故事
 - **Greg Isenberg 的 Agent 101 免费课**：58 分钟，440</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260317-Claude Code配Obsidian火了、GPT-5.4首周十亿、新词在路上</title>
-      <description>## 今日摘要
-
-GPT-5.4 发布满一周，Sam Altman 公布每天五万亿 token、年化十亿美元新增收入的数据，同时谈到"humanity"正在成为模型下一个竞争维度。Claude Code 团队的 Thariq 发出今日最高互动推文，说需要一个比"vibe coding"更好的词。Greg Isenberg 的 Claude Code 配 Obsidian 工作流视频拿下近三千收藏，是本期最值得实践的内容。Peter 联合 NVIDIA 推出 OpenShell 和 NemoClaw，朝 agent 可信安全迈出具体一步。
-
-## 重点话题
-
-- **GPT-5.4 首周数据**：每天五万亿 token，年化十亿美元净新增收入，Sam Altman 强调"humanity"正成为新的差异化维度
-- **Thariq 的两条推文**：需要比"vibe coding"更好的词，同时表示低估了百万 token 上下文的实用价值
-- **Claude Code 配 Obsidian**：Greg Isenberg 的 46 秒视频创下近三千收藏，核心是把本地知识库接入 Claude Code 的完整工作流，以及"人写 vault，agent 读执行"的分工原则
-- **OpenShell + NemoClaw + CodexBar 0.18**：Peter 与 NVIDIA AI 联合构建可信 agent 安全基础设施；CodexBar 0.18 发布，新增多个 provider 支持
-- **AI 让工作变孤独**：Amjad Masad 提出协作 prompting 的问题，Replit Agent 4 尝试用多人同时发指令来解决
-
-## 快讯
-
-- Aaron Levie 反驳线性消失论：AI 降低成本，有可能反而激活更多需求，AI 暴露度高的工作未必是威胁
-- Perplexity Computer 接管本地 Comet 浏览器，完整浏览器 agent，cookies 不离开设备
-- Gemini API 降低开发者门槛：升级从三十天缩到三天，门槛消费从 $250 降到 $100，支出上限上线
-- Linear 的 Nan Yu：他们撤掉了一个 AI 功能，因为用户太容易按那个偷懒按钮了
-- 17 岁高中生 Austin Way：十万模拟学生 + ML 反馈循环，两周内 AP 考试均分从 3 分迭代到 4.43 分（80 百分位）
-- 郭宇东京读书会："最好的软件将不再由团队构建，而是由有远见的个体与 AI 共同创造"，并宣布快要结束 vibe 阶段
-
-## 值得阅读
-
-- Greg Isenberg 的 Claude Code + Obsidian 工作流视频（46 秒）及配套播客：[startupideaspod 完整集](https://youtu.be/SkqkoUiJinLdmxoV)
-- Thariq 的 Claude 创作截图推文（数学 + 苏菲主义 HTML 页面）
-- Ramp CPO Geoff Charles 完整访谈（Peter Yang，已在昨日节目中介绍，今日仍在传播）：[YouTube](https://youtu.be/RBqT2PHWdBg)
-- CodexBar 0.18 发布说明：[GitHub Release](https://github.com/steipete/CodexBar/releases/tag/v0.18.0)
-- Austin Way 的 edtech ML 反馈循环项目介绍（via Peter Yang 推文）</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-17/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-17/audio.mp3" length="15886560" type="audio/mpeg"/>
-      <pubDate>Mon, 16 Mar 2026 23:12:50 +0000</pubDate>
-      <itunes:duration>794</itunes:duration>
-      <itunes:summary>## 今日摘要
-
-GPT-5.4 发布满一周，Sam Altman 公布每天五万亿 token、年化十亿美元新增收入的数据，同时谈到"humanity"正在成为模型下一个竞争维度。Claude Code 团队的 Thariq 发出今日最高互动推文，说需要一个比"vibe coding"更好的词。Greg Isenberg 的 Claude Code 配 Obsidian 工作流视频拿下近三千收藏，是本期最值得实践的内容。Peter 联合 NVIDIA 推出 OpenShell 和 NemoClaw，朝 agent 可信安全迈出具体一步。
-
-## 重点话题
-
-- **GPT-5.4 首周数据**：每天五万亿 token，年化十亿美元净新增收入，Sam Altman 强调"humanity"正成为新的差异化维度
-- **Thariq 的两条推文**：需要比"vibe coding"更好的词，同时表示低估了百万 token 上下文的实用价值
-- **Claude Code 配 Obsidian**：Greg Isenberg 的 46 秒视频创下近三千收藏，核心是把本地知识库接入 Claud</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260316-kepano护城河金句爆款、OpenClaw插话来了、郭宇vibelab上线</title>
-      <description>## 今日摘要
-本期聚焦三大方向：OpenClaw 周末连发三条高互动更新，包括 Twitter 垃圾提及自动屏蔽 cron job、/btw 中途插话功能即将上线，以及 Claude Code bundle 支持进入开发；Obsidian 创始人 kepano 发出今日点赞收藏双料冠军两条推文，分别探讨 AI 时代个人护城河与第三方 MCP 的隐私风险；郭宇上线第 11 个 vibe 产品 vibelab（面向 vibe coder 的云端协作直播平台），Sandbank Cloud 浏览器自动化同步正式 GA。此外，Vercel CEO Guillermo 的 TravisCore 建设视频引发巨量关注，swyx 发出 CPU 短缺预警。
-
-## 重点话题
-- **OpenClaw 周末三更新**：Twitter 垃圾提及自动屏蔽（agent 实用落地案例）、/btw 中途插话功能即将发布、Claude Code/Codex plugin bundle 支持开发中
-- **kepano 两条洞察**：你的护城河是模型不知道的东西；第三方 MCP 意味着将数据明文访问权完整交出
-- **郭宇新产品**：vibelab 上线（云端 vibe coding 直播平台）+ Sandbank Cloud 浏览器自动化正式 GA
-
-## 快讯
-- Guillermo Rauch 发布 1 小时 TravisCore 建设视频，2432 收藏，今日全榜第一
-- Ramp CPO Geoff Charles 访谈完整版上线，"管理可能已经死了，现在要成为最好的 builder"
-- swyx：下一波算力短缺是 CPU，不是 GPU，2025 年 12 月后所有云服务商曲线集体起飞
-- Zara Zhang："Bring your own API key"时代来临，模型封装中间层承压
-- Replit：从 prompt to app 进化为 prompt to business stack
-- Nan Yu（Linear）：coding agent 的真正瓶颈，永远是先做出人们想要的东西
-- Matt Turck：产品路线图从一年缩到一周，2028 年只能问 agent 它在建什么
-
-## 值得阅读
-- Peter Yang x Geoff Charles（Ramp CPO）完整访谈：Inside Ramp, the $32B Company Where AI Agents Run Everything — https://youtu.be/RBqT2PHWdBg
-- Peter Steinberger：OpenClaw Twitter mention block cron job（推文 + 截图）
-- kepano：your edge is whatever you know that the models don't know（推文）
-- kepano：Third-party MCPs and privacy（推文）
-- 郭宇：vibelab 上线公告（推文）— http://vibelab.live
-- Sandbank Cloud：浏览器自动化服务 — https://sandbank.dev/cloud</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-16/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-16/audio.mp3" length="15694080" type="audio/mpeg"/>
-      <pubDate>Sun, 15 Mar 2026 23:12:30 +0000</pubDate>
-      <itunes:duration>784</itunes:duration>
-      <itunes:summary>## 今日摘要
-本期聚焦三大方向：OpenClaw 周末连发三条高互动更新，包括 Twitter 垃圾提及自动屏蔽 cron job、/btw 中途插话功能即将上线，以及 Claude Code bundle 支持进入开发；Obsidian 创始人 kepano 发出今日点赞收藏双料冠军两条推文，分别探讨 AI 时代个人护城河与第三方 MCP 的隐私风险；郭宇上线第 11 个 vibe 产品 vibelab（面向 vibe coder 的云端协作直播平台），Sandbank Cloud 浏览器自动化同步正式 GA。此外，Vercel CEO Guillermo 的 TravisCore 建设视频引发巨量关注，swyx 发出 CPU 短缺预警。
-
-## 重点话题
-- **OpenClaw 周末三更新**：Twitter 垃圾提及自动屏蔽（agent 实用落地案例）、/btw 中途插话功能即将发布、Claude Code/Codex plugin bundle 支持开发中
-- **kepano 两条洞察**：你的护城河是模型不知道的东西；第三方 MCP 意味着将数据明文访问权完整交出
-- </itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260315-Claude Code春假双倍额度、OpenClaw浏览器控制上线、郭宇装置艺术AI公司</title>
-      <description>## 今日摘要
-Anthropic 宣布为期两周的春假双倍额度，同步推出 `/effort max` 等一批 Claude Code 新功能。OpenClaw 迎来高光周末：Chrome DevTools MCP 正式集成上线、NVIDIA 工程师协助安全审查、Microsoft 加入 Teams 集成建设、lossless-claw 插件收藏量破三千。郭宇用纯 Qwen 3.5 六个 agent 在东京"开"了一家装置艺术公司 KOUROKU，跑了 1036 轮后因 sandbox 超时终止。Aaron Levie 提出 agent 采购论：没有好 API 的平台将对 agent 隐形。
-
-## 重点话题
-- **Anthropic 春假礼包**：非高峰时段和周末 Claude 使用额度翻倍，持续两周；新增 `/effort max` 深度推理模式（需按 session 开启）、setup script 支持、postcompact hook 等多项功能更新
-- **OpenClaw 大周末**：Chrome DevTools MCP 正式进入 beta（支持真实浏览器控制）；NVIDIA 工程师协助处理安全问题；Microsoft 6 名员工投入 Teams 集成；lossless-claw 无损上下文插件爆火（3153 收藏）；并行工具调用即将到来
-- **郭宇 KOUROKU 实验**：目标东京装置艺术公司，6 个 Qwen 3.5 agent，1036 轮 / 6.6 小时，产出 82 个文件（含 WebGL 官网、商业计划书、品牌系统），因 sandbox 超时终止且交付物丢失；郭宇在单向街现场展示 wanman AI
-- **Aaron Levie 的 agent 采购论**：为 AI agent 从零重新设计流程 vs 叠加 AI 到现有流程，差距将持续拉大；未来 agent 会成为软件采购的主要决策者，没有可调用 API 的平台将对 agent 隐形
-
-## 快讯
-- Meta 宣布裁员超过 20%，来源路透社
-- Axiom Math 完成 2 亿美元 A 轮，专注用形式证明语言 Lean 做数学推理 AI，Putnam 竞赛 12/12
-- ClawCon Austin：15 岁用户用 OpenClaw 拿到超 3 万美元合同
-- agent-browser 全面改写为 Rust，冷启动快 1.6x，内存减少 18x，安装包缩小 99x
-- Ramp CPO：25 个 PM 三阶段 Claude Code 技能（问题框定 → 6-10 个并行 agent 研究 → 规格整合）去年交付 500+ 功能
-- swyx：agentic AI 本质上是后端工程，核心是事件驱动、数据管道、分布式系统和可观测性
-- 郭宇观察：同样产品中文社区做了没水花，英语社区做了上 Product Hunt，创新重心回到硅谷
-
-## 值得阅读
-- [Claude March 2026 usage promotion](https://support.claude.com/en/articles/14063676-claude-march-2026-usage-promotion) — Anthropic 官方说明
-- [Claude Code CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md) — /effort max 等新功能完整列表
-- [Chrome DevTools MCP](https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session) — OpenClaw 集成的浏览器控制技术文档
-- [lossless-claw](https://github.com/martian-engineering/lossless-claw) — OpenClaw 无损上下文管理插件（3153 收藏）
-- [Ramp AI-native PM workflow](https://www.youtube.com/@peteryangyt?sub_confirmation=1) — Peter Yang 访谈 Ramp CPO，三阶段 Claude Code 产品规格技能
-- [Axiom Math interview with Matt Turck](https://t.co/E7Od96LZJc) — 2 亿 A 轮数学推理 AI 深度访谈
-- Zara Zhang 精选阅读单（8 篇关于 AI 时代产品构建的文章）— 包括 Aaron Levie「Building for Trillions of Agents」、Thariq「Seeing like an Agent」等</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-15/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-15/audio.mp3" length="16003200" type="audio/mpeg"/>
-      <pubDate>Sat, 14 Mar 2026 23:11:11 +0000</pubDate>
-      <itunes:duration>800</itunes:duration>
-      <itunes:summary>## 今日摘要
-Anthropic 宣布为期两周的春假双倍额度，同步推出 `/effort max` 等一批 Claude Code 新功能。OpenClaw 迎来高光周末：Chrome DevTools MCP 正式集成上线、NVIDIA 工程师协助安全审查、Microsoft 加入 Teams 集成建设、lossless-claw 插件收藏量破三千。郭宇用纯 Qwen 3.5 六个 agent 在东京"开"了一家装置艺术公司 KOUROKU，跑了 1036 轮后因 sandbox 超时终止。Aaron Levie 提出 agent 采购论：没有好 API 的平台将对 agent 隐形。
-
-## 重点话题
-- **Anthropic 春假礼包**：非高峰时段和周末 Claude 使用额度翻倍，持续两周；新增 `/effort max` 深度推理模式（需按 session 开启）、setup script 支持、postcompact hook 等多项功能更新
-- **OpenClaw 大周末**：Chrome DevTools MCP 正式进入 beta（支持真实浏览器控制）；NVI</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260314-Claude Code一百万上下文成默认，郭宇纯Qwen跑出AI游戏公司</title>
-      <description>## 今日摘要
-Anthropic 周五集中发布多项 Claude Code 更新：1M context 正式 GA 并成为 Max/Team/Enterprise 默认模型，手机远程启动笔记本 session，Voice Mode 全量推送。郭宇发布 wanman AI 新实验，用纯 Qwen 3.5 35B 在本地跑了 1019 轮游戏公司模拟，AI 自主开发了一款种花放置游戏。Chrome 146 通过 MCP 接口暴露真实浏览器 session，AI agent 操控浏览器迎来新可能。
-
-## 重点话题
-- **Claude Code 周五大礼包**：1M context GA 成默认、手机远程启动、Voice Mode 全量、Code Review 可按需触发、3 个实用快捷键
-- **郭宇 wanman AI 新实验**：纯 Qwen 3.5 35B（无 Opus），1019 轮 / 6小时，AI 在日本游戏公司模拟中自主开发放置游戏
-- **Chrome 146 + MCP 真实浏览器 session**：一个开关让 CLI agent 接管你的完整浏览器会话，OpenClaw 计划今晚集成
-
-## 快讯
-- Meta 新模型 "Avocado" 延迟发布：内部测试在推理、编程、写作上落后竞品
-- Aaron Levie：前沿 AI 场景 token 消耗是一年前 100 倍，推理容量争夺战即将开始
-- LangChain CEO Harrison Chase 专访：agent 框架层会被模型吃掉吗？
-- Google VP Josh Woodward：Google 25-30% 代码由 AI 编写
-- 开发者反向工程 Anthropic Generative UI 并移植给 Pi AI，附完整文章和代码
-- Obsidian/Defuddle 更新：支持 YouTube 视频转录，输出带时间戳 Markdown，MIT 开源
-- Perplexity CTO 回应 session token 安全争议：那是短周期代理 token，不是 API key
-
-## 值得阅读
-- [Claude 1M context GA 官方博客](https://claude.com/blog/1m-context-ga)
-- [Claude Code Model 配置文档](https://code.claude.com/docs/en/model-config)
-- [Claude Code Review 配置文档](https://code.claude.com/docs/en/code-review)
-- [Matt Turck × Harrison Chase 专访视频（LangChain / agent 框架未来）](https://twitter.com/mattturck/status/2032528435600396650)
-- [开发者反向工程 Anthropic Generative UI 文章](https://twitter.com/micLivs/status/2032263869708808433)
-- [Defuddle — 任意网页转 Markdown，支持 YouTube 转录](https://defuddle.md)</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-14/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-14/audio.mp3" length="14735520" type="audio/mpeg"/>
-      <pubDate>Fri, 13 Mar 2026 23:11:16 +0000</pubDate>
-      <itunes:duration>736</itunes:duration>
-      <itunes:summary>## 今日摘要
-Anthropic 周五集中发布多项 Claude Code 更新：1M context 正式 GA 并成为 Max/Team/Enterprise 默认模型，手机远程启动笔记本 session，Voice Mode 全量推送。郭宇发布 wanman AI 新实验，用纯 Qwen 3.5 35B 在本地跑了 1019 轮游戏公司模拟，AI 自主开发了一款种花放置游戏。Chrome 146 通过 MCP 接口暴露真实浏览器 session，AI agent 操控浏览器迎来新可能。
-
-## 重点话题
-- **Claude Code 周五大礼包**：1M context GA 成默认、手机远程启动、Voice Mode 全量、Code Review 可按需触发、3 个实用快捷键
-- **郭宇 wanman AI 新实验**：纯 Qwen 3.5 35B（无 Opus），1019 轮 / 6小时，AI 在日本游戏公司模拟中自主开发放置游戏
-- **Chrome 146 + MCP 真实浏览器 session**：一个开关让 CLI agent 接管你的完整浏览器会话，OpenC</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>

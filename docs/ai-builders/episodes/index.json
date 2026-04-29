@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-04-28",
+    "title": "20260428-OpenAI挣脱独家云枷锁与AI失忆症",
+    "summary": "OpenAI 宣布与微软的独家云合作关系松绑，可将产品部署到所有云平台。Browser Use 反向推出持久化沙盒产品 Box，agent 基础设施路径之争浮出水面。Box CEO Aaron Levie 提出“盖尔曼失忆症 AI 版”，指出人们高估 AI 替代他人工作、却深谙自身工作的复杂性，这一观察与硅谷和传统企业间的巨大认知鸿沟形成呼应。此外还包括 Snap CEO 的十大反直觉洞见、自建 benchmark 的行业呼吁等快讯。",
+    "audio_duration": 591,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-28/audio.mp3",
+    "tweet_count": 55
+  },
+  {
+    "date": "2026-04-22",
+    "title": "20260422-SpaceX六百亿押注Cursor与百万Agent新职业",
+    "summary": "SpaceX 宣布与 Cursor 深度合作，以百万张 H100 算力 + 六百亿收购期权为筹码，直接进军编程工具赛道。OpenAI 发布 GPT-Image-2，其世界知识与 UI 还原能力引发刷屏；但 Sam Altman 暗示本周还有后续。Aaron Levie 预测“Agent Operator”将成为一个全新的百万人级岗位，这与 Peter Yang 分享的“用 Claude Code 构建第二大脑”实战路径形成深度呼应。",
+    "audio_duration": 535,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-22/audio.mp3",
+    "tweet_count": 69
+  },
+  {
+    "date": "2026-04-21",
+    "title": "20260421-Cloudflare模型大更新与Atlassian数据新政",
+    "summary": "Atlassian 更新隐私政策，默认使用客户数据训练 AI，部分计划无法退出。Cloudflare Workers AI 上线 Opus 4.7 等大量新模型，郭宇晒出百万访问量仅花费七美元的账单。OpenAI 为 Codex 推出 Chronicle 记忆功能，Sam Altman 称其内部代号为“心灵感应”。Vercel CEO 澄清安全事件中“删除”与“轮换”的区别。Aaron Levie 与 Lenny/Nikhyl 播客围绕“AI 是放大器还是淘汰器”展开对立讨论。",
+    "audio_duration": 741,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-21/audio.mp3",
+    "tweet_count": 76
+  },
+  {
     "date": "2026-04-20",
     "title": "20260420-Vercel被AI攻破与PM大逃杀",
     "summary": "Vercel 因第三方 AI 工具被入侵，导致客户环境变量遭未授权访问，攻击者疑似利用 AI 加速渗透。Lenny 与 Nikhyl 的播客警告，一半的产品经理可能无法适应 AI 原生工作流的转型。Aaron Levie 指出，AI 模型进步太快，工程团队必须准备每几个月就推翻之前的架构设计。此外，GPT Pro 被指在未公开更新后前端编码能力突飞猛进，OpenAI 推理接口则出现了大面积宕机。",
