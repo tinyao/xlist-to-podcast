@@ -137,7 +137,7 @@ def _generate_via_claude_cli(prompt: str) -> str:
         [
             claude_path,
             "-p",
-            "--model", "sonnet",
+            "--model", "opus",
             "--max-turns", "1",
             "--output-format", "stream-json",
             "--verbose",
