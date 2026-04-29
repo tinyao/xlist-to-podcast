@@ -1,0 +1,16 @@
+{
+  "id": "a7769a9c-cefa-44fb-a06a-593b0225cca4",
+  "podcast_id": "ai-builders",
+  "date": "2026-04-01",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "Command '['/opt/hostedtoolcache/node/20.20.2/x64/bin/claude', '-p', '--model', 'sonnet', '--max-turns', '1', '--output-format', 'text', '--no-session-persistence']' timed out after 600 seconds",
+  "created_at": "2026-04-29T08:01:27.845548",
+  "audio_url": ""
+}
