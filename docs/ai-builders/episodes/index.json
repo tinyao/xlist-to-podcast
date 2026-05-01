@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-01",
+    "title": "20260501-GPT-5.5-Cyber与Claude Code的定价争议",
+    "summary": "OpenAI 宣布将向关键网络防御机构推出前端安全模型 GPT-5.5-Cyber，标志着前沿模型开始走向特定领域化。Claude Code 被指对提及 OpenClaw 的仓库多收钱或拒接请求，引发社区关注。Andrej Karpathy 在红杉 AI Ascent 活动中详细阐述了 LLM 的能力不均衡性、新计算范式带来的机会，以及对 agent 原生经济的展望。",
+    "audio_duration": 434,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-01/audio.mp3",
+    "tweet_count": 49
+  },
+  {
     "date": "2026-04-28",
     "title": "20260428-OpenAI挣脱独家云枷锁与AI失忆症",
     "summary": "OpenAI 宣布与微软的独家云合作关系松绑，可将产品部署到所有云平台。Browser Use 反向推出持久化沙盒产品 Box，agent 基础设施路径之争浮出水面。Box CEO Aaron Levie 提出“盖尔曼失忆症 AI 版”，指出人们高估 AI 替代他人工作、却深谙自身工作的复杂性，这一观察与硅谷和传统企业间的巨大认知鸿沟形成呼应。此外还包括 Snap CEO 的十大反直觉洞见、自建 benchmark 的行业呼吁等快讯。",
