@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-02",
+    "title": "20260502-Codex的宠物与agent经济的定价重构",
+    "summary": "Codex 发布 /pet 和 /hatch 新功能，Sam Altman 亲自下场说它比看起来更有用。Aaron Levie 连发三条长帖，深入分析 agent 时代的软件定价模型变迁，从 seat 到 consumption model 的过渡路径。Stripe 正式推出 Link wallet for agents，agent 经济开始从\"干活\"走向\"花钱\"。Peter Steinberger 开源了 Crabbox 远程测试工具，郭宇的 wanman agent 完成自动部署能力升级。",
+    "audio_duration": 520,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-02/audio.mp3",
+    "tweet_count": 51
+  },
+  {
     "date": "2026-05-01",
     "title": "20260501-GPT-5.5-Cyber与Claude Code的定价争议",
     "summary": "OpenAI 宣布将向关键网络防御机构推出前端安全模型 GPT-5.5-Cyber，标志着前沿模型开始走向特定领域化。Claude Code 被指对提及 OpenClaw 的仓库多收钱或拒接请求，引发社区关注。Andrej Karpathy 在红杉 AI Ascent 活动中详细阐述了 LLM 的能力不均衡性、新计算范式带来的机会，以及对 agent 原生经济的展望。",
