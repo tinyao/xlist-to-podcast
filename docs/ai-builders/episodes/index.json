@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-03",
+    "title": "20260503-Agent越能干，你的能力半径越重要",
+    "summary": "Replit 十周年免费开放，平台同时承载数十个 agent 并行构建，引发对 agent 时代平台承载力的讨论。Sam Altman 在体验 GPT-5.5 后表示，模型更聪明仍然比更便宜更重要。ChatGPT 账户与 OpenClaw 正式打通，agent 经济的支付和情感连接都在加深。Aaron Levie 通过思维实验论证，AI 将释放被压抑的工程师需求而非取代他们，并深入探讨了 agent 时代角色边界压缩的极限在于人的理解能力与问责意愿。",
+    "audio_duration": 557,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-03/audio.mp3",
+    "tweet_count": 47
+  },
+  {
     "date": "2026-05-02",
     "title": "20260502-Codex的宠物与agent经济的定价重构",
     "summary": "Codex 发布 /pet 和 /hatch 新功能，Sam Altman 亲自下场说它比看起来更有用。Aaron Levie 连发三条长帖，深入分析 agent 时代的软件定价模型变迁，从 seat 到 consumption model 的过渡路径。Stripe 正式推出 Link wallet for agents，agent 经济开始从\"干活\"走向\"花钱\"。Peter Steinberger 开源了 Crabbox 远程测试工具，郭宇的 wanman agent 完成自动部署能力升级。",

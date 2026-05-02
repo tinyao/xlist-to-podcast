@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Fri, 01 May 2026 23:26:24 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 23:24:05 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,43 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260503-Agent越能干，你的能力半径越重要</title>
+      <description>## 今日摘要
+Replit 十周年免费开放，平台同时承载数十个 agent 并行构建，引发对 agent 时代平台承载力的讨论。Sam Altman 在体验 GPT-5.5 后表示，模型更聪明仍然比更便宜更重要。ChatGPT 账户与 OpenClaw 正式打通，agent 经济的支付和情感连接都在加深。Aaron Levie 通过思维实验论证，AI 将释放被压抑的工程师需求而非取代他们，并深入探讨了 agent 时代角色边界压缩的极限在于人的理解能力与问责意愿。
+
+## 重点话题
+- Replit 十周年免费日：平台同时运行 22 个活跃 agent，展示 agent 时代基础设施的压力与机遇。
+- Sam Altman 谈模型能力：更聪明比更便宜更重要，xhigh 加 fast 模式带来显著体验提升。
+- OpenClaw 与 ChatGPT 账户打通：agent 花钱更容易，但用户对 agent 的情感依赖也在浮现。
+- Aaron Levie 论 AI 与就业：AI 消除人力瓶颈会释放海量被压抑的工程需求，而非取代工程师；agent 压缩角色边界的极限是人类自身的理解半径与问责能力。
+
+## 快讯
+- Peter Yang 分享用 agent 整理本地文件和 Google Drive 的 Marie Kondo 玩法，强调先审计划再执行的安全流程。
+- swyx 卸载 ChatGPT 应用，认为 Codex 已是严格超集；对比发现 Grok 4.30 性价比最高。
+- Hamel Husain 称此前对 Devin 的批评文章已完全过时，Devin 如今是他最喜欢的工具之一。
+- 郭宇发布休息日动态，提醒在 agent 协作中保持节奏感。
+
+## 值得阅读
+- Aaron Levie 关于 AI 与软件工程师需求的长推文：https://x.com/levie/status/2050684160151617603
+- Aaron Levie 关于 agent 时代工作边界与责任的长推文：https://x.com/levie/status/2050645685104746686
+- Sam Altman 关于模型智能与速度权衡的推文：https://x.com/sama/status/2050671161915371998
+- Greg Isenberg 关于即将到来的创业大爆发的长推文：https://x.com/gregisenberg/status/2050582257971163530
+- Peter Yang 的 agent 整理术实操分享：https://x.com/petergyang/status/2050623358488997917</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-03/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-03/audio.mp3" length="11152800" type="audio/mpeg"/>
+      <pubDate>Sat, 02 May 2026 23:20:25 +0000</pubDate>
+      <itunes:duration>557</itunes:duration>
+      <itunes:summary>## 今日摘要
+Replit 十周年免费开放，平台同时承载数十个 agent 并行构建，引发对 agent 时代平台承载力的讨论。Sam Altman 在体验 GPT-5.5 后表示，模型更聪明仍然比更便宜更重要。ChatGPT 账户与 OpenClaw 正式打通，agent 经济的支付和情感连接都在加深。Aaron Levie 通过思维实验论证，AI 将释放被压抑的工程师需求而非取代他们，并深入探讨了 agent 时代角色边界压缩的极限在于人的理解能力与问责意愿。
+
+## 重点话题
+- Replit 十周年免费日：平台同时运行 22 个活跃 agent，展示 agent 时代基础设施的压力与机遇。
+- Sam Altman 谈模型能力：更聪明比更便宜更重要，xhigh 加 fast 模式带来显著体验提升。
+- OpenClaw 与 ChatGPT 账户打通：agent 花钱更容易，但用户对 agent 的情感依赖也在浮现。
+- Aaron Levie 论 AI 与就业：AI 消除人力瓶颈会释放海量被压抑的工程需求，而非取代工程师；agent 压缩角色边界的极限是人类自身的理解半径与问</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260502-Codex的宠物与agent经济的定价重构</title>
       <description>## 今日摘要
@@ -1122,42 +1159,6 @@ Claude Code Desktop 正式支持鼠标键盘屏幕控制，同时一封要求 AI
 
 - **Claude Code Desktop 接管鼠标键盘**：computer use 功能正式落地，配合 Dispatch 工具可实现远程控制；Peter Yang 发起的 Claude Code vs OpenClaw 对比引发百条真实用户反馈
 - **退款邮件走红**：OpenClaw 用户要求因"</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260321-PM手册要重写了，框架开始内置AGENTS.md</title>
-      <description>## 今日摘要
-Anthropic 产品团队 cat 发布了一篇关于 AI 时代 PM 工作方式变化的深度文章，获得近千收藏；Karpathy 上了 No Priors 播客，谈到"AI psychosis"、coding agent 掌握程度和 AutoResearch；Vercel 发布 Next.js 16.2，将 AGENTS.md 设为默认模板，框架层面正式拥抱 agent-native 设计；此外 Jensen Huang 关于 token 预算的表述引发广泛讨论，多个 Claude Code 和生态工具也有小幅更新。
-
-## 重点话题
-- **AI 时代的 PM playbook**：Anthropic 产品团队总结四条新工作方式——短周期实验、原型优于文档、随模型更新重测旧功能、找最简单的解
-- **Karpathy on No Priors**：AI psychosis、coding agent 判断力、AutoResearch 方向、模型物种分化等直白观察
-- **Next.js 16.2 agent-native**：AGENTS.md 内置为默认模板，@vercel/next-browser 为 agent 提供专用调试工具；AGENTS.md / DESIGN.md / CLAUDE.md 三合一的上下文文件模式正在成为行业惯例
-- **Jensen 的 token 预算表述**：$500k 工程师应消耗 $250k tokens，否则说明没有真正使用 AI——问题从"AI 有没有价值"移动到了"花多少才合理"
-
-## 快讯
-- Claude Code 支持云端沙箱定时任务，agent 可以无人值守后台运行
-- Amjad Masad 回应 Apple App Store 争议：Replit 四年功能未变，苹果最终确认未违规
-- Granola MCP 接入 Replit：会议记录直接驱动 coding agent 搭 MVP
-- claude.ai 桌面端和网页端提速：p75 首字节响应降 65%，prompt 出现快 50%
-- mails.dev 更新至 v1.5.1：附件收发、本地同步、安全漏洞修复、测试从 146 扩展到 225 个
-
-## 值得阅读
-- Karpathy × No Priors Pod 完整访谈（Sarah Guo 主持，约 70 分钟）：https://www.youtube.com/watch?v=... （见原推 tweet 4）
-- Zara Zhang 用 AnyGen 制作的 Karpathy 访谈交互摘要网页（可跳转时间戳）
-- Anthropic 博客：Product management on the AI exponential：https://claude.com/blog/product-management-on-the-ai-exponential
-- Next.js 16.2 发布说明（含 AGENTS.md 介绍）：https://nextjs.org/blog/next-16-2</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-21/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-21/audio.mp3" length="14688000" type="audio/mpeg"/>
-      <pubDate>Sat, 21 Mar 2026 01:35:22 +0000</pubDate>
-      <itunes:duration>734</itunes:duration>
-      <itunes:summary>## 今日摘要
-Anthropic 产品团队 cat 发布了一篇关于 AI 时代 PM 工作方式变化的深度文章，获得近千收藏；Karpathy 上了 No Priors 播客，谈到"AI psychosis"、coding agent 掌握程度和 AutoResearch；Vercel 发布 Next.js 16.2，将 AGENTS.md 设为默认模板，框架层面正式拥抱 agent-native 设计；此外 Jensen Huang 关于 token 预算的表述引发广泛讨论，多个 Claude Code 和生态工具也有小幅更新。
-
-## 重点话题
-- **AI 时代的 PM playbook**：Anthropic 产品团队总结四条新工作方式——短周期实验、原型优于文档、随模型更新重测旧功能、找最简单的解
-- **Karpathy on No Priors**：AI psychosis、coding agent 判断力、AutoResearch 方向、模型物种分化等直白观察
-- **Next.js 16.2 agent-native**：AGENTS.md 内置为默认模板，@verc</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
