@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-04",
+    "title": "20260504-AI是工具还是存在？",
+    "summary": "Justine Moore 转发了一篇关于 Anthropic 组织文化的深度观察，认为我们已经在 AI 教派里了。Aaron Levie 详细拆解了 agent 在企业落地的真实门槛，预测实施 agent 将催生巨大的咨询服务市场。Sam Altman 认为 Agents SDK 2.0 被严重低估。本期深聊聚焦于一个根本问题：我们到底该把 AI 当工具还是当存在？道金斯认为 Claude 有意识，Levie 警告这种混淆很危险，而 Anthropic 内部正在系统性地把 Claude 当作道德上的优越者来对待。",
+    "audio_duration": 548,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-04/audio.mp3",
+    "tweet_count": 49
+  },
+  {
     "date": "2026-05-03",
     "title": "20260503-Agent越能干，你的能力半径越重要",
     "summary": "Replit 十周年免费开放，平台同时承载数十个 agent 并行构建，引发对 agent 时代平台承载力的讨论。Sam Altman 在体验 GPT-5.5 后表示，模型更聪明仍然比更便宜更重要。ChatGPT 账户与 OpenClaw 正式打通，agent 经济的支付和情感连接都在加深。Aaron Levie 通过思维实验论证，AI 将释放被压抑的工程师需求而非取代他们，并深入探讨了 agent 时代角色边界压缩的极限在于人的理解能力与问责意愿。",
