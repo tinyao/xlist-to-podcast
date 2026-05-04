@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Sun, 03 May 2026 23:24:45 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 23:28:56 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,47 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260505-凌晨3点追龙，一个人的agent帝国</title>
+      <description>## 今日摘要
+Vercel 开源了多 agent 并行安全审查工具 deepsec，能在几分钟内发现人工团队数月才能找到的漏洞。Greg Isenberg 分享了一套收购死 SaaS、用 agent 重建的详细操作手册，成本低至数千美元。Greg Isenberg 还邀请到操盘手 Andrew Wilkinson，讲述他如何用 agent 独自运营 40 多家公司——真实体验是 50% debug、30% 改进、20% 产出，但产出强到停不下来。此外，AI 微短剧在中国上月激增 5 万部，Factory 推出中间价位计划，哈佛研究显示 LLM 在急诊分诊中准确率已超真人医生。
+
+## 重点话题
+- **Vercel 开源 deepsec**：基于 Vercel Sandbox 的 CLI 安全审查 harness，可并行调度数千个 agent 审查代码库，现已公开可用。
+- **Agent 单人运营真实全景**：Andrew Wilkinson 展示如何用 Claude Code、OpenClaw 等工具零员工跑 SaaS，收入两万美元/月，同时坦诚 50% 时间在 debug。
+- **死 SaaS 收购转型 agent 公司策略**：Greg Isenberg 给出 10 步可执行清单，从扫描到谈判到产品重建，以及用旧数据获取新用户的打法。
+- **AI 微短剧海外前夜**：抖音上月上传 5 万部 AI 短剧，Justine Moore 认为类似内容将很快席卷海外短视频平台。
+- **Gemini API 支持 Webhooks**：Google AI Studio 为长时间运行任务提供异步通知能力，错误消息也更可读，改善 agent 开发体验。
+
+## 快讯
+- Factory 发布 $100/月 Plus 计划，约 5 倍 Pro 用量并支持远程 Droid Computers。
+- Peter Steinberger 发布 RepoBar 0.4.0，GitHub 菜单栏工具增加缓存与可见速率限制。
+- 哈佛研究：o1 在急诊分诊准确率达 67% 超过医生的 50-55%，但缺乏法律问责框架。
+- tldraw Fairydraw 多 agent 画布工具，一次买断 $25，swyx 及 Zara Zhang 强烈推荐作为交互范式探索。
+
+## 值得阅读
+- Vercel deepsec 开源工具公告：[Guillermo Rauch 推文](https://twitter.com/rauchg/status/2051386798899888539)
+- Greg Isenberg 与 Andrew Wilkinson 对话：[播客视频](https://www.youtube.com/watch?v=65IAqRUxg3c)
+- Greg Isenberg 死 SaaS 转型策略：[推文](https://twitter.com/gregisenberg/status/2051312719823810744)
+- Justine Moore 关于 AI 微短剧的观察及纽约时报文章：[推文](https://twitter.com/venturetwins/status/2051330810444386379)
+- Gemini API Webhooks 公告：[Logan Kilpatrick 推文](https://twitter.com/OfficialLoganK/status/2051434527931953490)
+- Factory Plus 计划：[推文](https://twitter.com/matanSF/status/2051391366945820773)
+- RepoBar 0.4.0 发布：[Peter Steinberger 推文](https://twitter.com/steipete/status/2051088325100831046)
+- Harvard 急诊分诊研究：[Greg Isenberg 推文](https://twitter.com/gregisenberg/status/2051300870361342285)
+- tldraw Fairydraw 多 agent 演示：[swyx 推文](https://twitter.com/swyx/status/2051329252344369626)</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-05/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-05/audio.mp3" length="9362400" type="audio/mpeg"/>
+      <pubDate>Mon, 04 May 2026 23:23:51 +0000</pubDate>
+      <itunes:duration>468</itunes:duration>
+      <itunes:summary>## 今日摘要
+Vercel 开源了多 agent 并行安全审查工具 deepsec，能在几分钟内发现人工团队数月才能找到的漏洞。Greg Isenberg 分享了一套收购死 SaaS、用 agent 重建的详细操作手册，成本低至数千美元。Greg Isenberg 还邀请到操盘手 Andrew Wilkinson，讲述他如何用 agent 独自运营 40 多家公司——真实体验是 50% debug、30% 改进、20% 产出，但产出强到停不下来。此外，AI 微短剧在中国上月激增 5 万部，Factory 推出中间价位计划，哈佛研究显示 LLM 在急诊分诊中准确率已超真人医生。
+
+## 重点话题
+- **Vercel 开源 deepsec**：基于 Vercel Sandbox 的 CLI 安全审查 harness，可并行调度数千个 agent 审查代码库，现已公开可用。
+- **Agent 单人运营真实全景**：Andrew Wilkinson 展示如何用 Claude Code、OpenClaw 等工具零员工跑 SaaS，收入两万美元/月，同时坦诚 50% 时间在 debug。
+-</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260504-AI是工具还是存在？</title>
       <description>## 今日摘要
@@ -1114,46 +1155,6 @@ Boris Cherny 分享了在 Anthropic 工作收到用户来信的细节，与 Just
 
 - **Boris Cherny 的收件箱**：Claude Code 开发者分享每天收到用户来信，与 Justine Moore"可以租用智能"的观察并排，呈现 AI 商品化与情感化同步发生的奇异现实
 - **四个 .md 文件优化 Claude**：Greg Isenberg 的 46 秒视频获近 3800 次收藏，解决 Claude C</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260325-LiteLLM供应链告急，Figma向agent敞开了门</title>
-      <description>## 今日摘要
-LiteLLM PyPI 遭供应链攻击，单次 pip install 可泄露所有凭据，Karpathy 发出警告；Claude Code 推出 Auto Mode，彻底告别权限弹窗；Figma MCP 进入开放 beta，AI agent 可直接在画布上设计；Vercel CEO 分享内部实践，几乎所有 SaaS 工具已被生成式 app 替代；Lenny 2026 年初就业报告显示 PM 和工程师需求创新高，设计岗持平。
-
-## 重点话题
-- **LiteLLM 供应链攻击**：PyPI 1.82.8 版本被植入恶意代码，可窃取 SSH 密钥、云服务凭据等所有敏感信息，在线不足一小时即被发现，影响所有依赖 litellm 的项目
-- **Claude Code Auto Mode**：不再需要逐条批准权限，也不需要跳过全部权限，由 Claude 在 safeguard 保护下自主判断每个操作是否安全，目前仅限 Teams 计划
-- **Figma MCP 开放 beta**：AI agent 通过 use_figma MCP 工具直接操作 Figma 画布，Claude Code 生成 Plugin API 代码来执行设计动作，支持双向 Code↔Figma 转换
-- **SaaSpocalypse 内部实践**：Vercel 内部几乎所有 SaaS 工具已被生成 app 替代，Guillermo 和 Aaron Levie 判断软件正从人机界面演变为 agent 操作的业务逻辑层
-- **2026 年初科技就业市场报告**：PM 岗位 7300+ 个（3 年来最高），工程师 67000+ 个，AI 岗位曲棍球棒增长，设计岗位持平，PM 需求是设计的 1.27 倍
-
-## 快讯
-- OpenAI 成立 OpenAI Foundation，一年投入超 10 亿美元，Wojciech Zaremba 转任"AI Resilience"负责人
-- Sora 应用关闭，swyx 称为"OpenAI 清理副业的第一个牺牲品"，Justine Moore 致敬其 remix 文化设计理念
-- 哈佛物理学家 Matthew Schwartz：Claude Opus 4.5 相当于二年级博士生水平，研究速度提升 10 倍
-- Cloudflare 推出 Dynamic Workers，AI 生成代码可在轻量隔离环境执行，速度比传统容器快 100 倍
-- Peter Steinberger 分享 Codex 代码评审工作流，CodexBar 更新至 0.19.0 支持阿里 Coding Plan
-- 郭宇昨日完成 131 个提交，nkmc gateway 开源，两款新 vibe 产品准备上线
-
-## 值得阅读
-- [Karpathy 关于 LiteLLM 供应链攻击的原帖](https://twitter.com/karpathy/status/2036487306585268612)（附详细技术分析）
-- [Figma MCP 官方公告及文档](https://twitter.com/figma/status/2036442891346755787)
-- [Thariq 主持的 Claude Code × Figma 直播（3 月 31 日）](https://fig-events.figma.com/claude-to-figma)
-- [Guillermo Rauch 关于 SaaSpocalypse 的完整推文](https://twitter.com/rauchg/status/2036447879985037495)
-- [Lenny Rachitsky 2026 年初产品岗位市场完整报告](https://www.lennysnewsletter.com/p/state-of-the-product-job-market-in-ee9)
-- [Alex Albert 推荐：Claude Opus 4.5 做理论物理研究（Anthropic 博客）](https://twitter.com/alexalbert__/status/2036232980059062550)</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-25/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-03-25/audio.mp3" length="13942080" type="audio/mpeg"/>
-      <pubDate>Tue, 24 Mar 2026 23:13:35 +0000</pubDate>
-      <itunes:duration>697</itunes:duration>
-      <itunes:summary>## 今日摘要
-LiteLLM PyPI 遭供应链攻击，单次 pip install 可泄露所有凭据，Karpathy 发出警告；Claude Code 推出 Auto Mode，彻底告别权限弹窗；Figma MCP 进入开放 beta，AI agent 可直接在画布上设计；Vercel CEO 分享内部实践，几乎所有 SaaS 工具已被生成式 app 替代；Lenny 2026 年初就业报告显示 PM 和工程师需求创新高，设计岗持平。
-
-## 重点话题
-- **LiteLLM 供应链攻击**：PyPI 1.82.8 版本被植入恶意代码，可窃取 SSH 密钥、云服务凭据等所有敏感信息，在线不足一小时即被发现，影响所有依赖 litellm 的项目
-- **Claude Code Auto Mode**：不再需要逐条批准权限，也不需要跳过全部权限，由 Claude 在 safeguard 保护下自主判断每个操作是否安全，目前仅限 Teams 计划
-- **Figma MCP 开放 beta**：AI agent 通过 use_figma MCP 工具直接操作 Figma 画布，Claude</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
