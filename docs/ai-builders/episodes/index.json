@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-05",
+    "title": "20260505-凌晨3点追龙，一个人的agent帝国",
+    "summary": "Vercel 开源了多 agent 并行安全审查工具 deepsec，能在几分钟内发现人工团队数月才能找到的漏洞。Greg Isenberg 分享了一套收购死 SaaS、用 agent 重建的详细操作手册，成本低至数千美元。Greg Isenberg 还邀请到操盘手 Andrew Wilkinson，讲述他如何用 agent 独自运营 40 多家公司——真实体验是 50% debug、30% 改进、20% 产出，但产出强到停不下来。此外，AI 微短剧在中国上月激增 5 万部，Factory 推出中间价位计划，哈佛研究显示 LLM 在急诊分诊中准确率已超真人医生。",
+    "audio_duration": 468,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-05/audio.mp3",
+    "tweet_count": 44
+  },
+  {
     "date": "2026-05-04",
     "title": "20260504-AI是工具还是存在？",
     "summary": "Justine Moore 转发了一篇关于 Anthropic 组织文化的深度观察，认为我们已经在 AI 教派里了。Aaron Levie 详细拆解了 agent 在企业落地的真实门槛，预测实施 agent 将催生巨大的咨询服务市场。Sam Altman 认为 Agents SDK 2.0 被严重低估。本期深聊聚焦于一个根本问题：我们到底该把 AI 当工具还是当存在？道金斯认为 Claude 有意识，Levie 警告这种混淆很危险，而 Anthropic 内部正在系统性地把 Claude 当作道德上的优越者来对待。",
