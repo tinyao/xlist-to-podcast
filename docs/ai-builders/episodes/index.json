@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-06",
+    "title": "20260506-全球只有1000家真正的AI原生公司",
+    "summary": "Greg Isenberg 提出一个令人警醒的判断：全球真正实现 AI 原生的公司可能只有 1000 家，而 ElevenLabs 刚以 500M ARR 证明了这个方向的价值。Sam Altman 密集推广 ChatGPT 5.5 Instant，Codex 在非编程领域的能力让 Riley Brown 等人惊喜。SubQ 模型声称突破 Transformer 架构瓶颈，但 Riley Brown 的直觉发出了警告。今天深聊展开 Greg Isenberg 对“AI 原生”的定义，以及为什么这个看似拥挤的赛道其实几乎无人真正入场。Coinbase 开始测试一人团队加 agent 模式，同时裁掉 700 人，企业组织结构的根本变化正在加速。",
+    "audio_duration": 633,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-06/audio.mp3",
+    "tweet_count": 65
+  },
+  {
     "date": "2026-05-05",
     "title": "20260505-凌晨3点追龙，一个人的agent帝国",
     "summary": "Vercel 开源了多 agent 并行安全审查工具 deepsec，能在几分钟内发现人工团队数月才能找到的漏洞。Greg Isenberg 分享了一套收购死 SaaS、用 agent 重建的详细操作手册，成本低至数千美元。Greg Isenberg 还邀请到操盘手 Andrew Wilkinson，讲述他如何用 agent 独自运营 40 多家公司——真实体验是 50% debug、30% 改进、20% 产出，但产出强到停不下来。此外，AI 微短剧在中国上月激增 5 万部，Factory 推出中间价位计划，哈佛研究显示 LLM 在急诊分诊中准确率已超真人医生。",
