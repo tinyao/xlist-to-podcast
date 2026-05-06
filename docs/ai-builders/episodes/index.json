@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-07",
+    "title": "20260507-Claude加码算力，但AI原生的钱到底在哪",
+    "summary": "Anthropic 与 SpaceX 达成算力合作，Claude Code 额度翻倍并取消高峰限制；Greg Isenberg 给出 AI 原生创业方向的 2x2 矩阵，指出高复杂度、高重复度流程是 agent 的主战场；Peter Yang 对市面上主流个人 agent 工具做了深度横评，结论是这场仗还没人打赢；Zara Zhang 提醒开发者工具正在错失“非开发者”用户群体。",
+    "audio_duration": 488,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-07/audio.mp3",
+    "tweet_count": 62
+  },
+  {
     "date": "2026-05-06",
     "title": "20260506-全球只有1000家真正的AI原生公司",
     "summary": "Greg Isenberg 提出一个令人警醒的判断：全球真正实现 AI 原生的公司可能只有 1000 家，而 ElevenLabs 刚以 500M ARR 证明了这个方向的价值。Sam Altman 密集推广 ChatGPT 5.5 Instant，Codex 在非编程领域的能力让 Riley Brown 等人惊喜。SubQ 模型声称突破 Transformer 架构瓶颈，但 Riley Brown 的直觉发出了警告。今天深聊展开 Greg Isenberg 对“AI 原生”的定义，以及为什么这个看似拥挤的赛道其实几乎无人真正入场。Coinbase 开始测试一人团队加 agent 模式，同时裁掉 700 人，企业组织结构的根本变化正在加速。",
