@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-08",
+    "title": "20260508-分发是新护城河，但Anthropic的女性产品领导层更值得注意",
+    "summary": "GPT-Realtime-2 API 正式上线，Sam Altman 分享了语音交互的用户分层观察。Firefox 用 Claude Mythos Preview 在一个月内修复了过去十五个月总量的安全漏洞。Lenny 指出 Anthropic 的产品领导层是目前科技圈最女性主导的组织，同时 Gergely Orosz 和 Lenny 关于“分发是新护城河”的讨论，与 Zara Zhang 对营销语言错失的提醒形成了今天最值得深思的话题。",
+    "audio_duration": 546,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-08/audio.mp3",
+    "tweet_count": 50
+  },
+  {
     "date": "2026-05-07",
     "title": "20260507-Claude加码算力，但AI原生的钱到底在哪",
     "summary": "Anthropic 与 SpaceX 达成算力合作，Claude Code 额度翻倍并取消高峰限制；Greg Isenberg 给出 AI 原生创业方向的 2x2 矩阵，指出高复杂度、高重复度流程是 agent 的主战场；Peter Yang 对市面上主流个人 agent 工具做了深度横评，结论是这场仗还没人打赢；Zara Zhang 提醒开发者工具正在错失“非开发者”用户群体。",

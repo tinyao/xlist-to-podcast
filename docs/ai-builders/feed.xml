@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Wed, 06 May 2026 23:26:45 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 23:26:39 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,43 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260508-分发是新护城河，但Anthropic的女性产品领导层更值得注意</title>
+      <description>## 今日摘要
+GPT-Realtime-2 API 正式上线，Sam Altman 分享了语音交互的用户分层观察。Firefox 用 Claude Mythos Preview 在一个月内修复了过去十五个月总量的安全漏洞。Lenny 指出 Anthropic 的产品领导层是目前科技圈最女性主导的组织，同时 Gergely Orosz 和 Lenny 关于“分发是新护城河”的讨论，与 Zara Zhang 对营销语言错失的提醒形成了今天最值得深思的话题。
+
+## 重点话题
+- 分发是新护城河：Gergely Orosz 指出 AI 产品供应端爆炸，用户触达成为最大痛点。Lenny 总结“分发是新护城河”，Zara Zhang 提醒营销语言仍在过滤非技术用户。
+- Anthropic 的女性产品领导层：Lenny 列出 Anthropic 产品决策层的女性领导者名单，认为这是当前科技圈最值得关注的组织信号。
+
+## 快讯
+- Peter Steinberger：OpenClaw 的 /goal 功能搭配 GPT 5.5，可以规划大规模重构并直接跑通端到端测试。
+- Cursor 3 上线 PR review 体验，将评论、diff、提交记录整合到编辑器内。
+- Replit 发布 vibecon.ai，Lenny x Replit Buildathon 仍在进行中。
+- Justine Moore 预告一款新的图像模型即将发布，称其让图像生成重新有了艺术感。
+
+## 值得阅读
+- Mozilla 官方博客：Behind the Scenes Hardening Firefox with Claude Mythos Preview – https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/
+- Sam Altman：GPT-Realtime-2 API 上线及语音交互观察 – https://x.com/sama/status/2052462271667028211
+- Lenny Rachitsky：Anthropic 的产品领导层 – https://x.com/lennysan/status/2052439125538873516
+- Gergely Orosz：AI 产品触达客户的痛点 – https://x.com/GergelyOrosz/status/（见 Lenny 引用）
+- Zara Zhang 对 Boris Cherny 的访谈：Claude Code 团队深度对话 – https://www.youtube.com/watch?v=SlGRN8jh2RI</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-08/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-08/audio.mp3" length="10932480" type="audio/mpeg"/>
+      <pubDate>Thu, 07 May 2026 23:23:54 +0000</pubDate>
+      <itunes:duration>546</itunes:duration>
+      <itunes:summary>## 今日摘要
+GPT-Realtime-2 API 正式上线，Sam Altman 分享了语音交互的用户分层观察。Firefox 用 Claude Mythos Preview 在一个月内修复了过去十五个月总量的安全漏洞。Lenny 指出 Anthropic 的产品领导层是目前科技圈最女性主导的组织，同时 Gergely Orosz 和 Lenny 关于“分发是新护城河”的讨论，与 Zara Zhang 对营销语言错失的提醒形成了今天最值得深思的话题。
+
+## 重点话题
+- 分发是新护城河：Gergely Orosz 指出 AI 产品供应端爆炸，用户触达成为最大痛点。Lenny 总结“分发是新护城河”，Zara Zhang 提醒营销语言仍在过滤非技术用户。
+- Anthropic 的女性产品领导层：Lenny 列出 Anthropic 产品决策层的女性领导者名单，认为这是当前科技圈最值得关注的组织信号。
+
+## 快讯
+- Peter Steinberger：OpenClaw 的 /goal 功能搭配 GPT 5.5，可以规划大规模重构并直接跑通端到端测试。
+- Cursor 3 上线</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260507-Claude加码算力，但AI原生的钱到底在哪</title>
       <description>## 今日摘要
@@ -1147,47 +1184,6 @@ Claude Code 把整个终端渲染重写了，新模式 NO_FLICKER 启用 viewpor
 - Aaron Levie 的「童话世界」论：企业级 agent 的真正天花板在治理而不在能力
 - Cloudflare EmDash 与 Dynamic Worker：用 V8 sandbox 跑插件，给 agent 时代的下一代平台示范
 - 服务即软件 vs 治理鸿沟：Greg 的「ambient</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260401-axios供应链告急，软件的灵魂去哪了</title>
-      <description>## 今日摘要
-npm axios 1.14.1 被植入恶意代码，Socket Security 在攻击发布 6 分钟内检测到，AI 辅助安全审查首次在真实供应链攻击中被验证有效。Claude Code 源码因 Bun bug 疑似意外泄露。微软任命专职 CVP 负责 OpenClaw × M365 整合，Vercel 公开内部"负责任用 agent"指南。Cursor 设计师 Ryo Lu 发长文探讨：AI 加速时代，那些真正在意的人将更稀有，也更有价值。
-
-## 重点话题
-- axios 供应链攻击：1.14.1 版本植入恶意代码，影响 npm 生态 3 亿次周下载量
-- Claude Code 源码泄露：Bun 打包 bug 导致源代码意外打入 npm 发布包
-- 微软 × OpenClaw：专职 CVP Omar Shahine 负责推进 Microsoft 365 全面整合
-- Vercel "负责任用 agent"指南：公开内部规范，以安全、持久性、高可用为核心
-- Ryo Lu《When software had a soul》：AI slop 泛滥时代，做有质感东西的人更稀有了
-
-## 快讯
-- Google Veo 3.1 Lite 发布，4 月 7 日 Veo 3.1 Fast 同步降价
-- Zara Zhang 发布飞书 agent skill：直接从会议记录执行待办，全打通
-- Meta-Harness 论文：model+harness 组合优于单纯模型，harness 设计质量是关键变量
-- PrismML 发布 Bonsai 8B：1-bit 权重，1.15GB 内存，14x 更小、8x 更快，Apache 2.0 开源
-
-## 值得阅读
-- Karpathy：axios 供应链攻击警告 https://x.com/karpathy/status/2038849654423798197
-- Vercel：Agent Responsibly 指南 https://vercel.com/blog/agent-responsibly
-- Ryo Lu：When software had a soul https://x.com/ryolu_/status/2038841219556724924
-- OpenClaw 2026.3.31 发布说明 https://github.com/openclaw/openclaw/releases/tag/v2026.3.31-beta.1
-- PrismML Bonsai 8B 发布 https://x.com/PrismML/status/2039110607820193862
-- Zara Zhang：Lark CLI agent skill https://x.com/zarazhangrui/status/2038771778802331817
-- Junyang Lin 转发 Meta-Harness https://x.com/JustinLin610/status/2038783276937310582</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-01/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-01/audio.mp3" length="10055040" type="audio/mpeg"/>
-      <pubDate>Wed, 01 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>502</itunes:duration>
-      <itunes:summary>## 今日摘要
-npm axios 1.14.1 被植入恶意代码，Socket Security 在攻击发布 6 分钟内检测到，AI 辅助安全审查首次在真实供应链攻击中被验证有效。Claude Code 源码因 Bun bug 疑似意外泄露。微软任命专职 CVP 负责 OpenClaw × M365 整合，Vercel 公开内部"负责任用 agent"指南。Cursor 设计师 Ryo Lu 发长文探讨：AI 加速时代，那些真正在意的人将更稀有，也更有价值。
-
-## 重点话题
-- axios 供应链攻击：1.14.1 版本植入恶意代码，影响 npm 生态 3 亿次周下载量
-- Claude Code 源码泄露：Bun 打包 bug 导致源代码意外打入 npm 发布包
-- 微软 × OpenClaw：专职 CVP Omar Shahine 负责推进 Microsoft 365 全面整合
-- Vercel "负责任用 agent"指南：公开内部规范，以安全、持久性、高可用为核心
-- Ryo Lu《When software had a soul》：AI slop 泛滥时代，做有质感东西的人</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
