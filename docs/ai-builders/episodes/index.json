@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-09",
+    "title": "20260509-HTML吃掉一切，而护城河移到了客户身边",
+    "summary": "OpenAI 推出 GPT-5.5-Cyber 模型，限定用于关键基础设施防御，安全领域的模型对抗正在成型。Anthropic 工程师 Thariq 提出“HTML is the new markdown”的工作流，已开始用 Claude Code 全面生成 HTML 替代文档和仪表板。本周关于“分发是护城河”的讨论被 Aaron Levie 延伸，他指出 AI 让某件事变容易的同时也对所有人变容易，资源会自然流向新的稀缺点——销售和客户成功。",
+    "audio_duration": 571,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-09/audio.mp3",
+    "tweet_count": 45
+  },
+  {
     "date": "2026-05-08",
     "title": "20260508-分发是新护城河，但Anthropic的女性产品领导层更值得注意",
     "summary": "GPT-Realtime-2 API 正式上线，Sam Altman 分享了语音交互的用户分层观察。Firefox 用 Claude Mythos Preview 在一个月内修复了过去十五个月总量的安全漏洞。Lenny 指出 Anthropic 的产品领导层是目前科技圈最女性主导的组织，同时 Gergely Orosz 和 Lenny 关于“分发是新护城河”的讨论，与 Zara Zhang 对营销语言错失的提醒形成了今天最值得深思的话题。",
