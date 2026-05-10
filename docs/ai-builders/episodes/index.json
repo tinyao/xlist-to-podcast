@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-10",
+    "title": "20260510-GPT-5.5是自闭症天才，而Token预算正在成为企业新战场",
+    "summary": "Peekaboo 3.0 发布，让 AI 直接操控 macOS 桌面。swyx 推荐了一篇“GPT the Hard Way”的技术文章，建议所有 AI 工程师精读。Sam Altman 将 GPT-5.5 形容为“自闭症天才”，并分享了 agent 独立完成任务的乐观体验。Anthropic 的 Claude Mythos Preview 在长时间任务上大幅领先。Aaron Levie 提出“Token 预算”概念，认为企业内部的 agent 资源分配将催生新软件品类。",
+    "audio_duration": 563,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-10/audio.mp3",
+    "tweet_count": 47
+  },
+  {
     "date": "2026-05-09",
     "title": "20260509-HTML吃掉一切，而护城河移到了客户身边",
     "summary": "OpenAI 推出 GPT-5.5-Cyber 模型，限定用于关键基础设施防御，安全领域的模型对抗正在成型。Anthropic 工程师 Thariq 提出“HTML is the new markdown”的工作流，已开始用 Claude Code 全面生成 HTML 替代文档和仪表板。本周关于“分发是护城河”的讨论被 Aaron Levie 延伸，他指出 AI 让某件事变容易的同时也对所有人变容易，资源会自然流向新的稀缺点——销售和客户成功。",
