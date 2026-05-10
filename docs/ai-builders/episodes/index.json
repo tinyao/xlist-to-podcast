@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-11",
+    "title": "20260511-Bun重写Rust只用了6天，而专家的优势反而变大了",
+    "summary": "Bun 的作者用 6 天时间完成了 96 万行代码的 Zig 到 Rust 重写，通过 99.8% 测试。Aaron Levie 提出专家在 AI 时代的优势反而被放大，经验正在变成驾驭 agent 的杠杆。Sam Altman 半开玩笑地提议下一个模型叫“地精”。Peter Steinberger 展示了 AI 生成网站一年内的质量飞跃，以及 OpenClaw 的自动化 QA 流水线。",
+    "audio_duration": 570,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-11/audio.mp3",
+    "tweet_count": 53
+  },
+  {
     "date": "2026-05-10",
     "title": "20260510-GPT-5.5是自闭症天才，而Token预算正在成为企业新战场",
     "summary": "Peekaboo 3.0 发布，让 AI 直接操控 macOS 桌面。swyx 推荐了一篇“GPT the Hard Way”的技术文章，建议所有 AI 工程师精读。Sam Altman 将 GPT-5.5 形容为“自闭症天才”，并分享了 agent 独立完成任务的乐观体验。Anthropic 的 Claude Mythos Preview 在长时间任务上大幅领先。Aaron Levie 提出“Token 预算”概念，认为企业内部的 agent 资源分配将催生新软件品类。",
