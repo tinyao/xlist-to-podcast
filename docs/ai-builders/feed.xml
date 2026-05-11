@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 May 2026 23:25:53 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 23:27:07 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,44 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260511-Bun重写Rust只用了6天，而专家的优势反而变大了</title>
+      <description>## 今日摘要
+Bun 的作者用 6 天时间完成了 96 万行代码的 Zig 到 Rust 重写，通过 99.8% 测试。Aaron Levie 提出专家在 AI 时代的优势反而被放大，经验正在变成驾驭 agent 的杠杆。Sam Altman 半开玩笑地提议下一个模型叫“地精”。Peter Steinberger 展示了 AI 生成网站一年内的质量飞跃，以及 OpenClaw 的自动化 QA 流水线。
+
+## 重点话题
+- 专家优势放大论：Aaron Levie 认为 AI 让门外汉入门，但让专家的判断力更有价值。Peter Yang 的“slop 陷阱”和 Thariq 的“野心论”从不同角度佐证了这个观点。
+
+## 快讯
+- Lenny Rachitsky 对话 Eric Ries，新书《Incorruptible》讨论公司如何避免走向平庸
+- Peter Yang 分享 Claude Code 个人 OS 系统，核心是一个每晚运行的“梦境”记忆整理任务
+- 郭宇质疑 Apple 税对 AI App 的不合理性，寻求统一推理额度管理方案
+
+## 值得阅读
+- Jarred Sumner 关于 Bun 重写 Rust 的推文：https://x.com/jarredsumner
+- Aaron Levie 关于专家与 AI 的长推文：https://x.com/levie/status/2053267097493573921
+- Peter Steinberger 的“Slop 2025 vs 2026”对比：https://x.com/steipete/status/2053456429420265662
+- Sam Altman 的“地精”命名玩笑：https://x.com/sama/status/2053572868936761350
+- Lenny Rachitsky 对话 Eric Ries 播客：https://youtu.be/PoJ1vTdHpks</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-11/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-11/audio.mp3" length="11410080" type="audio/mpeg"/>
+      <pubDate>Sun, 10 May 2026 23:22:59 +0000</pubDate>
+      <itunes:duration>570</itunes:duration>
+      <itunes:summary>## 今日摘要
+Bun 的作者用 6 天时间完成了 96 万行代码的 Zig 到 Rust 重写，通过 99.8% 测试。Aaron Levie 提出专家在 AI 时代的优势反而被放大，经验正在变成驾驭 agent 的杠杆。Sam Altman 半开玩笑地提议下一个模型叫“地精”。Peter Steinberger 展示了 AI 生成网站一年内的质量飞跃，以及 OpenClaw 的自动化 QA 流水线。
+
+## 重点话题
+- 专家优势放大论：Aaron Levie 认为 AI 让门外汉入门，但让专家的判断力更有价值。Peter Yang 的“slop 陷阱”和 Thariq 的“野心论”从不同角度佐证了这个观点。
+
+## 快讯
+- Lenny Rachitsky 对话 Eric Ries，新书《Incorruptible》讨论公司如何避免走向平庸
+- Peter Yang 分享 Claude Code 个人 OS 系统，核心是一个每晚运行的“梦境”记忆整理任务
+- 郭宇质疑 Apple 税对 AI App 的不合理性，寻求统一推理额度管理方案
+
+## 值得阅读
+- Jarred Sum</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260510-GPT-5.5是自闭症天才，而Token预算正在成为企业新战场</title>
       <description>## 今日摘要
@@ -1123,45 +1161,6 @@ Anthropic 突然宣布 Claude 订阅不再支持 OpenClaw 等第三方工具，�
 - **新图像模型现身 Arena**：三款代号为 maskingtape、packingtape、gaffertape 的图像模型在 Arena 上展示了强大的世界知识和文字渲染能力，疑似包含 OpenAI 正在测试的 GPT Image 2。
 - **Karpathy 的 agent 知识库工作流**：Karpathy 详细介绍了如何利用 LLM 将原始资料自动“编译”成由 agent 完全维护的个人 Wiki，以及他提出的“idea file”分享理念。
 - **深聊 - Aaron Levie </itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260404-Anthropic 砍掉第三方工具订阅权限，Simon Willison 说用 agents 写到 11 点就累瘫了</title>
-      <description>## 今日摘要
-Anthropic 宣布从今天中午起，Claude 订阅将不再覆盖 OpenClaw 等第三方工具的用量，用户需额外购买折扣套餐或改用 API。Lenny 与 Simon Willison 的深度对谈在圈内引发强烈共鸣，Simon 坦言同时操控四个 coding agents 到上午 11 点就认知耗尽，并分享了“暗工厂”、红/绿 TDD 等一线工程模式。Cursor 设计师 Ryo Lu 发表“玻璃 vs 黑箱”宣言，强调 AI 工具应保持透明可控而非让人放弃思考。
-
-## 重点话题
-- Anthropic 订阅政策突变：Claude 订阅不再覆盖第三方工具，OpenClaw 用户需切换到 API 或购买额外套餐
-- Simon Willison 深度访谈：2025 年 11 月是 AI 编码的拐点，中年工程师最危险，“暗工厂”模式正在实验，认知负荷是真实瓶颈
-- Cursor 的设计哲学：Ryo Lu 提出“玻璃”理念，认为 AI 工具越强大越应该透明，用户应始终在驾驶位
-
-## 快讯
-- Grok Imagine 图像生成大升级，文字渲染和场景构建能力显著提升
-- Google Labs 的 Stitch 推出 Live Mode，实现设计师与 AI 实时协作
-- Obsidian Web Clipper 1.3 发布，Reader 模式新增主题和高亮功能
-- Box CEO Aaron Levie 分享构建 AI agent 的核心教训：对旧架构要冷酷无情
-
-## 值得阅读
-- Lenny 与 Simon Willison 完整对谈：https://www.youtube.com/watch?v=wc8FBhQtdsA
-- Ryo Lu 的“玻璃 vs 黑箱”原文：https://x.com/ryolu_/status/2039895634313187619
-- Anthropic 官方政策说明：https://support.claude.com/en/articles/13189465-logging-in-to-your-claude-account
-- Marc Andreessen 在 Latent.Space 的访谈：https://youtu.be/knx2wrILP1M
-- Justine Moore 的 Grok Imagine 测评 thread：https://x.com/venturetwins/status/2040068944946774151</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-04/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-04/audio.mp3" length="12684960" type="audio/mpeg"/>
-      <pubDate>Sat, 04 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>634</itunes:duration>
-      <itunes:summary>## 今日摘要
-Anthropic 宣布从今天中午起，Claude 订阅将不再覆盖 OpenClaw 等第三方工具的用量，用户需额外购买折扣套餐或改用 API。Lenny 与 Simon Willison 的深度对谈在圈内引发强烈共鸣，Simon 坦言同时操控四个 coding agents 到上午 11 点就认知耗尽，并分享了“暗工厂”、红/绿 TDD 等一线工程模式。Cursor 设计师 Ryo Lu 发表“玻璃 vs 黑箱”宣言，强调 AI 工具应保持透明可控而非让人放弃思考。
-
-## 重点话题
-- Anthropic 订阅政策突变：Claude 订阅不再覆盖第三方工具，OpenClaw 用户需切换到 API 或购买额外套餐
-- Simon Willison 深度访谈：2025 年 11 月是 AI 编码的拐点，中年工程师最危险，“暗工厂”模式正在实验，认知负荷是真实瓶颈
-- Cursor 的设计哲学：Ryo Lu 提出“玻璃”理念，认为 AI 工具越强大越应该透明，用户应始终在驾驶位
-
-## 快讯
-- Grok Imagine 图像生成大升级，文字渲染和场景构建能力显著提升
--</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
