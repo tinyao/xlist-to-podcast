@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Sun, 10 May 2026 23:27:07 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 23:28:59 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,47 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260512-Agent部署正在催生一批新职业，你准备好了吗？</title>
+      <description>## 今日摘要
+OpenAI 宣布成立一家由 19 家机构联合参与的部署公司，专门帮企业将 agent 落地到生产环境。Box CEO Aaron Levie 深度分析了 agent 部署市场的巨大机会，并透露 Box 已开始招聘 AI 自动化工程师。Karpathy 提出人机交互正在从纯文本向 HTML 乃至交互式视频进化，并给出了实用建议。从大厂部署到个人创业，agent 落地正在催生一批全新的职业角色。
+
+## 重点话题
+- Agent 部署催生新职业：OpenAI 成立部署公司、Box 招聘 AI 自动化工程师、Greg Isenberg 列出七个 agent 创业想法，三条线索指向同一个方向——让 agent 在真实业务中跑起来，正在变成一种新的职业技能
+
+## 快讯
+- OpenAI 推出 Daybreak 网络安全加速计划，Sam Altman 亲自官宣
+- Claude Code 发布 Agent View 多会话管理功能，类似 tmux for CC
+- Replit 推出 Parallel Agents，最多同时跑 10 个 agent 并自动合并
+- Karpathy 建议让 AI 输出 HTML 而非纯文本，Thariq 已在日常使用
+- Justine Moore 称教科书“完了”，AI 交互式学习内容正在突破
+- 中国婚礼摄影师用 10 天和 3000 元人民币成本制作的 AI 短片被电影公司买下改编权
+
+## 值得阅读
+- Aaron Levie 对 OpenAI 部署公司的分析：https://x.com/levie/status/2053888702427115811
+- Aaron Levie 关于 AI 自动化工程师角色的推文：https://x.com/levie/status/2053672965125140915
+- Karpathy 关于人机交互输入输出进化的长文：https://x.com/karpathy/status/2053872850101285137
+- Greg Isenberg 的七个 agent 创业想法：https://x.com/gregisenberg/status/2053909333847491012
+- Lenny Rachitsky 与 Eric Ries 的深度访谈：https://youtube.com/watch?v=PoJ1vTdHpks
+- Peter Steinberger 让 Codex 自己操作 Google Cloud 后台：https://x.com/steipete/status/2053797643516592299
+- PJ Ace 转发中国 AI 短片创作者声明：https://x.com/PJaccetturo/status/2053834513524965718</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-12/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-12/audio.mp3" length="13025280" type="audio/mpeg"/>
+      <pubDate>Mon, 11 May 2026 23:24:52 +0000</pubDate>
+      <itunes:duration>651</itunes:duration>
+      <itunes:summary>## 今日摘要
+OpenAI 宣布成立一家由 19 家机构联合参与的部署公司，专门帮企业将 agent 落地到生产环境。Box CEO Aaron Levie 深度分析了 agent 部署市场的巨大机会，并透露 Box 已开始招聘 AI 自动化工程师。Karpathy 提出人机交互正在从纯文本向 HTML 乃至交互式视频进化，并给出了实用建议。从大厂部署到个人创业，agent 落地正在催生一批全新的职业角色。
+
+## 重点话题
+- Agent 部署催生新职业：OpenAI 成立部署公司、Box 招聘 AI 自动化工程师、Greg Isenberg 列出七个 agent 创业想法，三条线索指向同一个方向——让 agent 在真实业务中跑起来，正在变成一种新的职业技能
+
+## 快讯
+- OpenAI 推出 Daybreak 网络安全加速计划，Sam Altman 亲自官宣
+- Claude Code 发布 Agent View 多会话管理功能，类似 tmux for CC
+- Replit 推出 Parallel Agents，最多同时跑 10 个 agent 并自动合并
+- Karpat</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260511-Bun重写Rust只用了6天，而专家的优势反而变大了</title>
       <description>## 今日摘要
@@ -1127,40 +1168,6 @@ Anthropic 开始系统性地封锁第三方 agent 调用，要求用户自带 AP
 - Anthropic 封锁第三方 harness：OpenClaw 开发者发现 --append-system-prompt 被禁，要求自带额度，引发模型与编排层关系的大讨论
 - Replit 遭苹果封杀仍登顶：Amjad Masad 用一次性数据点暴露了 AI 原生应用在移动端分发中的脆弱性
 - OpenAI Codex 团队内幕：Peter Yang 访谈揭示 10 行 bullet point 代替规格、设计师</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260405-Anthropic封杀OpenClaw，Agent的"认知瓶颈"浮出水面</title>
-      <description>## 今日摘要
-Anthropic 突然宣布 Claude 订阅不再支持 OpenClaw 等第三方工具，引发开发者圈强烈反应。Karpathy 分享了如何用 LLM agent 构建和管理数十万字的个人知识库，并提出了“idea file”的新概念。Arena 出现三款神秘新图像模型，对真实世界地点的理解力惊人。Box CEO Aaron Levie 则阐述了 Agent 架构正从“机械式 chunk 拼接”转向“类人工作流”，而工程师的认知极限正成为新的效率瓶颈。
-
-## 重点话题
-- **新图像模型现身 Arena**：三款代号为 maskingtape、packingtape、gaffertape 的图像模型在 Arena 上展示了强大的世界知识和文字渲染能力，疑似包含 OpenAI 正在测试的 GPT Image 2。
-- **Karpathy 的 agent 知识库工作流**：Karpathy 详细介绍了如何利用 LLM 将原始资料自动“编译”成由 agent 完全维护的个人 Wiki，以及他提出的“idea file”分享理念。
-- **深聊 - Aaron Levie 论 Agent 架构的范式转移**：随着模型推理和上下文能力的提升，Agent 设计正从依赖 embedding + chunk 搜索，转变为更接近人类全局阅读、自我纠错的工作模式。
-
-## 快讯
-- Anthropic 工程师 Boris Cherny 承诺将通过优化缓存效率降低 API 用户成本，openclaw 的开发者 steipete 对此表示认可。
-- Zara Zhang 观察到新趋势：人们开始将同事、KOL 甚至前任“蒸馏”成 agent 技能。
-- Cursor 发布全新界面和包含 420 个图标的图标集。
-- Claude 移动端推出中等尺寸的桌面小组件，可快速唤起对话。
-
-## 值得阅读
-- Karpathy 的 Gist: LLM Wiki 工作流及“idea file”概念 - https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
-- Aaron Levie 关于 Agent 设计范式转变的长文与视频 - https://x.com/levie/status/2040528801386361128
-- Justine Moore 对 Arena 新图像模型的测试与讨论 - https://x.com/venturetwins/status/2040273845748449724
-- Simon Willison 与 Lenny 讨论 agent 认知极限的播客 - https://x.com/lennysan/status/2040256989268263295</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-05/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-05/audio.mp3" length="10611840" type="audio/mpeg"/>
-      <pubDate>Sun, 05 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>530</itunes:duration>
-      <itunes:summary>## 今日摘要
-Anthropic 突然宣布 Claude 订阅不再支持 OpenClaw 等第三方工具，引发开发者圈强烈反应。Karpathy 分享了如何用 LLM agent 构建和管理数十万字的个人知识库，并提出了“idea file”的新概念。Arena 出现三款神秘新图像模型，对真实世界地点的理解力惊人。Box CEO Aaron Levie 则阐述了 Agent 架构正从“机械式 chunk 拼接”转向“类人工作流”，而工程师的认知极限正成为新的效率瓶颈。
-
-## 重点话题
-- **新图像模型现身 Arena**：三款代号为 maskingtape、packingtape、gaffertape 的图像模型在 Arena 上展示了强大的世界知识和文字渲染能力，疑似包含 OpenAI 正在测试的 GPT Image 2。
-- **Karpathy 的 agent 知识库工作流**：Karpathy 详细介绍了如何利用 LLM 将原始资料自动“编译”成由 agent 完全维护的个人 Wiki，以及他提出的“idea file”分享理念。
-- **深聊 - Aaron Levie </itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>

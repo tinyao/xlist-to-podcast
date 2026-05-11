@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-12",
+    "title": "20260512-Agent部署正在催生一批新职业，你准备好了吗？",
+    "summary": "OpenAI 宣布成立一家由 19 家机构联合参与的部署公司，专门帮企业将 agent 落地到生产环境。Box CEO Aaron Levie 深度分析了 agent 部署市场的巨大机会，并透露 Box 已开始招聘 AI 自动化工程师。Karpathy 提出人机交互正在从纯文本向 HTML 乃至交互式视频进化，并给出了实用建议。从大厂部署到个人创业，agent 落地正在催生一批全新的职业角色。",
+    "audio_duration": 651,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-12/audio.mp3",
+    "tweet_count": 65
+  },
+  {
     "date": "2026-05-11",
     "title": "20260511-Bun重写Rust只用了6天，而专家的优势反而变大了",
     "summary": "Bun 的作者用 6 天时间完成了 96 万行代码的 Zig 到 Rust 重写，通过 99.8% 测试。Aaron Levie 提出专家在 AI 时代的优势反而被放大，经验正在变成驾驭 agent 的杠杆。Sam Altman 半开玩笑地提议下一个模型叫“地精”。Peter Steinberger 展示了 AI 生成网站一年内的质量飞跃，以及 OpenClaw 的自动化 QA 流水线。",
