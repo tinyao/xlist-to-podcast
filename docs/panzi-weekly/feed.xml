@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/panzi-weekly</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Mon, 16 Mar 2026 00:51:45 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 01:05:48 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,49 @@
     </itunes:owner>
     <itunes:summary>每周一喵，聊聊矿圈这周发生的大事。冷却技术、能源格局、AI转型、竞品动向。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260511-MSTR“永不卖出”信仰震动，矿工集体转行AI房东</title>
+      <description>## 今日摘要
+本周焦点是MSTR从"永不卖出"转向"可能卖币"的战略震荡，引发社区对叙事力量的反思。与此同时，比特币矿企加速向AI基础设施转型，Hut 8拿下百亿美元级AI数据中心租赁合同，融资成本因此大幅下降。政策层面，德国和荷兰推动严厉的加密货币税收改革引发广泛不安，而BlackRock和JPMorgan等传统金融巨头正加速拥抱比特币。
+
+## 重点话题
+- MSTR叙事地震：CEO五月内五次暗示可能卖币，"永不卖出"信仰遭遇最大考验，社区反应两极分化
+- 矿工的AI转型潮：IREN出售矿机转向AI，Hut 8拿下98亿美元AI租赁合同，融资成本骤降一半
+- 哥伦比亚的比特币挖矿实验：左翼总统Petro提出在加勒比海岸建设清洁能源矿场，并与原住民社区共享所有权
+- 量子计算虚惊与比特币防御：Adam Back驳斥Project 11的2029年量子威胁论，介绍Blockstream的后量子签名系统
+- 欧洲加密税潮：德国拟取消持有一年免税政策，荷兰2028年推行未实现收益征税，高税率引发资产外流担忧
+
+## 快讯
+- CME将于六月上线比特币波动率期货，首次提供合规的BTC波动性对冲工具
+- 摩根士丹利向860万E-Trade用户开放比特币交易，手续费0.5%低于主流平台
+- Boltzhq推出无KYC、无托管的比特币-USDC互换服务，用户全程控制私钥
+- 日本媒体罕见发出恶性通胀警告，前高管称政府正用通胀侵蚀1342万亿日元国债
+- 农场主用比特币矿机余热为小狗取暖的视频走红，成为本周最温暖的行业注脚
+
+## 值得阅读
+- Adam Back深度访谈：关于Project 11量子威胁的辟谣与Bitcoin Core内存安全漏洞的修复详情
+- DocumentingBTC：Block模块化矿机的设计哲学与分布式挖矿的未来
+- The Energy Mag分析：比特币矿工如何通过AI基础设施获得更低融资成本
+- Michael Saylor与Coffeezilla的辩论：关于数字信用商业模式的争议性讨论
+- BlackRock 10年资产类别比较报告：比特币在回报率与风险调整后表现均领先其他资产</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/panzi-weekly/episodes/2026-05-11/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/panzi-weekly/episodes/2026-05-11/audio.mp3" length="15465600" type="audio/mpeg"/>
+      <pubDate>Mon, 11 May 2026 01:00:00 +0000</pubDate>
+      <itunes:duration>773</itunes:duration>
+      <itunes:summary>## 今日摘要
+本周焦点是MSTR从"永不卖出"转向"可能卖币"的战略震荡，引发社区对叙事力量的反思。与此同时，比特币矿企加速向AI基础设施转型，Hut 8拿下百亿美元级AI数据中心租赁合同，融资成本因此大幅下降。政策层面，德国和荷兰推动严厉的加密货币税收改革引发广泛不安，而BlackRock和JPMorgan等传统金融巨头正加速拥抱比特币。
+
+## 重点话题
+- MSTR叙事地震：CEO五月内五次暗示可能卖币，"永不卖出"信仰遭遇最大考验，社区反应两极分化
+- 矿工的AI转型潮：IREN出售矿机转向AI，Hut 8拿下98亿美元AI租赁合同，融资成本骤降一半
+- 哥伦比亚的比特币挖矿实验：左翼总统Petro提出在加勒比海岸建设清洁能源矿场，并与原住民社区共享所有权
+- 量子计算虚惊与比特币防御：Adam Back驳斥Project 11的2029年量子威胁论，介绍Blockstream的后量子签名系统
+- 欧洲加密税潮：德国拟取消持有一年免税政策，荷兰2028年推行未实现收益征税，高税率引发资产外流担忧
+
+## 快讯
+- CME将于六月上线比特币波动率期货，首次提供合规的BTC波动性</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260316-比特币挖完95%，固件才是新算力</title>
       <description>## 今日摘要
