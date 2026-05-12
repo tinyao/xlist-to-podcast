@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-13",
+    "title": "20260513-把品味教给AI，是当下最值钱的手艺",
+    "summary": "Krea 2 发布全新图像基础模型，主打美学多样性和风格控制，Justine Moore 称其“让图像模型重新变得有艺术感”。Greg Isenberg 公开了一套用 agent 接单赚钱的完整打法，月费可达 5000 美元。Julie Zhuo 深入探讨了将人类品味蒸馏为 AI 指令的挑战，认为这是当下最难也最值钱的手艺。Claude Code Agent View 正式上线，Boris Cherny 分享用 Claude Cowork 一次性预订 8 张机票和 5 家酒店的经历。",
+    "audio_duration": 696,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-13/audio.mp3",
+    "tweet_count": 69
+  },
+  {
     "date": "2026-05-12",
     "title": "20260512-Agent部署正在催生一批新职业，你准备好了吗？",
     "summary": "OpenAI 宣布成立一家由 19 家机构联合参与的部署公司，专门帮企业将 agent 落地到生产环境。Box CEO Aaron Levie 深度分析了 agent 部署市场的巨大机会，并透露 Box 已开始招聘 AI 自动化工程师。Karpathy 提出人机交互正在从纯文本向 HTML 乃至交互式视频进化，并给出了实用建议。从大厂部署到个人创业，agent 落地正在催生一批全新的职业角色。",
