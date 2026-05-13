@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-14",
+    "title": "20260514-Agent正在形成偏好，软技能变成了硬技能",
+    "summary": "Sam Altman 宣布 Codex 向企业开放两个月免费试用，Peter Steinberger 展示 agent 自主操作桌面应用和手机。Vercel AI Gateway 公布真实用量数据，揭示 Google、Anthropic、OpenAI 在生产环境中的真实格局。Greg Isenberg 发布 32 条 agent 时代观察，涵盖 agent 买家、agent 偏好形成、新型职业倦怠等反直觉趋势。Lenny Rachitsky 指出数据科学岗位正在被 AI 半吊子分析侵蚀。",
+    "audio_duration": 627,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-14/audio.mp3",
+    "tweet_count": 70
+  },
+  {
     "date": "2026-05-13",
     "title": "20260513-把品味教给AI，是当下最值钱的手艺",
     "summary": "Krea 2 发布全新图像基础模型，主打美学多样性和风格控制，Justine Moore 称其“让图像模型重新变得有艺术感”。Greg Isenberg 公开了一套用 agent 接单赚钱的完整打法，月费可达 5000 美元。Julie Zhuo 深入探讨了将人类品味蒸馏为 AI 指令的挑战，认为这是当下最难也最值钱的手艺。Claude Code Agent View 正式上线，Boris Cherny 分享用 Claude Cowork 一次性预订 8 张机票和 5 家酒店的经历。",
