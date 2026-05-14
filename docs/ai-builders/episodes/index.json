@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-15",
+    "title": "20260515-Codex进了ChatGPT手机端，agent harness的故事讲完了吗？",
+    "summary": "Codex 正式进入 ChatGPT 手机端，让 agent 从桌面走向移动。郭宇判断 harness startup 的故事已经结束，而 Peter Steinberger 用行动回应——OpenClaw 发了新版本，他还写了一个让 code review 自动循环到零错误的 skill。Lenny Rachitsky 和 Aaron Levie 同时指向一个新趋势：agent 正在重写所有岗位的定义，一个全新的职业市场已经打开。",
+    "audio_duration": 588,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-15/audio.mp3",
+    "tweet_count": 68
+  },
+  {
     "date": "2026-05-13",
     "title": "20260513-把品味教给AI，是当下最值钱的手艺",
     "summary": "Krea 2 发布全新图像基础模型，主打美学多样性和风格控制，Justine Moore 称其“让图像模型重新变得有艺术感”。Greg Isenberg 公开了一套用 agent 接单赚钱的完整打法，月费可达 5000 美元。Julie Zhuo 深入探讨了将人类品味蒸馏为 AI 指令的挑战，认为这是当下最难也最值钱的手艺。Claude Code Agent View 正式上线，Boris Cherny 分享用 Claude Cowork 一次性预订 8 张机票和 5 家酒店的经历。",
