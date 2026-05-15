@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-16",
+    "title": "20260516-100个Codex同时跑，agent矩阵正在接管工程流程",
+    "summary": "Peter Steinberger 完整公开了 OpenClaw 项目用 100 个 Codex 实例构建的 agent 自动化矩阵，从代码审查到会议监听全部接管。Greg Isenberg 补充了 17 条 agent 观察，涵盖本地模型、YAML 组织架构、agent 内部竞争等新视角。OpenAI 再次组织重组，Greg Brockman 正式接管产品线。Google PM 负责人 Madhu Guru 指出产品经理正面临从“playbook 执行者”到“playbook 发明家”的转型压力，Aaron Levie 和 Elena Verna 从不同角度回应了 AI 时代的角色分工问题。",
+    "audio_duration": 618,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-16/audio.mp3",
+    "tweet_count": 60
+  },
+  {
     "date": "2026-05-14",
     "title": "20260514-Agent正在形成偏好，软技能变成了硬技能",
     "summary": "Sam Altman 宣布 Codex 向企业开放两个月免费试用，Peter Steinberger 展示 agent 自主操作桌面应用和手机。Vercel AI Gateway 公布真实用量数据，揭示 Google、Anthropic、OpenAI 在生产环境中的真实格局。Greg Isenberg 发布 32 条 agent 时代观察，涵盖 agent 买家、agent 偏好形成、新型职业倦怠等反直觉趋势。Lenny Rachitsky 指出数据科学岗位正在被 AI 半吊子分析侵蚀。",

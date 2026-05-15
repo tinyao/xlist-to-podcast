@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Wed, 13 May 2026 23:32:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 23:27:29 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,43 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260516-100个Codex同时跑，agent矩阵正在接管工程流程</title>
+      <description>## 今日摘要
+Peter Steinberger 完整公开了 OpenClaw 项目用 100 个 Codex 实例构建的 agent 自动化矩阵，从代码审查到会议监听全部接管。Greg Isenberg 补充了 17 条 agent 观察，涵盖本地模型、YAML 组织架构、agent 内部竞争等新视角。OpenAI 再次组织重组，Greg Brockman 正式接管产品线。Google PM 负责人 Madhu Guru 指出产品经理正面临从“playbook 执行者”到“playbook 发明家”的转型压力，Aaron Levie 和 Elena Verna 从不同角度回应了 AI 时代的角色分工问题。
+
+## 重点话题
+- **OpenClaw 的 agent 矩阵**：Peter Steinberger 公开了约 100 个 Codex 实例的自动化流水线，涵盖 PR 审查、安全扫描、issue 去重、会议监听等功能
+- **Greg Isenberg 的 17 条新观察**：agent 记忆形成不公平优势、本地模型打开受监管行业、YAML 成为新组织架构图、agent 延迟是新的页面加载速度
+- **OpenAI 重组**：Greg Brockman 正式接管产品线，Codex 和 ChatGPT 负责人职责扩展，Lenny 认为每六个月一次重组的频率其实不算快
+- **PM 的角色转型**：Google PM 负责人 Madhu Guru 认为 PM 必须从框架执行者变成发明家，Aaron Levie 则认为 AI 最终会强化专业分工
+
+## 快讯
+- Replit iOS 应用在被下架四个月后重新上架
+- Factory 收购 YC W24 的 Lumetric，加强自主系统能力
+- Codex Mobile 正式上线，Riley Brown 发布 14 分钟详细教程
+- Peter Yang 吐槽 AI 黑客马拉松变成“等 agent 跑完”
+
+## 值得阅读
+- Peter Steinberger 的 agent 矩阵详解：https://x.com/steipete/status/2055405041843052792
+- Greg Isenberg 的 17 条 agent 新观察：https://x.com/gregisenberg/status/2055354334737543217
+- clawpatch 0.1.0 发布：https://x.com/steipete/status/2055364630709448970
+- Aaron Levie 论 AI 时代的角色分工：https://x.com/levie/status/2055143231625818554
+- Elena Verna：IC 工作是新的职业炫耀：https://www.elenaverna.com/p/ic-work-is-the-new-career-flex
+- Madhu Guru 论 PM 的转型：https://x.com/realmadhuguru/status/2055414865146327088
+- Codex Mobile 教程 by Riley Brown：https://youtu.be/4OiLljSo-hw</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-16/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-16/audio.mp3" length="12360960" type="audio/mpeg"/>
+      <pubDate>Fri, 15 May 2026 23:23:58 +0000</pubDate>
+      <itunes:duration>618</itunes:duration>
+      <itunes:summary>## 今日摘要
+Peter Steinberger 完整公开了 OpenClaw 项目用 100 个 Codex 实例构建的 agent 自动化矩阵，从代码审查到会议监听全部接管。Greg Isenberg 补充了 17 条 agent 观察，涵盖本地模型、YAML 组织架构、agent 内部竞争等新视角。OpenAI 再次组织重组，Greg Brockman 正式接管产品线。Google PM 负责人 Madhu Guru 指出产品经理正面临从“playbook 执行者”到“playbook 发明家”的转型压力，Aaron Levie 和 Elena Verna 从不同角度回应了 AI 时代的角色分工问题。
+
+## 重点话题
+- **OpenClaw 的 agent 矩阵**：Peter Steinberger 公开了约 100 个 Codex 实例的自动化流水线，涵盖 PR 审查、安全扫描、issue 去重、会议监听等功能
+- **Greg Isenberg 的 17 条新观察**：agent 记忆形成不公平优势、本地模型打开受监管行业、YAML 成为新组织架构图、agent 延迟</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260514-Agent正在形成偏好，软技能变成了硬技能</title>
       <description>## 今日摘要
@@ -1135,43 +1172,6 @@ Google Gemini 上线 Notebooks 功能，将 NotebookLM 的核心能力直接整�
 ## 快讯
 - Sam Altman 宣布 Codex 周活突破 300 万，并重置所有用户额度。
 - Claud</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260408-Anthropic 最强模型暂不公开，以及单月营收暴增 110 亿的内部逻辑</title>
-      <description>## 今日摘要
-Anthropic 紧急启动 Project Glasswing，用最强漏洞挖掘模型 Mythos Preview 加固关键软件安全，该模型暂不对外公开。同时 Anthropic 被曝 ARR 已飙升至 300 亿美元，一个月暴增 110 亿美元。此外，OpenAI 发布学术论文审阅工具 Paper Review，独立开发者推出超百种语言的 AI 实时电话翻译网络 tuwa，Box CEO 展示了长链路 agent 独立处理 RFP 的全过程。深聊部分围绕 Anthropic 的增长方法论展开，探讨“成功灾难”、内部自动化工具及增长飞轮。
-
-## 重点话题
-- Project Glasswing 与 Mythos Preview：Anthropic 选择将具备恐怖漏洞挖掘能力的新模型仅开放给网络防御者，以防止其被恶意利用。
-- Anthropic 增长奇迹：ARR 在一个月内从 190 亿美元飙升至 300 亿美元，Lenny Rachitsky 深度对话其增长负责人，揭示其利用 AI 驱动增长的内部机制。
-- OpenAI Prism 论文审阅：新功能 Paper Review 可对学术论文进行数学推导、结构一致性等严谨技术审查，并直接生成可编辑的 LaTeX 文件。
-- tuwa 电话网络：一个支持 100 多种语言实时翻译的 AI 电话服务，允许 agent 自主拨打电话，打通物理通信边界。
-- Box 长线 Agent 实践：Box CEO 演示了 agent 如何独立使用工具链处理耗时数小时的复杂知识工作，指出模型能力的跃升使之成为可能。
-
-## 快讯
-- HappyHorse-1.0 视频模型登顶榜单，在文本和图像生成视频任务上展现出强大的多镜头一致性和指令遵循能力。
-- Replit 推出 AI SDR 工具，帮助用户利用 AI 自动寻找下一批客户。
-- swyx 公布 AI 工程师大会赛道详情，强调 Harness Engineering 对 agent 性能的影响已超越底层模型本身。
-- Linear 产品负责人 Nan Yu 鼓励设计师与工程师转型 PM，并建议用 LLM 作为产品思维的试金石。
-
-## 值得阅读
-- 视频：Anthropic’s $1B to $19B growth run: how Claude became the fastest-growing AI product in history | Amol Avasare (Lenny's Podcast): https://www.youtube.com/watch?v=k-H4nsOTuxU
-- 文章 / 模型卡：Project Glasswing: Securing critical software for the AI era: http://anthropic.com/glasswing
-- 产品：Prism - AI LaTeX Editor (Paper Review): http://prism.openai.com
-- 产品：tuwa.ai — Call anyone. Speak your language: http://tuwa.ai
-- 视频：Peter Yang 与 a16z 合伙人 Anish Acharya 对谈 AI agent 时代的工作未来: https://www.youtube.com/watch?v=UE8jx4dvlSQ</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-08/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-08/audio.mp3" length="14095200" type="audio/mpeg"/>
-      <pubDate>Wed, 08 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>704</itunes:duration>
-      <itunes:summary>## 今日摘要
-Anthropic 紧急启动 Project Glasswing，用最强漏洞挖掘模型 Mythos Preview 加固关键软件安全，该模型暂不对外公开。同时 Anthropic 被曝 ARR 已飙升至 300 亿美元，一个月暴增 110 亿美元。此外，OpenAI 发布学术论文审阅工具 Paper Review，独立开发者推出超百种语言的 AI 实时电话翻译网络 tuwa，Box CEO 展示了长链路 agent 独立处理 RFP 的全过程。深聊部分围绕 Anthropic 的增长方法论展开，探讨“成功灾难”、内部自动化工具及增长飞轮。
-
-## 重点话题
-- Project Glasswing 与 Mythos Preview：Anthropic 选择将具备恐怖漏洞挖掘能力的新模型仅开放给网络防御者，以防止其被恶意利用。
-- Anthropic 增长奇迹：ARR 在一个月内从 190 亿美元飙升至 300 亿美元，Lenny Rachitsky 深度对话其增长负责人，揭示其利用 AI 驱动增长的内部机制。
-- OpenAI Prism 论文审阅：新功能 Paper R</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
