@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-18",
+    "title": "20260518-硬件的觉醒，AI正在推开物理世界的大门",
+    "summary": "AI 前沿正从数字转向物理世界，前苹果/OpenAI 硬件专家警告内存价格冲击并建议初创公司提前采购。Anthropic 内部设有专职团队思考 Claude 的意识问题，其模型构建强调产品与模型的深度融合，呼应了 Google 人士\"模型就是产品\"的观点。Box CEO Aaron Levie 则提醒，AI 时代放弃深度学习基本功是极大的误区，专家加 AI 将永远胜过新手。",
+    "audio_duration": 557,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-18/audio.mp3",
+    "tweet_count": 34
+  },
+  {
     "date": "2026-05-16",
     "title": "20260516-100个Codex同时跑，agent矩阵正在接管工程流程",
     "summary": "Peter Steinberger 完整公开了 OpenClaw 项目用 100 个 Codex 实例构建的 agent 自动化矩阵，从代码审查到会议监听全部接管。Greg Isenberg 补充了 17 条 agent 观察，涵盖本地模型、YAML 组织架构、agent 内部竞争等新视角。OpenAI 再次组织重组，Greg Brockman 正式接管产品线。Google PM 负责人 Madhu Guru 指出产品经理正面临从“playbook 执行者”到“playbook 发明家”的转型压力，Aaron Levie 和 Elena Verna 从不同角度回应了 AI 时代的角色分工问题。",
