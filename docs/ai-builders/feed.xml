@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Sun, 17 May 2026 23:28:14 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 23:32:33 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,43 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260519-让agent开口告诉你它在想什么</title>
+      <description>## 今日摘要
+本周二，AI 编程工具和 agent 工作流迎来密集更新。Cursor 发布了全新的 Composer 2.5 模型，Riley Brown 在半年后重新评估了它的设计能力。Vercel 推出了面向 agent 的防火墙 CLI 命令。但今天的核心信号来自 Anthropic 的 Thariq：一条关于让 agent 在执行过程中主动维护"决策笔记"的提示词，正在重新定义人与 agent 的协作边界。
+
+## 重点话题
+- **Agent 的"决策笔记"工作流**：Thariq 分享的提示词要求 agent 在执行任务时维护 implementation-notes.html，记录决策、偏离和待确认项。这解决了 agent 长任务中最大的痛点——人在环的信息断层。
+
+## 快讯
+- Cursor 发布 Composer 2.5 模型，设计能力突出。
+- Vercel CLI 上线 firewall 命令，支持 agent 以 300 毫秒全球同步管理防火墙。
+- Sam Altman 称 ChatGPT 近期更新使体验显著提升，Images 2.0 在印度生成量已超 10 亿张。
+- Riley Brown 用 Codex 分析三年短信记录，获得深刻个人洞察。
+
+## 值得阅读
+- Thariq 关于 agent 决策笔记的提示词及优化版本：https://x.com/trq212/status/2056415973125796184
+- Ryo Lu 宣布 Cursor Composer 2.5 发布：https://x.com/ryolu_/status/2056417715448156276
+- Guillermo Rauch 介绍面向 agent 的 Vercel 防火墙：https://x.com/rauchg/status/2056423973123183028
+- Sam Altman 称 ChatGPT 最新更新体验大幅提升：https://x.com/sama/status/2056435834333934051
+- Sam Altman 公布 ChatGPT Images 2.0 在印度生成量超 10 亿：https://x.com/sama/status/2056165722804654196
+- Riley Brown 时隔半年重新上手 Cursor 的初体验：https://x.com/rileybrown/status/2056494779597459463</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-19/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-19/audio.mp3" length="9376800" type="audio/mpeg"/>
+      <pubDate>Mon, 18 May 2026 23:28:41 +0000</pubDate>
+      <itunes:duration>468</itunes:duration>
+      <itunes:summary>## 今日摘要
+本周二，AI 编程工具和 agent 工作流迎来密集更新。Cursor 发布了全新的 Composer 2.5 模型，Riley Brown 在半年后重新评估了它的设计能力。Vercel 推出了面向 agent 的防火墙 CLI 命令。但今天的核心信号来自 Anthropic 的 Thariq：一条关于让 agent 在执行过程中主动维护"决策笔记"的提示词，正在重新定义人与 agent 的协作边界。
+
+## 重点话题
+- **Agent 的"决策笔记"工作流**：Thariq 分享的提示词要求 agent 在执行任务时维护 implementation-notes.html，记录决策、偏离和待确认项。这解决了 agent 长任务中最大的痛点——人在环的信息断层。
+
+## 快讯
+- Cursor 发布 Composer 2.5 模型，设计能力突出。
+- Vercel CLI 上线 firewall 命令，支持 agent 以 300 毫秒全球同步管理防火墙。
+- Sam Altman 称 ChatGPT 近期更新使体验显著提升，Images 2.0 在印度生成量已超 1</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260518-硬件的觉醒，AI正在推开物理世界的大门</title>
       <description>## 今日摘要
@@ -1134,44 +1171,6 @@ OpenClaw 与 Anthropic 的摩擦再度升级，系统提示被随机拦截，第
 - Replit 可直接部署到 Databricks，继承企业安全与治理。
 - AI 电影预告片质量惊艳，创作者 Taylor Chien。
 - Seedance 2 把查克·诺里斯放进任何视频</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260410-ChatGPT Pro 千元档上线，企业 agent 基建集体进入后台时代</title>
-      <description>## 今日摘要
-OpenAI 推出每月 1000 美元的 ChatGPT Pro 新档位，进一步瞄准重度技术用户。Karpathy 长文分析 AI 认知撕裂，指出编程等可量化领域进展巨大，与普通用户体验严重脱节。Claude 发布 Managed Agents 进入公开测试，Box CEO 演示企业工作流自动化，并预言 agent 获取上下文将是下个十年的核心 IT 挑战。Vercel 提出 Agentic Infrastructure 方向，强调基建必须本身 agent 化。
-
-## 重点话题
-- ChatGPT Pro 千美元档位：OpenAI 针对 Codex 等前沿模型的重度用户推出高定价、高算力方案。
-- AI 认知撕裂：Karpathy 解释为何技术圈内感受与大众印象差距巨大，强化学习在可验证领域造成的能力极不平衡。
-- Claude Managed Agents：一套集成 harness、沙箱和系统连接的企业级 agent 构建方案，已在 Box 等场景落地工作流自动化。
-- Agentic Infrastructure：Vercel 披露 agent 已在触发其每周三成的部署，宣布基建需转向自我配置、自我修复的 agentic 形态。
-
-## 快讯
-- Claude Code 通过 Opus 重写索引器，@-mention 性能获三倍提升，开放自定义索引接口。
-- Claude Code 推出 Monitor 工具，让 agent 可通过后台脚本监测错误并唤醒自己。
-- Gemini 开放 Lyria 3 音乐模型，用户已生成超一亿首歌，现每天可制作五首完整歌曲。
-- Microsoft Markitdown 项目被指过于杂乱，Obsidian 创始人呼吁官方提供高质量格式转换库。
-
-## 值得阅读
-- Sam Altman 宣布 ChatGPT Pro 千元档位：https://x.com/sama/status/2042342572958630332
-- Andrej Karpathy 关于 AI 认知差距的深度分析：https://x.com/karpathy/status/2042334451611693415
-- Claude Managed Agents 公开测试发布：https://x.com/robertjbye/status/2042245298018517166
-- Vercel Agentic Infrastructure 官方博客：https://vercel.com/blog/agentic-infrastructure
-- Boris Cherny 分享 Claude Code @-mention 性能优化过程：https://x.com/bcherny/status/2042352725481177315
-- Lenny 对话 Simon Willison 播客（包含 Challenger 灾难等深度话题）：https://www.youtube.com/watch?v=k-H4nsOTuxU</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-10/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-10/audio.mp3" length="9289920" type="audio/mpeg"/>
-      <pubDate>Fri, 10 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>464</itunes:duration>
-      <itunes:summary>## 今日摘要
-OpenAI 推出每月 1000 美元的 ChatGPT Pro 新档位，进一步瞄准重度技术用户。Karpathy 长文分析 AI 认知撕裂，指出编程等可量化领域进展巨大，与普通用户体验严重脱节。Claude 发布 Managed Agents 进入公开测试，Box CEO 演示企业工作流自动化，并预言 agent 获取上下文将是下个十年的核心 IT 挑战。Vercel 提出 Agentic Infrastructure 方向，强调基建必须本身 agent 化。
-
-## 重点话题
-- ChatGPT Pro 千美元档位：OpenAI 针对 Codex 等前沿模型的重度用户推出高定价、高算力方案。
-- AI 认知撕裂：Karpathy 解释为何技术圈内感受与大众印象差距巨大，强化学习在可验证领域造成的能力极不平衡。
-- Claude Managed Agents：一套集成 harness、沙箱和系统连接的企业级 agent 构建方案，已在 Box 等场景落地工作流自动化。
-- Agentic Infrastructure：Vercel 披露 agent 已在触发其每周三成</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
