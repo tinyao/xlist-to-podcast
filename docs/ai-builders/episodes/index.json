@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-20",
+    "title": "20260520-一个I/O把代理做成完整矩阵",
+    "summary": "Google I/O 集中发布了三款代理产品，从个人助理到科研工具链，形成一套完整矩阵。Gemini Spark 作为 24/7 个人代理即将开放 beta，Gemini 3.5 Flash 在专业知识工作上效果显著，Omni 视频模型首次实现对话式生成。OpenAI 推出 1-3 年算力预售，应对长期容量限制。Andrej Karpathy 正式确认加入 Anthropic 预训练团队，这是圈内昨天热度最高的一条信息。",
+    "audio_duration": 577,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-20/audio.mp3",
+    "tweet_count": 85
+  },
+  {
     "date": "2026-05-19",
     "title": "20260519-让agent开口告诉你它在想什么",
     "summary": "本周二，AI 编程工具和 agent 工作流迎来密集更新。Cursor 发布了全新的 Composer 2.5 模型，Riley Brown 在半年后重新评估了它的设计能力。Vercel 推出了面向 agent 的防火墙 CLI 命令。但今天的核心信号来自 Anthropic 的 Thariq：一条关于让 agent 在执行过程中主动维护\"决策笔记\"的提示词，正在重新定义人与 agent 的协作边界。",
