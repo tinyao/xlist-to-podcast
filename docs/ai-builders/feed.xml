@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Wed, 20 May 2026 23:36:43 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 23:33:03 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,46 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260522-ClickUp裁员22%重组AI组织，Codex和Claude Code同日上新</title>
+      <description>## 今日摘要
+Codex 和 Claude Code 同日发布重要更新，Appshots 功能让 agent 能读取屏幕内容，Claude Code 则上线了 token 使用量可视化。ClickUp CEO 宣布裁员 22% 并完全重组为“100x 组织”，其长文引发了工程圈关于 AI 时代团队结构的激烈争论。Justine Moore 则用数据反驳“AI 时代没有爆款消费应用”的说法。
+
+## 重点话题
+- ClickUp 的 AI 组织实验：CEO 宣布裁员 22% 重组为 100x 组织，引入百万美元薪资带，争议点在于“优秀工程师 100x，普通工程师减速”的论断
+- Codex Appshots：新功能让 agent 获取 Mac 应用窗口的截图和全文文本上下文
+
+## 快讯
+- Claude Code 将上线 `/usage` 命令，可视化 Skills、Agents、MCPs 等组件的 token 消耗
+- Replit Enterprise 上线自助购买，支持 SSO 和 SCIM，几分钟完成部署
+- Black Forest Labs 发布 FLUX Erase，模型级对象擦除和背景重建
+- Vercel AI Gateway 被 Riley Brown 评为严重被低估的基础设施
+- Gemini 3.5 Flash 在 APEX-Agents-AA 和 Zapier Automation Bench 上均排名第一
+
+## 值得阅读
+- ClickUp CEO Zeb Evans: The 100X Organization（原帖长文）
+- Dan Shipper: After Automation（Lenny 推荐，关于 AI 自动化后人力不减反增的结构性分析）
+- Peter Yang: Enough With the "AI Made Us Do It" Layoff Memo
+- Alex Albert 谈 Anthropic 如何构建下一代 Claude（Peter Yang 播客）
+- Matt Turck 与 OpenAI Yann Dubois 对谈：Why AI Progress Suddenly Feels Real
+- Boris Cherny 发布 Claude Code `/usage` 功能截图</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-22/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-22/audio.mp3" length="13262400" type="audio/mpeg"/>
+      <pubDate>Thu, 21 May 2026 23:28:22 +0000</pubDate>
+      <itunes:duration>663</itunes:duration>
+      <itunes:summary>## 今日摘要
+Codex 和 Claude Code 同日发布重要更新，Appshots 功能让 agent 能读取屏幕内容，Claude Code 则上线了 token 使用量可视化。ClickUp CEO 宣布裁员 22% 并完全重组为“100x 组织”，其长文引发了工程圈关于 AI 时代团队结构的激烈争论。Justine Moore 则用数据反驳“AI 时代没有爆款消费应用”的说法。
+
+## 重点话题
+- ClickUp 的 AI 组织实验：CEO 宣布裁员 22% 重组为 100x 组织，引入百万美元薪资带，争议点在于“优秀工程师 100x，普通工程师减速”的论断
+- Codex Appshots：新功能让 agent 获取 Mac 应用窗口的截图和全文文本上下文
+
+## 快讯
+- Claude Code 将上线 `/usage` 命令，可视化 Skills、Agents、MCPs 等组件的 token 消耗
+- Replit Enterprise 上线自助购买，支持 SSO 和 SCIM，几分钟完成部署
+- Black Forest Labs 发布 FLUX Erase，模</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260521-OpenAI解数学难题，Exa融2.5亿，AI信任设计成焦点</title>
       <description>## 今日摘要
@@ -1139,44 +1179,6 @@ Vercel 开源了企业级编程 agent 平台参考实现 Open Agents，揭示了
 
 ## 快讯
 - 谷歌搜索新增"论坛"和"短视频"标签页，分发逻辑从索引网页转向索引</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260413-管理者们，该给团队松松“规则”了</title>
-      <description>## 今日摘要
-Agent 的评测基准遭到圈内质疑，通义科学家指出刷榜正在让模型迷失方向。OpenClaw 推出“严格模式”并让 Codex 接管运行底座，试图根治 GPT 的持续性执行难题。Box CEO 的深度调研揭示了企业的 Token 预算博弈、无界面软件和工程师角色的重塑。Keith Rabois 的硬核管理访谈掀起关于心理安全、PM 消亡和个人产出模式的新争论。此外，Claude Code 接入了税务软件，还出现了解决标签焦虑的开源小工具。
-
-## 重点话题
-- OpenClaw 的强效修复：通过“严格模式”和 Codex 底座，强制 Agent 减少空谈、持续产出，大幅提升长周期任务执行力。
-- Keith Rabois 的管理硬核三论：反对稀释后的心理安全、认为产品调研有害、宣告产品经理岗位消亡，探讨 AI 时代如何管理高密度人才。
-
-## 快讯
-- Claude Code 支持连接 TurboTax 税单数据，自动整理报税明细。
-- 开发者反馈 Codex 5.4 在复杂架构上一键生成，却在简单界面调整上严重磨洋工。
-- 新开源的 Chrome 新标签页插件，利用 AI 维度逻辑实现浏览器标签页的自动断舍离。
-- Greg Isenberg 发布长达 58 分钟的免费视频课，手把手拆解如何用 MD 文件构建 AI 员工。
-
-## 值得阅读
-- OpenClaw 执行契约配置文档：https://docs.openclaw.ai/
-- Keith Rabois 深度访谈（Lenny's Podcast）：https://youtu.be/xCd9ykretlg
-- 浏览器标签页断舍离工具 (Tab Out): https://github.com/zarazhangrui/tab-out
-- Agent 实战与 MD 文件编写课程：https://t.co/HK4tKAoeQ7
-- Box CEO Aaron Levie 的 Agent 企业落地观察：https://twitter.com/levie</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-13/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-13/audio.mp3" length="9202080" type="audio/mpeg"/>
-      <pubDate>Mon, 13 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>460</itunes:duration>
-      <itunes:summary>## 今日摘要
-Agent 的评测基准遭到圈内质疑，通义科学家指出刷榜正在让模型迷失方向。OpenClaw 推出“严格模式”并让 Codex 接管运行底座，试图根治 GPT 的持续性执行难题。Box CEO 的深度调研揭示了企业的 Token 预算博弈、无界面软件和工程师角色的重塑。Keith Rabois 的硬核管理访谈掀起关于心理安全、PM 消亡和个人产出模式的新争论。此外，Claude Code 接入了税务软件，还出现了解决标签焦虑的开源小工具。
-
-## 重点话题
-- OpenClaw 的强效修复：通过“严格模式”和 Codex 底座，强制 Agent 减少空谈、持续产出，大幅提升长周期任务执行力。
-- Keith Rabois 的管理硬核三论：反对稀释后的心理安全、认为产品调研有害、宣告产品经理岗位消亡，探讨 AI 时代如何管理高密度人才。
-
-## 快讯
-- Claude Code 支持连接 TurboTax 税单数据，自动整理报税明细。
-- 开发者反馈 Codex 5.4 在复杂架构上一键生成，却在简单界面调整上严重磨洋工。
-- 新开源的 Chrome 新标签页插件，利用 A</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
