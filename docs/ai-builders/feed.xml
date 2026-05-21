@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Tue, 19 May 2026 23:34:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 23:36:43 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,43 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260521-OpenAI解数学难题，Exa融2.5亿，AI信任设计成焦点</title>
+      <description>## 今日摘要
+OpenAI 的通用模型解决了一个长期悬而未决的数学难题，Sam Altman 在兴奋之余表达了复杂心情，同时确认了向 YC 创业公司每家投资 200 万美元代币的计划。Exa 完成 2.5 亿美元融资，a16z 领投，将 AI agent 专用搜索推向新的阶段。Figma 的设计 agent 开始内测，Cursor 的 Composer 2.5 将规划、构建、调试全收敛到一个模型，创作工具正在内化 AI 能力。Julie Zhuo 提出了 AI 产品设计中一个根本性的问题：如何让用户判断 AI 输出的可信度。
+
+## 重点话题
+- AI 产品的信任设计：Julie Zhuo 分析了 LLM 的“阿喀琉斯之踵”——它们不知道自己不知道什么，并提出了通过可观测性、审计线索和结构化数据来为信任做设计的思路。
+
+## 快讯
+- Project Genie 面向全球 Google AI Ultra 订阅者开放
+- Vercel 发布 WordPress AI Gateway 插件，覆盖 42% 的互联网
+- Aaron Levie 指出 token 成本正成为企业 AI 最激烈的讨论话题
+- Lenny and Friends Summit 24 小时内收到超过 1500 份申请
+
+## 值得阅读
+- Timothy Gowers 关于 AI 解决数学难题的原始推文
+- Exa 完成 2.5 亿美元融资的官方公告（Jeffrey Wang）
+- Julie Zhuo: Designing for trust 视频及完整分析
+- Cursor Ryo Lu 关于 Composer 2.5 的使用体验推文
+- Figma 设计 agent 演示视频（Felix Lee 转发）
+- swyx 关于 Exa 对比测试和去年采访 Will Bryk 的推文</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-21/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-21/audio.mp3" length="11096160" type="audio/mpeg"/>
+      <pubDate>Wed, 20 May 2026 23:33:07 +0000</pubDate>
+      <itunes:duration>554</itunes:duration>
+      <itunes:summary>## 今日摘要
+OpenAI 的通用模型解决了一个长期悬而未决的数学难题，Sam Altman 在兴奋之余表达了复杂心情，同时确认了向 YC 创业公司每家投资 200 万美元代币的计划。Exa 完成 2.5 亿美元融资，a16z 领投，将 AI agent 专用搜索推向新的阶段。Figma 的设计 agent 开始内测，Cursor 的 Composer 2.5 将规划、构建、调试全收敛到一个模型，创作工具正在内化 AI 能力。Julie Zhuo 提出了 AI 产品设计中一个根本性的问题：如何让用户判断 AI 输出的可信度。
+
+## 重点话题
+- AI 产品的信任设计：Julie Zhuo 分析了 LLM 的“阿喀琉斯之踵”——它们不知道自己不知道什么，并提出了通过可观测性、审计线索和结构化数据来为信任做设计的思路。
+
+## 快讯
+- Project Genie 面向全球 Google AI Ultra 订阅者开放
+- Vercel 发布 WordPress AI Gateway 插件，覆盖 42% 的互联网
+- Aaron Levie 指出 token 成本正成为企业 AI 最激烈</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260520-一个I/O把代理做成完整矩阵</title>
       <description>## 今日摘要
@@ -1140,47 +1177,6 @@ Agent 的评测基准遭到圈内质疑，通义科学家指出刷榜正在让�
 - Claude Code 支持连接 TurboTax 税单数据，自动整理报税明细。
 - 开发者反馈 Codex 5.4 在复杂架构上一键生成，却在简单界面调整上严重磨洋工。
 - 新开源的 Chrome 新标签页插件，利用 A</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260412-没有好 API 的软件，三年后会被淘汰</title>
-      <description>## 今日摘要
-本期节目聚焦三大核心：针对 Sam Altman 的袭击者被证实与 AI 末日论社区有关联，引发对安全话语体系的反思；Claude Code 推出 /ultraplan 功能，将 agent 规划与执行拆分为可视化步骤；Box CEO Aaron Levie 发出警告，没有优秀 API 的软件将在三到五年内被淘汰。此外，agent 基准测试爆出大规模作弊丑闻，动摇了评测体系的公信力。
-
-## 重点话题
-- AI 末日论与暴力事件：袭击者背景曝光，Justine Moore 和 Amjad Masad 抨击 Pause AI 社区的沉默与矛盾表态
-- Claude Code 新功能 /ultraplan：网页端生成可编辑、可执行的实施计划，提升 agent 工程可控性
-- 软件行业的 API 生死线：Box CEO Aaron Levie 与非科技行业 CIO 对话后断言，headless 模式将成为软件生存的必备条件
-
-## 快讯
-- Vercel Sandbox 在 microVM 安全沙箱性能基准测试中排名第一，持久化沙箱即将 GA
-- Stripe 推出 Stripe Projects，CLI 工具让 agent 能自动化部署、支付和获取密钥
-- Peter Yang 观察中国 AI 工作文化：深夜工作、政府强力支持、一人公司模式兴起
-- 郭宇指出传统行业 AI 应用仍处初级阶段，垂直领域专业化方案存在巨大机会
-
-## 值得阅读
-- Amjad Masad 关于 AI 末日论与暴力袭击的评论：https://x.com/amasad/status/2042833728305795370
-- Justine Moore 对 Pause AI 领导层沉默的批评：https://x.com/venturetwins/status/2043079480697393496
-- Aaron Levie 关于 headless 软件和 API 未来的深度思考：https://x.com/levie/status/2042759653281456218
-- Claude Code /ultraplan 功能演示与讨论：https://x.com/trq212/status/2043035021846671685
-- Agent 基准测试大规模作弊调查报告：https://x.com/adamlsteinl/status/2042787821371412572
-- Peter Yang 中国 AI 工作文化观察：https://x.com/petergyang/status/2042772055905689977
-- 郭宇关于 Stripe Projects 的体验与评价：https://x.com/turingou/status/2042951407167508987</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-12/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-12/audio.mp3" length="9960000" type="audio/mpeg"/>
-      <pubDate>Sun, 12 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>498</itunes:duration>
-      <itunes:summary>## 今日摘要
-本期节目聚焦三大核心：针对 Sam Altman 的袭击者被证实与 AI 末日论社区有关联，引发对安全话语体系的反思；Claude Code 推出 /ultraplan 功能，将 agent 规划与执行拆分为可视化步骤；Box CEO Aaron Levie 发出警告，没有优秀 API 的软件将在三到五年内被淘汰。此外，agent 基准测试爆出大规模作弊丑闻，动摇了评测体系的公信力。
-
-## 重点话题
-- AI 末日论与暴力事件：袭击者背景曝光，Justine Moore 和 Amjad Masad 抨击 Pause AI 社区的沉默与矛盾表态
-- Claude Code 新功能 /ultraplan：网页端生成可编辑、可执行的实施计划，提升 agent 工程可控性
-- 软件行业的 API 生死线：Box CEO Aaron Levie 与非科技行业 CIO 对话后断言，headless 模式将成为软件生存的必备条件
-
-## 快讯
-- Vercel Sandbox 在 microVM 安全沙箱性能基准测试中排名第一，持久化沙箱即将 GA
-- Stripe 推出 Stri</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
