@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Thu, 21 May 2026 23:33:03 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 23:33:11 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,43 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260523-从iMessage生成iOS应用，App Store围墙被撕开</title>
+      <description>## 今日摘要
+Riley Brown 演示了从 iMessage 直接生成原生 iOS 应用并下载到主屏幕的完整流程，引发了对 App Store 分发模式的讨论。Aaron Levie 深入分析了 AI 成本从聊天工具到 agent 的剧变，指出微软取消内部 Claude Code 许可证背后的结构性原因。Justine Moore 分享了 AI 创业公司与创作者合作的五条实战经验。Logan Kilpatrick 公布了 Gemini 3.5 Flash 的最新性能数据。
+
+## 重点话题
+- **iOS 应用构建革命**：Riley Brown 展示了从 iMessage 用 agent 生成原生 Swift 应用并绕过 App Store 分发的完整流程，三个月前苹果刚禁止 vibecoding 类应用上架
+- **AI 成本结构剧变**：Aaron Levie 分析微软砍掉 Claude Code 内部许可证事件，指出 agent 时代推理成本比聊天工具高一个数量级，成本将按任务类型分层而非收敛到单一低价
+- **创作者分发实战手册**：Justine Moore 在 Google I/O 后总结五条经验，包括创作者正在取代传统媒体、Instagram 被严重低估、技术创作者需要直接跟产品团队沟通
+
+## 快讯
+- Sam Altman 公开征集 AI 最应该解决的问题，收到上万条回复
+- swyx 开源 Kakuna skill，可将 vibecoded 应用硬化为生产级代码库，16 小时 103 次提交功能不变
+- zero2claude 免费课程已有 17000 名学生，平台由一人用 Claude Code 构建运维，日处理 640 万次请求
+- Zara Zhang 开源飞书 Claude Code 桥接工具，支持在飞书中像聊天一样使用 agent
+
+## 值得阅读
+- Riley Brown 的 iOS 应用构建演示：https://x.com/rileybrown/status/2057669775837577538
+- Aaron Levie 关于 AI 成本的分析：https://x.com/levie/status/2057663408376516703
+- Justine Moore 的创作者合作指南：https://x.com/venturetwins/status/2057855754472919208
+- Hamel Husain 转发 Shreya Shankar 的 agent 定性分析实验：https://x.com/HamelHusain/status/2057875320011882923
+- swyx 的 Kakuna codebase hardening skill：https://x.com/swyx/status/2057876022553690327
+- zero2claude 免费课程：https://x.com/bcherny/status/2057876668501434603
+- Zara Zhang 的飞书 Claude Code 桥接工具：https://x.com/zarazhangrui/status/2057710284920520906</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-23/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-23/audio.mp3" length="11428320" type="audio/mpeg"/>
+      <pubDate>Fri, 22 May 2026 23:29:49 +0000</pubDate>
+      <itunes:duration>571</itunes:duration>
+      <itunes:summary>## 今日摘要
+Riley Brown 演示了从 iMessage 直接生成原生 iOS 应用并下载到主屏幕的完整流程，引发了对 App Store 分发模式的讨论。Aaron Levie 深入分析了 AI 成本从聊天工具到 agent 的剧变，指出微软取消内部 Claude Code 许可证背后的结构性原因。Justine Moore 分享了 AI 创业公司与创作者合作的五条实战经验。Logan Kilpatrick 公布了 Gemini 3.5 Flash 的最新性能数据。
+
+## 重点话题
+- **iOS 应用构建革命**：Riley Brown 展示了从 iMessage 用 agent 生成原生 Swift 应用并绕过 App Store 分发的完整流程，三个月前苹果刚禁止 vibecoding 类应用上架
+- **AI 成本结构剧变**：Aaron Levie 分析微软砍掉 Claude Code 内部许可证事件，指出 agent 时代推理成本比聊天工具高一个数量级，成本将按任务类型分层而非收敛到单一低价
+- **创作者分发实战手册**：Justine Moore 在 Go</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260522-ClickUp裁员22%重组AI组织，Codex和Claude Code同日上新</title>
       <description>## 今日摘要
@@ -1143,42 +1180,6 @@ Vercel 开源了企业级编程 agent 平台参考实现 Open Agents，揭示了
 - **Vercel 开源 Open Agents &amp; Claude Code 双更新**：Vercel 发布开源参考实现，对标 Stripe/Spotify 等大厂的内部工具；Claude Code 推出多会话桌面版与自动化 Routines 功能，进一步模糊命令行与 IDE 的界限。
 
 - **AI 时代的岗位重塑与设计品味**：Box CEO 定义新角色"Agent 部署经理"；Figma CEO 强调 AI 输出只是黏土，人的品味才是决定性因素；知名设</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260414-PM消亡论和成为AI时代的桶</title>
-      <description>## 今日摘要
-今天的两大主线围绕 AI 时代的人和工具。开发者侧，Claude Code 上线了全新的"无闪烁"终端渲染并对标 OpenAI Codex 的隐藏大招；谷歌和 Replit 各有重要更新。核心深聊聚焦 Keith Rabois 的激进组织观：他认为 PM 角色终将消亡，AI 时代企业唯一的竞争壁垒是拥有能把想法从零推到底的"桶型人才"。
-
-## 重点话题
-- 终端体验升级与 Codex 竞赛：Claude Code 公布实验性的 NO_FLICKER 渲染器，同时 OpenAI Codex 的隐藏功能和 "Scratchpad" 代号相继曝光。
-- Vibe Coding 基础设施迭代：谷歌 AI Studio 推出 Tab Tab Tab 提示词自动补全；Replit 开放全球多区域应用托管。
-- Lenny 播客 x Keith Rabois 深度复盘：探讨 PM 角色的消亡、CMO 正在成为最强 AI 用户、"一桶 vs. 弹药"的用人哲学，以及对消费级产品用户调研的颠覆性否定。
-
-## 快讯
-- 谷歌搜索新增"论坛"和"短视频"标签页，分发逻辑从索引网页转向索引真人。
-- swyx 引用地图数据指出，全球近 80% 的 AI 工程研发集中在旧金山 3 平方英里的区域内。
-- Justine Moore 用绝症医生类比，回击自动驾驶导致失业的悲观论调。
-
-## 值得阅读
-- Claude Code 全屏渲染文档：https://code.claude.com/docs/en/fullscreen
-- Lenny 与 Keith Rabois 完整播客对谈：https://www.youtube.com/watch?v=xCd9ykretlg
-- Greg Isenberg 的 Claude Code + MCP 全流程实战演示（Startup Ideas Pod）
-- Peter Yang 与 Figma CEO Dylan Field 对谈：https://www.youtube.com/watch?v=eqPljh_9C9Y</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-14/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-14/audio.mp3" length="9308640" type="audio/mpeg"/>
-      <pubDate>Tue, 14 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>465</itunes:duration>
-      <itunes:summary>## 今日摘要
-今天的两大主线围绕 AI 时代的人和工具。开发者侧，Claude Code 上线了全新的"无闪烁"终端渲染并对标 OpenAI Codex 的隐藏大招；谷歌和 Replit 各有重要更新。核心深聊聚焦 Keith Rabois 的激进组织观：他认为 PM 角色终将消亡，AI 时代企业唯一的竞争壁垒是拥有能把想法从零推到底的"桶型人才"。
-
-## 重点话题
-- 终端体验升级与 Codex 竞赛：Claude Code 公布实验性的 NO_FLICKER 渲染器，同时 OpenAI Codex 的隐藏功能和 "Scratchpad" 代号相继曝光。
-- Vibe Coding 基础设施迭代：谷歌 AI Studio 推出 Tab Tab Tab 提示词自动补全；Replit 开放全球多区域应用托管。
-- Lenny 播客 x Keith Rabois 深度复盘：探讨 PM 角色的消亡、CMO 正在成为最强 AI 用户、"一桶 vs. 弹药"的用人哲学，以及对消费级产品用户调研的颠覆性否定。
-
-## 快讯
-- 谷歌搜索新增"论坛"和"短视频"标签页，分发逻辑从索引网页转向索引</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
