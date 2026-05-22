@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-22",
+    "title": "20260522-ClickUp裁员22%重组AI组织，Codex和Claude Code同日上新",
+    "summary": "Codex 和 Claude Code 同日发布重要更新，Appshots 功能让 agent 能读取屏幕内容，Claude Code 则上线了 token 使用量可视化。ClickUp CEO 宣布裁员 22% 并完全重组为“100x 组织”，其长文引发了工程圈关于 AI 时代团队结构的激烈争论。Justine Moore 则用数据反驳“AI 时代没有爆款消费应用”的说法。",
+    "audio_duration": 663,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-22/audio.mp3",
+    "tweet_count": 65
+  },
+  {
     "date": "2026-05-21",
     "title": "20260521-OpenAI解数学难题，Exa融2.5亿，AI信任设计成焦点",
     "summary": "OpenAI 的通用模型解决了一个长期悬而未决的数学难题，Sam Altman 在兴奋之余表达了复杂心情，同时确认了向 YC 创业公司每家投资 200 万美元代币的计划。Exa 完成 2.5 亿美元融资，a16z 领投，将 AI agent 专用搜索推向新的阶段。Figma 的设计 agent 开始内测，Cursor 的 Composer 2.5 将规划、构建、调试全收敛到一个模型，创作工具正在内化 AI 能力。Julie Zhuo 提出了 AI 产品设计中一个根本性的问题：如何让用户判断 AI 输出的可信度。",
