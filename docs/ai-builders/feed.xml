@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Thu, 21 May 2026 23:33:03 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 23:27:07 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,44 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260524-Agent让安全漏洞暴增，AI时代的Jevons悖论来了</title>
+      <description>## 今日摘要
+本周日聚焦 AI 自动化带来的反直觉悖论：Aaron Levie 与 Dan Shipper 深入分析了为何任务自动化反而会催生更多人类工作职位。同时，Peter Steinberger 展示了 agent 工作流的最新实践，包括 scratch-log 与自动修复 issue。Guillermo Rauch 发起社区互动，邀请开发者展示 AI 作品。
+
+## 重点话题
+- **自动化悖论与岗位重构**：随着 AI 安全工具发现上万漏洞，审查和修复工作成为新瓶颈，安全工程师需求激增。Aaron Levie 指出，我们常混淆“任务完成”与“岗位消失”，自动化越强，岗位定义越容易扩张。
+
+## 快讯
+- Lenny Rachitsky 的活动 36 小时内收到超 2000 份申请，PMF 信号明显。
+- Logan Kilpatrick 分享 Gemini 3.5 Flash 在成本与智能帕累托前沿的成绩。
+- 郭宇提出 to B 养 to C 的 AI 产品模式，引发关于健康流量结构的讨论。
+- Peter Yang 即将上线专访系列，聚焦独立开发者的 AI 技术栈。
+
+## 值得阅读
+- After Automation by Dan Shipper: https://every.to/reports/after-automation
+- OpenClaw agent-skills/autoreview: https://github.com/openclaw/agent-skills
+- cmux terminal for coding agents: https://github.com/manaflow-ai/cmux
+- Guillermo Rauch 的 X 互动帖 (Show me the thing you’ve built with AI): https://x.com/rauchg</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-24/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-24/audio.mp3" length="10041120" type="audio/mpeg"/>
+      <pubDate>Sat, 23 May 2026 23:23:48 +0000</pubDate>
+      <itunes:duration>502</itunes:duration>
+      <itunes:summary>## 今日摘要
+本周日聚焦 AI 自动化带来的反直觉悖论：Aaron Levie 与 Dan Shipper 深入分析了为何任务自动化反而会催生更多人类工作职位。同时，Peter Steinberger 展示了 agent 工作流的最新实践，包括 scratch-log 与自动修复 issue。Guillermo Rauch 发起社区互动，邀请开发者展示 AI 作品。
+
+## 重点话题
+- **自动化悖论与岗位重构**：随着 AI 安全工具发现上万漏洞，审查和修复工作成为新瓶颈，安全工程师需求激增。Aaron Levie 指出，我们常混淆“任务完成”与“岗位消失”，自动化越强，岗位定义越容易扩张。
+
+## 快讯
+- Lenny Rachitsky 的活动 36 小时内收到超 2000 份申请，PMF 信号明显。
+- Logan Kilpatrick 分享 Gemini 3.5 Flash 在成本与智能帕累托前沿的成绩。
+- 郭宇提出 to B 养 to C 的 AI 产品模式，引发关于健康流量结构的讨论。
+- Peter Yang 即将上线专访系列，聚焦独立开发者的 AI 技术栈。
+
+</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260522-ClickUp裁员22%重组AI组织，Codex和Claude Code同日上新</title>
       <description>## 今日摘要
@@ -1143,42 +1181,6 @@ Vercel 开源了企业级编程 agent 平台参考实现 Open Agents，揭示了
 - **Vercel 开源 Open Agents &amp; Claude Code 双更新**：Vercel 发布开源参考实现，对标 Stripe/Spotify 等大厂的内部工具；Claude Code 推出多会话桌面版与自动化 Routines 功能，进一步模糊命令行与 IDE 的界限。
 
 - **AI 时代的岗位重塑与设计品味**：Box CEO 定义新角色"Agent 部署经理"；Figma CEO 强调 AI 输出只是黏土，人的品味才是决定性因素；知名设</itunes:summary>
-      <itunes:episodeType>full</itunes:episodeType>
-    </item>
-    <item>
-      <title>20260414-PM消亡论和成为AI时代的桶</title>
-      <description>## 今日摘要
-今天的两大主线围绕 AI 时代的人和工具。开发者侧，Claude Code 上线了全新的"无闪烁"终端渲染并对标 OpenAI Codex 的隐藏大招；谷歌和 Replit 各有重要更新。核心深聊聚焦 Keith Rabois 的激进组织观：他认为 PM 角色终将消亡，AI 时代企业唯一的竞争壁垒是拥有能把想法从零推到底的"桶型人才"。
-
-## 重点话题
-- 终端体验升级与 Codex 竞赛：Claude Code 公布实验性的 NO_FLICKER 渲染器，同时 OpenAI Codex 的隐藏功能和 "Scratchpad" 代号相继曝光。
-- Vibe Coding 基础设施迭代：谷歌 AI Studio 推出 Tab Tab Tab 提示词自动补全；Replit 开放全球多区域应用托管。
-- Lenny 播客 x Keith Rabois 深度复盘：探讨 PM 角色的消亡、CMO 正在成为最强 AI 用户、"一桶 vs. 弹药"的用人哲学，以及对消费级产品用户调研的颠覆性否定。
-
-## 快讯
-- 谷歌搜索新增"论坛"和"短视频"标签页，分发逻辑从索引网页转向索引真人。
-- swyx 引用地图数据指出，全球近 80% 的 AI 工程研发集中在旧金山 3 平方英里的区域内。
-- Justine Moore 用绝症医生类比，回击自动驾驶导致失业的悲观论调。
-
-## 值得阅读
-- Claude Code 全屏渲染文档：https://code.claude.com/docs/en/fullscreen
-- Lenny 与 Keith Rabois 完整播客对谈：https://www.youtube.com/watch?v=xCd9ykretlg
-- Greg Isenberg 的 Claude Code + MCP 全流程实战演示（Startup Ideas Pod）
-- Peter Yang 与 Figma CEO Dylan Field 对谈：https://www.youtube.com/watch?v=eqPljh_9C9Y</description>
-      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-14/audio.mp3</guid>
-      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-04-14/audio.mp3" length="9308640" type="audio/mpeg"/>
-      <pubDate>Tue, 14 Apr 2026 12:00:00 +0000</pubDate>
-      <itunes:duration>465</itunes:duration>
-      <itunes:summary>## 今日摘要
-今天的两大主线围绕 AI 时代的人和工具。开发者侧，Claude Code 上线了全新的"无闪烁"终端渲染并对标 OpenAI Codex 的隐藏大招；谷歌和 Replit 各有重要更新。核心深聊聚焦 Keith Rabois 的激进组织观：他认为 PM 角色终将消亡，AI 时代企业唯一的竞争壁垒是拥有能把想法从零推到底的"桶型人才"。
-
-## 重点话题
-- 终端体验升级与 Codex 竞赛：Claude Code 公布实验性的 NO_FLICKER 渲染器，同时 OpenAI Codex 的隐藏功能和 "Scratchpad" 代号相继曝光。
-- Vibe Coding 基础设施迭代：谷歌 AI Studio 推出 Tab Tab Tab 提示词自动补全；Replit 开放全球多区域应用托管。
-- Lenny 播客 x Keith Rabois 深度复盘：探讨 PM 角色的消亡、CMO 正在成为最强 AI 用户、"一桶 vs. 弹药"的用人哲学，以及对消费级产品用户调研的颠覆性否定。
-
-## 快讯
-- 谷歌搜索新增"论坛"和"短视频"标签页，分发逻辑从索引网页转向索引</itunes:summary>
       <itunes:episodeType>full</itunes:episodeType>
     </item>
   </channel>
