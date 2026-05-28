@@ -62,6 +62,43 @@
       <itunes:episodeType>full</itunes:episodeType>
     </item>
     <item>
+      <title>20260523-从iMessage生成iOS应用，App Store围墙被撕开</title>
+      <description>## 今日摘要
+Riley Brown 演示了从 iMessage 直接生成原生 iOS 应用并下载到主屏幕的完整流程，引发了对 App Store 分发模式的讨论。Aaron Levie 深入分析了 AI 成本从聊天工具到 agent 的剧变，指出微软取消内部 Claude Code 许可证背后的结构性原因。Justine Moore 分享了 AI 创业公司与创作者合作的五条实战经验。Logan Kilpatrick 公布了 Gemini 3.5 Flash 的最新性能数据。
+
+## 重点话题
+- **iOS 应用构建革命**：Riley Brown 展示了从 iMessage 用 agent 生成原生 Swift 应用并绕过 App Store 分发的完整流程，三个月前苹果刚禁止 vibecoding 类应用上架
+- **AI 成本结构剧变**：Aaron Levie 分析微软砍掉 Claude Code 内部许可证事件，指出 agent 时代推理成本比聊天工具高一个数量级，成本将按任务类型分层而非收敛到单一低价
+- **创作者分发实战手册**：Justine Moore 在 Google I/O 后总结五条经验，包括创作者正在取代传统媒体、Instagram 被严重低估、技术创作者需要直接跟产品团队沟通
+
+## 快讯
+- Sam Altman 公开征集 AI 最应该解决的问题，收到上万条回复
+- swyx 开源 Kakuna skill，可将 vibecoded 应用硬化为生产级代码库，16 小时 103 次提交功能不变
+- zero2claude 免费课程已有 17000 名学生，平台由一人用 Claude Code 构建运维，日处理 640 万次请求
+- Zara Zhang 开源飞书 Claude Code 桥接工具，支持在飞书中像聊天一样使用 agent
+
+## 值得阅读
+- Riley Brown 的 iOS 应用构建演示：https://x.com/rileybrown/status/2057669775837577538
+- Aaron Levie 关于 AI 成本的分析：https://x.com/levie/status/2057663408376516703
+- Justine Moore 的创作者合作指南：https://x.com/venturetwins/status/2057855754472919208
+- Hamel Husain 转发 Shreya Shankar 的 agent 定性分析实验：https://x.com/HamelHusain/status/2057875320011882923
+- swyx 的 Kakuna codebase hardening skill：https://x.com/swyx/status/2057876022553690327
+- zero2claude 免费课程：https://x.com/bcherny/status/2057876668501434603
+- Zara Zhang 的飞书 Claude Code 桥接工具：https://x.com/zarazhangrui/status/2057710284920520906</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-23/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-23/audio.mp3" length="11428320" type="audio/mpeg"/>
+      <pubDate>Fri, 22 May 2026 23:29:49 +0000</pubDate>
+      <itunes:duration>571</itunes:duration>
+      <itunes:summary>## 今日摘要
+Riley Brown 演示了从 iMessage 直接生成原生 iOS 应用并下载到主屏幕的完整流程，引发了对 App Store 分发模式的讨论。Aaron Levie 深入分析了 AI 成本从聊天工具到 agent 的剧变，指出微软取消内部 Claude Code 许可证背后的结构性原因。Justine Moore 分享了 AI 创业公司与创作者合作的五条实战经验。Logan Kilpatrick 公布了 Gemini 3.5 Flash 的最新性能数据。
+
+## 重点话题
+- **iOS 应用构建革命**：Riley Brown 展示了从 iMessage 用 agent 生成原生 Swift 应用并绕过 App Store 分发的完整流程，三个月前苹果刚禁止 vibecoding 类应用上架
+- **AI 成本结构剧变**：Aaron Levie 分析微软砍掉 Claude Code 内部许可证事件，指出 agent 时代推理成本比聊天工具高一个数量级，成本将按任务类型分层而非收敛到单一低价
+- **创作者分发实战手册**：Justine Moore 在 Go</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
+    <item>
       <title>20260522-ClickUp裁员22%重组AI组织，Codex和Claude Code同日上新</title>
       <description>## 今日摘要
 Codex 和 Claude Code 同日发布重要更新，Appshots 功能让 agent 能读取屏幕内容，Claude Code 则上线了 token 使用量可视化。ClickUp CEO 宣布裁员 22% 并完全重组为“100x 组织”，其长文引发了工程圈关于 AI 时代团队结构的激烈争论。Justine Moore 则用数据反驳“AI 时代没有爆款消费应用”的说法。
