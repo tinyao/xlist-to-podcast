@@ -13,7 +13,7 @@
       <link>https://podcast.zao.im/ai-builders</link>
     </image>
     <language>zh</language>
-    <lastBuildDate>Fri, 22 May 2026 23:33:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 23:27:07 +0000</lastBuildDate>
     <itunes:author>Ryan Yao</itunes:author>
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
@@ -23,6 +23,44 @@
     </itunes:owner>
     <itunes:summary>每天10分钟，从X（Twitter）上AI圈最活跃的开发者、实践者、创始人和投资人的推文中，筛选当天最值得关注的信号。该播客由程序 + AI 构建，全自动更新。</itunes:summary>
     <itunes:type>episodic</itunes:type>
+    <item>
+      <title>20260524-Agent让安全漏洞暴增，AI时代的Jevons悖论来了</title>
+      <description>## 今日摘要
+本周日聚焦 AI 自动化带来的反直觉悖论：Aaron Levie 与 Dan Shipper 深入分析了为何任务自动化反而会催生更多人类工作职位。同时，Peter Steinberger 展示了 agent 工作流的最新实践，包括 scratch-log 与自动修复 issue。Guillermo Rauch 发起社区互动，邀请开发者展示 AI 作品。
+
+## 重点话题
+- **自动化悖论与岗位重构**：随着 AI 安全工具发现上万漏洞，审查和修复工作成为新瓶颈，安全工程师需求激增。Aaron Levie 指出，我们常混淆“任务完成”与“岗位消失”，自动化越强，岗位定义越容易扩张。
+
+## 快讯
+- Lenny Rachitsky 的活动 36 小时内收到超 2000 份申请，PMF 信号明显。
+- Logan Kilpatrick 分享 Gemini 3.5 Flash 在成本与智能帕累托前沿的成绩。
+- 郭宇提出 to B 养 to C 的 AI 产品模式，引发关于健康流量结构的讨论。
+- Peter Yang 即将上线专访系列，聚焦独立开发者的 AI 技术栈。
+
+## 值得阅读
+- After Automation by Dan Shipper: https://every.to/reports/after-automation
+- OpenClaw agent-skills/autoreview: https://github.com/openclaw/agent-skills
+- cmux terminal for coding agents: https://github.com/manaflow-ai/cmux
+- Guillermo Rauch 的 X 互动帖 (Show me the thing you’ve built with AI): https://x.com/rauchg</description>
+      <guid isPermaLink="false">https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-24/audio.mp3</guid>
+      <enclosure url="https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-24/audio.mp3" length="10041120" type="audio/mpeg"/>
+      <pubDate>Sat, 23 May 2026 23:23:48 +0000</pubDate>
+      <itunes:duration>502</itunes:duration>
+      <itunes:summary>## 今日摘要
+本周日聚焦 AI 自动化带来的反直觉悖论：Aaron Levie 与 Dan Shipper 深入分析了为何任务自动化反而会催生更多人类工作职位。同时，Peter Steinberger 展示了 agent 工作流的最新实践，包括 scratch-log 与自动修复 issue。Guillermo Rauch 发起社区互动，邀请开发者展示 AI 作品。
+
+## 重点话题
+- **自动化悖论与岗位重构**：随着 AI 安全工具发现上万漏洞，审查和修复工作成为新瓶颈，安全工程师需求激增。Aaron Levie 指出，我们常混淆“任务完成”与“岗位消失”，自动化越强，岗位定义越容易扩张。
+
+## 快讯
+- Lenny Rachitsky 的活动 36 小时内收到超 2000 份申请，PMF 信号明显。
+- Logan Kilpatrick 分享 Gemini 3.5 Flash 在成本与智能帕累托前沿的成绩。
+- 郭宇提出 to B 养 to C 的 AI 产品模式，引发关于健康流量结构的讨论。
+- Peter Yang 即将上线专访系列，聚焦独立开发者的 AI 技术栈。
+
+</itunes:summary>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <item>
       <title>20260523-从iMessage生成iOS应用，App Store围墙被撕开</title>
       <description>## 今日摘要

@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-05-24",
+    "title": "20260524-Agent让安全漏洞暴增，AI时代的Jevons悖论来了",
+    "summary": "本周日聚焦 AI 自动化带来的反直觉悖论：Aaron Levie 与 Dan Shipper 深入分析了为何任务自动化反而会催生更多人类工作职位。同时，Peter Steinberger 展示了 agent 工作流的最新实践，包括 scratch-log 与自动修复 issue。Guillermo Rauch 发起社区互动，邀请开发者展示 AI 作品。",
+    "audio_duration": 502,
+    "audio_url": "https://xlist-podcast.oss-cn-beijing.aliyuncs.com/ai-builders/episodes/2026-05-24/audio.mp3",
+    "tweet_count": 29
+  },
+  {
     "date": "2026-05-23",
     "title": "20260523-从iMessage生成iOS应用，App Store围墙被撕开",
     "summary": "Riley Brown 演示了从 iMessage 直接生成原生 iOS 应用并下载到主屏幕的完整流程，引发了对 App Store 分发模式的讨论。Aaron Levie 深入分析了 AI 成本从聊天工具到 agent 的剧变，指出微软取消内部 Claude Code 许可证背后的结构性原因。Justine Moore 分享了 AI 创业公司与创作者合作的五条实战经验。Logan Kilpatrick 公布了 Gemini 3.5 Flash 的最新性能数据。",
