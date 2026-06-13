@@ -1,0 +1,16 @@
+{
+  "id": "02a3e7d3-8ed0-418b-ab9e-11cf82685847",
+  "podcast_id": "ai-builders",
+  "date": "2026-06-14",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}",
+  "created_at": "2026-06-13T23:30:24.879479",
+  "audio_url": ""
+}
