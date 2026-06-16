@@ -1,0 +1,16 @@
+{
+  "id": "9cc4c558-2d0e-4e59-9483-cb7a91268d73",
+  "podcast_id": "ai-builders",
+  "date": "2026-06-17",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "Expecting value: line 1671 column 1 (char 9185)",
+  "created_at": "2026-06-16T23:36:20.139148",
+  "audio_url": ""
+}
