@@ -1,0 +1,16 @@
+{
+  "id": "2f66dcfc-b772-4cbf-93d2-1d60f4c34869",
+  "podcast_id": "ai-builders",
+  "date": "2026-07-12",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "X API 503: {\"detail\":\"Service Unavailable\",\"status\":503,\"title\":\"Service Unavailable\",\"type\":\"about:blank\"}",
+  "created_at": "2026-07-11T23:59:36.935186",
+  "audio_url": ""
+}
