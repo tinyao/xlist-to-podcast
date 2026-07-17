@@ -1,0 +1,16 @@
+{
+  "id": "0e358b95-dbf5-4513-a9eb-1a31b2736bc1",
+  "podcast_id": "ai-builders",
+  "date": "2026-07-18",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+  "created_at": "2026-07-17T23:57:49.455910",
+  "audio_url": ""
+}
