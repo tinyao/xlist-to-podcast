@@ -1,0 +1,16 @@
+{
+  "id": "ac98dac6-2f58-49b0-80bf-c364d1d81ff1",
+  "podcast_id": "ai-builders",
+  "date": "2026-07-21",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "X API 403: {\"detail\":\"Your monthly spend cap has been reached.\",\"status\":403,\"title\":\"Forbidden\",\"type\":\"https://api.x.com/2/problems/spend-cap-reached\"}",
+  "created_at": "2026-07-20T23:59:07.885672",
+  "audio_url": ""
+}
