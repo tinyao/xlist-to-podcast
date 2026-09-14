@@ -1,0 +1,16 @@
+{
+  "id": "f2eb622a-4cc7-4b8f-bf32-0fa653810b7c",
+  "podcast_id": "ai-builders",
+  "date": "2026-09-15",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+  "created_at": "2026-09-14T23:45:08.993587",
+  "audio_url": ""
+}
