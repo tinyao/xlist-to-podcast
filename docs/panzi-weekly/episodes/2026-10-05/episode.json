@@ -1,0 +1,16 @@
+{
+  "id": "47fb9ac5-3cce-4183-a4cb-d3069e8ba722",
+  "podcast_id": "panzi-weekly",
+  "date": "2026-10-05",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+  "created_at": "2026-10-05T00:34:33.379964",
+  "audio_url": ""
+}
