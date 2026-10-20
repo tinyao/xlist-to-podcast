@@ -1,0 +1,16 @@
+{
+  "id": "b47fc49c-f169-4ca3-bf72-58e701396984",
+  "podcast_id": "ai-builders",
+  "date": "2026-10-21",
+  "title": "",
+  "script": "",
+  "shownotes": "",
+  "audio_path": "",
+  "audio_duration": 0,
+  "audio_size": 0,
+  "tweet_count": 0,
+  "status": "failed",
+  "error_msg": "LLM 未返回有效的 <script> 内容",
+  "created_at": "2026-10-20T23:02:39.520832",
+  "audio_url": ""
+}
